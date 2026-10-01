@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validador de CPF Online: confira se um CPF é válido</title>
+<meta name="description" content="Validador de CPF online e gratuito: digite um CPF e confira na hora se os dígitos verificadores estão corretos. Sem enviar dados.">
+<link rel="canonical" href="http://localhost:1313/validador-de-cpf/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Validador de CPF Online: confira se um CPF é válido">
+<meta property="og:url" content="http://localhost:1313/validador-de-cpf/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Gerador de CPF">
+<meta property="og:description" content="Validador de CPF online e gratuito: digite um CPF e confira na hora se os dígitos verificadores estão corretos. Sem enviar dados.">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1536">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<link rel="stylesheet" href="/css/main.min.feea3b38ca0b4ecfda112830c28e452de17c28a1c7fd9efc26fc3ddad54d569e.css" integrity="sha256-/uo7OMoLTs/aESgwwo5FLeF8KKHH/Z78Jvw92tVNVp4=" crossorigin="anonymous">
+
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="/" aria-label="Gerador de CPF - início">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#0a7d4f"/><text x="14" y="18.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">CPF</text></svg>
+      <span>Gerador de CPF</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      
+      <li><a href="/artigos/">Artigos</a></li><li><a href="/sobre/">Sobre</a></li><li><a href="/contato/">Contato</a></li><li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main class="wrap">
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><span aria-current="page">Validador de CPF</span></nav>
+<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/\",\"name\":\"Início\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/validador-de-cpf/\",\"name\":\"Validador de CPF\",\"position\":2}]}"</script>
+<section class="tool" aria-labelledby="v-h">
+  <h1 id="v-h">Validador de CPF</h1>
+  <p class="lead">Digite ou cole um CPF, com ou sem pontuação, e veja na hora se os dígitos verificadores conferem.</p>
+  <label class="field" for="cpf">CPF</label>
+  <input id="cpf" type="text" inputmode="numeric" autocomplete="off" maxlength="14" placeholder="000.000.000-00">
+  <button type="button" id="vbtn" class="btn">Validar CPF</button>
+  <div id="vbox" class="vres" role="status"><strong id="vt"></strong><p id="vd"></p></div>
+  <p class="note">A conferência é feita no seu navegador. O número digitado não é enviado nem guardado.</p>
+</section>
+<script>
+(function(){
+function dv(a){var s=0,n=a.length+1;for(var i=0;i<a.length;i++)s+=a[i]*(n-i);var r=s%11;return r<2?0:11-r;}
+function fmt(d){return d.slice(0,3)+'.'+d.slice(3,6)+'.'+d.slice(6,9)+'-'+d.slice(9);}
+var inp=document.getElementById('cpf'),box=document.getElementById('vbox'),t=document.getElementById('vt'),p=document.getElementById('vd');
+function show(cls,title,detail){box.className='vres '+cls;t.textContent=title;p.textContent=detail;}
+function run(){
+var d=inp.value.replace(/\D/g,'');
+if(!d){if(inp.value.trim()){show('bad','CPF inválido','O CPF contém apenas números.');}else{show('','Digite um CPF','Informe os 11 dígitos, com ou sem pontuação.');}return;}
+if(d.length!==11){show('bad','CPF inválido','Um CPF tem 11 dígitos e você informou '+d.length+'.');return;}
+if(/^(\d)\1{10}$/.test(d)){show('bad','CPF inválido','Sequências de dígitos repetidos são rejeitadas, mesmo passando na conta do módulo 11.');return;}
+var n=d.split('').map(Number),b=n.slice(0,9),v1=dv(b),v2=dv(b.concat(v1));
+if(v1===n[9]&&v2===n[10]){show('ok','CPF válido',fmt(d)+': os dígitos verificadores conferem. Isso não prova que o CPF existe nem que está regular.');}
+else{show('bad','CPF inválido','Os dígitos verificadores não conferem. Para '+fmt(d).slice(0,11)+' o correto seria '+v1+''+v2+', e você informou '+n[9]+''+n[10]+'.');}
+}
+document.getElementById('vbtn').addEventListener('click',run);
+inp.addEventListener('keydown',function(e){if(e.key==='Enter')run();});
+})();
+</script>
+<div class="prose pillar">
+  <h2 id="como-o-validador-confere-o-cpf">Como o validador confere o CPF</h2>
+<ol>
+<li>Remove a pontuação e mantém só os dígitos.</li>
+<li>Confere se há exatamente 11 dígitos e se não são todos iguais.</li>
+<li>Recalcula o 10º dígito a partir dos nove primeiros, pelo módulo 11.</li>
+<li>Recalcula o 11º dígito a partir dos dez primeiros.</li>
+<li>Compara os dois dígitos calculados com os informados.</li>
+</ol>
+<p>O cálculo completo, com exemplo, está em <a href="/artigos/como-calcular-digitos-verificadores-cpf/">como calcular os dígitos verificadores</a>, e o passo a passo em <a href="/artigos/como-validar-cpf/">como validar um CPF</a>.</p>
+<h2 id="o-que-um-cpf-válido-não-prova">O que um CPF válido não prova</h2>
+<p>A validação só detecta erros de digitação. Um CPF válido pode não existir na base da Receita Federal ou pertencer a alguém que você não conhece. Para conferir a situação de um CPF real, veja <a href="/artigos/como-consultar-a-situacao-do-cpf/">como consultar a situação do CPF</a>.</p>
+<h2 id="exemplos-para-testar">Exemplos para testar</h2>
+<table>
+  <thead>
+      <tr>
+          <th>CPF</th>
+          <th>Resultado esperado</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>123.456.789-09</td>
+          <td>Válido (exemplo de formato)</td>
+      </tr>
+      <tr>
+          <td>012.345.678-90</td>
+          <td>Válido (começa com zero)</td>
+      </tr>
+      <tr>
+          <td>123.456.789-10</td>
+          <td>Inválido (dígito verificador errado)</td>
+      </tr>
+      <tr>
+          <td>111.111.111-11</td>
+          <td>Inválido (dígitos repetidos)</td>
+      </tr>
+      <tr>
+          <td>1234</td>
+          <td>Inválido (tamanho)</td>
+      </tr>
+  </tbody>
+</table>
+<p>Precisa de números para testar? Use o <a href="/">gerador de CPF</a>.</p>
+
+  
+<h2>Perguntas frequentes</h2>
+<details class="faq"><summary>O validador diz se o CPF existe?</summary><p>Não. Ele só confere a conta matemática dos dígitos verificadores. Para saber se o CPF existe e está regular, consulte a Receita Federal com CPF e data de nascimento.</p></details><details class="faq"><summary>Posso digitar com ou sem pontos e traço?</summary><p>Sim. O validador ignora a pontuação e considera apenas os dígitos.</p></details><details class="faq"><summary>Meus dados ficam salvos?</summary><p>Não. A conferência acontece no seu navegador e o número não é enviado a nenhum servidor.</p></details><details class="faq"><summary>Por que 111.111.111-11 aparece como inválido?</summary><p>Ele passa na conta do módulo 11, mas sequências de dígitos repetidos costumam ser rejeitadas pelos sistemas, então o validador as trata como inválidas.</p></details>
+
+
+<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Não. Ele só confere a conta matemática dos dígitos verificadores. Para saber se o CPF existe e está regular, consulte a Receita Federal com CPF e data de nascimento.\"},\"name\":\"O validador diz se o CPF existe?\"},{\"@type\":\"Question\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Sim. O validador ignora a pontuação e considera apenas os dígitos.\"},\"name\":\"Posso digitar com ou sem pontos e traço?\"},{\"@type\":\"Question\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Não. A conferência acontece no seu navegador e o número não é enviado a nenhum servidor.\"},\"name\":\"Meus dados ficam salvos?\"},{\"@type\":\"Question\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ele passa na conta do módulo 11, mas sequências de dígitos repetidos costumam ser rejeitadas pelos sistemas, então o validador as trata como inválidas.\"},\"name\":\"Por que 111.111.111-11 aparece como inválido?\"}]}"</script>
+
+
+</div>
+
+<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"WebApplication\",\"applicationCategory\":\"UtilitiesApplication\",\"description\":\"Validador de CPF online e gratuito: digite um CPF e confira na hora se os dígitos verificadores estão corretos. Sem enviar dados.\",\"inLanguage\":\"pt-BR\",\"isAccessibleForFree\":true,\"name\":\"Validador de CPF\",\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"BRL\"},\"operatingSystem\":\"Any\",\"publisher\":{\"@id\":\"http://localhost:1313/#organization\",\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"http://localhost:1313/favicon.svg\"},\"name\":\"Gerador de CPF\",\"url\":\"http://localhost:1313/\"},\"url\":\"http://localhost:1313/validador-de-cpf/\"}"</script>
+</main>
+<footer class="site">
+  <div class="bar foot">
+    <span>© 2026 Gerador de CPF</span>
+    <span class="mu">Números gerados aleatoriamente, apenas para testes.</span>
+    <a href="/politica-de-privacidade/">Política de Privacidade</a>
+  </div>
+</footer>
+
+
+</body>
+</html>
