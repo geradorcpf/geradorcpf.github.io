@@ -1,6 +1,6 @@
 # Gerador de CPF (Hugo)
 
-Situs statis berbasis Hugo untuk https://geradordecpf.github.io/ berisi gerador CPF, konten pilar, dan artikel cluster.
+Situs statis berbasis Hugo untuk https://geradorcpf.github.io/ berisi gerador CPF, konten pilar, dan artikel cluster.
 
 ## 1. Persiapan
 
@@ -94,17 +94,17 @@ Edit `assets/css/main.css`. Warna ada di bagian paling atas:
 
 ## 5. Canonical dan SEO
 
-- Canonical otomatis dari `baseURL` di `hugo.toml` (`https://geradordecpf.github.io/`). Jika pindah ke domain sendiri, ubah `baseURL` saja.
+- Canonical otomatis dari `baseURL` di `hugo.toml` (`https://geradorcpf.github.io/`). Jika pindah ke domain sendiri, ubah `baseURL` saja.
 - `sitemap.xml` dibuat otomatis oleh Hugo; alamatnya sudah tercantum di `static/robots.txt`.
 - Schema JSON-LD: WebApplication (homepage), FAQPage (dari `faq`), Article (artikel).
-- Setelah online: daftarkan situs di Google Search Console dan kirim `https://geradordecpf.github.io/sitemap.xml`.
+- Setelah online: daftarkan situs di Google Search Console dan kirim `https://geradorcpf.github.io/sitemap.xml`.
 
 ## 6. Deploy ke GitHub Pages
 
-1. Buat akun atau organisasi GitHub bernama `geradordecpf`, lalu repositori publik bernama **`geradordecpf.github.io`**.
+1. Buat akun atau organisasi GitHub bernama `geradorcpf`, lalu repositori publik bernama **`geradorcpf.github.io`**.
 2. Dari folder proyek: `git init`, `git add .`, `git commit -m "init"`, `git branch -M main`, `git remote add origin <url-repo>`, `git push -u origin main`.
 3. Di GitHub: **Settings > Pages > Build and deployment > Source: GitHub Actions**.
-4. Setiap `git push` ke `main` akan membangun dan menerbitkan situs otomatis (lihat tab Actions). Alamat: https://geradordecpf.github.io/
+4. Setiap `git push` ke `main` akan membangun dan menerbitkan situs otomatis (lihat tab Actions). Alamat: https://geradorcpf.github.io/
 5. Jika Actions gagal karena versi action usang, perbarui nomor versi di `.github/workflows/hugo.yml`.
 
 ## 7. Daftar cek sebelum tayang

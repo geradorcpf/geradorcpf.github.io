@@ -1,7 +1,8 @@
 baseURL = "https://geradordecpf.github.io/"
-locale = "pt-BR"
+languageCode = "pt-BR"
 defaultContentLanguage = "pt-br"
 title = "Gerador de CPF"
+enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
