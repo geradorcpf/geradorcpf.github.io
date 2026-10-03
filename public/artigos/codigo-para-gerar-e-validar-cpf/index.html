@@ -1,5 +1,50 @@
-<!doctype html><html lang=pt-BR><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Código para gerar e validar CPF em JavaScript, Python e PHP | Gerador de CPF</title><meta name=description content="Funções prontas e comentadas para calcular o dígito verificador, validar e gerar CPF em JavaScript, Python e PHP."><link rel=canonical href=https://geradordecpf.github.io/artigos/codigo-para-gerar-e-validar-cpf/><link rel=icon href=/favicon.svg type=image/svg+xml><meta property="og:type" content="article"><meta property="og:title" content="Código para gerar e validar CPF em JavaScript, Python e PHP"><meta property="og:url" content="https://geradordecpf.github.io/artigos/codigo-para-gerar-e-validar-cpf/"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Gerador de CPF"><meta property="og:description" content="Funções prontas e comentadas para calcular o dígito verificador, validar e gerar CPF em JavaScript, Python e PHP."><meta property="og:image" content="https://geradordecpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp"><meta property="og:image:width" content="1024"><meta property="og:image:height" content="1536"><meta name=twitter:card content="summary_large_image"><meta name=robots content="index,follow,max-image-preview:large"><link rel=stylesheet href=/css/main.min.feea3b38ca0b4ecfda112830c28e452de17c28a1c7fd9efc26fc3ddad54d569e.css integrity="sha256-/uo7OMoLTs/aESgwwo5FLeF8KKHH/Z78Jvw92tVNVp4=" crossorigin=anonymous></head><body><header class=site><div class=bar><a class=logo href=/ aria-label="Gerador de CPF - início"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#0a7d4f"/><text x="14" y="18.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">CPF</text></svg>
-<span>Gerador de CPF</span></a><nav aria-label=Principal><ul><li><a href=/artigos/>Artigos</a></li><li><a href=/sobre/>Sobre</a></li><li><a href=/contato/>Contato</a></li><li><a href=/politica-de-privacidade/>Política de Privacidade</a></li></ul></nav></div></header><main class=wrap><nav class=crumbs aria-label="Trilha de navegação"><a href=https://geradordecpf.github.io/>Início</a><span aria-hidden=true> / </span><a href=https://geradordecpf.github.io/artigos/>Artigos</a><span aria-hidden=true> / </span><span aria-current=page>Código para gerar e validar CPF em JavaScript, Python e PHP</span></nav><script type=application/ld+json>"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"https://geradordecpf.github.io/\",\"name\":\"Início\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"https://geradordecpf.github.io/artigos/\",\"name\":\"Artigos\",\"position\":2},{\"@type\":\"ListItem\",\"item\":\"https://geradordecpf.github.io/artigos/codigo-para-gerar-e-validar-cpf/\",\"name\":\"Código para gerar e validar CPF em JavaScript, Python e PHP\",\"position\":3}]}"</script><article class="prose page"><h1>Código para gerar e validar CPF em JavaScript, Python e PHP</h1><p class="mu small">Atualizado em 29/09/2026</p><p>As três implementações abaixo seguem o mesmo método: soma ponderada e resto da divisão por 11 (módulo 11), explicado em <a href=/artigos/como-calcular-digitos-verificadores-cpf/>como calcular os dígitos verificadores</a>. Cada uma tem três funções: calcular um dígito, validar e gerar.</p><p>Os CPFs gerados são apenas para testes. Leia antes <a href=/artigos/gerar-cpf-para-testes-de-software/>como gerar CPF para testes de software</a>.</p><h2 id=javascript>JavaScript</h2><pre><code class=language-js>// Calcula um dígito verificador a partir de um array de dígitos (9 ou 10 itens)
+<!doctype html>
+<html lang="pt-BR">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Código para gerar e validar CPF em JavaScript, Python e PHP | Gerador de CPF</title>
+<meta name="description" content="Funções prontas e comentadas para calcular o dígito verificador, validar e gerar CPF em JavaScript, Python e PHP.">
+<link rel="canonical" href="http://localhost:1313/artigos/codigo-para-gerar-e-validar-cpf/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Código para gerar e validar CPF em JavaScript, Python e PHP">
+<meta property="og:url" content="http://localhost:1313/artigos/codigo-para-gerar-e-validar-cpf/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Gerador de CPF">
+<meta property="og:description" content="Funções prontas e comentadas para calcular o dígito verificador, validar e gerar CPF em JavaScript, Python e PHP.">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1536">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<link rel="stylesheet" href="/css/main.min.feea3b38ca0b4ecfda112830c28e452de17c28a1c7fd9efc26fc3ddad54d569e.css" integrity="sha256-/uo7OMoLTs/aESgwwo5FLeF8KKHH/Z78Jvw92tVNVp4=" crossorigin="anonymous">
+
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="/" aria-label="Gerador de CPF - início">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#0a7d4f"/><text x="14" y="18.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">CPF</text></svg>
+      <span>Gerador de CPF</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      
+      <li><a href="/artigos/">Artigos</a></li><li><a href="/sobre/">Sobre</a></li><li><a href="/contato/">Contato</a></li><li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main class="wrap">
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/artigos/">Artigos</a><span aria-hidden="true"> / </span><span aria-current="page">Código para gerar e validar CPF em JavaScript, Python e PHP</span></nav>
+<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/\",\"name\":\"Início\",\"position\":1},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/artigos/\",\"name\":\"Artigos\",\"position\":2},{\"@type\":\"ListItem\",\"item\":\"http://localhost:1313/artigos/codigo-para-gerar-e-validar-cpf/\",\"name\":\"Código para gerar e validar CPF em JavaScript, Python e PHP\",\"position\":3}]}"</script>
+<article class="prose page">
+  <h1>Código para gerar e validar CPF em JavaScript, Python e PHP</h1>
+  <p class="mu small">Atualizado em 29/09/2026</p>
+  <p>As três implementações abaixo seguem o mesmo método: soma ponderada e resto da divisão por 11 (módulo 11), explicado em <a href="/artigos/como-calcular-digitos-verificadores-cpf/">como calcular os dígitos verificadores</a>. Cada uma tem três funções: calcular um dígito, validar e gerar.</p>
+<p>Os CPFs gerados são apenas para testes. Leia antes <a href="/artigos/gerar-cpf-para-testes-de-software/">como gerar CPF para testes de software</a>.</p>
+<h2 id="javascript">JavaScript</h2>
+<pre><code class="language-js">// Calcula um dígito verificador a partir de um array de dígitos (9 ou 10 itens)
 function calcDigito(digitos) {
   const peso = digitos.length + 1;
   let soma = 0;
@@ -27,10 +72,15 @@ function gerarCPF(comPontuacao = true) {
     ? cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
     : cpf;
 }
-</code></pre><p>Uso:</p><pre><code class=language-js>validarCPF('123.456.789-09'); // true
+</code></pre>
+<p>Uso:</p>
+<pre><code class="language-js">validarCPF('123.456.789-09'); // true
 gerarCPF();                   // &quot;529.982.247-25&quot; (exemplo; muda a cada chamada)
 gerarCPF(false);              // só dígitos
-</code></pre><p><code>Math.random()</code> basta para dados de teste. Não use estes números para nada que exija aleatoriedade segura.</p><h2 id=python>Python</h2><pre><code class=language-python>import random
+</code></pre>
+<p><code>Math.random()</code> basta para dados de teste. Não use estes números para nada que exija aleatoriedade segura.</p>
+<h2 id="python">Python</h2>
+<pre><code class="language-python">import random
 import re
 
 
@@ -59,10 +109,14 @@ def gerar_cpf(com_pontuacao: bool = True) -&gt; str:
     if com_pontuacao:
         return f&quot;{base[:3]}.{base[3:6]}.{base[6:9]}-{base[9:]}&quot;
     return base
-</code></pre><p>Uso:</p><pre><code class=language-python>validar_cpf(&quot;123.456.789-09&quot;)  # True
+</code></pre>
+<p>Uso:</p>
+<pre><code class="language-python">validar_cpf(&quot;123.456.789-09&quot;)  # True
 gerar_cpf()                    # ex.: &quot;529.982.247-25&quot;
 gerar_cpf(False)               # só dígitos
-</code></pre><h2 id=php>PHP</h2><pre><code class=language-php>&lt;?php
+</code></pre>
+<h2 id="php">PHP</h2>
+<pre><code class="language-php">&lt;?php
 // Calcula um dígito verificador a partir de 9 ou 10 dígitos
 function calcDigito(string $base): int {
     $peso = strlen($base) + 1;
@@ -96,9 +150,40 @@ function gerarCpf(bool $comPontuacao = true): string {
         ? vsprintf('%s%s%s.%s%s%s.%s%s%s-%s%s', str_split($base))
         : $base;
 }
-</code></pre><p>Uso:</p><pre><code class=language-php>validarCpf('123.456.789-09'); // true
+</code></pre>
+<p>Uso:</p>
+<pre><code class="language-php">validarCpf('123.456.789-09'); // true
 gerarCpf();                   // ex.: &quot;529.982.247-25&quot;
 gerarCpf(false);              // só dígitos
-</code></pre><h2 id=detalhes-importantes>Detalhes importantes</h2><ul><li>O CPF é tratado como <strong>texto</strong>, para preservar zeros à esquerda.</li><li>Sequências de dígitos repetidos (111.111.111-11 etc.) são rejeitadas na validação e evitadas na geração, pois os sistemas costumam tratá-las como inválidas.</li><li>A validação confere apenas a matemática. Ela não prova que o CPF existe nem que está regular. Para isso, <a href=/artigos/como-consultar-a-situacao-do-cpf/>consulte a Receita Federal</a>.</li><li>Para gerar por estado, defina o nono dígito conforme a <a href=/artigos/regiao-fiscal-do-cpf/>região fiscal</a> antes de calcular os dois últimos.</li></ul><h2 id=leia-também>Leia também</h2><ul><li><a href=/artigos/como-validar-cpf/>Como validar um CPF: passo a passo</a></li><li><a href=/artigos/estrutura-do-cpf/>Estrutura do CPF</a></li></ul><p><a href=/>Ir para o gerador de CPF</a></p></article><script type=application/ld+json>"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"author\":{\"@type\":\"Organization\",\"name\":\"Gerador de CPF\",\"url\":\"https://geradordecpf.github.io/\"},\"dateModified\":\"2026-09-29\",\"datePublished\":\"2026-09-29\",\"description\":\"Funções prontas e comentadas para calcular o dígito verificador, validar e gerar CPF em JavaScript, Python e PHP.\",\"headline\":\"Código para gerar e validar CPF em JavaScript, Python e PHP\",\"inLanguage\":\"pt-BR\",\"mainEntityOfPage\":{\"@id\":\"https://geradordecpf.github.io/artigos/codigo-para-gerar-e-validar-cpf/\",\"@type\":\"WebPage\"},\"publisher\":{\"@id\":\"https://geradordecpf.github.io/#organization\",\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://geradordecpf.github.io/favicon.svg\"},\"name\":\"Gerador de CPF\",\"url\":\"https://geradordecpf.github.io/\"}}"</script></main><footer class=site><div class="bar foot"><span>© 2026 Gerador de CPF</span>
-<span class=mu>Números gerados aleatoriamente, apenas para testes.</span>
-<a href=/politica-de-privacidade/>Política de Privacidade</a></div></footer></body></html>
+</code></pre>
+<h2 id="detalhes-importantes">Detalhes importantes</h2>
+<ul>
+<li>O CPF é tratado como <strong>texto</strong>, para preservar zeros à esquerda.</li>
+<li>Sequências de dígitos repetidos (111.111.111-11 etc.) são rejeitadas na validação e evitadas na geração, pois os sistemas costumam tratá-las como inválidas.</li>
+<li>A validação confere apenas a matemática. Ela não prova que o CPF existe nem que está regular. Para isso, <a href="/artigos/como-consultar-a-situacao-do-cpf/">consulte a Receita Federal</a>.</li>
+<li>Para gerar por estado, defina o nono dígito conforme a <a href="/artigos/regiao-fiscal-do-cpf/">região fiscal</a> antes de calcular os dois últimos.</li>
+</ul>
+<h2 id="leia-também">Leia também</h2>
+<ul>
+<li><a href="/artigos/como-validar-cpf/">Como validar um CPF: passo a passo</a></li>
+<li><a href="/artigos/estrutura-do-cpf/">Estrutura do CPF</a></li>
+</ul>
+
+  <p><a href="/">Ir para o gerador de CPF</a></p>
+</article>
+
+
+<script type="application/ld+json">"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"author\":{\"@type\":\"Organization\",\"name\":\"Gerador de CPF\",\"url\":\"http://localhost:1313/\"},\"dateModified\":\"2026-09-29\",\"datePublished\":\"2026-09-29\",\"description\":\"Funções prontas e comentadas para calcular o dígito verificador, validar e gerar CPF em JavaScript, Python e PHP.\",\"headline\":\"Código para gerar e validar CPF em JavaScript, Python e PHP\",\"inLanguage\":\"pt-BR\",\"mainEntityOfPage\":{\"@id\":\"http://localhost:1313/artigos/codigo-para-gerar-e-validar-cpf/\",\"@type\":\"WebPage\"},\"publisher\":{\"@id\":\"http://localhost:1313/#organization\",\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"http://localhost:1313/favicon.svg\"},\"name\":\"Gerador de CPF\",\"url\":\"http://localhost:1313/\"}}"</script>
+
+</main>
+<footer class="site">
+  <div class="bar foot">
+    <span>© 2026 Gerador de CPF</span>
+    <span class="mu">Números gerados aleatoriamente, apenas para testes.</span>
+    <a href="/politica-de-privacidade/">Política de Privacidade</a>
+  </div>
+</footer>
+
+
+</body>
+</html>

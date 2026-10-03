@@ -1,4 +1,4 @@
-baseURL = "https://geradordecpf.github.io/"
+baseURL = "https://geradorcpf.github.io/"
 languageCode = "pt-BR"
 defaultContentLanguage = "pt-br"
 title = "Gerador de CPF"
