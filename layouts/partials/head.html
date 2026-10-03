@@ -15,6 +15,7 @@
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 {{ $css := resources.Get "css/main.css" | minify | fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 {{ if .IsHome }}
@@ -23,5 +24,5 @@
 {{ $home := .Permalink }}
 {{ $site := dict "@type" "WebSite" "@id" (printf "%s#website" $home) "url" $home "name" site.Title "inLanguage" "pt-BR" "publisher" $ref }}
 {{ $app := dict "@type" "WebApplication" "name" site.Title "url" $home "description" site.Params.description "applicationCategory" "UtilitiesApplication" "operatingSystem" "Any" "inLanguage" "pt-BR" "isAccessibleForFree" true "featureList" (slice "Gerar CPF válido e aleatório" "Com ou sem pontuação" "Escolher o estado de origem" "Gerar vários CPFs de uma vez" "Baixar a lista em CSV") "publisher" $ref "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "BRL") }}
-<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $pub $site $app) | jsonify }}</script>
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $pub $site $app) | jsonify | safeJS }}</script>
 {{ end }}

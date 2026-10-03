@@ -7,5 +7,5 @@
 </nav>
 {{- $list := slice -}}
 {{- range $i, $e := $items -}}{{- $list = $list | append (dict "@type" "ListItem" "position" (add $i 1) "name" $e.name "item" $e.url) -}}{{- end }}
-<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $list | jsonify }}</script>
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $list | jsonify | safeJS }}</script>
 {{- end -}}
