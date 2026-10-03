@@ -12,4 +12,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: http://localhost:1313/sitemap.xml
+Sitemap: https://geradordecpf.github.io/sitemap.xml
