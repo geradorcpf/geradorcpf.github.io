@@ -2,6 +2,8 @@
 title: "Quem é obrigado a ter CPF"
 description: "Veja quem precisa se inscrever no CPF segundo a norma da Receita Federal, e quem pode se inscrever voluntariamente."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "documentos"]
 ---
 Qualquer pessoa natural pode se inscrever no CPF, uma única vez, independentemente de idade ou nacionalidade (inclusive falecidas). A inscrição é obrigatória em situações específicas definidas pela Receita Federal.
 

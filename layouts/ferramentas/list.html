@@ -1,0 +1,106 @@
+{{ define "main" }}
+{{ partial "breadcrumb.html" . }}
+{{ $pages := .Pages.ByTitle }}
+{{ $cats := hugo.Data.ferramentas_categorias }}
+{{ $total := len $pages }}
+<div class="hub">
+
+<section class="hub-hero" aria-labelledby="hub-h">
+  <p class="eyebrow">Biblioteca de ferramentas</p>
+  <h1 id="hub-h">{{ .Title }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  {{ if $total }}
+  <div class="hub-search">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="hq" type="search" placeholder="Buscar: CNPJ, QR Code, IMC, PDF…" aria-label="Buscar ferramenta" autocomplete="off">
+  </div>
+  <p class="hub-count" id="hcount" role="status">{{ $total }} {{ if eq $total 1 }}ferramenta{{ else }}ferramentas{{ end }}</p>
+  {{ end }}
+</section>
+
+<section class="hub-feat" id="hfeat" aria-labelledby="feat-h">
+  <h2 id="feat-h" class="hub-h2">Mais usadas</h2>
+  <ul class="cards feat">
+    <li class="c-documentos"><a class="card" href="{{ "/" | relURL }}"><span class="tile">{{ partial "icon.html" "documentos" }}</span><span class="tx"><strong>Gerador de CPF</strong><small>Gere CPFs válidos e aleatórios, com ou sem pontuação e por estado.</small></span></a></li>
+    {{ with site.GetPage "/validador-de-cpf" }}<li class="c-documentos"><a class="card" href="{{ .RelPermalink }}"><span class="tile">{{ partial "icon.html" "documentos" }}</span><span class="tx"><strong>{{ .Title }}</strong><small>Confira na hora se um CPF é válido pelos dígitos verificadores.</small></span></a></li>{{ end }}
+  </ul>
+</section>
+
+{{ if $total }}
+<div class="hub-chips" id="hchips" role="toolbar" aria-label="Filtrar por categoria" hidden>
+  <button type="button" class="chip" data-cat="" aria-pressed="true">Todas <span>{{ $total }}</span></button>
+  {{ range $cats }}{{ $n := len (where $pages "Params.category" .key) }}{{ if $n }}<button type="button" class="chip c-{{ .key }}" data-cat="{{ .key }}" aria-pressed="false">{{ .label }} <span>{{ $n }}</span></button>{{ end }}{{ end }}
+</div>
+
+{{ range $cats }}
+  {{ $key := .key }}
+  {{ $in := where $pages "Params.category" $key }}
+  {{ if $in }}
+  <section class="hub-sec c-{{ $key }}" id="cat-{{ $key }}" data-cat="{{ $key }}" aria-labelledby="h-{{ $key }}">
+    <header class="sec-head">
+      <span class="tile lg">{{ partial "icon.html" $key }}</span>
+      <div><h2 id="h-{{ $key }}">{{ .label }}</h2><p>{{ .desc }}</p></div>
+      <span class="sec-n">{{ len $in }}</span>
+    </header>
+    <ul class="cards">
+      {{ range $in }}{{ if not .Params.compact }}{{ partial "tool-card.html" (dict "p" . "search" true) }}{{ end }}{{ end }}
+    </ul>
+    {{ $compact := where $in "Params.compact" true }}
+    {{ if $compact }}
+    <div class="chips-group">
+      <h3>Por estado</h3>
+      <ul class="pills">
+        {{ range (sort $compact "File.ContentBaseName") }}<li data-q="{{ lower (printf "%s %s" .Title (delimit (.Params.tags | default slice) " ")) }}"><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ replaceRE `^Gerador de Inscrição Estadual (?:de|do|da) (.*) \((.*)\)$` "$2 · $1" .Title }}</a></li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </section>
+  {{ end }}
+{{ end }}
+<p class="hub-empty" id="hnone" hidden>Nenhuma ferramenta encontrada. Tente outro termo ou escolha outra categoria.</p>
+{{ else }}
+<section class="hub-soon">
+  <div class="soon-ic">{{ partial "icon.html" "util" }}</div>
+  <h2>Novas ferramentas a caminho</h2>
+  <p>Estamos preparando geradores, validadores, calculadoras e conversores. Enquanto isso, use o <a href="{{ "/" | relURL }}">gerador de CPF</a> ou leia os <a href="{{ "/artigos/" | relURL }}">artigos</a>.</p>
+</section>
+{{ end }}
+
+</div>
+
+{{ if $total }}
+<script>
+(function(){
+var q=document.getElementById('hq'),chips=document.getElementById('hchips'),cnt=document.getElementById('hcount'),
+none=document.getElementById('hnone'),feat=document.getElementById('hfeat'),
+secs=[].slice.call(document.querySelectorAll('.hub-sec')),items=[].slice.call(document.querySelectorAll('.hub [data-q]')),cat='';
+function norm(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();}
+items.forEach(function(li){li.setAttribute('data-n',norm(li.getAttribute('data-q')));});
+function run(){
+  var t=norm(q.value.trim()),n=0;
+  items.forEach(function(li){
+    var ok=(!cat||li.closest('.hub-sec').getAttribute('data-cat')===cat)&&(!t||li.getAttribute('data-n').indexOf(t)>-1);
+    li.hidden=!ok; if(ok)n++;
+  });
+  secs.forEach(function(s){
+    s.hidden=!s.querySelector('[data-q]:not([hidden])');
+    var g=s.querySelector('.chips-group'); if(g)g.hidden=!g.querySelector('li:not([hidden])');
+  });
+  feat.hidden=!!(t||cat);
+  none.hidden=n>0;
+  cnt.textContent=n+(n===1?' ferramenta':' ferramentas');
+}
+chips.hidden=false;
+chips.addEventListener('click',function(e){
+  var b=e.target.closest('.chip'); if(!b)return;
+  cat=b.getAttribute('data-cat');
+  [].forEach.call(chips.querySelectorAll('.chip'),function(c){c.setAttribute('aria-pressed',c===b?'true':'false');});
+  run(); if(cat){var s=document.getElementById('cat-'+cat); if(s&&!s.hidden)s.scrollIntoView({block:'start'});}
+});
+q.addEventListener('input',run);
+})();
+</script>
+{{ end }}
+{{ $ld := dict "@context" "https://schema.org" "@type" "CollectionPage" "name" .Title "url" .Permalink "description" .Description "inLanguage" "pt-BR" "isPartOf" (dict "@type" "WebSite" "name" site.Title "url" site.Home.Permalink) }}
+<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+{{ end }}

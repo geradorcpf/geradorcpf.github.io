@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ site.Language.Locale }}">
 <head>{{ partial "head.html" . }}</head>
-<body>
+<body{{ if and .IsSection (eq .Section "ferramentas") }} class="is-hub"{{ end }}>
 {{ partial "header.html" . }}
 <main class="wrap">{{ block "main" . }}{{ end }}</main>
 {{ partial "footer.html" . }}

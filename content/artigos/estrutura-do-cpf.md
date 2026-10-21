@@ -2,6 +2,8 @@
 title: "Estrutura do CPF: o que significa cada dígito"
 description: "Veja como o CPF de 11 dígitos é formado: oito dígitos-base, um dígito de região fiscal e dois dígitos verificadores, com exemplo."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "dígito verificador", "documentos"]
 ---
 O CPF tem 11 dígitos decimais: oito dígitos-base, um dígito que indica a região fiscal e dois dígitos verificadores. Ele é escrito em quatro blocos, como em 123.456.789-09.
 

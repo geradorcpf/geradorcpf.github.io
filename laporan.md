@@ -1,0 +1,246 @@
+# Laporan H1: 4devs.com.br dan invertexto.com
+
+Format: H1 -- English translation -- URL asli
+
+## 4devs.com.br (128 halaman)
+
+- Contador de Caracteres, Palavras e Linhas -- Character, Word and Line Counter -- https://www.4devs.com.br/analisar_textos
+- Converter Maiúsculas e Minúsculas -- Convert Uppercase and Lowercase -- https://www.4devs.com.br/converter_maiusculas_minusculas
+- Base64 Decodificar e Codificar -- Base64 Decode and Encode -- https://www.4devs.com.br/codificar_decodificar_base64
+- Qual é o meu IP: descubra o seu endereço de IP rapidamente -- What Is My IP: Find Out Your IP Address Quickly -- https://www.4devs.com.br/meu_ip
+- Inverter Texto -- Reverse Text -- https://www.4devs.com.br/inverter_texto
+- URL Encode/Decode -- URL Encode/Decode -- https://www.4devs.com.br/url_encode_url_decode
+- Meu Navegador -- My Browser -- https://www.4devs.com.br/meu_navegador
+- Meu Sistema Operacional -- My Operating System -- https://www.4devs.com.br/meu_sistema_operacional
+- Gerador de QR Code (crie de forma fácil e gratuita) -- QR Code Generator (Create Easily and for Free) -- https://www.4devs.com.br/gerador_de_qrcode
+- Contador de Ocorrência de Palavra -- Word Occurrence Counter -- https://www.4devs.com.br/contador_ocorrencia_palavra_no_texto
+- Remover Acentos de um Texto -- Remove Accents from a Text -- https://www.4devs.com.br/remover_acentos_de_um_texto
+- Gerador de CNPJ -- CNPJ Generator -- https://www.4devs.com.br/gerador_de_cnpj
+- Gerador de CEP -- CEP (Postal Code) Generator -- https://www.4devs.com.br/gerador_de_cep
+- Converter Texto para HTML -- Convert Text to HTML -- https://www.4devs.com.br/converter_texto_html
+- Dividir String -- Split String -- https://www.4devs.com.br/dividir_string
+- Informações de Caracter -- Character Information -- https://www.4devs.com.br/informacoes_caracter
+- Gerador de Senhas -- Password Generator -- https://www.4devs.com.br/gerador_de_senha
+- Letras Personalizadas -- Custom Letters -- https://www.4devs.com.br/textos_fontes_personalizadas
+- Gerador de Texto Lorem Ipsum -- Lorem Ipsum Text Generator -- https://www.4devs.com.br/gerador_de_texto_lorem_ipsum
+- Tabela ASCII -- ASCII Table -- https://www.4devs.com.br/tabela_ascii
+- Somar Dias em Datas -- Add Days to Dates -- https://www.4devs.com.br/somar_dias_em_datas
+- Subtrair Dias em Datas -- Subtract Days from Dates -- https://www.4devs.com.br/subtrair_dias_em_datas
+- Contador de dias entre datas -- Counter of Days Between Dates -- https://www.4devs.com.br/diferenca_de_dias_entre_datas
+- Remover ou Trocar Quebra Linha '\n' -- Remove or Replace Line Break '\n' -- https://www.4devs.com.br/remover_trocar_quebra_linha
+- Cortar Textos em 'x' Letras -- Cut Texts into 'x' Letters -- https://www.4devs.com.br/cortar_textos_x_letras
+- Número por Extenso Online -- Number in Words Online -- https://www.4devs.com.br/numero_por_extenso
+- Gerador de Imagem Lorem Pixel - Placeholder -- Lorem Pixel Image Generator - Placeholder -- https://www.4devs.com.br/gerador_de_imagem_lorem_pixel
+- Gerador de RG -- RG (ID Card) Generator -- https://www.4devs.com.br/gerador_de_rg
+- Gerador de Número de Cartão de Crédito -- Credit Card Number Generator -- https://www.4devs.com.br/gerador_de_numero_cartao_credito
+- Codificar um Texto em MD5 -- Encode a Text in MD5 -- https://www.4devs.com.br/codificar_md5
+- Codificar um Texto em SHA1 -- Encode a Text in SHA1 -- https://www.4devs.com.br/codificar_sha1
+- Calcular CRC32 -- Calculate CRC32 -- https://www.4devs.com.br/calcular_crc32
+- Color Picker -- Color Picker -- https://www.4devs.com.br/color_picker
+- Validador de RG -- RG (ID Card) Validator -- https://www.4devs.com.br/validador_rg
+- Validador de CNPJ -- CNPJ Validator -- https://www.4devs.com.br/validador_cnpj
+- Validador de Número de Cartão Crédito -- Credit Card Number Validator -- https://www.4devs.com.br/validador_numero_cartao_credito
+- Gerador de documentos de pessoas (Nome, RG, CPF, CEP, Endereço, Telefone, etc) -- Generator of People's Documents (Name, RG, CPF, Postal Code, Address, Phone, etc.) -- https://www.4devs.com.br/gerador_de_pessoas
+- Gerador de documentos de empresas (Nome, CNPJ, Inscrição Estadual, CEP) -- Generator of Company Documents (Name, CNPJ, State Registration, Postal Code) -- https://www.4devs.com.br/gerador_de_empresas
+- Gerador de Inscrição Estadual -- State Registration Generator -- https://www.4devs.com.br/gerador_de_inscricao_estadual
+- Validar Inscrição Estadual -- Validate State Registration -- https://www.4devs.com.br/validar_inscricao_estadual
+- Gerador de Meta Tags -- Meta Tags Generator -- https://www.4devs.com.br/gerador_de_meta_tags
+- O que é e pra que serve a inscrição estadual? -- What Is State Registration and What Is It For? -- https://www.4devs.com.br/o_que_e_pra_que_serve_inscricao_estadual
+- Gerador de Inscrição Estadual do Acre - AC -- State Registration Generator for Acre - AC -- https://www.4devs.com.br/gerador_de_inscricao_estadual_acre
+- Gerador de Inscrição Estadual de Alagos - AL -- State Registration Generator for Alagoas - AL (the site's H1 spells it "Alagos") -- https://www.4devs.com.br/gerador_de_inscricao_estadual_alagoas
+- Gerador de Inscrição Estadual de Amazonas - AM -- State Registration Generator for Amazonas - AM -- https://www.4devs.com.br/gerador_de_inscricao_estadual_amazonas
+- Gerador de Inscrição Estadual de Amapá - AP -- State Registration Generator for Amapá - AP -- https://www.4devs.com.br/gerador_de_inscricao_estadual_amapa
+- Gerador de Inscrição Estadual de Bahia - BA -- State Registration Generator for Bahia - BA -- https://www.4devs.com.br/gerador_de_inscricao_estadual_bahia
+- Gerador de Inscrição Estadual de Ceará - CE -- State Registration Generator for Ceará - CE -- https://www.4devs.com.br/gerador_de_inscricao_estadual_ceara
+- Gerador de Inscrição Estadual de Distrito Federal - DF -- State Registration Generator for Federal District - DF -- https://www.4devs.com.br/gerador_de_inscricao_estadual_distrito_federal
+- Gerador de Inscrição Estadual de Espirito Santo - ES -- State Registration Generator for Espírito Santo - ES -- https://www.4devs.com.br/gerador_de_inscricao_estadual_espirito_santo
+- Gerador de Inscrição Estadual de Goiás - GO -- State Registration Generator for Goiás - GO -- https://www.4devs.com.br/gerador_de_inscricao_estadual_goias
+- Gerador de Inscrição Estadual de Maranhão - MA -- State Registration Generator for Maranhão - MA -- https://www.4devs.com.br/gerador_de_inscricao_estadual_maranhao
+- Gerador de Inscrição Estadual de Minas Gerais - MG -- State Registration Generator for Minas Gerais - MG -- https://www.4devs.com.br/gerador_de_inscricao_estadual_minas_gerais
+- Gerador de Inscrição Estadual de Mato Grosso do Sul - MS -- State Registration Generator for Mato Grosso do Sul - MS -- https://www.4devs.com.br/gerador_de_inscricao_estadual_mato_grosso_do_sul
+- Gerador de Inscrição Estadual de Mato Grosso - MT -- State Registration Generator for Mato Grosso - MT -- https://www.4devs.com.br/gerador_de_inscricao_estadual_mato_grosso
+- Gerador de Inscrição Estadual do Pará - PA -- State Registration Generator for Pará - PA -- https://www.4devs.com.br/gerador_de_inscricao_estadual_para
+- Gerador de Inscrição Estadual de Paraíba - PB -- State Registration Generator for Paraíba - PB -- https://www.4devs.com.br/gerador_de_inscricao_estadual_paraiba
+- Gerador de Inscrição Estadual de Pernambuco - PE -- State Registration Generator for Pernambuco - PE -- https://www.4devs.com.br/gerador_de_inscricao_estadual_pernambuco
+- Gerador de Inscrição Estadual de Piauí - PI -- State Registration Generator for Piauí - PI -- https://www.4devs.com.br/gerador_de_inscricao_estadual_piaui
+- Gerador de Inscrição Estadual de Paraná - PR -- State Registration Generator for Paraná - PR -- https://www.4devs.com.br/gerador_de_inscricao_estadual_parana
+- Gerador de Inscrição Estadual de Rio de Janeiro - RJ -- State Registration Generator for Rio de Janeiro - RJ -- https://www.4devs.com.br/gerador_de_inscricao_estadual_rio_de_janeiro
+- Gerador de Inscrição Estadual de Rio Grande do Norte - RN -- State Registration Generator for Rio Grande do Norte - RN -- https://www.4devs.com.br/gerador_de_inscricao_estadual_rio_grande_do_norte
+- Gerador de Inscrição Estadual de Rondônia - RO -- State Registration Generator for Rondônia - RO -- https://www.4devs.com.br/gerador_de_inscricao_estadual_rondonia
+- Gerador de Inscrição Estadual de Roraima - RR -- State Registration Generator for Roraima - RR -- https://www.4devs.com.br/gerador_de_inscricao_estadual_roraima
+- Gerador de Inscrição Estadual de Rio Grande do Sul - RS -- State Registration Generator for Rio Grande do Sul - RS -- https://www.4devs.com.br/gerador_de_inscricao_estadual_rio_grande_do_sul
+- Gerador de Inscrição Estadual de Santa Catarina - SC -- State Registration Generator for Santa Catarina - SC -- https://www.4devs.com.br/gerador_de_inscricao_estadual_santa_catarina
+- Gerador de Inscrição Estadual de Sergipe - SE -- State Registration Generator for Sergipe - SE -- https://www.4devs.com.br/gerador_de_inscricao_estadual_sergipe
+- Gerador de Inscrição Estadual de São Paulo - SP -- State Registration Generator for São Paulo - SP -- https://www.4devs.com.br/gerador_de_inscricao_estadual_sao_paulo
+- Gerador de Inscrição Estadual de Tocantins - TO -- State Registration Generator for Tocantins - TO -- https://www.4devs.com.br/gerador_de_inscricao_estadual_tocantins
+- Gerador de Título de Eleitor -- Voter Registration Card Generator -- https://www.4devs.com.br/gerador_de_titulo_de_eleitor
+- Validador de Título de Eleitor -- Voter Registration Card Validator -- https://www.4devs.com.br/validador_titulo_de_eleitor
+- Matemática -- Mathematics -- https://www.4devs.com.br/matematica
+- Computação -- Computing -- https://www.4devs.com.br/computacao
+- Calculadora de porcentagem online -- Online Percentage Calculator -- https://www.4devs.com.br/calculadora_porcentagem
+- Calculadora de Fatoração de Número -- Number Factorization Calculator -- https://www.4devs.com.br/calculadora_fatorar_numero
+- Calculadora de Regra de Três Simples -- Simple Rule of Three Calculator -- https://www.4devs.com.br/calculadora_regra_tres_simples
+- Calculadora de MMC Online -- Online LCM (Least Common Multiple) Calculator -- https://www.4devs.com.br/calculadora_mmc
+- Calculadora de MDC Online -- Online GCD (Greatest Common Divisor) Calculator -- https://www.4devs.com.br/calculadora_mdc
+- Calculadora Online de Resto da Divisão -- Online Division Remainder Calculator -- https://www.4devs.com.br/resto_da_divisao
+- Calculadora Online da Área do Retângulo -- Online Rectangle Area Calculator -- https://www.4devs.com.br/area_retangulo
+- Calculadora Online da Área do Quadrado -- Online Square Area Calculator -- https://www.4devs.com.br/area_quadrado
+- Calcular a Área do Círculo -- Calculate the Area of the Circle -- https://www.4devs.com.br/area_circulo
+- Calculadora Online da Área do Paralelogramo -- Online Parallelogram Area Calculator -- https://www.4devs.com.br/area_paralelogramo
+- Calculadora Online da Área do Triângulo -- Online Triangle Area Calculator -- https://www.4devs.com.br/area_triangulo
+- Calculadora Online da Área do Trapézio -- Online Trapezoid Area Calculator -- https://www.4devs.com.br/area_trapezio
+- Calculadora Online da Área do Losango -- Online Rhombus Area Calculator -- https://www.4devs.com.br/area_losango
+- Calculadora Online da Área do Setor Circular -- Online Circular Sector Area Calculator -- https://www.4devs.com.br/area_setor_circular
+- Calculadora Online da Área da Coroa Circular -- Online Circular Ring (Annulus) Area Calculator -- https://www.4devs.com.br/area_coroa_circular
+- Calculadora Online da Área da Elipse -- Online Ellipse Area Calculator -- https://www.4devs.com.br/area_elipse
+- Calculadora Online da Área do Pentágono -- Online Pentagon Area Calculator -- https://www.4devs.com.br/area_pentagono
+- Calculadora Online da Área do Hexágono -- Online Hexagon Area Calculator -- https://www.4devs.com.br/area_hexagono
+- Calculadora Online da Área do Polígono Regular -- Online Regular Polygon Area Calculator -- https://www.4devs.com.br/area_poligono_regular
+- Conversor de Números Romanos -- Roman Numeral Converter -- https://www.4devs.com.br/conversor_romanos
+- Como Somar Números, aprenda métodos para fazer adição -- How to Add Numbers, Learn Methods for Addition -- https://www.4devs.com.br/como_somar
+- Como Subtrair Números, aprenda métodos para fazer subtração -- How to Subtract Numbers, Learn Methods for Subtraction -- https://www.4devs.com.br/como_subtrair
+- Como Multiplicar Números, aprenda métodos para fazer multiplicação -- How to Multiply Numbers, Learn Methods for Multiplication -- https://www.4devs.com.br/como_multiplicar
+- Como Dividir Números, aprenda métodos para fazer divisão -- How to Divide Numbers, Learn Methods for Division -- https://www.4devs.com.br/como_dividir
+- Gerador Online de PIS/PASEP Válido -- Valid PIS/PASEP Online Generator -- https://www.4devs.com.br/gerador_de_pis_pasep
+- Validador Online de PIS/PASEP -- Online PIS/PASEP Validator -- https://www.4devs.com.br/validador_pis_pasep
+- Gerador Online de CNH Válido -- Valid CNH (Driver's License) Online Generator -- https://www.4devs.com.br/gerador_de_cnh
+- Validador Online de CNH -- Online CNH (Driver's License) Validator -- https://www.4devs.com.br/validador_cnh
+- Consulta Número do Banco ou Número do Banco para DOC e TED -- Bank Number Lookup, or Bank Number for DOC and TED Transfers -- https://www.4devs.com.br/consulta_numero_banco
+- Gerador Online de Conta Bancária -- Online Bank Account Generator -- https://www.4devs.com.br/gerador_conta_bancaria
+- Validador Online de Conta Bancária -- Online Bank Account Validator -- https://www.4devs.com.br/validador_conta_bancaria
+- Gerador Online de Certidões de Nascimento, Casamento e Óbito -- Online Generator of Birth, Marriage and Death Certificates -- https://www.4devs.com.br/gerador_numero_certidoes
+- Validador Online de Certidões -- Online Certificate Validator -- https://www.4devs.com.br/validador_certidoes
+- Gerador de Certidões de Nascimento -- Birth Certificate Generator -- https://www.4devs.com.br/gerador_certidao_nascimento
+- Gerador de Certidões de Casamento -- Marriage Certificate Generator -- https://www.4devs.com.br/gerador_certidao_casamento
+- Gerador de Certidões de Óbito -- Death Certificate Generator -- https://www.4devs.com.br/gerador_certidao_obito
+- O que é Orgão Expedidor ou Emissor? -- What Is an Issuing Agency or Issuer? -- https://www.4devs.com.br/o_que_e_orgao_expedidor_ou_emissor
+- Gerador Online de Renavam -- Online Renavam (Vehicle Registry Number) Generator -- https://www.4devs.com.br/gerador_de_renavam
+- Validador Online de RENAVAM -- Online RENAVAM (Vehicle Registry Number) Validator -- https://www.4devs.com.br/validador_de_renavam
+- Gerador Online de Placas de Automóveis -- Online Vehicle License Plate Generator -- https://www.4devs.com.br/gerador_de_placa_automoveis
+- Gerador Online de Veículos -- Online Vehicle Generator -- https://www.4devs.com.br/gerador_de_veiculos
+- Tradutor de Código Binário -- Binary Code Translator -- https://www.4devs.com.br/tradutor_codigo_binario
+- Gerador de Nicks -- Nickname Generator -- https://www.4devs.com.br/gerador_de_nicks
+- Colocar em Ordem Alfabética -- Put in Alphabetical Order -- https://www.4devs.com.br/colocar_em_ordem_alfabetica
+- Gerador de Nomes -- Name Generator -- https://www.4devs.com.br/gerador_de_nomes
+- Gerador de Números Aleatórios -- Random Number Generator -- https://www.4devs.com.br/gerador_de_numeros_aleatorios
+- Corretor Ortográfico -- Spell Checker -- https://www.4devs.com.br/corretor_ortografico
+- Cálculo de rescisão de contrato -- Employment Contract Termination Calculation -- https://www.4devs.com.br/rescisao_contrato
+- Gerador de Currículo Online e Grátis -- Free Online Resume Generator -- https://www.4devs.com.br/gerador-de-curriculo
+- Letras diferentes -- Different Letters -- https://www.4devs.com.br/letras_diferentes
+- Cálculo de Férias -- Vacation Pay Calculation -- https://www.4devs.com.br/calculo_de_ferias
+- Sorteador de números aleatórios -- Random Number Draw Online -- https://www.4devs.com.br/sorteador
+- Símbolos para Copiar -- Symbols to Copy -- https://www.4devs.com.br/simbolos
+
+## invertexto.com (106 halaman)
+
+- Remover Linhas Duplicadas -- Remove Duplicate Lines -- https://www.invertexto.com/remover-linhas-duplicadas
+- Notepad Online -- Online Notepad -- https://www.invertexto.com/notepad
+- Cápsula do Tempo -- Time Capsule -- https://www.invertexto.com/capsula-tempo
+- Mensagem Autodestrutiva -- Self-Destructing Message -- https://www.invertexto.com/mensagem-autodestrutiva
+- Organizador de Links -- Link Organizer -- https://www.invertexto.com/organizador-de-links
+- Sorteio Online -- Online Draw -- https://www.invertexto.com/sorteio
+- Lista Aleatória -- Random List -- https://www.invertexto.com/lista-aleatoria
+- Gerador de Números da Megasena -- Mega-Sena Number Generator -- https://www.invertexto.com/gerador-numeros-megasena
+- Código Morse -- Morse Code -- https://www.invertexto.com/codigo-morse
+- Texto Criptografado -- Encrypted Text -- https://www.invertexto.com/texto-criptografado
+- Gerador de Código de Barras -- Barcode Generator -- https://www.invertexto.com/codigo-barras
+- Gerador de Código de Barras em Lote -- Batch Barcode Generator -- https://www.invertexto.com/codigo-barras-lote
+- Contagem Regressiva -- Countdown -- https://www.invertexto.com/contagem-regressiva
+- Cronômetro -- Stopwatch -- https://www.invertexto.com/cronometro
+- Conversão de Base Numérica -- Numeral Base Conversion -- https://www.invertexto.com/conversao-base-numerica
+- Calcular IMC -- Calculate BMI -- https://www.invertexto.com/calcular-imc
+- Calculadora Gestacional -- Pregnancy Calculator -- https://www.invertexto.com/calculadora-gestacional
+- Calcular Período Fértil -- Calculate Fertile Period -- https://www.invertexto.com/calcular-periodo-fertil
+- Teste de Velocidade -- Speed Test -- https://www.invertexto.com/teste-de-velocidade
+- Conversor de Medidas -- Unit Converter -- https://www.invertexto.com/conversor-de-medidas
+- Signos e Datas -- Zodiac Signs and Dates -- https://www.invertexto.com/signos-datas
+- Conversor de Moedas -- Currency Converter -- https://www.invertexto.com/conversor-de-moedas
+- Simulador de Poupança -- Savings Simulator -- https://www.invertexto.com/simulador-de-poupanca
+- Simulador de Financiamento -- Financing Simulator -- https://www.invertexto.com/simulador-de-financiamento
+- Calculadora do Primeiro Milhão -- First Million Calculator -- https://www.invertexto.com/calculadora-primeiro-milhao
+- Texto de Cabeça para Baixo -- Upside-Down Text -- https://www.invertexto.com/texto-de-cabeca-para-baixo
+- Prefixo e Sufixo -- Prefix and Suffix -- https://www.invertexto.com/prefixo-e-sufixo
+- Comparar Textos -- Compare Texts -- https://www.invertexto.com/comparar-textos
+- Sobre o Site -- About the Site -- https://www.invertexto.com/sobre
+- Formulário de Contato -- Contact Form -- https://www.invertexto.com/contato
+- Converter Imagem em Texto -- Convert Image to Text -- https://www.invertexto.com/converter-imagem-em-texto
+- Valor do Salário Mínimo em 2026 -- Minimum Wage Value in 2026 -- https://www.invertexto.com/valor-salario-minimo
+- Leitura Rápida -- Speed Reading -- https://www.invertexto.com/leitura-rapida
+- Textos Sinônimos -- Synonym Texts -- https://www.invertexto.com/textos-sinonimos
+- Calendário 2026 -- Calendar 2026 -- https://www.invertexto.com/calendario
+- Whois -- Whois -- https://www.invertexto.com/whois
+- Não Seguidores no Instagram -- Non-Followers on Instagram -- https://www.invertexto.com/nao-seguidores-instagram
+- Redimensionar Imagem -- Resize Image -- https://www.invertexto.com/redimensionar-imagem
+- Juntar PDF -- Merge PDF -- https://www.invertexto.com/juntar-pdf
+- Comprimir PDF -- Compress PDF -- https://www.invertexto.com/comprimir-pdf
+- Converter PDF em JPG -- Convert PDF to JPG -- https://www.invertexto.com/converter-pdf-em-jpg
+- Converter JPG em PDF -- Convert JPG to PDF -- https://www.invertexto.com/converter-jpg-em-pdf
+- Distância Entre Cidades -- Distance Between Cities -- https://www.invertexto.com/distancia-entre-cidades
+- Minha Localização Atual -- My Current Location -- https://www.invertexto.com/minha-localizacao-atual
+- Emojis para Copiar e Colar -- Emojis to Copy and Paste -- https://www.invertexto.com/emojis-para-copiar
+- Contador de Inscritos em Tempo Real -- Real-Time Subscriber Counter -- https://www.invertexto.com/contador-inscritos
+- Ordenar Conta do Instagram -- Sort Instagram Account -- https://www.invertexto.com/ordenar-conta-instagram
+- Hora Certa -- Exact Time -- https://www.invertexto.com/hora-certa
+- Localizar IP -- Locate IP -- https://www.invertexto.com/localizar-ip
+- Recortar Imagem -- Crop Image -- https://www.invertexto.com/recortar-imagem
+- Calculadora de Horas -- Hours Calculator -- https://www.invertexto.com/calculadora-de-horas
+- Gerador de Email Temporário -- Temporary Email Generator -- https://www.invertexto.com/gerador-email-temporario
+- Recibo Online -- Online Receipt -- https://www.invertexto.com/recibo-online
+- Nota Promissória Online -- Online Promissory Note -- https://www.invertexto.com/nota-promissoria-online
+- Teste de Portas -- Port Test -- https://www.invertexto.com/teste-de-portas
+- Semana do Ano -- Week of the Year -- https://www.invertexto.com/semana-do-ano
+- Dia do Ano -- Day of the Year -- https://www.invertexto.com/dia-do-ano
+- Calcular Idade -- Calculate Age -- https://www.invertexto.com/calcular-idade
+- Fase da Lua Hoje -- Moon Phase Today -- https://www.invertexto.com/fase-lua-hoje
+- Gerador de Link para Whatsapp -- WhatsApp Link Generator -- https://www.invertexto.com/gerador-link-whatsapp
+- Calendário Lunar 2026 -- Lunar Calendar 2026 -- https://www.invertexto.com/calendario-lunar
+- Estação do Ano Hoje -- Season of the Year Today -- https://www.invertexto.com/estacao-ano-hoje
+- Letras Empilhadas -- Stacked Letters -- https://www.invertexto.com/letras-empilhadas
+- Foto em Preto e Branco -- Black and White Photo -- https://www.invertexto.com/foto-preto-e-branco
+- Dado Online -- Online Dice -- https://www.invertexto.com/dado-online
+- Consulta de CNPJ -- CNPJ Lookup -- https://www.invertexto.com/consulta-cnpj
+- Consulta de CEP -- CEP (Postal Code) Lookup -- https://www.invertexto.com/consulta-cep
+- Feriados 2026 -- Holidays 2026 -- https://www.invertexto.com/feriados
+- Tabela Fipe Veículos -- FIPE Table: Vehicles -- https://www.invertexto.com/tabela-fipe
+- Gerador de Palavras Aleatórias -- Random Word Generator -- https://www.invertexto.com/gerador-palavras-aleatorias
+- Palavras Que Rimam -- Words That Rhyme -- https://www.invertexto.com/palavras-que-rimam
+- Emoticons para copiar -- Emoticons to Copy -- https://www.invertexto.com/emoticons-para-copiar
+- Quem Deixou de me Seguir? -- Who Unfollowed Me? -- https://www.invertexto.com/quem-deixou-de-me-seguir
+- Instagram Anônimo -- Anonymous Instagram -- https://www.invertexto.com/instagram-anonimo
+- Leitor de QR Code Online -- Online QR Code Reader -- https://www.invertexto.com/leitor-qr-code-online
+- Gerador de QR Code Wi-Fi -- Wi-Fi QR Code Generator -- https://www.invertexto.com/gerador-qr-code-wifi
+- Gerador de QR Code Pix -- Pix QR Code Generator -- https://www.invertexto.com/gerador-qr-code-pix
+- Pomodoro Timer -- Pomodoro Timer -- https://www.invertexto.com/pomodoro-timer
+- Desenhar Online -- Draw Online -- https://www.invertexto.com/desenhar-online
+- Comparar PDF -- Compare PDF -- https://www.invertexto.com/comparar-pdf
+- Calculadora de Dias Úteis -- Business Days Calculator -- https://www.invertexto.com/calculadora-dias-uteis
+- Cálculo de Combustível -- Fuel Calculation -- https://www.invertexto.com/calculo-combustivel
+- Cálculo Gasolina ou Etanol -- Gasoline or Ethanol Calculation -- https://www.invertexto.com/calculo-gasolina-etanol
+- Calculadora de Churrasco -- Barbecue Calculator -- https://www.invertexto.com/calculadora-churrasco
+- Roleta Online -- Online Roulette -- https://www.invertexto.com/roleta-online
+- Gerador de UUID -- UUID Generator -- https://www.invertexto.com/gerador-de-uuid
+- Conversor de Timestamp -- Timestamp Converter -- https://www.invertexto.com/conversor-timestamp
+- Teste de Digitação -- Typing Test -- https://www.invertexto.com/teste-de-digitacao
+- Nuvem de Palavras -- Word Cloud -- https://www.invertexto.com/nuvem-de-palavras
+- Calculadora de Fração -- Fraction Calculator -- https://www.invertexto.com/calculadora-de-fracao
+- Organizar PDF -- Organize PDF -- https://www.invertexto.com/organizar-pdf
+- Dividir PDF -- Split PDF -- https://www.invertexto.com/dividir-pdf
+- Comprimir Imagem -- Compress Image -- https://www.invertexto.com/comprimir-imagem
+- DNS Lookup -- DNS Lookup -- https://www.invertexto.com/dns-lookup
+- Blog com dicas de aplicativos e tecnologia -- Blog with Tips on Apps and Technology -- https://www.invertexto.com/blog
+- Como tirar o online do Instagram -- How to Remove the Online Status on Instagram -- https://www.invertexto.com/blog/como-tirar-o-online-do-instagram
+- Como economizar com aluguel de carros nos Estados Unidos -- How to Save on Car Rentals in the United States -- https://www.invertexto.com/blog/como-economizar-com-aluguel-de-carros-nos-estados-unidos
+- Como saber quem a pessoa seguiu por último no Instagram -- How to Find Out Who a Person Followed Last on Instagram -- https://www.invertexto.com/blog/como-saber-quem-a-pessoa-seguiu-por-ultimo-no-instagram
+- Como remover seguidores em massa no Instagram -- How to Remove Followers in Bulk on Instagram -- https://www.invertexto.com/blog/como-remover-seguidores-em-massa-no-instagram
+- Site para confirmar presença grátis -- Free Website to Confirm Attendance -- https://www.invertexto.com/blog/site-para-confirmar-presenca
+- Como ver stories do Instagram anonimamente -- How to View Instagram Stories Anonymously -- https://www.invertexto.com/blog/como-ver-stories-do-instagram-anonimamente
+- Como seguir automaticamente no Instagram e ganhar seguidores -- How to Automatically Follow on Instagram and Gain Followers -- https://www.invertexto.com/blog/como-seguir-automaticamente-no-instagram
+- Como baixar suas informações do Instagram para o Não Seguidores Pro -- How to Download Your Instagram Information for Não Seguidores Pro -- https://www.invertexto.com/blog/como-baixar-suas-informacoes-do-instagram
+- Como preencher formulários automaticamente no Chrome -- How to Fill Out Forms Automatically in Chrome -- https://www.invertexto.com/blog/como-preencher-formularios-automaticamente
+- Tela Branca -- White Screen -- https://www.invertexto.com/tela-branca
+- Leitor de Código de Barras Online -- Online Barcode Reader -- https://www.invertexto.com/leitor-codigo-barras-online
+
+## Halaman tanpa H1 yang terbaca
+
+- (tidak ada H1; halaman utama hanya berisi H2 kategori) -- (no H1; the homepage only has category H2s) -- https://www.invertexto.com
+- (H1 tidak bisa diambil, halaman gagal dibuka) -- (H1 could not be retrieved; page failed to load) -- https://www.invertexto.com/blog/como-deixar-de-seguir-quem-nao-me-segue-no-instagram

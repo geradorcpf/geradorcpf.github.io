@@ -6,6 +6,7 @@
   {{ .Content }}
   <p><a href="{{ "/" | relURL }}">Ir para o gerador de CPF</a></p>
 </article>
+{{ if or (eq .Section "ferramentas") (eq .Section "artigos") }}{{ partial "related-tools.html" . }}{{ end }}
 {{ if eq .Section "artigos" }}
 {{ $ld := dict "@context" "https://schema.org" "@type" "Article" "headline" .Title "description" (or .Description site.Params.description) "inLanguage" "pt-BR" "datePublished" (.Date.Format "2006-01-02") "dateModified" (.Lastmod.Format "2006-01-02") "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink) "author" (partial "ld-author.html" .) "publisher" (partial "ld-publisher.html" .) }}
 <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>

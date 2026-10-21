@@ -1,0 +1,38 @@
+# Kategori hub /ferramentas/. Urutan di sini = urutan tampil di hub.
+# `key` harus sama dengan field `category` di front matter tool. Warna per kategori ada di assets/css/main.css (.c-<key>).
+- key: documentos
+  label: "Documentos e cadastros"
+  desc: "Geradores e validadores de CNPJ, RG, CEP, CNH, certidões, veículos e mais, para testes de software."
+- key: texto
+  label: "Texto e escrita"
+  desc: "Contadores, conversores e ajustes de texto, letras especiais, símbolos e emojis."
+- key: dev
+  label: "Desenvolvimento e segurança"
+  desc: "Codificação, hashes, UUID, senhas, cores, meta tags e outras ferramentas para quem programa."
+- key: rede
+  label: "Internet e rede"
+  desc: "Descubra seu IP, teste a conexão, consulte DNS e domínios."
+- key: matematica
+  label: "Matemática e geometria"
+  desc: "Calculadoras de porcentagem, MMC, MDC, frações e áreas de figuras planas."
+- key: datas
+  label: "Datas, hora e calendário"
+  desc: "Some e subtraia datas, calcule idade e dias úteis, veja feriados e fases da lua."
+- key: financas
+  label: "Finanças, trabalho e veículos"
+  desc: "Rescisão, férias, simuladores, conversor de moedas, tabela Fipe e combustível."
+- key: saude
+  label: "Saúde e bem-estar"
+  desc: "IMC, calculadora gestacional e período fértil."
+- key: aleatorio
+  label: "Sorteios e aleatórios"
+  desc: "Sorteios, listas aleatórias, dados, roleta, nomes e números."
+- key: midia
+  label: "Imagens, PDF e códigos"
+  desc: "QR Code, código de barras, edição de imagens e ferramentas de PDF."
+- key: util
+  label: "Produtividade e utilidades"
+  desc: "Bloco de notas, cronômetro, pomodoro, teste de digitação e outras utilidades."
+- key: social
+  label: "Redes sociais"
+  desc: "Ferramentas para Instagram, YouTube e outras redes."

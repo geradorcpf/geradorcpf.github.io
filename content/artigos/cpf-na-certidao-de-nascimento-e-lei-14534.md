@@ -2,6 +2,8 @@
 title: "CPF na certidão de nascimento e a Lei 14.534/2023"
 description: "Como o CPF passou a ser emitido com a certidão de nascimento e o que a Lei 14.534/2023 mudou: o CPF como número único de identificação."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "certidões", "documentos"]
 ---
 Duas mudanças transformaram o CPF no principal número de identificação do brasileiro: a emissão junto com a certidão de nascimento e a Lei 14.534/2023.
 

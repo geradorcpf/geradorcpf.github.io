@@ -2,6 +2,8 @@
 title: "Como gerar CPF para testes de software (QA)"
 description: "Boas práticas para usar CPFs gerados em testes: por que evitar CPFs reais, casos de teste importantes e erros comuns ao tratar o CPF."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "gerador", "dados de teste", "desenvolvimento", "documentos"]
 ---
 Em testes de software, use CPFs gerados, e não CPFs de pessoas reais. Um CPF gerado é matematicamente válido, passa nas validações do sistema e não expõe dados de ninguém.
 

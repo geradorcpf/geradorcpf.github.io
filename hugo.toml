@@ -5,6 +5,11 @@ title = "Gerador de CPF"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.8
+  filename = "sitemap.xml"
+
 [params]
   description = "Gerador de CPF online: gere um CPF válido e aleatório, com ou sem pontuação e por estado."
   # AdSense: preencha depois da aprovação (ex.: ca-pub-1234567890123456)
@@ -18,21 +23,25 @@ disableKinds = ["taxonomy", "term"]
   type = "Organization"
 
 [[menus.main]]
+  name = "Ferramentas"
+  pageRef = "/ferramentas"
+  weight = 1
+[[menus.main]]
   name = "Artigos"
   pageRef = "/artigos"
-  weight = 1
+  weight = 2
 [[menus.main]]
   name = "Sobre"
   pageRef = "/sobre"
-  weight = 2
+  weight = 3
 [[menus.main]]
   name = "Contato"
   pageRef = "/contato"
-  weight = 3
+  weight = 4
 [[menus.main]]
   name = "Política de Privacidade"
   pageRef = "/politica-de-privacidade"
-  weight = 4
+  weight = 5
 
 [markup.highlight]
   codeFences = false

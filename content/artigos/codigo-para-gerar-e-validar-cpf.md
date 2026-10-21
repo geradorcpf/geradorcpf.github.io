@@ -2,6 +2,8 @@
 title: "Código para gerar e validar CPF em JavaScript, Python e PHP"
 description: "Funções prontas e comentadas para calcular o dígito verificador, validar e gerar CPF em JavaScript, Python e PHP."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "gerador", "validador", "dados de teste", "desenvolvimento"]
 ---
 As três implementações abaixo seguem o mesmo método: soma ponderada e resto da divisão por 11 (módulo 11), explicado em [como calcular os dígitos verificadores](/artigos/como-calcular-digitos-verificadores-cpf/). Cada uma tem três funções: calcular um dígito, validar e gerar.
 

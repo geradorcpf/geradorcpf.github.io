@@ -2,6 +2,8 @@
 title: "Como calcular os dígitos verificadores do CPF (módulo 11)"
 description: "Passo a passo para calcular o 10º e o 11º dígito do CPF pelo módulo 11, com exemplo numérico completo e a regra do resto menor que 2."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "validador", "dígito verificador", "documentos"]
 ---
 Os dois últimos dígitos do CPF são calculados a partir dos nove primeiros por uma soma ponderada e pelo resto da divisão por 11, método conhecido como módulo 11. O segundo dígito usa o primeiro no cálculo.
 

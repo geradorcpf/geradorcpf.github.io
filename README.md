@@ -144,3 +144,12 @@ Edit `assets/css/main.css`. Warna ada di bagian paling atas:
 - **Penulis artikel:** atur di `hugo.toml` bagian `[params.author]`. Kosong berarti penulis = nama situs (Organization). Untuk memakai nama pribadi: `name = "Nama Anda"` dan `type = "Person"`.
 - **Logo publisher:** memakai `static/favicon.svg`. Jika sudah punya logo PNG (minimal 112x112 px), letakkan di `static/` dan ubah `ld-publisher.html`.
 - **Tes setelah online:** Rich Results Test (search.google.com/test/rich-results) dan validator.schema.org.
+
+## 11. Ferramentas (hub) dan related tools
+
+- Tool baru: `content/ferramentas/<slug>.md`. Hub: `content/ferramentas/_index.md` + `layouts/ferramentas/list.html`. Kategori hub (urutan, nama, deskripsi): `data/ferramentas_categorias.yaml`; warna per kategori: kelas `.c-<key>` di `assets/css/main.css`.
+- Front matter tool: `title`, `seoTitle`, `description`, `summary` (teks pendek di kartu), `category` (harus sama dengan `key` di data kategori), `tags`, `keywords`, `compact: true` (opsional, tampil sebagai pil kecil di hub). Terbitkan dengan `draft: false`.
+- Hub dan related tools hanya menampilkan halaman yang sudah terbit. Pratinjau semua draft: `hugo server -D`.
+- Related tools (5 tool, setelah isi artikel/tool) dihitung otomatis dari `tags` di `layouts/partials/related-tools.html`. Pakai tag yang konsisten (huruf kecil); tag langka lebih berbobot dari tag umum.
+- Daftar semua slug: `daftarslugs.md`. Rencana lengkap: `rencana.md`.
+

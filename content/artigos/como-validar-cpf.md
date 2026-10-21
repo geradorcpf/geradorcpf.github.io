@@ -2,6 +2,8 @@
 title: "Como validar um CPF: passo a passo"
 description: "Aprenda a checar se um CPF é válido: limpar a pontuação, conferir o tamanho, recalcular os dígitos e entender o que a validação não prova."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "validador", "dígito verificador", "documentos"]
 ---
 Validar um CPF é recalcular os dois dígitos verificadores e comparar com os que foram informados. Se baterem, o número é matematicamente válido. Para conferir agora, use o [validador de CPF online](/validador-de-cpf/).
 

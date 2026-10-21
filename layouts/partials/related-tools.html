@@ -1,0 +1,49 @@
+{{- /*
+  Ferramentas relacionadas (otomatis, sem editar arquivo .md).
+  Dipanggil di single.html setelah isi artigo/ferramenta.
+  Cara kerja:
+   1. Kandidat = semua ferramentas publicadas (draft tidak ikut).
+   2. Skor = soma bobot tag yang sama. Bobot tag = 1 / jumlah ferramentas yang memakai tag itu,
+      jadi tag langka (ex.: "cnpj") lebih berpengaruh dari tag umum (ex.: "gerador").
+   3. Bonus kecil jika kategori sama. Seri diurutkan berdasarkan kedekatan slug (abjad),
+      supaya halaman serupa (ex.: 27 UF) tidak semuanya menampilkan 5 tool yang sama.
+      Tool tanpa tag yang sama tetap jadi cadangan (skor dasar), jadi hasil selalu 5 selama ada >5 tool terbit.
+   4. Ambil 5 teratas, tanpa halaman itu sendiri.
+*/ -}}
+{{- $self := . -}}
+{{- $tools := where site.RegularPages "Section" "ferramentas" -}}
+{{- $tags := .Params.tags | default slice -}}
+{{- $cat := .Params.category -}}
+{{- $w := dict -}}
+{{- range $tags -}}
+  {{- $n := len (where $tools "Params.tags" "intersect" (slice .)) -}}
+  {{- if $n }}{{ $w = merge $w (dict . (div 1.0 $n)) }}{{ end -}}
+{{- end -}}
+{{- $sorted := sort $tools "File.ContentBaseName" -}}
+{{- $total := len $sorted -}}
+{{- $selfIdx := -1 -}}
+{{- range $i, $p := $sorted }}{{ if eq $p.RelPermalink $self.RelPermalink }}{{ $selfIdx = $i }}{{ end }}{{ end -}}
+{{- $scored := slice -}}
+{{- range $i, $p := $sorted -}}
+  {{- if ne $p.RelPermalink $self.RelPermalink -}}
+    {{- $score := 0.0 -}}
+    {{- range intersect $tags ($p.Params.tags | default slice) }}{{ $score = add $score (index $w .) }}{{ end -}}
+    {{- $key := add (mul $score 1000000) 500 -}}
+    {{- if and $cat (eq $p.Params.category $cat) }}{{ $key = add $key 2000 }}{{ end -}}
+    {{- if ge $selfIdx 0 -}}
+      {{- $d := math.Abs (sub $i $selfIdx) -}}
+      {{- $d = math.Min $d (sub $total $d) -}}
+      {{- $key = sub $key $d -}}
+    {{- end -}}
+    {{- if gt $key 0 }}{{ $scored = $scored | append (dict "p" $p "k" $key) }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $top := first 5 (sort $scored "k" "desc") -}}
+{{- if $top }}
+<aside class="related" aria-labelledby="rel-h">
+  <h2 id="rel-h">Ferramentas relacionadas</h2>
+  <ul class="cards rel">
+    {{- range $top }}{{ partial "tool-card.html" (dict "p" .p) }}{{ end }}
+  </ul>
+</aside>
+{{- end }}

@@ -2,6 +2,8 @@
 title: "CPF, CNPJ, RG e CIN: quais são as diferenças"
 description: "Compare CPF, CNPJ, RG e Carteira de Identidade Nacional (CIN): para quem servem, quem emite e como se relacionam."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "cnpj", "rg", "documentos"]
 ---
 CPF e CNPJ são cadastros da Receita Federal, enquanto RG e CIN são documentos de identidade. Hoje, o CPF é o elo entre eles.
 

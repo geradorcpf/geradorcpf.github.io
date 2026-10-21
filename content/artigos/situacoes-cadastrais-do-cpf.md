@@ -2,6 +2,8 @@
 title: "Situações cadastrais do CPF: regular, pendente, suspensa, cancelada e nula"
 description: "Entenda cada situação cadastral do CPF, o que a causa e como saber em qual delas o seu CPF está."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "consulta", "documentos"]
 ---
 A situação cadastral mostra se o CPF está em ordem junto à Receita Federal. Segundo a norma que regula o cadastro (IN RFB 1.548/2015), o CPF pode estar em uma destas situações:
 

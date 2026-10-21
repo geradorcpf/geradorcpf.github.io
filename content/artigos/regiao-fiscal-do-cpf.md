@@ -2,6 +2,8 @@
 title: "Região fiscal do CPF: qual dígito corresponde a cada estado"
 description: "Tabela das 10 regiões fiscais do CPF e o nono dígito de cada uma, com os estados que pertencem a cada região."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "estados", "documentos"]
 ---
 O nono dígito do CPF indica a região fiscal responsável pela inscrição. São dez regiões, e cada uma agrupa um ou mais estados.
 

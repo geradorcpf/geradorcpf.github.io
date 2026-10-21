@@ -2,6 +2,8 @@
 title: "O que é CPF e para que serve"
 description: "Entenda o que é o CPF, quem o mantém, como ele é formado e por que se tornou o número único de identificação."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "documentos"]
 ---
 O Cadastro de Pessoas Físicas (CPF) é o registro de contribuintes mantido pela Receita Federal do Brasil. Qualquer pessoa natural pode se inscrever uma única vez, independentemente de idade ou nacionalidade. O número tem 11 dígitos, é pessoal e intransferível e só muda por decisão judicial.
 

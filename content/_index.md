@@ -1,6 +1,6 @@
 ---
 title: "Gerador de CPF"
-seoTitle: "Gerador de CPF Válido: gere CPF aleatório online grátis"
+seoTitle: "Gerador de CPF"
 description: "Gerador de CPF online: gere um CPF válido e aleatório, com ou sem pontuação e por estado. Grátis, para testes de software."
 faq:
   - q: "O CPF gerado é real?"

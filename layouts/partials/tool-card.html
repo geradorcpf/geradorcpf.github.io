@@ -1,0 +1,9 @@
+{{- /* Cartão de ferramenta. Parâmetros: p (página), search (bool, adiciona data-q para o filtro do hub) */ -}}
+{{- $p := .p -}}
+{{- $cat := $p.Params.category | default "documentos" -}}
+<li class="c-{{ $cat }}"{{ if .search }} data-q="{{ lower (printf "%s %s %s" $p.Title ($p.Params.summary | default $p.Description) (delimit ($p.Params.tags | default slice) " ")) }}"{{ end }}>
+  <a class="card" href="{{ $p.RelPermalink }}">
+    <span class="tile">{{ partial "icon.html" $cat }}</span>
+    <span class="tx"><strong>{{ $p.Title }}</strong>{{ with ($p.Params.summary | default $p.Description) }}<small>{{ . }}</small>{{ end }}</span>
+  </a>
+</li>

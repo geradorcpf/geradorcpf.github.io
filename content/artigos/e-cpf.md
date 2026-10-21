@@ -2,6 +2,8 @@
 title: "e-CPF: o que é e quando usar"
 description: "O e-CPF é o certificado digital vinculado ao CPF. Veja para que serve, em quais formatos é fornecido e quando você realmente precisa dele."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "documentos"]
 ---
 O e-CPF é a versão digital do CPF: um certificado digital vinculado ao seu número de contribuinte. Ele garante a autenticidade e a integridade da comunicação eletrônica entre a pessoa física e a Receita Federal.
 

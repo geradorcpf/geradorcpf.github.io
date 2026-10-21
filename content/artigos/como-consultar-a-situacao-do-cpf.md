@@ -2,6 +2,8 @@
 title: "Como consultar a situação do CPF na Receita Federal"
 description: "Passo a passo para consultar a situação cadastral do CPF no site e no aplicativo da Receita Federal, e o que fazer se estiver irregular."
 date: 2026-09-29
+category: "documentos"
+tags: ["cpf", "consulta", "documentos"]
 ---
 A situação do CPF pode ser consultada de graça no site oficial da Receita Federal. Você precisa do número do CPF e da data de nascimento do titular. Não é possível consultar pelo nome.
 
