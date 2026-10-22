@@ -3,12 +3,12 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calculadora de Horas: online e grátis</title>
+<title>Calculadora de Horas</title>
 <meta name="description" content="Calculadora de Horas: some e subtraia horas e minutos. Grátis e online, sem cadastro.">
 <link rel="canonical" href="http://localhost:1313/ferramentas/calculadora-de-horas/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Calculadora de Horas: online e grátis">
+<meta property="og:title" content="Calculadora de Horas">
 <meta property="og:url" content="http://localhost:1313/ferramentas/calculadora-de-horas/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
@@ -43,45 +43,194 @@
 <article class="prose page">
   <h1>Calculadora de Horas</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta digitar as horas e os minutos abaixo, escolher se cada valor será somado (+) ou subtraído (−) e depois clicar em <strong>Calcular Horas</strong>.</p>
+<div id="calc-horas" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">⏱️ Calculadora de Horas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Some e subtraia horas e minutos e veja o resultado na hora.</p>
+<div style="display:flex;gap:8px;margin-bottom:6px;font-weight:600;font-size:0.95rem;">
+<span style="width:64px;flex:none;">Operação</span>
+<span style="flex:1;">Horas</span>
+<span style="width:10px;flex:none;"></span>
+<span style="flex:1;">Minutos</span>
+</div>
+<div style="display:flex;gap:8px;align-items:center;margin-bottom:10px;">
+<select id="hrs-op-1" aria-label="Operação da linha 1" style="width:64px;flex:none;padding:12px 6px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"><option value="+">+</option><option value="-">−</option></select>
+<input id="hrs-h-1" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Horas da linha 1" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<span style="font-weight:700;color:#3730a3;">:</span>
+<input id="hrs-m-1" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Minutos da linha 1" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="display:flex;gap:8px;align-items:center;margin-bottom:10px;">
+<select id="hrs-op-2" aria-label="Operação da linha 2" style="width:64px;flex:none;padding:12px 6px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"><option value="+">+</option><option value="-">−</option></select>
+<input id="hrs-h-2" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Horas da linha 2" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<span style="font-weight:700;color:#3730a3;">:</span>
+<input id="hrs-m-2" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Minutos da linha 2" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="display:flex;gap:8px;align-items:center;margin-bottom:10px;">
+<select id="hrs-op-3" aria-label="Operação da linha 3" style="width:64px;flex:none;padding:12px 6px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"><option value="+">+</option><option value="-">−</option></select>
+<input id="hrs-h-3" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Horas da linha 3" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<span style="font-weight:700;color:#3730a3;">:</span>
+<input id="hrs-m-3" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Minutos da linha 3" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="display:flex;gap:8px;align-items:center;margin-bottom:10px;">
+<select id="hrs-op-4" aria-label="Operação da linha 4" style="width:64px;flex:none;padding:12px 6px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"><option value="+">+</option><option value="-">−</option></select>
+<input id="hrs-h-4" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Horas da linha 4" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<span style="font-weight:700;color:#3730a3;">:</span>
+<input id="hrs-m-4" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Minutos da linha 4" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="display:flex;gap:8px;align-items:center;margin-bottom:10px;">
+<select id="hrs-op-5" aria-label="Operação da linha 5" style="width:64px;flex:none;padding:12px 6px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"><option value="+">+</option><option value="-">−</option></select>
+<input id="hrs-h-5" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Horas da linha 5" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<span style="font-weight:700;color:#3730a3;">:</span>
+<input id="hrs-m-5" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Minutos da linha 5" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="display:flex;gap:8px;align-items:center;margin-bottom:20px;">
+<select id="hrs-op-6" aria-label="Operação da linha 6" style="width:64px;flex:none;padding:12px 6px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"><option value="+">+</option><option value="-">−</option></select>
+<input id="hrs-h-6" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Horas da linha 6" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<span style="font-weight:700;color:#3730a3;">:</span>
+<input id="hrs-m-6" type="text" inputmode="numeric" placeholder="00" autocomplete="off" aria-label="Minutos da linha 6" style="flex:1;min-width:0;width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="hrs-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular Horas</button>
+<button type="button" id="hrs-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="hrs-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="hrs-resultado">preencha os campos e clique em "Calcular Horas".</span></div>
+</div>
+<script>
+(function () {
+  var TOTAL = 6;
+  var resultado = document.getElementById('hrs-resultado');
+  var caixa = document.getElementById('hrs-resposta');
+  var linhas = [];
+  for (var i = 1; i <= TOTAL; i++) {
+    linhas.push({
+      op: document.getElementById('hrs-op-' + i),
+      h: document.getElementById('hrs-h-' + i),
+      m: document.getElementById('hrs-m-' + i)
+    });
+  }
+  function inteiro(v) {
+    var t = String(v).trim();
+    if (t === '') { return 0; }
+    if (!/^\d+$/.test(t)) { return NaN; }
+    return parseInt(t, 10);
+  }
+  function dois(n) { return (n < 10 ? '0' : '') + n; }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function calcular() {
+    var total = 0;
+    var usadas = 0;
+    for (var i = 0; i < linhas.length; i++) {
+      var l = linhas[i];
+      var vazia = l.h.value.trim() === '' && l.m.value.trim() === '';
+      if (vazia) { continue; }
+      var h = inteiro(l.h.value);
+      var m = inteiro(l.m.value);
+      if (isNaN(h) || isNaN(m)) { erro('informe apenas números inteiros (sem sinais) nas horas e nos minutos da linha ' + (i + 1) + '.'); return; }
+      var minutos = h * 60 + m;
+      total += (l.op.value === '-' ? -1 : 1) * minutos;
+      usadas++;
+    }
+    if (usadas === 0) { erro('informe pelo menos um valor de horas ou minutos.'); return; }
+    var negativo = total < 0;
+    var abs = Math.abs(total);
+    var hh = Math.floor(abs / 60);
+    var mm = abs % 60;
+    var sinal = negativo ? '-' : '';
+    var decimal = (abs / 60).toLocaleString('pt-BR', { maximumFractionDigits: 2 });
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.innerHTML = 'O resultado é <strong style="font-size:1.2rem;">' + sinal + dois(hh) + ':' + dois(mm) + '</strong> (' + sinal + hh + ' h e ' + mm + ' min)<br><small style="color:#475569;">Total: ' + sinal + abs.toLocaleString('pt-BR') + ' minutos = ' + sinal + decimal + ' horas decimais</small>';
+  }
+  function limpar() {
+    linhas.forEach(function (l) {
+      l.op.value = '+';
+      l.h.value = '';
+      l.m.value = '';
+    });
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'preencha os campos e clique em "Calcular Horas".';
+    linhas[0].h.focus();
+  }
+  document.getElementById('hrs-calcular').addEventListener('click', calcular);
+  document.getElementById('hrs-limpar').addEventListener('click', limpar);
+  linhas.forEach(function (l) {
+    [l.h, l.m].forEach(function (el) {
+      el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+    });
+    [l.h, l.m, l.op].forEach(function (el) {
+      el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+      el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+    });
+  });
+})();
+</script>
+<h2 id="como-usar-a-calculadora">Como usar a calculadora</h2>
+<ol>
+<li>Digite as <strong>Horas</strong> e os <strong>Minutos</strong> do primeiro valor na primeira linha.</li>
+<li>Escolha a <strong>Operação</strong> de cada linha: <strong>+</strong> para somar ou <strong>−</strong> para subtrair aquele valor.</li>
+<li>Preencha as demais linhas que precisar. As linhas em branco são ignoradas.</li>
+<li>Clique em <strong>Calcular Horas</strong> (ou pressione Enter) para ver o resultado.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar tudo e fazer um novo cálculo.</li>
+</ol>
+<p>Use apenas números inteiros nos campos de horas e minutos. Os minutos podem passar de 59 (por exemplo, 90 minutos valem 1 hora e 30 minutos). O resultado aparece no formato <strong>HH:MM</strong> e também em minutos totais e em horas decimais. Se o resultado for negativo, ele é exibido com o sinal de menos.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Hora:</strong> unidade de tempo equivalente a 60 minutos.</li>
+<li><strong>Minuto:</strong> unidade de tempo equivalente a 60 segundos. Cada hora tem 60 minutos.</li>
+<li><strong>Operação:</strong> define se o valor da linha será somado (+) ou subtraído (−) do total.</li>
+<li><strong>HH:MM:</strong> formato de exibição do tempo, com as horas antes dos dois pontos e os minutos depois (por exemplo, 08:30).</li>
+<li><strong>Horas trabalhadas:</strong> tempo total que uma pessoa dedicou ao trabalho em um dia ou período.</li>
+<li><strong>Horas extras:</strong> tempo trabalhado além da jornada normal, obtido ao subtrair a jornada do total trabalhado.</li>
+<li><strong>Horas decimais:</strong> forma de representar o tempo com casas decimais, em que 30 minutos equivalem a 0,5 hora. É útil para multiplicar por valor-hora.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-financas">
-  <a class="card" href="/ferramentas/calculo-de-ferias/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
-</span>
-    <span class="tx"><strong>Cálculo de Férias</strong><small>Estime o valor das suas férias, com o terço constitucional.</small></span>
-  </a>
-</li>
-<li class="c-financas">
-  <a class="card" href="/ferramentas/calculo-de-rescisao/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
-</span>
-    <span class="tx"><strong>Cálculo de Rescisão de Contrato</strong><small>Estime as verbas de uma rescisão de contrato de trabalho.</small></span>
-  </a>
-</li>
-<li class="c-datas">
+  <ul class="cards rel"><li class="c-datas">
   <a class="card" href="/ferramentas/calculadora-dias-uteis/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
     <span class="tx"><strong>Calculadora de Dias Úteis</strong><small>Conte os dias úteis entre duas datas, descontando feriados.</small></span>
   </a>
 </li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/feriados-2026/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-fracao/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Feriados 2026</strong><small>Lista de feriados nacionais de 2026.</small></span>
+    <span class="tx"><strong>Calculadora de Fração</strong><small>Some, subtraia, multiplique e divida frações.</small></span>
   </a>
 </li>
-<li class="c-documentos">
-  <a class="card" href="/ferramentas/validador-de-pis-pasep/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-porcentagem/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Validador de PIS/PASEP</strong><small>Confira se um PIS/PASEP é válido.</small></span>
+    <span class="tx"><strong>Calculadora de Porcentagem</strong><small>Calcule porcentagens, descontos e aumentos.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-fatoracao/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora de Fatoração de Número</strong><small>Decomponha um número em fatores primos.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-regra-de-tres/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora de Regra de Três Simples</strong><small>Resolva regra de três simples com o passo a passo.</small></span>
   </a>
 </li>
 
@@ -94,7 +243,7 @@
   <div class="bar foot">
     <span>© 2026 Gerador de CPF</span>
 
-    <a href="/%20/politica-de-privacidade/">Política de Privacidade</a>
+    <a href="https://geradorcpf.github.io/politica-de-privacidade/">Política de Privacidade</a>
   </div>
 </footer>
 

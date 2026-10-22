@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora da Área do Quadrado</title>
+<meta name="description" content="Calculadora da Área do Quadrado: informe as medidas e veja o resultado na hora, com a fórmula e um exemplo resolvido.">
+<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/area-quadrado/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Calculadora da Área do Quadrado">
+<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/area-quadrado/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Gerador de CPF">
+<meta property="og:description" content="Calculadora da Área do Quadrado: informe as medidas e veja o resultado na hora, com a fórmula e um exemplo resolvido.">
+<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1536">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+
+<link rel="stylesheet" href="/css/main.min.22c415b02743f468cec67c0add7435d80ae88c5946e5b7ca479660da397bf9b7.css" integrity="sha256-IsQVsCdD9GjOxnwK3XQ12ArojFlG5bfKR5Zg2jl7&#43;bc=" crossorigin="anonymous">
+
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="/" aria-label="Gerador de CPF - início">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#0a7d4f"/><text x="14" y="18.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">CPF</text></svg>
+      <span>Gerador de CPF</span>
+    </a>
+    <nav aria-label="Principal"><ul>
+      
+      <li><a href="/ferramentas/">Ferramentas</a></li><li><a href="/artigos/">Artigos</a></li><li><a href="/sobre/">Sobre</a></li><li><a href="/contato/">Contato</a></li><li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main class="wrap">
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Calculadora da Área do Quadrado</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/area-quadrado/","name":"Calculadora da Área do Quadrado","position":3}]}</script>
+<article class="prose page">
+  <h1>Calculadora da Área do Quadrado</h1>
+  
+  <p>Use esta ferramenta para calcular a área de um quadrado informando a medida de um de seus lados. Como todos os lados do quadrado têm a mesma medida, basta inserir um único valor para obter o resultado.</p>
+<h2 id="calculadora-da-área-do-quadrado">Calculadora da área do quadrado</h2>
+<p>Digite o comprimento de um dos lados e selecione a unidade. A calculadora calcula a área automaticamente ao clicar no botão.</p>
+<div class="calculadora-quadrado">
+  <label for="lado-quadrado">Lado do quadrado</label>
+  <input id="lado-quadrado" type="number" min="0" step="any" placeholder="Ex.: 5" />
+  <label for="unidade-quadrado">Unidade do lado</label>
+  <select id="unidade-quadrado">
+    <option value="mm">Milímetro (mm)</option>
+    <option value="cm" selected>Centímetro (cm)</option>
+    <option value="m">Metro (m)</option>
+    <option value="km">Quilômetro (km)</option>
+  </select>
+  <button type="button" onclick="calcularAreaQuadrado()">Calcular Área</button>
+  <p id="resultado-quadrado" aria-live="polite">O resultado aparecerá aqui.</p>
+</div>
+<script>
+function calcularAreaQuadrado() {
+  const campo = document.getElementById('lado-quadrado');
+  const unidade = document.getElementById('unidade-quadrado').value;
+  const resultado = document.getElementById('resultado-quadrado');
+  const lado = Number(campo.value);
+
+  if (campo.value.trim() === '' || !Number.isFinite(lado) || lado <= 0) {
+    resultado.textContent = 'Insira um valor numérico maior que zero para o lado.';
+    return;
+  }
+
+  const area = lado * lado;
+  const formatado = new Intl.NumberFormat('pt-BR', {
+    maximumFractionDigits: 8
+  }).format(area);
+  resultado.textContent = `Área = ${formatado} ${unidade}²`;
+}
+</script>
+<blockquote>
+<p><strong>Nota de implementação:</strong> o bloco acima é uma calculadora funcional em páginas que permitem HTML e JavaScript incorporados. Se o seu gerador de site remove as tags <code>&lt;script&gt;</code> ou bloqueia JavaScript inline, coloque a função JavaScript no arquivo de scripts do site e mantenha o HTML da calculadora no conteúdo.</p>
+</blockquote>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Identifique a medida de um dos lados do quadrado.</li>
+<li>Digite essa medida no campo <strong>Lado</strong>.</li>
+<li>Clique em <strong>Calcular Área</strong>.</li>
+<li>Confira o valor exibido em <strong>Resposta</strong>.</li>
+</ol>
+<p>Informe uma medida numérica positiva e mantenha a mesma unidade de medida durante o cálculo. Se o lado estiver em centímetros, por exemplo, a área será apresentada em centímetros quadrados.</p>
+<h2 id="fórmula-da-área-do-quadrado">Fórmula da área do quadrado</h2>
+<p>A área de um quadrado é calculada multiplicando a medida do lado por ela mesma:</p>
+<p>[
+A = l \times l = l^2
+]</p>
+<p>Em que:</p>
+<ul>
+<li><strong>A (área):</strong> medida da superfície interna do quadrado.</li>
+<li><strong>l (lado):</strong> comprimento de qualquer um dos quatro lados iguais do quadrado.</li>
+<li><strong>² (ao quadrado):</strong> indica que um número deve ser multiplicado por ele mesmo.</li>
+</ul>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Considere um quadrado cujo lado mede <strong>5 cm</strong>.</p>
+<ol>
+<li>Identifique o lado: (l = 5\text{ cm}).</li>
+<li>Aplique a fórmula: (A = l^2).</li>
+<li>Substitua o valor: (A = 5 \times 5).</li>
+<li>Calcule: (A = 25\text{ cm}^2).</li>
+</ol>
+<p><strong>Resultado:</strong> a área do quadrado é <strong>25 cm²</strong>.</p>
+<h2 id="significado-dos-termos">Significado dos termos</h2>
+<ul>
+<li><strong>Quadrado:</strong> figura geométrica plana com quatro lados iguais e quatro ângulos retos (90°).</li>
+<li><strong>Lado:</strong> cada segmento que forma o contorno do quadrado. Como todos são iguais, basta conhecer um deles para calcular a área.</li>
+<li><strong>Área:</strong> medida da superfície que fica dentro da figura.</li>
+<li><strong>Fórmula:</strong> expressão matemática usada para realizar um cálculo. Para o quadrado, é (A = l^2).</li>
+<li><strong>Unidade de medida:</strong> unidade usada para expressar o comprimento, como centímetro (cm) ou metro (m).</li>
+<li><strong>Unidade quadrada:</strong> unidade usada para expressar uma área, como centímetro quadrado (cm²) ou metro quadrado (m²). Ela resulta da multiplicação de uma medida de comprimento por outra.</li>
+<li><strong>Elevar ao quadrado:</strong> multiplicar um número por ele mesmo. Por exemplo, (5^2 = 5 \times 5 = 25).</li>
+</ul>
+<h2 id="atenção-às-unidades">Atenção às unidades</h2>
+<p>A unidade do resultado deve ser quadrada. Se o lado for informado em metros, a área será calculada em metros quadrados; se for informado em centímetros, será em centímetros quadrados.</p>
+<p>Não confunda <strong>área</strong> com <strong>perímetro</strong>: a área mede a superfície interna do quadrado, enquanto o perímetro mede o comprimento total de seu contorno. Esta ferramenta calcula a área.</p>
+
+  <p><a href="/">Ir para o gerador de CPF</a></p>
+</article>
+
+<aside class="related" aria-labelledby="rel-h">
+  <h2 id="rel-h">Ferramentas relacionadas</h2>
+  <ul class="cards rel"><li class="c-matematica">
+  <a class="card" href="/ferramentas/area-poligono-regular/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora da Área do Polígono Regular</strong><small>Calcule a área do polígono regular com a fórmula.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-retangulo/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora da Área do Retângulo</strong><small>Calcule a área do retângulo com a fórmula.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-pentagono/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora da Área do Pentágono</strong><small>Calcule a área do pentágono com a fórmula.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-setor-circular/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora da Área do Setor Circular</strong><small>Calcule a área do setor circular com a fórmula.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-paralelogramo/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora da Área do Paralelogramo</strong><small>Calcule a área do paralelogramo com a fórmula.</small></span>
+  </a>
+</li>
+
+  </ul>
+</aside>
+
+
+</main>
+<footer class="site">
+  <div class="bar foot">
+    <span>© 2026 Gerador de CPF</span>
+
+    <a href="https://geradorcpf.github.io/politica-de-privacidade/">Política de Privacidade</a>
+  </div>
+</footer>
+
+</body>
+</html>

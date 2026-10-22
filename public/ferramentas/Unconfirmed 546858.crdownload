@@ -1,0 +1,190 @@
+---
+title: "Calculadora de Fatoração de Número"
+seoTitle: "Calculadora de Fatoração de Número: online e grátis"
+description: "Calculadora de Fatoração de Número: decomponha um número em fatores primos. Grátis e online, sem cadastro."
+summary: "Decomponha um número em fatores primos."
+date: 2026-10-20
+draft: true
+category: "matematica"
+tags: ["fatoração", "números primos", "calculadora", "matemática"]
+keywords: ["calculadora de fatoração de número", "calculadora de fatoração de número online", "fatoração", "números primos", "calculadora"]
+---
+
+Basta digitar o número que deseja fatorar abaixo e depois clicar em **Fatorar Número**.
+
+<div id="calc-fatoracao" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔢 Calculadora de Fatoração de Número</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Decomponha um número em fatores primos na hora.</p>
+<label for="fat-numero" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Qual número deseja fatorar? (máximo 20 dígitos)</label>
+<input id="fat-numero" type="text" inputmode="numeric" placeholder="Ex.: 360" autocomplete="off" maxlength="26" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="fat-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Fatorar Número</button>
+<button type="button" id="fat-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="fat-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="fat-resultado">preencha o campo e clique em "Fatorar Número".</span></div>
+</div>
+<script>
+(function () {
+  var campo = document.getElementById('fat-numero');
+  var resultado = document.getElementById('fat-resultado');
+  var caixa = document.getElementById('fat-resposta');
+  var BASES = [2n, 3n, 5n, 7n, 11n, 13n, 17n, 19n, 23n, 29n, 31n, 37n, 41n];
+  function gcd(a, b) { while (b) { var t = a % b; a = b; b = t; } return a; }
+  function modPow(b, e, m) {
+    var r = 1n; b = b % m;
+    while (e > 0n) { if (e & 1n) { r = (r * b) % m; } b = (b * b) % m; e >>= 1n; }
+    return r;
+  }
+  function isqrt(n) {
+    if (n < 2n) { return n; }
+    var x = n, y = (x + 1n) / 2n;
+    while (y < x) { x = y; y = (x + n / x) / 2n; }
+    return x;
+  }
+  function ehPrimo(n) {
+    if (n < 2n) { return false; }
+    for (var i = 0; i < BASES.length; i++) {
+      if (n === BASES[i]) { return true; }
+      if (n % BASES[i] === 0n) { return false; }
+    }
+    var d = n - 1n, s = 0;
+    while (d % 2n === 0n) { d /= 2n; s++; }
+    for (var j = 0; j < BASES.length; j++) {
+      var x = modPow(BASES[j], d, n);
+      if (x === 1n || x === n - 1n) { continue; }
+      var composto = true;
+      for (var r = 1; r < s; r++) {
+        x = (x * x) % n;
+        if (x === n - 1n) { composto = false; break; }
+      }
+      if (composto) { return false; }
+    }
+    return true;
+  }
+  function rho(n) {
+    if (n % 2n === 0n) { return 2n; }
+    var raiz = isqrt(n);
+    if (raiz * raiz === n) { return raiz; }
+    for (var c = 1n; ; c++) {
+      var x = 2n, y = 2n, d = 1n;
+      while (d === 1n) {
+        x = (x * x + c) % n;
+        y = (y * y + c) % n;
+        y = (y * y + c) % n;
+        d = gcd(x > y ? x - y : y - x, n);
+      }
+      if (d !== n) { return d; }
+    }
+  }
+  function fatorar(n, saida) {
+    if (n === 1n) { return; }
+    if (ehPrimo(n)) { saida.push(n); return; }
+    var d = rho(n);
+    fatorar(d, saida);
+    fatorar(n / d, saida);
+  }
+  function decompor(n) {
+    var fatores = [];
+    for (var p = 2n; p < 1000n && p * p <= n; p++) {
+      while (n % p === 0n) { fatores.push(p); n /= p; }
+    }
+    fatorar(n, fatores);
+    fatores.sort(function (a, b) { return a < b ? -1 : a > b ? 1 : 0; });
+    return fatores;
+  }
+  function fmt(n) { return n.toLocaleString('pt-BR'); }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function calcular() {
+    var texto = campo.value.trim().replace(/[\s.]/g, '');
+    if (!/^\d+$/.test(texto)) { erro('informe um número inteiro positivo.'); return; }
+    if (texto.length > 20) { erro('o número deve ter no máximo 20 dígitos.'); return; }
+    var n = BigInt(texto);
+    if (n < 2n) { erro('informe um número inteiro maior ou igual a 2.'); return; }
+    var fatores = decompor(n);
+    var grupos = [];
+    fatores.forEach(function (f) {
+      var ultimo = grupos[grupos.length - 1];
+      if (ultimo && ultimo.p === f) { ultimo.e++; } else { grupos.push({ p: f, e: 1 }); }
+    });
+    var potencias = grupos.map(function (g) {
+      return g.e > 1 ? fmt(g.p) + '<sup>' + g.e + '</sup>' : fmt(g.p);
+    }).join(' × ');
+    var linhas = '', atual = n;
+    fatores.forEach(function (f) {
+      linhas += '<tr><td style="padding:4px 12px;border-bottom:1px solid #e0e7ff;text-align:right;">' + fmt(atual) + '</td><td style="padding:4px 12px;border-bottom:1px solid #e0e7ff;font-weight:600;">' + fmt(f) + '</td></tr>';
+      atual = atual / f;
+    });
+    linhas += '<tr><td style="padding:4px 12px;text-align:right;">1</td><td style="padding:4px 12px;"></td></tr>';
+    var titulo = fatores.length === 1
+      ? fmt(n) + ' é um número primo.'
+      : 'A fatoração de ' + fmt(n) + ' é:';
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.innerHTML = titulo + '<br><strong style="font-size:1.2rem;">' + fmt(n) + ' = ' + potencias + '</strong>' +
+      '<table style="margin-top:12px;border-collapse:collapse;font-size:0.95rem;color:#475569;"><thead><tr><th style="padding:4px 12px;text-align:right;border-bottom:2px solid #c7d2fe;">Número</th><th style="padding:4px 12px;text-align:left;border-bottom:2px solid #c7d2fe;">Fator primo</th></tr></thead><tbody>' + linhas + '</tbody></table>';
+  }
+  function limpar() {
+    campo.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'preencha o campo e clique em "Fatorar Número".';
+    campo.focus();
+  }
+  document.getElementById('fat-calcular').addEventListener('click', calcular);
+  document.getElementById('fat-limpar').addEventListener('click', limpar);
+  campo.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+  campo.addEventListener('focus', function () { campo.style.borderColor = '#6366f1'; });
+  campo.addEventListener('blur', function () { campo.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+
+## Como usar a calculadora
+
+1. Digite o número inteiro que deseja fatorar no campo (até 20 dígitos).
+2. Clique em **Fatorar Número** (ou pressione Enter) para ver o resultado.
+3. Leia a **fatoração** em forma de potências e confira a **tabela de divisões sucessivas** logo abaixo.
+4. Use o botão **Limpar** para apagar o valor e fazer um novo cálculo.
+
+O número deve ser inteiro e maior ou igual a 2. Se o número informado for primo, a calculadora avisa que ele não pode ser decomposto em fatores menores.
+
+## Entendendo os termos
+
+- **Fatoração:** processo de escrever um número como uma multiplicação de outros números.
+- **Fator:** cada número que participa de uma multiplicação. Em 2 × 3 = 6, os fatores são 2 e 3.
+- **Número primo:** número natural maior que 1 que só é divisível por 1 e por ele mesmo, como 2, 3, 5, 7 e 11.
+- **Número composto:** número natural maior que 1 que tem mais divisores além de 1 e dele mesmo, como 4, 6, 9 e 12.
+- **Fatores primos:** números primos que, multiplicados entre si, resultam no número original.
+- **Decomposição em fatores primos:** fatoração em que todos os fatores são números primos. Ela é única para cada número.
+- **Expoente:** número pequeno acima de um fator que indica quantas vezes ele se repete. Em 2<sup>3</sup>, o fator 2 aparece 3 vezes.
+- **Divisão sucessiva:** método em que se divide o número, passo a passo, pelo menor primo possível até chegar a 1.
+
+## Como fatorar um número
+
+O método mais comum é a divisão sucessiva:
+
+1. Divida o número pelo menor número primo que o divide sem deixar resto.
+2. Repita a divisão com o resultado, sempre usando o menor primo possível.
+3. Pare quando o resultado for 1.
+4. Multiplique todos os primos usados. Se algum se repetir, escreva-o como potência.
+
+## Exemplo resolvido
+
+Decomponha o número 360 em fatores primos.
+
+1. 360 ÷ 2 = 180
+2. 180 ÷ 2 = 90
+3. 90 ÷ 2 = 45
+4. 45 ÷ 3 = 15
+5. 15 ÷ 3 = 5
+6. 5 ÷ 5 = 1
+
+Os primos usados foram 2, 2, 2, 3, 3 e 5.
+
+**Resposta:** 360 = 2 × 2 × 2 × 3 × 3 × 5 = **2³ × 3² × 5**.

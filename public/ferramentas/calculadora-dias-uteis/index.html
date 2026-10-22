@@ -3,12 +3,12 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calculadora de Dias Úteis: online e grátis</title>
+<title>Calculadora de Dias Úteis</title>
 <meta name="description" content="Calculadora de Dias Úteis: conte os dias úteis entre duas datas, descontando feriados. Grátis e online, sem cadastro.">
 <link rel="canonical" href="http://localhost:1313/ferramentas/calculadora-dias-uteis/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Calculadora de Dias Úteis: online e grátis">
+<meta property="og:title" content="Calculadora de Dias Úteis">
 <meta property="og:url" content="http://localhost:1313/ferramentas/calculadora-dias-uteis/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
@@ -43,45 +43,267 @@
 <article class="prose page">
   <h1>Calculadora de Dias Úteis</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta escolher a data inicial e a data final abaixo e depois clicar em <strong>Calcular</strong>.</p>
+<div id="calc-dias-uteis" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📅 Calculadora de Dias Úteis</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe as duas datas e veja o resultado na hora.</p>
+<label for="du-de" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">De</label>
+<input id="du-de" type="date" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="du-para" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Para</label>
+<input id="du-para" type="date" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="du-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular</button>
+<button type="button" id="du-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="du-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="du-resultado">preencha as datas e clique em "Calcular".</span>
+<table id="du-tabela" style="display:none;width:100%;margin-top:12px;border-collapse:collapse;font-size:0.95rem;color:#1e293b;">
+<thead><tr><th style="text-align:left;padding:8px 10px;background:#eef2ff;color:#3730a3;border-bottom:2px solid #c7d2fe;">Descrição</th><th style="text-align:right;padding:8px 10px;background:#eef2ff;color:#3730a3;border-bottom:2px solid #c7d2fe;">Dias</th></tr></thead>
+<tbody>
+<tr><td style="padding:8px 10px;border-bottom:1px solid #e0e7ff;font-weight:700;">Dias úteis</td><td id="du-uteis" style="padding:8px 10px;border-bottom:1px solid #e0e7ff;text-align:right;font-weight:700;color:#166534;">0</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid #e0e7ff;">Dias corridos</td><td id="du-corridos" style="padding:8px 10px;border-bottom:1px solid #e0e7ff;text-align:right;">0</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid #e0e7ff;">Sábados</td><td id="du-sabados" style="padding:8px 10px;border-bottom:1px solid #e0e7ff;text-align:right;">0</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid #e0e7ff;">Domingos</td><td id="du-domingos" style="padding:8px 10px;border-bottom:1px solid #e0e7ff;text-align:right;">0</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid #e0e7ff;">Feriados</td><td id="du-feriados" style="padding:8px 10px;border-bottom:1px solid #e0e7ff;text-align:right;">0</td></tr>
+<tr><td style="padding:8px 10px;">Personalizados</td><td id="du-personalizados" style="padding:8px 10px;text-align:right;">0</td></tr>
+</tbody>
+</table>
+<div id="du-calendario" style="display:none;margin-top:16px;"></div>
+<p id="du-dica" style="display:none;margin:12px 0 0;font-size:0.8rem;color:#64748b;">Dica: clique em um dia útil do calendário para marcá-lo como dia personalizado (folga, ponte, recesso) e descontá-lo da contagem. Clique de novo para desmarcar.</p>
+</div>
+</div>
+<script>
+(function () {
+  var inDe = document.getElementById('du-de');
+  var inPara = document.getElementById('du-para');
+  var resultado = document.getElementById('du-resultado');
+  var caixa = document.getElementById('du-resposta');
+  var tabela = document.getElementById('du-tabela');
+  var cal = document.getElementById('du-calendario');
+  var dica = document.getElementById('du-dica');
+  var personalizados = {};
+  var MESES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  var SEMANA = ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'];
+  var MAX_MESES_CALENDARIO = 24;
+  function chave(d) {
+    var m = d.getMonth() + 1, dia = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (dia < 10 ? '0' : '') + dia;
+  }
+  function lerData(v) {
+    if (!v) { return null; }
+    var p = v.split('-');
+    if (p.length !== 3) { return null; }
+    var d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+    return isNaN(d.getTime()) ? null : d;
+  }
+  function somar(d, n) { return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+  function pascoa(ano) {
+    var a = ano % 19, b = Math.floor(ano / 100), c = ano % 100;
+    var d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25);
+    var g = Math.floor((b - f + 1) / 3);
+    var h = (19 * a + b - d - g + 15) % 30;
+    var i = Math.floor(c / 4), k = c % 4;
+    var l = (32 + 2 * e + 2 * i - h - k) % 7;
+    var m = Math.floor((a + 11 * h + 22 * l) / 451);
+    var mes = Math.floor((h + l - 7 * m + 114) / 31);
+    var dia = ((h + l - 7 * m + 114) % 31) + 1;
+    return new Date(ano, mes - 1, dia);
+  }
+  var cacheFeriados = {};
+  function feriadosDoAno(ano) {
+    if (cacheFeriados[ano]) { return cacheFeriados[ano]; }
+    var f = {};
+    var fixos = [[1,1,'Confraternização Universal'],[4,21,'Tiradentes'],[5,1,'Dia do Trabalho'],[9,7,'Independência do Brasil'],[10,12,'Nossa Senhora Aparecida'],[11,2,'Finados'],[11,15,'Proclamação da República'],[12,25,'Natal']];
+    fixos.forEach(function (x) { f[chave(new Date(ano, x[0] - 1, x[1]))] = x[2]; });
+    if (ano >= 2024) { f[chave(new Date(ano, 10, 20))] = 'Consciência Negra'; }
+    f[chave(somar(pascoa(ano), -2))] = 'Sexta-feira Santa';
+    cacheFeriados[ano] = f;
+    return f;
+  }
+  function nomeFeriado(d) { return feriadosDoAno(d.getFullYear())[chave(d)] || null; }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+    tabela.style.display = 'none';
+    cal.style.display = 'none';
+    dica.style.display = 'none';
+  }
+  function montarCalendario(ini, fim) {
+    var meses = (fim.getFullYear() - ini.getFullYear()) * 12 + (fim.getMonth() - ini.getMonth()) + 1;
+    if (meses > MAX_MESES_CALENDARIO) {
+      cal.style.display = 'none';
+      dica.style.display = 'none';
+      return;
+    }
+    var html = '';
+    for (var i = 0; i < meses; i++) {
+      var ref = new Date(ini.getFullYear(), ini.getMonth() + i, 1);
+      var ultimo = new Date(ref.getFullYear(), ref.getMonth() + 1, 0).getDate();
+      html += '<div style="margin-bottom:14px;"><div style="font-weight:700;font-size:0.95rem;color:#3730a3;margin-bottom:6px;">' + MESES[ref.getMonth()] + ' ' + ref.getFullYear() + '</div>';
+      html += '<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center;">';
+      SEMANA.forEach(function (s) { html += '<div style="font-size:0.7rem;font-weight:700;color:#64748b;padding:2px 0;">' + s + '</div>'; });
+      for (var v = 0; v < ref.getDay(); v++) { html += '<div></div>'; }
+      for (var dia = 1; dia <= ultimo; dia++) {
+        var d = new Date(ref.getFullYear(), ref.getMonth(), dia);
+        var k = chave(d), dow = d.getDay();
+        var dentro = d >= ini && d <= fim;
+        var fer = nomeFeriado(d);
+        var fimSemana = dow === 0 || dow === 6;
+        var bg = '#ffffff', cor = '#1e293b', borda = '#e0e7ff', cursor = 'default', titulo = '', extra = '';
+        if (!dentro) { bg = '#f8fafc'; cor = '#cbd5e1'; borda = '#f1f5f9'; }
+        else if (fer) { bg = '#fee2e2'; cor = '#b91c1c'; borda = '#fca5a5'; titulo = fer; }
+        else if (fimSemana) { bg = '#e2e8f0'; cor = '#64748b'; borda = '#cbd5e1'; }
+        else if (personalizados[k]) { bg = '#fef3c7'; cor = '#92400e'; borda = '#fcd34d'; cursor = 'pointer'; titulo = 'Dia personalizado (clique para desmarcar)'; }
+        else { bg = '#f0fdf4'; cor = '#166534'; borda = '#86efac'; cursor = 'pointer'; titulo = 'Clique para marcar como personalizado'; }
+        if (fer && fimSemana && dentro) { titulo = fer + ' (em fim de semana)'; }
+        var clicavel = dentro && !fer && !fimSemana;
+        html += '<div ' + (clicavel ? 'data-du-dia="' + k + '" ' : '') + 'title="' + titulo + '" style="padding:6px 0;font-size:0.85rem;border:1px solid ' + borda + ';border-radius:6px;background:' + bg + ';color:' + cor + ';cursor:' + cursor + ';' + extra + '">' + dia + '</div>';
+      }
+      html += '</div></div>';
+    }
+    html += '<div style="display:flex;flex-wrap:wrap;gap:10px;font-size:0.75rem;color:#475569;">'
+      + '<span><span style="display:inline-block;width:10px;height:10px;background:#f0fdf4;border:1px solid #86efac;border-radius:3px;"></span> Dia útil</span>'
+      + '<span><span style="display:inline-block;width:10px;height:10px;background:#e2e8f0;border:1px solid #cbd5e1;border-radius:3px;"></span> Fim de semana</span>'
+      + '<span><span style="display:inline-block;width:10px;height:10px;background:#fee2e2;border:1px solid #fca5a5;border-radius:3px;"></span> Feriado</span>'
+      + '<span><span style="display:inline-block;width:10px;height:10px;background:#fef3c7;border:1px solid #fcd34d;border-radius:3px;"></span> Personalizado</span></div>';
+    cal.innerHTML = html;
+    cal.style.display = 'block';
+    dica.style.display = 'block';
+  }
+  function calcular() {
+    var ini = lerData(inDe.value);
+    var fim = lerData(inPara.value);
+    if (!ini || !fim) { erro('informe as duas datas.'); return; }
+    if (ini > fim) { erro('a data inicial deve ser anterior ou igual à data final.'); return; }
+    var corridos = 0, sab = 0, dom = 0, fer = 0, pers = 0, uteis = 0;
+    for (var d = new Date(ini.getTime()); d <= fim; d = somar(d, 1)) {
+      corridos++;
+      var dow = d.getDay();
+      if (dow === 6) { sab++; continue; }
+      if (dow === 0) { dom++; continue; }
+      if (nomeFeriado(d)) { fer++; continue; }
+      if (personalizados[chave(d)]) { pers++; continue; }
+      uteis++;
+    }
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.innerHTML = 'Entre as datas há <strong style="font-size:1.2rem;">' + uteis.toLocaleString('pt-BR') + '</strong> ' + (uteis === 1 ? 'dia útil' : 'dias úteis') + '<br><small style="color:#475569;">Contando a data inicial e a data final.</small>';
+    document.getElementById('du-uteis').textContent = uteis.toLocaleString('pt-BR');
+    document.getElementById('du-corridos').textContent = corridos.toLocaleString('pt-BR');
+    document.getElementById('du-sabados').textContent = sab.toLocaleString('pt-BR');
+    document.getElementById('du-domingos').textContent = dom.toLocaleString('pt-BR');
+    document.getElementById('du-feriados').textContent = fer.toLocaleString('pt-BR');
+    document.getElementById('du-personalizados').textContent = pers.toLocaleString('pt-BR');
+    tabela.style.display = 'table';
+    montarCalendario(ini, fim);
+  }
+  function limpar() {
+    inDe.value = '';
+    inPara.value = '';
+    personalizados = {};
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'preencha as datas e clique em "Calcular".';
+    tabela.style.display = 'none';
+    cal.style.display = 'none';
+    cal.innerHTML = '';
+    dica.style.display = 'none';
+    inDe.focus();
+  }
+  cal.addEventListener('click', function (e) {
+    var alvo = e.target;
+    while (alvo && alvo !== cal && !alvo.getAttribute('data-du-dia')) { alvo = alvo.parentNode; }
+    if (!alvo || alvo === cal) { return; }
+    var k = alvo.getAttribute('data-du-dia');
+    if (personalizados[k]) { delete personalizados[k]; } else { personalizados[k] = true; }
+    calcular();
+  });
+  document.getElementById('du-calcular').addEventListener('click', calcular);
+  document.getElementById('du-limpar').addEventListener('click', limpar);
+  [inDe, inPara].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-calculadora">Como usar a calculadora</h2>
+<ol>
+<li>Escolha a <strong>data inicial</strong> no campo <strong>De</strong>.</li>
+<li>Escolha a <strong>data final</strong> no campo <strong>Para</strong>.</li>
+<li>Clique em <strong>Calcular</strong> (ou pressione Enter) para ver o resultado.</li>
+<li>Confira a tabela com os <strong>dias úteis</strong>, <strong>dias corridos</strong>, <strong>sábados</strong>, <strong>domingos</strong>, <strong>feriados</strong> e <strong>personalizados</strong>.</li>
+<li>Se houver folgas, pontes ou recessos no período, clique nesses dias úteis no calendário para marcá-los como <strong>personalizados</strong>. Eles serão descontados da contagem na hora.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar as datas e os dias personalizados e fazer um novo cálculo.</li>
+</ol>
+<p>A data inicial e a data final entram na contagem. Se ambas forem o mesmo dia, o intervalo tem 1 dia corrido. A calculadora considera os feriados nacionais do Brasil, incluindo a Sexta-feira Santa, que muda de data a cada ano. Pontos facultativos, como o Carnaval e o Corpus Christi, e feriados estaduais ou municipais não entram automaticamente, mas você pode marcá-los como dias personalizados.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Dia útil:</strong> dia de trabalho comum, de segunda a sexta-feira, que não é feriado.</li>
+<li><strong>Dias corridos:</strong> todos os dias do calendário entre as duas datas, incluindo sábados, domingos e feriados.</li>
+<li><strong>Sábados:</strong> quantidade de sábados dentro do período.</li>
+<li><strong>Domingos:</strong> quantidade de domingos dentro do período.</li>
+<li><strong>Feriados:</strong> feriados nacionais que caem de segunda a sexta-feira dentro do período. Os que caem no fim de semana já aparecem nas contagens de sábados e domingos.</li>
+<li><strong>Personalizados:</strong> dias úteis que você marcou manualmente no calendário, como uma folga, uma ponte ou um feriado local.</li>
+<li><strong>Data inicial (De):</strong> primeiro dia do intervalo, incluído na contagem.</li>
+<li><strong>Data final (Para):</strong> último dia do intervalo, incluído na contagem.</li>
+</ul>
+<h2 id="fórmula-dos-dias-úteis">Fórmula dos dias úteis</h2>
+<p>Os dias úteis são os dias corridos menos o que não é dia de trabalho:</p>
+<p><strong>Dias úteis = dias corridos − sábados − domingos − feriados − personalizados</strong></p>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Quantos dias úteis existem entre 1 e 30 de abril de 2026?</p>
+<ol>
+<li>Dias corridos: abril tem 30 dias.</li>
+<li>Sábados: 4 (dias 4, 11, 18 e 25) e domingos: 4 (dias 5, 12, 19 e 26).</li>
+<li>Feriados em dias de semana: 2, a Sexta-feira Santa (3 de abril) e Tiradentes (21 de abril).</li>
+<li>Personalizados: 0.</li>
+<li>Aplique a fórmula: 30 − 4 − 4 − 2 − 0 = 20.</li>
+</ol>
+<p><strong>Resposta:</strong> entre 1 e 30 de abril de 2026 há <strong>20 dias úteis</strong>.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-datas">
-  <a class="card" href="/ferramentas/feriados-2026/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Feriados 2026</strong><small>Lista de feriados nacionais de 2026.</small></span>
-  </a>
-</li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/calendario-2026/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Calendário 2026</strong><small>Calendário de 2026 com feriados e datas importantes.</small></span>
-  </a>
-</li>
-<li class="c-datas">
   <a class="card" href="/ferramentas/calculadora-de-horas/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
     <span class="tx"><strong>Calculadora de Horas</strong><small>Some e subtraia horas e minutos.</small></span>
   </a>
 </li>
-<li class="c-financas">
-  <a class="card" href="/ferramentas/calculo-de-ferias/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-circulo/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Cálculo de Férias</strong><small>Estime o valor das suas férias, com o terço constitucional.</small></span>
+    <span class="tx"><strong>Calculadora da Área do Círculo</strong><small>Calcule a área do círculo com a fórmula.</small></span>
   </a>
 </li>
-<li class="c-financas">
-  <a class="card" href="/ferramentas/calculo-de-rescisao/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-resto-da-divisao/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Cálculo de Rescisão de Contrato</strong><small>Estime as verbas de uma rescisão de contrato de trabalho.</small></span>
+    <span class="tx"><strong>Calculadora de Resto da Divisão</strong><small>Descubra o quociente e o resto de uma divisão.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-coroa-circular/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora da Área da Coroa Circular</strong><small>Calcule a área da coroa circular com a fórmula.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-regra-de-tres/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora de Regra de Três Simples</strong><small>Resolva regra de três simples com o passo a passo.</small></span>
   </a>
 </li>
 
@@ -94,7 +316,7 @@
   <div class="bar foot">
     <span>© 2026 Gerador de CPF</span>
 
-    <a href="/%20/politica-de-privacidade/">Política de Privacidade</a>
+    <a href="https://geradorcpf.github.io/politica-de-privacidade/">Política de Privacidade</a>
   </div>
 </footer>
 

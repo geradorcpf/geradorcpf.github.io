@@ -3,12 +3,12 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cálculo de Combustível: online e grátis</title>
+<title>Cálculo de Combustível</title>
 <meta name="description" content="Cálculo de Combustível: calcule o gasto de combustível de uma viagem. Grátis e online, sem cadastro.">
 <link rel="canonical" href="http://localhost:1313/ferramentas/calculadora-de-combustivel/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cálculo de Combustível: online e grátis">
+<meta property="og:title" content="Cálculo de Combustível">
 <meta property="og:url" content="http://localhost:1313/ferramentas/calculadora-de-combustivel/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
@@ -43,45 +43,147 @@
 <article class="prose page">
   <h1>Cálculo de Combustível</h1>
   
-  
+  <!--SUDAH DIKERJAKAN-->
+<p>Informe a distância, o consumo do veículo e o preço por litro abaixo e depois clique em <strong>Calcular</strong>.</p>
+<div id="calc-combustivel" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">⛽ Cálculo de Combustível</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe os dados da viagem e veja o custo na hora.</p>
+<label for="comb-distancia" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Distância (km)</label>
+<input id="comb-distancia" type="text" inputmode="decimal" placeholder="Ex.: 350" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="comb-consumo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Consumo do veículo (km/litro)</label>
+<input id="comb-consumo" type="text" inputmode="decimal" placeholder="Ex.: 12" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="comb-preco" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Preço por litro (R$)</label>
+<input id="comb-preco" type="text" inputmode="decimal" placeholder="Ex.: 5,89" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="comb-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular</button>
+<button type="button" id="comb-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="comb-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="comb-resultado">preencha os campos e clique em "Calcular".</span></div>
+</div>
+<script>
+(function () {
+  var distancia = document.getElementById('comb-distancia');
+  var consumo = document.getElementById('comb-consumo');
+  var preco = document.getElementById('comb-preco');
+  var resultado = document.getElementById('comb-resultado');
+  var caixa = document.getElementById('comb-resposta');
+  function numero(v) {
+    var t = String(v).trim().replace(/\s/g, '').replace(/^R\$/i, '');
+    if (t.indexOf(',') > -1) { t = t.replace(/\./g, '').replace(',', '.'); }
+    if (t === '' || isNaN(Number(t))) { return NaN; }
+    return Number(t);
+  }
+  function fmt(n) { return n.toLocaleString('pt-BR', { maximumFractionDigits: 2 }); }
+  function moeda(n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function calcular() {
+    var d = numero(distancia.value);
+    var c = numero(consumo.value);
+    var p = numero(preco.value);
+    if (isNaN(d) || isNaN(c) || isNaN(p)) { erro('informe números válidos nos três campos.'); return; }
+    if (d <= 0 || c <= 0 || p <= 0) { erro('todos os valores devem ser maiores que zero.'); return; }
+    var litros = d / c;
+    var custo = litros * p;
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.innerHTML = 'O custo estimado da viagem é <strong style="font-size:1.2rem;">' + moeda(custo) + '</strong><br>' +
+      '<small style="color:#475569;">Combustível necessário: ' + fmt(litros) + ' litros<br>' +
+      'Litros = ' + fmt(d) + ' ÷ ' + fmt(c) + ' = ' + fmt(litros) + '<br>' +
+      'Custo = ' + fmt(litros) + ' × ' + moeda(p) + ' = ' + moeda(custo) + '</small>';
+  }
+  function limpar() {
+    distancia.value = '';
+    consumo.value = '';
+    preco.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'preencha os campos e clique em "Calcular".';
+    distancia.focus();
+  }
+  document.getElementById('comb-calcular').addEventListener('click', calcular);
+  document.getElementById('comb-limpar').addEventListener('click', limpar);
+  [distancia, consumo, preco].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-calculadora">Como usar a calculadora</h2>
+<ol>
+<li>Digite a <strong>Distância (km)</strong> que você pretende percorrer no primeiro campo.</li>
+<li>Digite o <strong>Consumo do veículo (km/litro)</strong>, ou seja, quantos quilômetros o carro faz com 1 litro.</li>
+<li>Digite o <strong>Preço por litro (R$)</strong> praticado no posto.</li>
+<li>Clique em <strong>Calcular</strong> (ou pressione Enter) para ver a quantidade de combustível e o custo estimado da viagem.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar os valores e fazer um novo cálculo.</li>
+</ol>
+<p>Você pode usar números inteiros ou decimais, com vírgula ou ponto (por exemplo, <code>5,89</code> ou <code>5.89</code>). Para uma viagem de ida e volta, informe a distância total do percurso. O consumo real varia conforme o trânsito, a velocidade e a carga do veículo, por isso o resultado é uma estimativa.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Distância (km):</strong> total de quilômetros que será percorrido na viagem.</li>
+<li><strong>Consumo do veículo (km/litro):</strong> média de quilômetros que o veículo percorre com cada litro de combustível. Quanto maior o número, mais econômico é o veículo.</li>
+<li><strong>Preço por litro (R$):</strong> valor cobrado por cada litro de combustível no posto, em reais.</li>
+<li><strong>Litros necessários:</strong> quantidade de combustível que será gasta para percorrer a distância informada.</li>
+<li><strong>Custo:</strong> valor total estimado em reais para abastecer o veículo durante a viagem.</li>
+</ul>
+<h2 id="fórmula-do-cálculo-de-combustível">Fórmula do cálculo de combustível</h2>
+<p>Primeiro descobrimos quantos litros serão gastos e depois multiplicamos pelo preço do litro:</p>
+<p><strong>Litros = distância ÷ consumo</strong></p>
+<p><strong>Custo = litros × preço por litro</strong></p>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Uma viagem de 350 km será feita em um carro que faz 12 km/litro, com a gasolina a R$ 5,89 por litro. Qual é o custo estimado?</p>
+<ol>
+<li>Identifique os dados: distância = 350 km, consumo = 12 km/litro e preço = R$ 5,89.</li>
+<li>Calcule os litros: 350 ÷ 12 = 29,17 litros (aproximadamente).</li>
+<li>Calcule o custo: 29,17 × 5,89 = R$ 171,79 (aproximadamente, usando o valor exato dos litros).</li>
+</ol>
+<p><strong>Resposta:</strong> o gasto estimado de combustível é de cerca de <strong>R$ 171,79</strong>.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-financas">
-  <a class="card" href="/ferramentas/gasolina-ou-etanol/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
-</span>
-    <span class="tx"><strong>Gasolina ou Etanol: qual compensa</strong><small>Descubra se compensa abastecer com gasolina ou etanol.</small></span>
-  </a>
-</li>
-<li class="c-util">
-  <a class="card" href="/ferramentas/distancia-entre-cidades/">
+  <ul class="cards rel"><li class="c-util">
+  <a class="card" href="/ferramentas/calculadora-churrasco/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
-    <span class="tx"><strong>Distância Entre Cidades</strong><small>Calcule a distância entre duas cidades.</small></span>
+    <span class="tx"><strong>Calculadora de Churrasco</strong><small>Calcule carne, bebida e acompanhamentos por convidado.</small></span>
   </a>
 </li>
-<li class="c-financas">
-  <a class="card" href="/ferramentas/tabela-fipe/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-fatoracao/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Tabela Fipe Veículos</strong><small>Consulte o preço de veículos na tabela Fipe.</small></span>
+    <span class="tx"><strong>Calculadora de Fatoração de Número</strong><small>Decomponha um número em fatores primos.</small></span>
   </a>
 </li>
-<li class="c-documentos">
-  <a class="card" href="/ferramentas/validador-de-renavam/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-fracao/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Validador de RENAVAM</strong><small>Confira se um Renavam é válido.</small></span>
+    <span class="tx"><strong>Calculadora de Fração</strong><small>Some, subtraia, multiplique e divida frações.</small></span>
   </a>
 </li>
-<li class="c-documentos">
-  <a class="card" href="/ferramentas/validador-de-cnh/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-triangulo/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Validador de CNH</strong><small>Confira se uma CNH é válida.</small></span>
+    <span class="tx"><strong>Calculadora da Área do Triângulo</strong><small>Calcule a área do triângulo com a fórmula.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/calculadora-de-horas/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora de Horas</strong><small>Some e subtraia horas e minutos.</small></span>
   </a>
 </li>
 
@@ -94,7 +196,7 @@
   <div class="bar foot">
     <span>© 2026 Gerador de CPF</span>
 
-    <a href="/%20/politica-de-privacidade/">Política de Privacidade</a>
+    <a href="https://geradorcpf.github.io/politica-de-privacidade/">Política de Privacidade</a>
   </div>
 </footer>
 
