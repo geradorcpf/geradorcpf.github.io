@@ -6,8 +6,92 @@
     <description>Recent content on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Base64 Decodificar e Codificar</title>
+      <link>http://localhost:1313/ferramentas/base64-codificar-decodificar/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/base64-codificar-decodificar/</guid>
+      <description>Codifique texto em Base64 ou decodifique de volta.</description>
+    </item>
+    <item>
+      <title>Calculadora da Área do Trapézio</title>
+      <link>http://localhost:1313/ferramentas/area-trapezio/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/area-trapezio/</guid>
+      <description>Calcule a área do trapézio com a fórmula.</description>
+    </item>
+    <item>
+      <title>Calculadora da Área do Triângulo</title>
+      <link>http://localhost:1313/ferramentas/area-triangulo/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/area-triangulo/</guid>
+      <description>Calcule a área do triângulo com a fórmula.</description>
+    </item>
+    <item>
+      <title>Calculadora de Churrasco</title>
+      <link>http://localhost:1313/ferramentas/calculadora-churrasco/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-churrasco/</guid>
+      <description>Calcule carne, bebida e acompanhamentos por convidado.</description>
+    </item>
+    <item>
+      <title>Calculadora de Dias Úteis</title>
+      <link>http://localhost:1313/ferramentas/calculadora-dias-uteis/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-dias-uteis/</guid>
+      <description>Conte os dias úteis entre duas datas, descontando feriados.</description>
+    </item>
+    <item>
+      <title>Calculadora de Fatoração de Número</title>
+      <link>http://localhost:1313/ferramentas/calculadora-de-fatoracao/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-de-fatoracao/</guid>
+      <description>Decomponha um número em fatores primos.</description>
+    </item>
+    <item>
+      <title>Calculadora de Fração</title>
+      <link>http://localhost:1313/ferramentas/calculadora-de-fracao/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-de-fracao/</guid>
+      <description>Some, subtraia, multiplique e divida frações.</description>
+    </item>
+    <item>
+      <title>Calculadora de Horas</title>
+      <link>http://localhost:1313/ferramentas/calculadora-de-horas/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-de-horas/</guid>
+      <description>Some e subtraia horas e minutos.</description>
+    </item>
+    <item>
+      <title>Calculadora de Porcentagem</title>
+      <link>http://localhost:1313/ferramentas/calculadora-de-porcentagem/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-de-porcentagem/</guid>
+      <description>Calcule porcentagens, descontos e aumentos.</description>
+    </item>
+    <item>
+      <title>Calculadora de Regra de Três Simples</title>
+      <link>http://localhost:1313/ferramentas/calculadora-de-regra-de-tres/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-de-regra-de-tres/</guid>
+      <description>Resolva regra de três simples com o passo a passo.</description>
+    </item>
+    <item>
+      <title>Calculadora de Resto da Divisão</title>
+      <link>http://localhost:1313/ferramentas/calculadora-de-resto-da-divisao/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-de-resto-da-divisao/</guid>
+      <description>Descubra o quociente e o resto de uma divisão.</description>
+    </item>
+    <item>
+      <title>Cálculo de Combustível</title>
+      <link>http://localhost:1313/ferramentas/calculadora-de-combustivel/</link>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-de-combustivel/</guid>
+      <description>Calcule o gasto de combustível de uma viagem.</description>
+    </item>
     <item>
       <title>Calculadora da Área da Coroa Circular</title>
       <link>http://localhost:1313/ferramentas/area-coroa-circular/</link>
@@ -86,11 +170,18 @@
       <description>Calcule a área do setor circular com a fórmula.</description>
     </item>
     <item>
-      <title>Calculadora da Área do Trapézio</title>
-      <link>http://localhost:1313/ferramentas/area-trapezio/</link>
+      <title>Calculadora de MDC</title>
+      <link>http://localhost:1313/ferramentas/calculadora-mdc/</link>
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/ferramentas/area-trapezio/</guid>
-      <description>Calcule a área do trapézio com a fórmula.</description>
+      <guid>http://localhost:1313/ferramentas/calculadora-mdc/</guid>
+      <description>Calcule o máximo divisor comum de dois ou mais números.</description>
+    </item>
+    <item>
+      <title>Calculadora Gestacional</title>
+      <link>http://localhost:1313/ferramentas/calculadora-gestacional/</link>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-gestacional/</guid>
+      <description>Estime a data provável do parto e a idade gestacional.</description>
     </item>
     <item>
       <title>Código para gerar e validar CPF em JavaScript, Python e PHP</title>

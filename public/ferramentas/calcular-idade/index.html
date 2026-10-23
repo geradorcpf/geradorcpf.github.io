@@ -43,45 +43,182 @@
 <article class="prose page">
   <h1>Calcular Idade</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta escolher a sua data de nascimento abaixo e depois clicar em <strong>Calcular Idade</strong>.</p>
+<div id="calc-idade" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🎂 Calculadora de Idade</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe sua data de nascimento e veja a idade exata na hora.</p>
+<label for="idade-dia" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Data de Nascimento</label>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+<select id="idade-dia" aria-label="Dia" style="flex:1;min-width:80px;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+<select id="idade-mes" aria-label="Mês" style="flex:2;min-width:130px;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+<input id="idade-ano" type="text" inputmode="numeric" maxlength="4" placeholder="Ano" aria-label="Ano" autocomplete="off" style="flex:1;min-width:90px;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="idade-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular Idade</button>
+<button type="button" id="idade-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="idade-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Sua Idade:</strong> <span id="idade-resultado">escolha a data e clique em "Calcular Idade".</span></div>
+</div>
+<script>
+(function () {
+  var dia = document.getElementById('idade-dia');
+  var mes = document.getElementById('idade-mes');
+  var ano = document.getElementById('idade-ano');
+  var resultado = document.getElementById('idade-resultado');
+  var caixa = document.getElementById('idade-resposta');
+  var nomesMes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+  var textoInicial = 'escolha a data e clique em "Calcular Idade".';
+  function opcao(sel, valor, texto) {
+    var o = document.createElement('option');
+    o.value = valor;
+    o.textContent = texto;
+    sel.appendChild(o);
+  }
+  function preencher() {
+    var i;
+    opcao(dia, '', 'Dia');
+    for (i = 1; 32 > i; i++) { opcao(dia, String(i), i > 9 ? String(i) : '0' + i); }
+    opcao(mes, '', 'Mês');
+    for (i = 0; nomesMes.length > i; i++) { opcao(mes, String(i + 1), nomesMes[i]); }
+  }
+  function fmt(n) { return n.toLocaleString('pt-BR'); }
+  function plural(n, singular, plur) { return fmt(n) + ' ' + (n === 1 ? singular : plur); }
+  function esvaziar() { while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); } }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    esvaziar();
+    resultado.appendChild(document.createTextNode(msg));
+  }
+  function calcular() {
+    var d = parseInt(dia.value, 10);
+    var m = parseInt(mes.value, 10);
+    var textoAno = ano.value.trim();
+    if (isNaN(d) || isNaN(m) || !/^\d{4}$/.test(textoAno)) { erro('informe o dia, o mês e um ano com 4 dígitos.'); return; }
+    var a = parseInt(textoAno, 10);
+    if (1900 > a) { erro('informe um ano a partir de 1900.'); return; }
+    var nasc = new Date(a, m - 1, d);
+    if (nasc.getFullYear() !== a || nasc.getMonth() !== m - 1 || nasc.getDate() !== d) { erro('essa data não existe no calendário.'); return; }
+    var agora = new Date();
+    var ta = agora.getFullYear();
+    var tm = agora.getMonth();
+    var td = agora.getDate();
+    if (nasc.getTime() > new Date(ta, tm, td).getTime()) { erro('a data de nascimento não pode estar no futuro.'); return; }
+    var anos = ta - a;
+    var meses = tm - (m - 1);
+    var dias = td - d;
+    if (0 > dias) {
+      dias += new Date(ta, tm, 0).getDate();
+      meses -= 1;
+    }
+    if (0 > meses) {
+      meses += 12;
+      anos -= 1;
+    }
+    var hojeUTC = Date.UTC(ta, tm, td);
+    var totalDias = Math.round((hojeUTC - Date.UTC(a, m - 1, d)) / 86400000);
+    var proximo = Date.UTC(ta, m - 1, d);
+    if (hojeUTC > proximo) { proximo = Date.UTC(ta + 1, m - 1, d); }
+    var faltam = Math.round((proximo - hojeUTC) / 86400000);
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    esvaziar();
+    resultado.appendChild(document.createTextNode('Você tem '));
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.2rem';
+    forte.textContent = plural(anos, 'ano', 'anos') + ', ' + plural(meses, 'mês', 'meses') + ' e ' + plural(dias, 'dia', 'dias');
+    resultado.appendChild(forte);
+    resultado.appendChild(document.createElement('br'));
+    var pequeno = document.createElement('small');
+    pequeno.style.color = '#475569';
+    var extra = 'Total: ' + plural(totalDias, 'dia vivido', 'dias vividos') + '. ';
+    extra += faltam === 0 ? 'Hoje é o seu aniversário! 🎉' : 'Faltam ' + plural(faltam, 'dia', 'dias') + ' para o próximo aniversário.';
+    pequeno.textContent = extra;
+    resultado.appendChild(pequeno);
+  }
+  function limpar() {
+    dia.value = '';
+    mes.value = '';
+    ano.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    esvaziar();
+    resultado.appendChild(document.createTextNode(textoInicial));
+    dia.focus();
+  }
+  preencher();
+  document.getElementById('idade-calcular').addEventListener('click', calcular);
+  document.getElementById('idade-limpar').addEventListener('click', limpar);
+  ano.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+  [dia, mes, ano].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-calculadora">Como usar a calculadora</h2>
+<ol>
+<li>Escolha o <strong>dia</strong> do seu nascimento no primeiro campo.</li>
+<li>Escolha o <strong>mês</strong> no segundo campo.</li>
+<li>Digite o <strong>ano</strong> com 4 dígitos no terceiro campo (por exemplo, <code>1990</code>).</li>
+<li>Clique em <strong>Calcular Idade</strong> (ou pressione Enter no campo do ano) para ver o resultado.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar a data e fazer um novo cálculo.</li>
+</ol>
+<p>A idade é calculada com base na data de hoje e mostrada em anos, meses e dias. A calculadora também informa o total de dias vividos e quantos dias faltam para o próximo aniversário. Datas inexistentes (como 31 de abril) ou no futuro não são aceitas.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Data de nascimento:</strong> dia, mês e ano em que a pessoa nasceu. É o ponto de partida do cálculo.</li>
+<li><strong>Idade:</strong> tempo decorrido entre a data de nascimento e a data de hoje.</li>
+<li><strong>Anos:</strong> quantidade de aniversários completos já comemorados.</li>
+<li><strong>Meses:</strong> meses completos que se passaram desde o último aniversário. O valor vai de 0 a 11.</li>
+<li><strong>Dias:</strong> dias completos que se passaram desde o último mês completado.</li>
+<li><strong>Dias vividos:</strong> total de dias entre o nascimento e hoje, contando todos os anos e meses.</li>
+<li><strong>Próximo aniversário:</strong> a próxima vez em que o dia e o mês de nascimento voltam a coincidir com o calendário.</li>
+<li><strong>Ano bissexto:</strong> ano de 366 dias, com 29 de fevereiro. Ele ocorre a cada 4 anos e é considerado no cálculo dos dias.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-datas">
-  <a class="card" href="/ferramentas/dias-entre-datas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+  <ul class="cards rel"><li class="c-saude">
+  <a class="card" href="/ferramentas/calcular-periodo-fertil/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
 </span>
-    <span class="tx"><strong>Contador de Dias entre Datas</strong><small>Conte quantos dias existem entre duas datas.</small></span>
+    <span class="tx"><strong>Calcular Período Fértil</strong><small>Estime seu período fértil a partir do ciclo.</small></span>
+  </a>
+</li>
+<li class="c-saude">
+  <a class="card" href="/ferramentas/calculadora-gestacional/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora Gestacional</strong><small>Estime a data provável do parto e a idade gestacional.</small></span>
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/subtrair-dias-em-datas/">
+  <a class="card" href="/ferramentas/calculadora-de-horas/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Subtrair Dias em Datas</strong><small>Descubra a data resultante ao subtrair dias de uma data.</small></span>
+    <span class="tx"><strong>Calculadora de Horas</strong><small>Some e subtraia horas e minutos.</small></span>
   </a>
 </li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/somar-dias-em-datas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-mmc/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Somar Dias em Datas</strong><small>Descubra a data resultante ao somar dias a uma data.</small></span>
+    <span class="tx"><strong>Calculadora de MMC</strong><small>Calcule o mínimo múltiplo comum de dois ou mais números.</small></span>
   </a>
 </li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/calendario-2026/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+<li class="c-financas">
+  <a class="card" href="/ferramentas/calculo-de-ferias/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
 </span>
-    <span class="tx"><strong>Calendário 2026</strong><small>Calendário de 2026 com feriados e datas importantes.</small></span>
-  </a>
-</li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/contagem-regressiva/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Contagem Regressiva</strong><small>Crie uma contagem regressiva para qualquer data.</small></span>
+    <span class="tx"><strong>Cálculo de Férias</strong><small>Estime o valor das suas férias, com o terço constitucional.</small></span>
   </a>
 </li>
 

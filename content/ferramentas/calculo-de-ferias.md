@@ -3,9 +3,223 @@ title: "Cálculo de Férias"
 seoTitle: "Cálculo de Férias: online e grátis"
 description: "Cálculo de Férias: estime o valor das suas férias, com o terço constitucional. Grátis e online, sem cadastro."
 summary: "Estime o valor das suas férias, com o terço constitucional."
-date: 2026-10-20
-draft: true
+date: 2026-10-23
+draft: false
 category: "financas"
 tags: ["férias", "trabalho", "direitos trabalhistas", "calculadora"]
 keywords: ["cálculo de férias", "cálculo de férias online", "férias", "trabalho", "direitos trabalhistas"]
 ---
+
+<!--INI SUDAH DIKERJAKAN-->
+
+Basta preencher os dados abaixo e depois clicar em **Calcular Férias**.
+
+<div id="calc-ferias" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🏖️ Calculadora de Férias</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe os dados e veja o valor das suas férias na hora.</p>
+<label for="fer-salario" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Salário Bruto (em reais)</label>
+<input id="fer-salario" type="text" inputmode="decimal" placeholder="Ex.: 3500,00" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="fer-dependentes" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Nº de Dependentes</label>
+<input id="fer-dependentes" type="text" inputmode="numeric" placeholder="Ex.: 0" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="fer-dias" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Dias de Férias</label>
+<select id="fer-dias" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="30">30 dias (desejo tirar os 30 dias de férias)</option>
+<option value="20">20 dias (desejo vender um terço das férias)</option>
+</select>
+<label for="fer-13" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Adiantar 1ª Parcela do 13º Salário</label>
+<select id="fer-13" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="nao">Não</option>
+<option value="sim">Sim</option>
+</select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="fer-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular Férias</button>
+<button type="button" id="fer-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="fer-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong><div id="fer-resultado" style="margin-top:4px;">preencha os campos e clique em "Calcular Férias".</div></div>
+</div>
+<script>
+(function () {
+  var salarioEl = document.getElementById('fer-salario');
+  var depEl = document.getElementById('fer-dependentes');
+  var diasEl = document.getElementById('fer-dias');
+  var decimoEl = document.getElementById('fer-13');
+  var resultado = document.getElementById('fer-resultado');
+  var caixa = document.getElementById('fer-resposta');
+  var TETO_INSS = 8475.55;
+  var FAIXAS_INSS = [[1621.00, 0.075], [2902.84, 0.09], [4354.27, 0.12], [8475.55, 0.14]];
+  var FAIXAS_IR = [[2428.80, 0, 0], [2826.65, 0.075, 182.16], [3751.05, 0.15, 394.16], [4664.68, 0.225, 675.49], [Infinity, 0.275, 908.73]];
+  var DEDUCAO_DEPENDENTE = 189.59;
+  var DESCONTO_SIMPLIFICADO = 607.20;
+  function numero(v) {
+    var t = String(v).trim().replace(/\s/g, '');
+    var m;
+    if (t.indexOf(',') > -1) {
+      t = t.replace(/\./g, '').replace(',', '.');
+    } else {
+      m = t.match(/^\d{1,3}(\.\d{3})+/);
+      if (m !== null) {
+        if (m[0].length === t.length) { t = t.replace(/\./g, ''); }
+      }
+    }
+    if (t === '' || isNaN(Number(t))) { return NaN; }
+    return Number(t);
+  }
+  function r2(n) { return Math.round((n + 1e-9) * 100) / 100; }
+  function fmt(n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+  function inss(base) {
+    var b = Math.min(base, TETO_INSS);
+    var anterior = 0;
+    var total = 0;
+    var i;
+    for (i = 0; i !== FAIXAS_INSS.length; i++) {
+      if (b > anterior) {
+        total += (Math.min(b, FAIXAS_INSS[i][0]) - anterior) * FAIXAS_INSS[i][1];
+      }
+      anterior = FAIXAS_INSS[i][0];
+    }
+    return r2(total);
+  }
+  function imposto(base) {
+    var i;
+    var f;
+    for (i = 0; i !== FAIXAS_IR.length; i++) {
+      f = FAIXAS_IR[i];
+      if (f[0] >= base) { return Math.max(0, r2(base * f[1] - f[2])); }
+    }
+    return 0;
+  }
+  function redutor(bruto, imp) {
+    var r = 0;
+    if (5000 >= bruto) {
+      r = 312.89;
+    } else if (7350 >= bruto) {
+      r = Math.max(0, 978.62 - 0.133145 * bruto);
+    }
+    return r2(Math.min(r, imp));
+  }
+  function esvaziar() {
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    esvaziar();
+    resultado.textContent = msg;
+  }
+  function titulo(texto) {
+    var t = document.createElement('div');
+    t.textContent = texto;
+    t.style.cssText = 'margin:12px 0 2px;font-weight:700;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;color:#3730a3;';
+    resultado.appendChild(t);
+  }
+  function linha(rotulo, valor, destaque) {
+    var d = document.createElement('div');
+    var a = document.createElement('span');
+    var b = document.createElement('span');
+    d.style.cssText = 'display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid #e2e8f0;font-size:' + (destaque ? '1.1rem' : '0.95rem') + ';' + (destaque ? 'font-weight:700;' : '');
+    a.textContent = rotulo;
+    a.style.color = destaque ? '#166534' : '#475569';
+    b.textContent = valor;
+    b.style.cssText = 'text-align:right;white-space:nowrap;';
+    d.appendChild(a);
+    d.appendChild(b);
+    resultado.appendChild(d);
+  }
+  function calcular() {
+    var sal = numero(salarioEl.value);
+    var depTxt = depEl.value.trim();
+    var dep = depTxt === '' ? 0 : Number(depTxt);
+    var dias = Number(diasEl.value);
+    var adianta = decimoEl.value === 'sim';
+    if (isNaN(sal)) { erro('informe um salário bruto válido.'); return; }
+    if (0 >= sal) { erro('o salário bruto deve ser maior que zero.'); return; }
+    if (isNaN(dep) || dep !== Math.floor(dep) || 0 > dep) { erro('informe um número inteiro de dependentes (0 ou mais).'); return; }
+    var valorFerias = r2(sal / 30 * dias);
+    var terco = r2(valorFerias / 3);
+    var abono = 0;
+    var tercoAbono = 0;
+    if (dias === 20) {
+      abono = r2(sal / 30 * 10);
+      tercoAbono = r2(abono / 3);
+    }
+    var decimo = adianta ? r2(sal / 2) : 0;
+    var baseTributavel = r2(valorFerias + terco);
+    var vInss = inss(baseTributavel);
+    var impLegal = imposto(baseTributavel - vInss - dep * DEDUCAO_DEPENDENTE);
+    var impSimples = imposto(baseTributavel - DESCONTO_SIMPLIFICADO);
+    var imp = impLegal > impSimples ? impSimples : impLegal;
+    var vIr = r2(imp - redutor(baseTributavel, imp));
+    var totalBruto = r2(baseTributavel + abono + tercoAbono + decimo);
+    var totalDescontos = r2(vInss + vIr);
+    var liquido = r2(totalBruto - totalDescontos);
+    var nota = document.createElement('small');
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    esvaziar();
+    titulo('Proventos');
+    linha('Férias (' + dias + ' dias)', fmt(valorFerias));
+    linha('1/3 constitucional', fmt(terco));
+    if (dias === 20) {
+      linha('Abono pecuniário (10 dias)', fmt(abono));
+      linha('1/3 sobre o abono', fmt(tercoAbono));
+    }
+    if (adianta) { linha('1ª parcela do 13º salário', fmt(decimo)); }
+    linha('Total bruto', fmt(totalBruto));
+    titulo('Descontos');
+    linha('INSS', fmt(vInss));
+    linha('IRRF', fmt(vIr));
+    linha('Total de descontos', fmt(totalDescontos));
+    titulo('Resultado');
+    linha('Valor líquido a receber', fmt(liquido), true);
+    nota.style.cssText = 'display:block;margin-top:12px;color:#475569;line-height:1.5;';
+    nota.textContent = 'Estimativa com as tabelas de INSS e IRRF de 2026. O abono pecuniário e a 1ª parcela do 13º não sofrem descontos neste cálculo.';
+    resultado.appendChild(nota);
+  }
+  function limpar() {
+    salarioEl.value = '';
+    depEl.value = '';
+    diasEl.value = '30';
+    decimoEl.value = 'nao';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    esvaziar();
+    resultado.textContent = 'preencha os campos e clique em "Calcular Férias".';
+    salarioEl.focus();
+  }
+  document.getElementById('fer-calcular').addEventListener('click', calcular);
+  document.getElementById('fer-limpar').addEventListener('click', limpar);
+  [salarioEl, depEl, diasEl, decimoEl].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+
+## Como usar a calculadora
+
+1. Digite o seu **Salário Bruto** mensal, ou seja, o valor antes de qualquer desconto.
+2. Informe o **Nº de Dependentes** (deixe em branco ou digite 0 se não houver).
+3. Escolha os **Dias de Férias**: 30 dias para tirar o período completo ou 20 dias para vender um terço das férias.
+4. Selecione se deseja **Adiantar a 1ª Parcela do 13º Salário** junto com as férias (Sim ou Não).
+5. Clique em **Calcular Férias** (ou pressione Enter) para ver o resultado detalhado.
+6. Use o botão **Limpar** para apagar os dados e fazer um novo cálculo.
+
+Você pode digitar valores com vírgula ou ponto (por exemplo, `3500,50` ou `3.500,50`). O resultado é uma estimativa baseada nas tabelas de INSS e IRRF de 2026, e o valor final pago pela empresa pode variar conforme a convenção coletiva e outros itens da folha.
+
+## Entendendo os termos
+
+- **Férias:** período de descanso remunerado a que todo trabalhador CLT tem direito após 12 meses de trabalho, com até 30 dias corridos.
+- **Salário bruto:** valor do salário antes dos descontos de INSS, imposto de renda e outros.
+- **Dependentes:** pessoas que o trabalhador sustenta e que podem ser informadas ao Imposto de Renda, como filhos. Cada dependente reduz a base de cálculo do IRRF.
+- **Terço constitucional (1/3):** adicional de um terço sobre o valor das férias, garantido pela Constituição Federal.
+- **Abono pecuniário:** venda de até um terço das férias (10 dias) para a empresa, recebida em dinheiro. Também recebe o adicional de 1/3 e não sofre desconto de INSS nem de IRRF.
+- **1ª parcela do 13º salário:** metade do 13º salário, que o trabalhador pode pedir para receber junto com as férias, sem descontos nesta parcela.
+- **INSS:** contribuição previdenciária descontada do trabalhador, calculada por faixas progressivas (de 7,5% a 14%) e limitada ao teto de contribuição.
+- **IRRF:** Imposto de Renda Retido na Fonte, descontado sobre a base de cálculo após INSS e dependentes (ou desconto simplificado). Em 2026, há redução que zera o imposto para quem recebe até 5 mil reais por mês.
+- **Desconto simplificado:** dedução padrão de 607,20 reais usada no lugar do INSS e dos dependentes quando for mais vantajosa.
+- **Total bruto:** soma de tudo o que é pago ao trabalhador antes dos descontos.
+- **Valor líquido:** quantia que de fato cai na conta, depois de subtrair INSS e IRRF do total bruto.

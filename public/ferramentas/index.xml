@@ -6,8 +6,64 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 22 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calculadora de MDC</title>
+      <link>http://localhost:1313/ferramentas/calculadora-mdc/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-mdc/</guid>
+      <description>Calcule o máximo divisor comum de dois ou mais números.</description>
+    </item>
+    <item>
+      <title>Calculadora do Primeiro Milhão</title>
+      <link>http://localhost:1313/ferramentas/calculadora-primeiro-milhao/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-primeiro-milhao/</guid>
+      <description>Descubra em quanto tempo você junta o primeiro milhão.</description>
+    </item>
+    <item>
+      <title>Calculadora Gestacional</title>
+      <link>http://localhost:1313/ferramentas/calculadora-gestacional/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-gestacional/</guid>
+      <description>Estime a data provável do parto e a idade gestacional.</description>
+    </item>
+    <item>
+      <title>Calcular CRC32</title>
+      <link>http://localhost:1313/ferramentas/calcular-crc32/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calcular-crc32/</guid>
+      <description>Calcule o checksum CRC32 de um texto.</description>
+    </item>
+    <item>
+      <title>Calcular Idade</title>
+      <link>http://localhost:1313/ferramentas/calcular-idade/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calcular-idade/</guid>
+      <description>Descubra sua idade exata em anos, meses e dias.</description>
+    </item>
+    <item>
+      <title>Calcular IMC</title>
+      <link>http://localhost:1313/ferramentas/calcular-imc/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calcular-imc/</guid>
+      <description>Calcule seu Índice de Massa Corporal e veja a faixa.</description>
+    </item>
+    <item>
+      <title>Calcular Período Fértil</title>
+      <link>http://localhost:1313/ferramentas/calcular-periodo-fertil/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calcular-periodo-fertil/</guid>
+      <description>Estime seu período fértil a partir do ciclo.</description>
+    </item>
+    <item>
+      <title>Cálculo de Férias</title>
+      <link>http://localhost:1313/ferramentas/calculo-de-ferias/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculo-de-ferias/</guid>
+      <description>Estime o valor das suas férias, com o terço constitucional.</description>
+    </item>
     <item>
       <title>Base64 Decodificar e Codificar</title>
       <link>http://localhost:1313/ferramentas/base64-codificar-decodificar/</link>
@@ -168,6 +224,13 @@
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/ferramentas/area-setor-circular/</guid>
       <description>Calcule a área do setor circular com a fórmula.</description>
+    </item>
+    <item>
+      <title>Calculadora de MMC</title>
+      <link>http://localhost:1313/ferramentas/calculadora-mmc/</link>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculadora-mmc/</guid>
+      <description>Calcule o mínimo múltiplo comum de dois ou mais números.</description>
     </item>
   </channel>
 </rss>

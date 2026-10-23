@@ -1,11 +1,206 @@
 ---
 title: "Calculadora do Primeiro Milhão"
-seoTitle: "Calculadora do Primeiro Milhão: online e grátis"
+seoTitle: "Calculadora do Primeiro Milhão"
 description: "Calculadora do Primeiro Milhão: descubra em quanto tempo você junta o primeiro milhão. Grátis e online, sem cadastro."
 summary: "Descubra em quanto tempo você junta o primeiro milhão."
-date: 2026-10-20
-draft: true
+date: 2026-10-23
+draft: false
 category: "financas"
 tags: ["investimentos", "juros compostos", "finanças", "simulador"]
 keywords: ["calculadora do primeiro milhão", "calculadora do primeiro milhão online", "investimentos", "juros compostos", "finanças"]
 ---
+<!--sudah dikerjakan-->
+
+Escolha abaixo o que você quer descobrir: **quanto poupar por mês** ou **em quanto tempo** você chega ao seu primeiro milhão. Depois é só preencher os campos e clicar em **Calcular**.
+
+<div id="calc-milhao-1" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">💰 Poupança Necessária</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Descubra quanto poupar por mês para atingir seu objetivo.</p>
+<label for="pm-valor-1" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Valor desejado (R$)</label>
+<input id="pm-valor-1" type="text" inputmode="decimal" value="1000000" placeholder="Ex.: 1000000" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pm-taxa-1" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Taxa de juros mensal (%)</label>
+<input id="pm-taxa-1" type="text" inputmode="decimal" placeholder="Ex.: 0,8" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pm-anos-1" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Período para atingir objetivo (anos)</label>
+<input id="pm-anos-1" type="text" inputmode="decimal" placeholder="Ex.: 20" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="pm-calcular-1" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular</button>
+<button type="button" id="pm-limpar-1" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="pm-resposta-1" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Poupança mensal:</strong> <span id="pm-resultado-1">preencha os campos e clique em "Calcular".</span></div>
+</div>
+<div id="calc-milhao-2" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">⏳ Tempo Necessário</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Descubra em quanto tempo você chega ao seu objetivo.</p>
+<label for="pm-valor-2" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Valor desejado (R$)</label>
+<input id="pm-valor-2" type="text" inputmode="decimal" value="1000000" placeholder="Ex.: 1000000" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pm-taxa-2" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Taxa de juros mensal (%)</label>
+<input id="pm-taxa-2" type="text" inputmode="decimal" placeholder="Ex.: 0,8" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pm-poup-2" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Poupança mensal (R$)</label>
+<input id="pm-poup-2" type="text" inputmode="decimal" placeholder="Ex.: 2000" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="pm-calcular-2" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular</button>
+<button type="button" id="pm-limpar-2" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="pm-resposta-2" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Período para atingir objetivo:</strong> <span id="pm-resultado-2">preencha os campos e clique em "Calcular".</span></div>
+</div>
+<script>
+(function () {
+  var TIPOS = {
+    ok: { borda: '#86efac', fundo: '#f0fdf4', cor: '#166534' },
+    erro: { borda: '#fca5a5', fundo: '#fef2f2', cor: '#b91c1c' },
+    neutro: { borda: '#c7d2fe', fundo: '#ffffff', cor: '#64748b' }
+  };
+  var PADRAO = 'preencha os campos e clique em "Calcular".';
+  function numero(v) {
+    var t = String(v).trim().replace(/\s/g, '');
+    if (t.indexOf(',') > -1) {
+      t = t.replace(/\./g, '').replace(',', '.');
+    } else if (t.split('.').length > 2) {
+      t = t.replace(/\./g, '');
+    }
+    if (t === '' || isNaN(Number(t))) { return NaN; }
+    return Number(t);
+  }
+  function moeda(n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+  function plural(n, s, p) { return n + ' ' + (n === 1 ? s : p); }
+  function mostrar(caixa, span, tipo, linhas) {
+    var c = TIPOS[tipo];
+    caixa.style.borderColor = c.borda;
+    caixa.style.background = c.fundo;
+    span.style.color = c.cor;
+    while (span.firstChild) { span.removeChild(span.firstChild); }
+    linhas.forEach(function (linha, i) {
+      if (i > 0) { span.appendChild(document.createElement('br')); }
+      linha.forEach(function (peca) {
+        if (peca.g) {
+          var g = document.createElement('strong');
+          g.style.fontSize = '1.2rem';
+          g.textContent = peca.t;
+          span.appendChild(g);
+        } else if (peca.p) {
+          var p = document.createElement('small');
+          p.style.color = '#475569';
+          p.textContent = peca.t;
+          span.appendChild(p);
+        } else {
+          span.appendChild(document.createTextNode(peca.t));
+        }
+      });
+    });
+  }
+  function ligar(ids, calcular, limpar) {
+    document.getElementById(ids.calcular).addEventListener('click', calcular);
+    document.getElementById(ids.limpar).addEventListener('click', limpar);
+    ids.campos.forEach(function (id) {
+      var el = document.getElementById(id);
+      el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+      el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+      el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+    });
+  }
+  var v1 = document.getElementById('pm-valor-1');
+  var t1 = document.getElementById('pm-taxa-1');
+  var a1 = document.getElementById('pm-anos-1');
+  var caixa1 = document.getElementById('pm-resposta-1');
+  var res1 = document.getElementById('pm-resultado-1');
+  function calcular1() {
+    var v = numero(v1.value);
+    var t = numero(t1.value);
+    var a = numero(a1.value);
+    if (isNaN(v) || isNaN(t) || isNaN(a)) { mostrar(caixa1, res1, 'erro', [[{ t: 'informe números válidos em todos os campos.' }]]); return; }
+    if (!(v > 0)) { mostrar(caixa1, res1, 'erro', [[{ t: 'o valor desejado deve ser maior que zero.' }]]); return; }
+    if (!(t >= 0) || t > 100) { mostrar(caixa1, res1, 'erro', [[{ t: 'a taxa mensal deve estar entre 0 e 100%.' }]]); return; }
+    if (!(a > 0) || a > 100) { mostrar(caixa1, res1, 'erro', [[{ t: 'o período deve estar entre 1 mês e 100 anos.' }]]); return; }
+    var n = Math.round(a * 12);
+    if (!(n > 0)) { mostrar(caixa1, res1, 'erro', [[{ t: 'o período mínimo é de 1 mês (0,0834 ano).' }]]); return; }
+    var i = t / 100;
+    var p = (i === 0) ? v / n : v * i / (Math.pow(1 + i, n) - 1);
+    if (!isFinite(p)) { mostrar(caixa1, res1, 'erro', [[{ t: 'não foi possível calcular com esses valores.' }]]); return; }
+    var investido = p * n;
+    var juros = v - investido;
+    mostrar(caixa1, res1, 'ok', [
+      [{ t: moeda(p), g: true }, { t: ' por mês' }],
+      [{ t: 'Total investido: ' + moeda(investido) + ' | Juros ganhos: ' + moeda(juros), p: true }],
+      [{ t: 'Período: ' + plural(n, 'mês', 'meses') + ' (juros compostos, depósitos no fim de cada mês)', p: true }]
+    ]);
+  }
+  function limpar1() {
+    v1.value = '1000000';
+    t1.value = '';
+    a1.value = '';
+    mostrar(caixa1, res1, 'neutro', [[{ t: PADRAO }]]);
+    t1.focus();
+  }
+  ligar({ calcular: 'pm-calcular-1', limpar: 'pm-limpar-1', campos: ['pm-valor-1', 'pm-taxa-1', 'pm-anos-1'] }, calcular1, limpar1);
+  var v2 = document.getElementById('pm-valor-2');
+  var t2 = document.getElementById('pm-taxa-2');
+  var p2 = document.getElementById('pm-poup-2');
+  var caixa2 = document.getElementById('pm-resposta-2');
+  var res2 = document.getElementById('pm-resultado-2');
+  function calcular2() {
+    var v = numero(v2.value);
+    var t = numero(t2.value);
+    var p = numero(p2.value);
+    if (isNaN(v) || isNaN(t) || isNaN(p)) { mostrar(caixa2, res2, 'erro', [[{ t: 'informe números válidos em todos os campos.' }]]); return; }
+    if (!(v > 0)) { mostrar(caixa2, res2, 'erro', [[{ t: 'o valor desejado deve ser maior que zero.' }]]); return; }
+    if (!(t >= 0) || t > 100) { mostrar(caixa2, res2, 'erro', [[{ t: 'a taxa mensal deve estar entre 0 e 100%.' }]]); return; }
+    if (!(p > 0)) { mostrar(caixa2, res2, 'erro', [[{ t: 'a poupança mensal deve ser maior que zero.' }]]); return; }
+    var i = t / 100;
+    var n = (i === 0) ? v / p : Math.log(1 + v * i / p) / Math.log(1 + i);
+    var m = Math.ceil(n - 0.000000001);
+    if (!isFinite(m) || m > 1200) { mostrar(caixa2, res2, 'erro', [[{ t: 'o período passa de 100 anos. Aumente a poupança ou a taxa.' }]]); return; }
+    if (!(m > 0)) { m = 1; }
+    var anos = Math.floor(m / 12);
+    var meses = m % 12;
+    var partes = [];
+    if (anos > 0) { partes.push(plural(anos, 'ano', 'anos')); }
+    if (meses > 0) { partes.push(plural(meses, 'mês', 'meses')); }
+    var acumulado = (i === 0) ? p * m : p * (Math.pow(1 + i, m) - 1) / i;
+    var investido = p * m;
+    mostrar(caixa2, res2, 'ok', [
+      [{ t: partes.join(' e '), g: true }, { t: ' (' + plural(m, 'mês', 'meses') + ')' }],
+      [{ t: 'Total investido: ' + moeda(investido) + ' | Juros ganhos: ' + moeda(acumulado - investido), p: true }],
+      [{ t: 'Valor acumulado: ' + moeda(acumulado) + ' (juros compostos, depósitos no fim de cada mês)', p: true }]
+    ]);
+  }
+  function limpar2() {
+    v2.value = '1000000';
+    t2.value = '';
+    p2.value = '';
+    mostrar(caixa2, res2, 'neutro', [[{ t: PADRAO }]]);
+    t2.focus();
+  }
+  ligar({ calcular: 'pm-calcular-2', limpar: 'pm-limpar-2', campos: ['pm-valor-2', 'pm-taxa-2', 'pm-poup-2'] }, calcular2, limpar2);
+})();
+</script>
+
+## Como usar a calculadora
+
+A página tem duas calculadoras. Use a que responde à sua dúvida:
+
+**Poupança Necessária** (quanto guardar por mês):
+
+1. Informe o **Valor desejado** (por exemplo, 1.000.000 para o primeiro milhão).
+2. Informe a **Taxa de juros mensal** em porcentagem (por exemplo, `0,8` para 0,8% ao mês).
+3. Informe o **Período** em anos em que você quer chegar ao objetivo.
+4. Clique em **Calcular** (ou pressione Enter) para ver quanto precisa poupar por mês.
+
+**Tempo Necessário** (em quanto tempo você chega lá):
+
+1. Informe o **Valor desejado**.
+2. Informe a **Taxa de juros mensal** em porcentagem.
+3. Informe a **Poupança mensal**, ou seja, quanto você consegue guardar todo mês.
+4. Clique em **Calcular** (ou pressione Enter) para ver o tempo necessário, em anos e meses.
+
+Use o botão **Limpar** para apagar os valores e fazer uma nova simulação. Você pode digitar números inteiros ou decimais, com vírgula ou ponto (por exemplo, `0,8` ou `0.8`). O cálculo considera juros compostos e depósitos feitos no fim de cada mês. O resultado é uma simulação: rendimentos reais variam e não há garantia de ganho.
+
+## Entendendo os termos
+
+- **Primeiro milhão:** meta de acumular R$ 1.000.000 em patrimônio. Na calculadora, você pode alterar o valor para qualquer objetivo.
+- **Valor desejado:** quantia total que você quer ter ao final do período.
+- **Taxa de juros mensal:** percentual que o investimento rende a cada mês. Para converter uma taxa anual aproximada, divida por 12 (ou use a taxa equivalente mensal).
+- **Juros compostos:** juros calculados sobre o valor investido mais os juros já acumulados, o famoso "juros sobre juros".
+- **Período:** tempo total, em anos, em que você vai poupar e investir.
+- **Poupança mensal:** valor que você guarda e investe todos os meses.
+- **Total investido:** soma de todos os depósitos mensais feitos, sem contar os rendimentos.
+- **Juros ganhos:** parte do patrimônio que vem dos rendimentos, e não do dinheiro que você depositou.
