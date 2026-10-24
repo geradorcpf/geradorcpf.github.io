@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Colocar em Ordem Alfabética: online e grátis</title>
+<title>Colocar em Ordem Alfabética</title>
 <meta name="description" content="Colocar em Ordem Alfabética: ordene uma lista de palavras em ordem alfabética. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/colocar-em-ordem-alfabetica/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/colocar-em-ordem-alfabetica/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Colocar em Ordem Alfabética: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/colocar-em-ordem-alfabetica/">
+<meta property="og:title" content="Colocar em Ordem Alfabética">
+<meta property="og:url" content="http://localhost:1313/ferramentas/colocar-em-ordem-alfabetica/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Colocar em Ordem Alfabética: ordene uma lista de palavras em ordem alfabética. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,50 +38,210 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Colocar em Ordem Alfabética</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/colocar-em-ordem-alfabetica/","name":"Colocar em Ordem Alfabética","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Colocar em Ordem Alfabética</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/colocar-em-ordem-alfabetica/","name":"Colocar em Ordem Alfabética","position":3}]}</script>
 <article class="prose page">
   <h1>Colocar em Ordem Alfabética</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta colar a sua lista abaixo, escolher as opções e depois clicar em <strong>Ordenar</strong>.</p>
+<div id="calc-ordem-alfabetica" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔤 Colocar em Ordem Alfabética</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Cole a lista, escolha as opções e veja o resultado na hora.</p>
+<label for="ord-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">1. Texto original</label>
+<textarea id="ord-texto" maxlength="10000" rows="6" placeholder="Ex.: Maçã, banana, abacaxi, Laranja" style="width:100%;min-height:130px;padding:12px 14px;margin-bottom:4px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div id="ord-contador" style="margin-bottom:16px;font-size:0.8rem;color:#64748b;text-align:right;">0/10.000 caracteres</div>
+<div style="margin-bottom:6px;font-weight:600;font-size:0.95rem;">2. Tipo de ordenação</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+<label style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;font-size:0.9rem;cursor:pointer;"><input type="radio" name="ord-tipo" value="asc" checked> Ascendente (A-Z)</label>
+<label style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;font-size:0.9rem;cursor:pointer;"><input type="radio" name="ord-tipo" value="desc"> Descendente (Z-A)</label>
+</div>
+<div style="margin-bottom:6px;font-weight:600;font-size:0.95rem;">3. Ordenar por</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+<label style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;font-size:0.9rem;cursor:pointer;"><input type="radio" name="ord-separador" value="linha" checked> Quebra de Linha</label>
+<label style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;font-size:0.9rem;cursor:pointer;"><input type="radio" name="ord-separador" value="espaco"> Espaço</label>
+<label style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;font-size:0.9rem;cursor:pointer;"><input type="radio" name="ord-separador" value="virgula"> Vírgula ( , )</label>
+<label style="display:flex;align-items:center;gap:6px;padding:8px 12px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;font-size:0.9rem;cursor:pointer;"><input type="radio" name="ord-separador" value="pontovirgula"> Ponto e Vírgula ( ; )</label>
+</div>
+<div style="margin-bottom:6px;font-weight:600;font-size:0.95rem;">4. Remover Duplicados?</div>
+<label style="display:inline-flex;align-items:center;gap:6px;padding:8px 12px;margin-bottom:20px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;font-size:0.9rem;cursor:pointer;"><input type="checkbox" id="ord-duplicados"> Sim, remover itens repetidos</label>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="ord-ordenar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Ordenar</button>
+<button type="button" id="ord-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="ord-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="ord-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="ord-resultado">cole a lista e clique em "Ordenar".</span></div>
+<label for="ord-saida" style="display:block;margin:16px 0 6px;font-weight:600;font-size:0.95rem;">Texto ordenado</label>
+<textarea id="ord-saida" rows="6" readonly placeholder="O resultado aparece aqui." style="width:100%;min-height:130px;padding:12px 14px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+</div>
+<script>
+(function () {
+  var texto = document.getElementById('ord-texto');
+  var contador = document.getElementById('ord-contador');
+  var saida = document.getElementById('ord-saida');
+  var resultado = document.getElementById('ord-resultado');
+  var caixa = document.getElementById('ord-resposta');
+  var duplicados = document.getElementById('ord-duplicados');
+  var collator = new Intl.Collator('pt-BR', { numeric: true, sensitivity: 'base' });
+  var padrao = 'cole a lista e clique em "Ordenar".';
+  function valorRadio(nome) {
+    var el = document.querySelector('input[name="' + nome + '"]:checked');
+    return el ? el.value : '';
+  }
+  function atualizarContador() {
+    contador.textContent = texto.value.length.toLocaleString('pt-BR') + '/10.000 caracteres';
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function sucesso(msg) {
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.textContent = msg;
+  }
+  function ordenar() {
+    var bruto = texto.value;
+    var separador = valorRadio('ord-separador');
+    var tipo = valorRadio('ord-tipo');
+    var partes;
+    if (bruto.trim() === '') {
+      saida.value = '';
+      erro('digite ou cole uma lista no campo "Texto original".');
+      return;
+    }
+    if (separador === 'espaco') { partes = bruto.split(/\s+/); }
+    else if (separador === 'virgula') { partes = bruto.split(','); }
+    else if (separador === 'pontovirgula') { partes = bruto.split(';'); }
+    else { partes = bruto.split(/\r?\n/); }
+    var itens = partes.map(function (p) { return p.trim(); }).filter(function (p) { return p !== ''; });
+    var total = itens.length;
+    if (duplicados.checked) {
+      var vistos = new Set();
+      itens = itens.filter(function (p) {
+        if (vistos.has(p)) { return false; }
+        vistos.add(p);
+        return true;
+      });
+    }
+    itens.sort(function (a, b) {
+      return tipo === 'desc' ? collator.compare(b, a) : collator.compare(a, b);
+    });
+    var juntar = { linha: '\n', espaco: ' ', virgula: ', ', pontovirgula: '; ' };
+    saida.value = itens.join(juntar[separador] || '\n');
+    var msg = itens.length + ' item(ns) em ordem ' + (tipo === 'desc' ? 'descendente (Z-A)' : 'ascendente (A-Z)') + '.';
+    if (total !== itens.length) { msg += ' Duplicados removidos: ' + (total - itens.length) + '.'; }
+    sucesso(msg);
+  }
+  function copiar() {
+    if (saida.value === '') { erro('não há texto ordenado para copiar.'); return; }
+    saida.select();
+    try {
+      if (navigator.clipboard) { navigator.clipboard.writeText(saida.value); }
+      else { document.execCommand('copy'); }
+      sucesso('texto ordenado copiado.');
+    } catch (e) {
+      erro('não foi possível copiar automaticamente. Selecione o texto e copie manualmente.');
+    }
+  }
+  function limpar() {
+    texto.value = '';
+    saida.value = '';
+    duplicados.checked = false;
+    document.querySelector('input[name="ord-tipo"][value="asc"]').checked = true;
+    document.querySelector('input[name="ord-separador"][value="linha"]').checked = true;
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = padrao;
+    atualizarContador();
+    texto.focus();
+  }
+  document.getElementById('ord-ordenar').addEventListener('click', ordenar);
+  document.getElementById('ord-copiar').addEventListener('click', copiar);
+  document.getElementById('ord-limpar').addEventListener('click', limpar);
+  texto.addEventListener('input', atualizarContador);
+  [texto, saida].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Cole ou digite a sua lista no campo <strong>Texto original</strong> (até 10.000 caracteres).</li>
+<li>Em <strong>Tipo de ordenação</strong>, escolha <strong>Ascendente (A-Z)</strong> ou <strong>Descendente (Z-A)</strong>.</li>
+<li>Em <strong>Ordenar por</strong>, indique como os itens estão separados: quebra de linha, espaço, vírgula ou ponto e vírgula.</li>
+<li>Marque <strong>Remover Duplicados?</strong> se quiser eliminar os itens repetidos.</li>
+<li>Clique em <strong>Ordenar</strong> e veja o resultado no campo <strong>Texto ordenado</strong>.</li>
+<li>Use <strong>Copiar</strong> para levar o resultado para a área de transferência e <strong>Limpar</strong> para começar uma nova lista.</li>
+</ol>
+<p>A ordenação segue o alfabeto português: acentos e letras maiúsculas ou minúsculas não mudam a posição (por exemplo, &ldquo;Álvaro&rdquo; fica junto de &ldquo;alvaro&rdquo;). Números dentro dos itens são comparados pelo valor, então &ldquo;item 2&rdquo; vem antes de &ldquo;item 10&rdquo;. Espaços extras no início e no fim de cada item e itens vazios são ignorados. O resultado usa o mesmo separador escolhido na entrada.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Ordem alfabética:</strong> organização dos itens seguindo a sequência das letras do alfabeto, de A a Z.</li>
+<li><strong>Texto original:</strong> a lista que você cola na ferramenta, com os itens que serão organizados.</li>
+<li><strong>Ascendente (A-Z):</strong> ordenação do início ao fim do alfabeto, da letra A até a letra Z.</li>
+<li><strong>Descendente (Z-A):</strong> ordenação inversa, da letra Z até a letra A.</li>
+<li><strong>Ordenar por:</strong> define o caractere que separa um item do outro no texto original.</li>
+<li><strong>Quebra de Linha:</strong> cada item fica em uma linha própria, separado pela tecla Enter.</li>
+<li><strong>Espaço:</strong> os itens são palavras separadas por um ou mais espaços.</li>
+<li><strong>Vírgula ( , ):</strong> os itens são separados por vírgula, como em &ldquo;banana, maçã, uva&rdquo;.</li>
+<li><strong>Ponto e Vírgula ( ; ):</strong> os itens são separados por ponto e vírgula, como em &ldquo;banana; maçã; uva&rdquo;.</li>
+<li><strong>Remover Duplicados:</strong> opção que mantém apenas uma ocorrência de cada item repetido na lista.</li>
+<li><strong>Texto ordenado:</strong> o resultado final, com a lista já organizada conforme as opções escolhidas.</li>
+</ul>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Suponha a lista abaixo, separada por vírgula, com a ordenação <strong>Ascendente (A-Z)</strong>:</p>
+<p><code>Maçã, banana, abacaxi, Laranja</code></p>
+<ol>
+<li>Escolha <strong>Vírgula ( , )</strong> em <strong>Ordenar por</strong> e <strong>Ascendente (A-Z)</strong> em <strong>Tipo de ordenação</strong>.</li>
+<li>Clique em <strong>Ordenar</strong>.</li>
+<li>Os itens são comparados letra a letra, sem diferenciar maiúsculas de minúsculas.</li>
+</ol>
+<p><strong>Resposta:</strong> <code>abacaxi, banana, Laranja, Maçã</code></p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-texto">
-  <a class="card" href="/ferramentas/remover-linhas-duplicadas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Remover Linhas Duplicadas</strong><small>Elimine linhas repetidas de uma lista ou texto.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/prefixo-e-sufixo/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Prefixo e Sufixo</strong><small>Adicione prefixo e sufixo a cada linha de uma lista.</small></span>
-  </a>
-</li>
-<li class="c-aleatorio">
-  <a class="card" href="/ferramentas/sorteio/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
-</span>
-    <span class="tx"><strong>Sorteio Online</strong><small>Sorteie nomes ou itens de uma lista.</small></span>
-  </a>
-</li>
-<li class="c-aleatorio">
-  <a class="card" href="/ferramentas/lista-aleatoria/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
-</span>
-    <span class="tx"><strong>Lista Aleatória</strong><small>Embaralhe uma lista em ordem aleatória.</small></span>
-  </a>
-</li>
-<li class="c-texto">
   <a class="card" href="/ferramentas/comparar-textos/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
     <span class="tx"><strong>Comparar Textos</strong><small>Compare dois textos e veja as diferenças.</small></span>
+  </a>
+</li>
+<li class="c-dev">
+  <a class="card" href="/ferramentas/base64-codificar-decodificar/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
+</span>
+    <span class="tx"><strong>Base64 Decodificar e Codificar</strong><small>Codifique texto em Base64 ou decodifique de volta.</small></span>
+  </a>
+</li>
+<li class="c-util">
+  <a class="card" href="/ferramentas/capsula-tempo/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
+</span>
+    <span class="tx"><strong>Cápsula do Tempo</strong><small>Escreva uma mensagem hoje para ser aberta no futuro.</small></span>
+  </a>
+</li>
+<li class="c-dev">
+  <a class="card" href="/ferramentas/color-picker/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
+</span>
+    <span class="tx"><strong>Color Picker</strong><small>Escolha uma cor e copie os códigos HEX, RGB e HSL.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/calendario-lunar-2027/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Calendário Lunar 2027</strong><small>Veja as fases da lua mês a mês em 2027.</small></span>
   </a>
 </li>
 

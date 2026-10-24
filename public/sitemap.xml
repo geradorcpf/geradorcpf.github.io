@@ -2,6 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/ferramentas/calculo-de-rescisao/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calculadora-mdc/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calculadora-primeiro-milhao/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calculadora-gestacional/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calcular-crc32/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calcular-idade/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calcular-imc/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calcular-periodo-fertil/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calculo-de-ferias/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>http://localhost:1313/ferramentas/base64-codificar-decodificar/</loc>
     <lastmod>2026-10-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -62,16 +117,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>http://localhost:1313/ferramentas/</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
     <loc>http://localhost:1313/ferramentas/area-coroa-circular/</loc>
     <lastmod>2026-10-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -127,12 +172,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>http://localhost:1313/ferramentas/calculadora-mdc/</loc>
-    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/ferramentas/calculadora-gestacional/</loc>
+    <loc>http://localhost:1313/ferramentas/calculadora-mmc/</loc>
     <lastmod>2026-10-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Comparar Textos: online e grátis</title>
 <meta name="description" content="Comparar Textos: compare dois textos e veja as diferenças. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/comparar-textos/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/comparar-textos/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Comparar Textos: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/comparar-textos/">
+<meta property="og:url" content="http://localhost:1313/ferramentas/comparar-textos/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Comparar Textos: compare dois textos e veja as diferenças. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,235 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Comparar Textos</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/comparar-textos/","name":"Comparar Textos","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Comparar Textos</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/comparar-textos/","name":"Comparar Textos","position":3}]}</script>
 <article class="prose page">
   <h1>Comparar Textos</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta colar o texto original e o texto novo abaixo e depois clicar em <strong>Comparar Textos</strong>.</p>
+<div id="comp-textos" style="max-width:760px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📝 Comparar Textos</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Cole os dois textos e veja as diferenças na hora.</p>
+<label for="ct-base" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Texto Base</label>
+<textarea id="ct-base" rows="7" placeholder="Cole aqui o texto original" autocomplete="off" spellcheck="false" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<label for="ct-novo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Novo Texto</label>
+<textarea id="ct-novo" rows="7" placeholder="Cole aqui o texto modificado" autocomplete="off" spellcheck="false" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px;font-size:0.95rem;">
+<label style="display:flex;align-items:center;gap:6px;cursor:pointer;"><input type="checkbox" id="ct-caixa" style="width:16px;height:16px;cursor:pointer;"> Ignorar maiúsculas e minúsculas</label>
+<label style="display:flex;align-items:center;gap:6px;cursor:pointer;"><input type="checkbox" id="ct-espacos" style="width:16px;height:16px;cursor:pointer;"> Ignorar espaços extras</label>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="ct-comparar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Comparar Textos</button>
+<button type="button" id="ct-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar Tudo</button>
+</div>
+<div id="ct-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="ct-resultado">preencha os campos e clique em "Comparar Textos".</span><div id="ct-diff" style="margin-top:12px;"></div></div>
+</div>
+<script>
+(function () {
+  var base = document.getElementById('ct-base');
+  var novo = document.getElementById('ct-novo');
+  var caixaOpt = document.getElementById('ct-caixa');
+  var espacosOpt = document.getElementById('ct-espacos');
+  var resultado = document.getElementById('ct-resultado');
+  var caixa = document.getElementById('ct-resposta');
+  var saida = document.getElementById('ct-diff');
+  var LIMITE = 4000000;
+  function chave(s) {
+    var t = s;
+    if (caixaOpt.checked) { t = t.toLowerCase(); }
+    if (espacosOpt.checked) { t = t.replace(/\s+/g, ' ').trim(); }
+    return t;
+  }
+  function chaves(lista) {
+    return lista.map(function (s) { return chave(s); });
+  }
+  function diff(A, B) {
+    var KA = chaves(A);
+    var KB = chaves(B);
+    var n = A.length;
+    var m = B.length;
+    var i, j;
+    var L = [];
+    for (i = 0; i !== n + 1; i++) { L.push(new Int32Array(m + 1)); }
+    for (i = n - 1; i >= 0; i--) {
+      for (j = m - 1; j >= 0; j--) {
+        if (KA[i] === KB[j]) { L[i][j] = L[i + 1][j + 1] + 1; }
+        else { L[i][j] = Math.max(L[i + 1][j], L[i][j + 1]); }
+      }
+    }
+    var ops = [];
+    i = 0;
+    j = 0;
+    while (i !== n && j !== m) {
+      if (KA[i] === KB[j]) { ops.push({ t: 'eq', a: A[i], b: B[j] }); i++; j++; }
+      else if (L[i + 1][j] >= L[i][j + 1]) { ops.push({ t: 'del', a: A[i] }); i++; }
+      else { ops.push({ t: 'add', b: B[j] }); j++; }
+    }
+    while (i !== n) { ops.push({ t: 'del', a: A[i] }); i++; }
+    while (j !== m) { ops.push({ t: 'add', b: B[j] }); j++; }
+    return ops;
+  }
+  var ESTILO = {
+    eq: { bg: '#ffffff', borda: '#e2e8f0', cor: '#475569', marca: '#e2e8f0', sinal: ' ' },
+    del: { bg: '#fef2f2', borda: '#fca5a5', cor: '#b91c1c', marca: '#fecaca', sinal: '-' },
+    add: { bg: '#f0fdf4', borda: '#86efac', cor: '#166534', marca: '#bbf7d0', sinal: '+' }
+  };
+  function linha(tipo, partes) {
+    var e = ESTILO[tipo];
+    var row = document.createElement('div');
+    row.style.cssText = 'display:flex;gap:10px;padding:6px 10px;margin-bottom:4px;border-left:4px solid ' + e.borda + ';border-radius:6px;background:' + e.bg + ';color:' + e.cor + ';font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:0.9rem;line-height:1.5;';
+    var sinal = document.createElement('span');
+    sinal.style.cssText = 'flex:none;font-weight:700;white-space:pre;';
+    sinal.textContent = e.sinal;
+    var corpo = document.createElement('span');
+    corpo.style.cssText = 'flex:1;white-space:pre-wrap;word-break:break-word;';
+    partes.forEach(function (p) {
+      var s = document.createElement('span');
+      if (p.destaque) { s.style.cssText = 'background:' + e.marca + ';font-weight:700;border-radius:3px;'; }
+      s.textContent = p.texto;
+      corpo.appendChild(s);
+    });
+    if (partes.length === 0) { corpo.textContent = ' '; }
+    row.appendChild(sinal);
+    row.appendChild(corpo);
+    return row;
+  }
+  function simples(texto) {
+    return [{ texto: texto, destaque: false }];
+  }
+  function palavras(a, b) {
+    var ta = a.split(/(\s+)/).filter(function (x) { return x !== ''; });
+    var tb = b.split(/(\s+)/).filter(function (x) { return x !== ''; });
+    if (ta.length * tb.length > LIMITE) { return { a: simples(a), b: simples(b) }; }
+    var ops = diff(ta, tb);
+    var pa = [];
+    var pb = [];
+    ops.forEach(function (o) {
+      if (o.t === 'eq') { pa.push({ texto: o.a, destaque: false }); pb.push({ texto: o.b, destaque: false }); }
+      else if (o.t === 'del') { pa.push({ texto: o.a, destaque: true }); }
+      else { pb.push({ texto: o.b, destaque: true }); }
+    });
+    return { a: pa, b: pb };
+  }
+  function descarregar(dels, adds) {
+    var k = Math.min(dels.length, adds.length);
+    var i;
+    var pares = [];
+    for (i = 0; i !== k; i++) { pares.push(palavras(dels[i], adds[i])); }
+    for (i = 0; i !== dels.length; i++) {
+      saida.appendChild(linha('del', i >= k ? simples(dels[i]) : pares[i].a));
+    }
+    for (i = 0; i !== adds.length; i++) {
+      saida.appendChild(linha('add', i >= k ? simples(adds[i]) : pares[i].b));
+    }
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+    saida.textContent = '';
+  }
+  function comparar() {
+    var va = base.value;
+    var vb = novo.value;
+    if (va.trim() === '' && vb.trim() === '') { erro('digite ou cole pelo menos um dos textos.'); return; }
+    var A = va.split(/\r\n|\r|\n/);
+    var B = vb.split(/\r\n|\r|\n/);
+    if (A.length * B.length > LIMITE) { erro('os textos são muito grandes para comparar de uma vez. Tente comparar trechos menores.'); return; }
+    var ops = diff(A, B);
+    var iguais = 0;
+    var removidas = 0;
+    var adicionadas = 0;
+    saida.textContent = '';
+    var dels = [];
+    var adds = [];
+    ops.forEach(function (o) {
+      if (o.t === 'eq') {
+        descarregar(dels, adds);
+        dels = [];
+        adds = [];
+        iguais++;
+        saida.appendChild(linha('eq', simples(o.b)));
+      } else if (o.t === 'del') { dels.push(o.a); removidas++; }
+      else { adds.push(o.b); adicionadas++; }
+    });
+    descarregar(dels, adds);
+    if (removidas === 0 && adicionadas === 0) {
+      caixa.style.borderColor = '#86efac';
+      caixa.style.background = '#f0fdf4';
+      resultado.style.color = '#166534';
+      resultado.textContent = 'os textos são idênticos. Nenhuma diferença encontrada.';
+      saida.textContent = '';
+      return;
+    }
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#1e293b';
+    resultado.textContent = 'foram encontradas diferenças: ' + removidas + ' linha(s) removida(s), ' + adicionadas + ' linha(s) adicionada(s) e ' + iguais + ' linha(s) sem alteração.';
+  }
+  function limpar() {
+    base.value = '';
+    novo.value = '';
+    caixaOpt.checked = false;
+    espacosOpt.checked = false;
+    saida.textContent = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'preencha os campos e clique em "Comparar Textos".';
+    base.focus();
+  }
+  document.getElementById('ct-comparar').addEventListener('click', comparar);
+  document.getElementById('ct-limpar').addEventListener('click', limpar);
+  [base, novo].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Cole ou digite o texto original no campo <strong>Texto Base</strong>.</li>
+<li>Cole ou digite a versão modificada no campo <strong>Novo Texto</strong>.</li>
+<li>Se quiser, marque <strong>Ignorar maiúsculas e minúsculas</strong> e/ou <strong>Ignorar espaços extras</strong> para desconsiderar esses detalhes na comparação.</li>
+<li>Clique em <strong>Comparar Textos</strong> para ver as diferenças linha por linha.</li>
+<li>Use o botão <strong>Limpar Tudo</strong> para apagar os dois textos e fazer uma nova comparação.</li>
+</ol>
+<p>Você pode comparar textos comuns, listas, trechos de documentos ou códigos de programação. As linhas em vermelho existem só no Texto Base, as linhas em verde existem só no Novo Texto e as linhas em branco são iguais nos dois. Quando uma linha foi alterada, as palavras que mudaram aparecem com um destaque mais forte.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Texto Base:</strong> o texto original, usado como ponto de partida da comparação.</li>
+<li><strong>Novo Texto:</strong> a versão modificada, que será comparada com o Texto Base.</li>
+<li><strong>Comparar Textos:</strong> botão que executa a comparação e mostra o resultado.</li>
+<li><strong>Limpar Tudo:</strong> botão que apaga os dois campos e o resultado, para começar de novo.</li>
+<li><strong>Diferença:</strong> qualquer trecho que foi removido, adicionado ou alterado entre o Texto Base e o Novo Texto.</li>
+<li><strong>Linha removida:</strong> linha que está no Texto Base, mas não aparece no Novo Texto. É mostrada em vermelho, com o sinal de menos (-).</li>
+<li><strong>Linha adicionada:</strong> linha que está no Novo Texto, mas não existia no Texto Base. É mostrada em verde, com o sinal de mais (+).</li>
+<li><strong>Linha sem alteração:</strong> linha idêntica nos dois textos. É mostrada em branco, sem destaque.</li>
+<li><strong>Destaque de palavras:</strong> realce das palavras exatas que mudaram dentro de uma linha alterada.</li>
+<li><strong>Ignorar maiúsculas e minúsculas:</strong> opção que trata letras maiúsculas e minúsculas como iguais, então &ldquo;Casa&rdquo; e &ldquo;casa&rdquo; não contam como diferença.</li>
+<li><strong>Ignorar espaços extras:</strong> opção que desconsidera espaços repetidos e espaços no início ou no fim da linha.</li>
+</ul>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Compare os dois textos abaixo.</p>
+<p><strong>Texto Base:</strong></p>
+<pre><code>O gato dorme no sofá.
+A casa é grande.
+</code></pre>
+<p><strong>Novo Texto:</strong></p>
+<pre><code>O gato dorme na cama.
+A casa é grande.
+</code></pre>
+<ol>
+<li>Cole o primeiro texto em <strong>Texto Base</strong> e o segundo em <strong>Novo Texto</strong>.</li>
+<li>Clique em <strong>Comparar Textos</strong>.</li>
+<li>A primeira linha aparece como removida (vermelho) e como adicionada (verde), com as palavras &ldquo;no sofá.&rdquo; e &ldquo;na cama.&rdquo; destacadas.</li>
+<li>A segunda linha é igual nos dois textos e aparece sem alteração.</li>
+</ol>
+<p><strong>Resposta:</strong> foi encontrada 1 linha removida, 1 linha adicionada e 1 linha sem alteração.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -57,31 +280,31 @@
   </a>
 </li>
 <li class="c-texto">
-  <a class="card" href="/ferramentas/contador-de-ocorrencia-de-palavras/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Contador de Ocorrência de Palavra</strong><small>Conte quantas vezes cada palavra aparece no texto.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/nuvem-de-palavras/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Nuvem de Palavras</strong><small>Transforme um texto em nuvem de palavras.</small></span>
-  </a>
-</li>
-<li class="c-texto">
   <a class="card" href="/ferramentas/colocar-em-ordem-alfabetica/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
     <span class="tx"><strong>Colocar em Ordem Alfabética</strong><small>Ordene uma lista de palavras em ordem alfabética.</small></span>
   </a>
 </li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/contador-de-caracteres-palavras-e-linhas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+<li class="c-dev">
+  <a class="card" href="/ferramentas/base64-codificar-decodificar/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
 </span>
-    <span class="tx"><strong>Contador de Caracteres, Palavras e Linhas</strong><small>Conte caracteres, palavras, linhas e parágrafos de qualquer texto.</small></span>
+    <span class="tx"><strong>Base64 Decodificar e Codificar</strong><small>Codifique texto em Base64 ou decodifique de volta.</small></span>
+  </a>
+</li>
+<li class="c-midia">
+  <a class="card" href="/ferramentas/comprimir-imagem/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
+</span>
+    <span class="tx"><strong>Comprimir Imagem</strong><small>Reduza o peso de imagens sem perder muita qualidade.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-circulo/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora da Área do Círculo</strong><small>Calcule a área do círculo com a fórmula.</small></span>
   </a>
 </li>
 

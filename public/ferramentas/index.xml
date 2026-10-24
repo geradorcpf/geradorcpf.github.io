@@ -6,8 +6,64 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cálculo de Rescisão de Contrato</title>
+      <link>http://localhost:1313/ferramentas/calculo-de-rescisao/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calculo-de-rescisao/</guid>
+      <description>Estime as verbas de uma rescisão de contrato de trabalho.</description>
+    </item>
+    <item>
+      <title>Calendário 2026</title>
+      <link>http://localhost:1313/ferramentas/calendario/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calendario/</guid>
+      <description>Calendário de 2026 com feriados e datas importantes.</description>
+    </item>
+    <item>
+      <title>Calendário Lunar 2026</title>
+      <link>http://localhost:1313/ferramentas/calendario-lunar-2026/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calendario-lunar-2026/</guid>
+      <description>Veja as fases da lua mês a mês em 2026.</description>
+    </item>
+    <item>
+      <title>Cápsula do Tempo</title>
+      <link>http://localhost:1313/ferramentas/capsula-tempo/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/capsula-tempo/</guid>
+      <description>Escreva uma mensagem hoje para ser aberta no futuro.</description>
+    </item>
+    <item>
+      <title>Colocar em Ordem Alfabética</title>
+      <link>http://localhost:1313/ferramentas/colocar-em-ordem-alfabetica/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/colocar-em-ordem-alfabetica/</guid>
+      <description>Ordene uma lista de palavras em ordem alfabética.</description>
+    </item>
+    <item>
+      <title>Color Picker</title>
+      <link>http://localhost:1313/ferramentas/color-picker/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/color-picker/</guid>
+      <description>Escolha uma cor e copie os códigos HEX, RGB e HSL.</description>
+    </item>
+    <item>
+      <title>Comparar PDF</title>
+      <link>http://localhost:1313/ferramentas/comparar-pdf/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/comparar-pdf/</guid>
+      <description>Compare dois PDFs e veja o que mudou.</description>
+    </item>
+    <item>
+      <title>Comparar Textos</title>
+      <link>http://localhost:1313/ferramentas/comparar-textos/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/comparar-textos/</guid>
+      <description>Compare dois textos e veja as diferenças.</description>
+    </item>
     <item>
       <title>Calculadora de MDC</title>
       <link>http://localhost:1313/ferramentas/calculadora-mdc/</link>
@@ -231,6 +287,13 @@
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/ferramentas/calculadora-mmc/</guid>
       <description>Calcule o mínimo múltiplo comum de dois ou mais números.</description>
+    </item>
+    <item>
+      <title>Calendário Lunar 2027</title>
+      <link>http://localhost:1313/ferramentas/calendario-lunar-2027/</link>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/calendario-lunar-2027/</guid>
+      <description>Veja as fases da lua mês a mês em 2027.</description>
     </item>
   </channel>
 </rss>

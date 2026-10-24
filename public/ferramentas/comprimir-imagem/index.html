@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Comprimir Imagem: online e grátis</title>
 <meta name="description" content="Comprimir Imagem: reduza o peso de imagens sem perder muita qualidade. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/comprimir-imagem/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/comprimir-imagem/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Comprimir Imagem: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/comprimir-imagem/">
+<meta property="og:url" content="http://localhost:1313/ferramentas/comprimir-imagem/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Comprimir Imagem: reduza o peso de imagens sem perder muita qualidade. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,50 +38,250 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Comprimir Imagem</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/comprimir-imagem/","name":"Comprimir Imagem","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Comprimir Imagem</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/comprimir-imagem/","name":"Comprimir Imagem","position":3}]}</script>
 <article class="prose page">
   <h1>Comprimir Imagem</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta selecionar as imagens JPG ou PNG abaixo, escolher a qualidade e clicar em <strong>Comprimir</strong>.</p>
+<div id="calc-comprimir" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🗜️ Comprimir Imagem</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Reduza o peso de imagens JPG e PNG direto no navegador.</p>
+<label for="cmp-arquivo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Imagens (JPG ou PNG)</label>
+<input id="cmp-arquivo" type="file" accept="image/jpeg,image/png" multiple style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="cmp-qualidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Qualidade</label>
+<select id="cmp-qualidade" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="baixa">Qualidade Baixa (menor arquivo)</option>
+<option value="boa" selected>Qualidade Boa</option>
+<option value="otima">Qualidade Ótima (maior arquivo)</option>
+</select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="cmp-comprimir" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Comprimir</button>
+<button type="button" id="cmp-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="cmp-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="cmp-resultado">escolha as imagens e clique em "Comprimir".</span><div id="cmp-lista" style="margin-top:12px;"></div></div>
+</div>
+<script>
+(function () {
+  var entrada = document.getElementById('cmp-arquivo');
+  var qualidade = document.getElementById('cmp-qualidade');
+  var botao = document.getElementById('cmp-comprimir');
+  var botaoLimpar = document.getElementById('cmp-limpar');
+  var resultado = document.getElementById('cmp-resultado');
+  var caixa = document.getElementById('cmp-resposta');
+  var lista = document.getElementById('cmp-lista');
+  var urls = [];
+  var ocupado = false;
+  var PERFIS = {
+    baixa: { jpeg: 0.4, passo: 48 },
+    boa: { jpeg: 0.7, passo: 24 },
+    otima: { jpeg: 0.88, passo: 12 }
+  };
+  function fmt(n) { return n.toLocaleString('pt-BR', { maximumFractionDigits: 2 }); }
+  function tamanho(bytes) {
+    if (bytes >= 1048576) { return fmt(bytes / 1048576) + ' MB'; }
+    if (bytes >= 1024) { return fmt(bytes / 1024) + ' KB'; }
+    return fmt(bytes) + ' B';
+  }
+  function estilo(cor, fundo, texto) {
+    caixa.style.borderColor = cor;
+    caixa.style.background = fundo;
+    resultado.style.color = texto;
+  }
+  function erro(msg) {
+    estilo('#fca5a5', '#fef2f2', '#b91c1c');
+    resultado.textContent = msg;
+  }
+  function liberarUrls() {
+    urls.forEach(function (u) { URL.revokeObjectURL(u); });
+    urls = [];
+  }
+  function carregar(arquivo) {
+    return new Promise(function (ok, falha) {
+      var url = URL.createObjectURL(arquivo);
+      var img = new Image();
+      img.onload = function () { URL.revokeObjectURL(url); ok(img); };
+      img.onerror = function () { URL.revokeObjectURL(url); falha(new Error('Não foi possível ler a imagem ' + arquivo.name + '.')); };
+      img.src = url;
+    });
+  }
+  function paraBlob(canvas, tipo, q) {
+    return new Promise(function (ok) { canvas.toBlob(ok, tipo, q); });
+  }
+  function comprimir(arquivo, perfil) {
+    return carregar(arquivo).then(function (img) {
+      var canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      var ctx = canvas.getContext('2d');
+      var ehPng = arquivo.type === 'image/png';
+      if (!ehPng) {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+      ctx.drawImage(img, 0, 0);
+      if (ehPng) {
+        var dados = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        var px = dados.data;
+        var passo = perfil.passo;
+        for (var i = 0; i !== px.length; i += 4) {
+          px[i] = Math.min(255, Math.round(px[i] / passo) * passo);
+          px[i + 1] = Math.min(255, Math.round(px[i + 1] / passo) * passo);
+          px[i + 2] = Math.min(255, Math.round(px[i + 2] / passo) * passo);
+        }
+        ctx.putImageData(dados, 0, 0);
+        return paraBlob(canvas, 'image/png');
+      }
+      return paraBlob(canvas, 'image/jpeg', perfil.jpeg);
+    }).then(function (blob) {
+      var reduziu = !!blob && blob.size > 0 && arquivo.size > blob.size;
+      return { blob: reduziu ? blob : arquivo, reduziu: reduziu };
+    });
+  }
+  function nomeSaida(nome, tipo) {
+    var ext = tipo === 'image/png' ? 'png' : 'jpg';
+    var base = nome.replace(/\.[^.]+$/, '');
+    return base + '-comprimido.' + ext;
+  }
+  function criarItem(arquivo, saida) {
+    var item = document.createElement('div');
+    item.style.cssText = 'padding:12px;margin-top:8px;background:#f8fafc;border:1px solid #c7d2fe;border-radius:10px;color:#1e293b;font-size:0.9rem;line-height:1.5;word-break:break-word;';
+    var nome = document.createElement('strong');
+    nome.style.color = '#3730a3';
+    nome.textContent = arquivo.name;
+    item.appendChild(nome);
+    var info = document.createElement('div');
+    var antes = arquivo.size;
+    var depois = saida.blob.size;
+    if (saida.reduziu) {
+      var pct = (1 - depois / antes) * 100;
+      info.textContent = tamanho(antes) + ' → ' + tamanho(depois) + ' (redução de ' + fmt(pct) + '%)';
+    } else {
+      info.textContent = tamanho(antes) + ' — a imagem já está otimizada, o original foi mantido.';
+    }
+    item.appendChild(info);
+    var url = URL.createObjectURL(saida.blob);
+    urls.push(url);
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = nomeSaida(arquivo.name, arquivo.type);
+    link.textContent = 'Baixar imagem';
+    link.style.cssText = 'display:inline-block;margin-top:8px;padding:8px 14px;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:8px;text-decoration:none;';
+    item.appendChild(link);
+    return item;
+  }
+  function executar() {
+    if (ocupado) { return; }
+    var arquivos = Array.prototype.slice.call(entrada.files || []).filter(function (f) {
+      return f.type === 'image/jpeg' || f.type === 'image/png';
+    });
+    if (arquivos.length === 0) { erro('selecione ao menos uma imagem JPG ou PNG.'); return; }
+    var perfil = PERFIS[qualidade.value] || PERFIS.boa;
+    ocupado = true;
+    botao.disabled = true;
+    liberarUrls();
+    lista.textContent = '';
+    estilo('#c7d2fe', '#ffffff', '#64748b');
+    resultado.textContent = 'comprimindo ' + arquivos.length + ' imagem(ns)...';
+    var totalAntes = 0;
+    var totalDepois = 0;
+    var cadeia = Promise.resolve();
+    arquivos.forEach(function (arquivo) {
+      cadeia = cadeia.then(function () {
+        return comprimir(arquivo, perfil).then(function (saida) {
+          totalAntes += arquivo.size;
+          totalDepois += saida.blob.size;
+          lista.appendChild(criarItem(arquivo, saida));
+        });
+      });
+    });
+    cadeia.then(function () {
+      estilo('#86efac', '#f0fdf4', '#166534');
+      var pct = totalAntes > 0 ? (1 - totalDepois / totalAntes) * 100 : 0;
+      resultado.innerHTML = 'Pronto! Tamanho total: <strong style="font-size:1.2rem;">' + tamanho(totalAntes) + ' → ' + tamanho(totalDepois) + '</strong><br><small style="color:#475569;">Economia de ' + fmt(pct) + '%</small>';
+    }).catch(function (e) {
+      erro(e && e.message ? e.message : 'ocorreu um erro ao comprimir a imagem.');
+    }).then(function () {
+      ocupado = false;
+      botao.disabled = false;
+    });
+  }
+  function limpar() {
+    liberarUrls();
+    entrada.value = '';
+    qualidade.value = 'boa';
+    lista.textContent = '';
+    estilo('#c7d2fe', '#ffffff', '#64748b');
+    resultado.textContent = 'escolha as imagens e clique em "Comprimir".';
+  }
+  botao.addEventListener('click', executar);
+  botaoLimpar.addEventListener('click', limpar);
+  [entrada, qualidade].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Clique em <strong>Imagens (JPG ou PNG)</strong> e selecione uma ou mais fotos do seu dispositivo.</li>
+<li>Escolha o nível de <strong>Qualidade</strong>: Baixa (arquivo menor), Boa (equilíbrio) ou Ótima (mais fiel ao original).</li>
+<li>Clique em <strong>Comprimir</strong> e aguarde o processamento.</li>
+<li>Confira o tamanho antes e depois de cada imagem e clique em <strong>Baixar imagem</strong> para salvar o arquivo comprimido.</li>
+<li>Use o botão <strong>Limpar</strong> para remover os arquivos e começar de novo.</li>
+</ol>
+<p>As imagens são processadas no seu próprio navegador e não são enviadas para nenhum servidor. Se a imagem já estiver bem otimizada e não for possível reduzi-la, o arquivo original é mantido.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Compressão de imagem:</strong> técnica que reduz o tamanho (peso) de um arquivo de imagem para ocupar menos espaço e carregar mais rápido.</li>
+<li><strong>JPG (JPEG):</strong> formato comum para fotos, que usa compressão com perda para gerar arquivos leves.</li>
+<li><strong>PNG:</strong> formato que preserva bem nitidez e transparência, muito usado em logotipos, ícones e capturas de tela.</li>
+<li><strong>Compressão com perda:</strong> método que descarta detalhes pouco perceptíveis da imagem para diminuir o arquivo. Quanto mais forte, menor o arquivo e maior a perda.</li>
+<li><strong>Qualidade:</strong> nível de compressão aplicado. Qualidade menor gera arquivos menores, e qualidade maior mantém mais detalhes.</li>
+<li><strong>Tamanho do arquivo:</strong> espaço que a imagem ocupa no dispositivo, medido em bytes (B), quilobytes (KB) ou megabytes (MB).</li>
+<li><strong>Redução:</strong> porcentagem de espaço economizado em relação ao tamanho original.</li>
+<li><strong>Otimização para web:</strong> preparo das imagens para que o site carregue mais rápido e use menos dados.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-midia">
-  <a class="card" href="/ferramentas/comprimir-pdf/">
+  <a class="card" href="/ferramentas/comparar-pdf/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
 </span>
-    <span class="tx"><strong>Comprimir PDF</strong><small>Reduza o tamanho de um arquivo PDF.</small></span>
+    <span class="tx"><strong>Comparar PDF</strong><small>Compare dois PDFs e veja o que mudou.</small></span>
   </a>
 </li>
-<li class="c-midia">
-  <a class="card" href="/ferramentas/foto-preto-e-branco/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-circulo/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Foto em Preto e Branco</strong><small>Transforme uma foto em preto e branco.</small></span>
+    <span class="tx"><strong>Calculadora da Área do Círculo</strong><small>Calcule a área do círculo com a fórmula.</small></span>
   </a>
 </li>
-<li class="c-midia">
-  <a class="card" href="/ferramentas/redimensionar-imagem/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/comparar-textos/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Redimensionar Imagem</strong><small>Mude a largura e a altura de uma imagem.</small></span>
+    <span class="tx"><strong>Comparar Textos</strong><small>Compare dois textos e veja as diferenças.</small></span>
   </a>
 </li>
-<li class="c-midia">
-  <a class="card" href="/ferramentas/recortar-imagem/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-coroa-circular/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Recortar Imagem</strong><small>Recorte uma imagem na área e proporção que quiser.</small></span>
+    <span class="tx"><strong>Calculadora da Área da Coroa Circular</strong><small>Calcule a área da coroa circular com a fórmula.</small></span>
   </a>
 </li>
-<li class="c-midia">
-  <a class="card" href="/ferramentas/converter-imagem-em-texto/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-elipse/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Converter Imagem em Texto</strong><small>Extraia o texto de uma imagem com OCR.</small></span>
+    <span class="tx"><strong>Calculadora da Área da Elipse</strong><small>Calcule a área da elipse com a fórmula.</small></span>
   </a>
 </li>
 
