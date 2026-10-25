@@ -3,9 +3,222 @@ title: "Consulta de CNPJ"
 seoTitle: "Consulta de CNPJ: online e grátis"
 description: "Consulta de CNPJ: consulte a situação e os dados cadastrais de um CNPJ. Grátis e online, sem cadastro."
 summary: "Consulte a situação e os dados cadastrais de um CNPJ."
-date: 2026-10-20
-draft: true
+date: 2026-10-25
+draft: false
 category: "documentos"
 tags: ["cnpj", "empresas", "consulta", "documentos"]
 keywords: ["consulta de cnpj", "consulta de cnpj online", "cnpj", "empresas", "consulta"]
 ---
+<!--sudah dikerjakan-->
+
+Basta digitar o CNPJ da empresa abaixo e depois clicar em **Consultar CNPJ**.
+
+<div id="calc-cnpj" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔎 Consulta de CNPJ</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe o CNPJ e veja os dados da empresa na hora.</p>
+<label for="cnpj-numero" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">CNPJ</label>
+<input id="cnpj-numero" type="text" inputmode="text" maxlength="18" placeholder="00.000.000/0000-00" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="cnpj-consultar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Consultar CNPJ</button>
+<button type="button" id="cnpj-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="cnpj-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="cnpj-resultado">preencha o CNPJ e clique em "Consultar CNPJ".</span></div>
+</div>
+<script>
+(function () {
+  var campo = document.getElementById('cnpj-numero');
+  var botao = document.getElementById('cnpj-consultar');
+  var resultado = document.getElementById('cnpj-resultado');
+  var caixa = document.getElementById('cnpj-resposta');
+  var MSG_INICIAL = 'preencha o CNPJ e clique em "Consultar CNPJ".';
+  function el(tag, css, texto) {
+    var e = document.createElement(tag);
+    if (css) { e.style.cssText = css; }
+    if (texto !== undefined) { e.textContent = texto; }
+    return e;
+  }
+  function soChars(v) {
+    return String(v).replace(/[^0-9A-Za-z]/g, '').toUpperCase().slice(0, 14);
+  }
+  function mascara(v) {
+    var s = soChars(v);
+    var o = s.slice(0, 2);
+    if (s.length > 2) { o += '.' + s.slice(2, 5); }
+    if (s.length > 5) { o += '.' + s.slice(5, 8); }
+    if (s.length > 8) { o += '/' + s.slice(8, 12); }
+    if (s.length > 12) { o += '-' + s.slice(12, 14); }
+    return o;
+  }
+  function digito(base) {
+    var pesos = base.length === 12 ? [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2] : [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+    var soma = 0;
+    base.split('').forEach(function (ch, i) { soma += (ch.charCodeAt(0) - 48) * pesos[i]; });
+    var r = soma % 11;
+    return r > 1 ? 11 - r : 0;
+  }
+  function cnpjValido(c) {
+    if (c.length !== 14) { return false; }
+    if (/^(.)\1+$/.test(c)) { return false; }
+    var base = c.slice(0, 12);
+    var d1 = digito(base);
+    var d2 = digito(base + String(d1));
+    return c.slice(12) === String(d1) + String(d2);
+  }
+  function vazio(v) {
+    return v === null || v === undefined || String(v).trim() === '';
+  }
+  function txt(v) { return vazio(v) ? '—' : String(v).trim(); }
+  function simNao(v) {
+    if (v === true) { return 'Sim'; }
+    if (v === false) { return 'Não'; }
+    return '—';
+  }
+  function dataBR(s) {
+    if (vazio(s)) { return '—'; }
+    var p = String(s).split('-');
+    return p.length === 3 ? p[2] + '/' + p[1] + '/' + p[0] : String(s);
+  }
+  function telefone(v) {
+    if (vazio(v)) { return '—'; }
+    var s = String(v).replace(/\D/g, '');
+    if (s.length === 10) { return '(' + s.slice(0, 2) + ') ' + s.slice(2, 6) + '-' + s.slice(6); }
+    if (s.length === 11) { return '(' + s.slice(0, 2) + ') ' + s.slice(2, 7) + '-' + s.slice(7); }
+    return s;
+  }
+  function cep(v) {
+    if (vazio(v)) { return '—'; }
+    var s = String(v).replace(/\D/g, '');
+    return s.length === 8 ? s.slice(0, 5) + '-' + s.slice(5) : s;
+  }
+  function moeda(v) {
+    var n = Number(v);
+    if (vazio(v) || isNaN(n)) { return '—'; }
+    return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function carregando() {
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'consultando, aguarde...';
+  }
+  function linha(rotulo, valor, cor) {
+    var row = el('div', 'padding:10px 0;border-bottom:1px solid #bbf7d0;');
+    row.appendChild(el('div', 'font-size:0.72rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#64748b;', rotulo));
+    var itens = Array.isArray(valor) ? valor : [valor];
+    if (itens.length === 0) { itens = ['—']; }
+    itens.forEach(function (t) {
+      row.appendChild(el('div', 'margin-top:2px;font-size:0.95rem;color:' + (cor || '#1e293b') + ';word-break:break-word;', t));
+    });
+    return row;
+  }
+  function mostrar(d, cnpj) {
+    var ativa = String(d.descricao_situacao_cadastral || '').toUpperCase() === 'ATIVA';
+    var situacao = txt(d.descricao_situacao_cadastral);
+    if (!vazio(d.data_situacao_cadastral)) { situacao += ' (desde ' + dataBR(d.data_situacao_cadastral) + ')'; }
+    var endereco = [
+      (txt(d.descricao_tipo_de_logradouro) === '—' ? '' : d.descricao_tipo_de_logradouro + ' ') + (d.logradouro || ''),
+      d.numero,
+      d.complemento,
+      d.bairro
+    ].filter(function (x) { return !vazio(x); }).map(function (x) { return String(x).trim(); }).join(', ');
+    var cnaes = (d.cnaes_secundarios || []).map(function (c) { return c.codigo + ' - ' + c.descricao; });
+    var socios = (d.qsa || []).map(function (s) { return s.nome_socio + (vazio(s.qualificacao_socio) ? '' : ' (' + s.qualificacao_socio + ')'); });
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#1e293b';
+    resultado.textContent = '';
+    resultado.appendChild(el('div', 'margin-top:6px;color:#166534;font-weight:600;', 'dados encontrados:'));
+    resultado.appendChild(linha('CNPJ', mascara(cnpj)));
+    resultado.appendChild(linha('Razão Social', txt(d.razao_social)));
+    resultado.appendChild(linha('Nome Fantasia', txt(d.nome_fantasia)));
+    resultado.appendChild(linha('Tipo', txt(d.descricao_identificador_matriz_filial)));
+    resultado.appendChild(linha('Natureza Jurídica', txt(d.natureza_juridica)));
+    resultado.appendChild(linha('Data da Abertura', dataBR(d.data_inicio_atividade)));
+    resultado.appendChild(linha('Situação Cadastral', situacao, ativa ? '#166534' : '#b91c1c'));
+    resultado.appendChild(linha('Capital Social', moeda(d.capital_social)));
+    resultado.appendChild(linha('Telefone', telefone(d.ddd_telefone_1)));
+    resultado.appendChild(linha('E-mail', txt(d.email)));
+    resultado.appendChild(linha('Endereço', txt(endereco)));
+    resultado.appendChild(linha('Cidade / UF', txt(d.municipio) + ' / ' + txt(d.uf)));
+    resultado.appendChild(linha('CEP', cep(d.cep)));
+    resultado.appendChild(linha('Optante Simples', simNao(d.opcao_pelo_simples)));
+    resultado.appendChild(linha('Optante MEI', simNao(d.opcao_pelo_mei)));
+    resultado.appendChild(linha('CNAE Principal', vazio(d.cnae_fiscal) ? '—' : d.cnae_fiscal + ' - ' + txt(d.cnae_fiscal_descricao)));
+    resultado.appendChild(linha('CNAE Secundárias', cnaes));
+    resultado.appendChild(linha('Sócios', socios));
+  }
+  function consultar() {
+    var cnpj = soChars(campo.value);
+    if (cnpj.length !== 14) { erro('informe um CNPJ com 14 caracteres.'); return; }
+    if (!cnpjValido(cnpj)) { erro('CNPJ inválido. Confira os números digitados.'); return; }
+    carregando();
+    botao.disabled = true;
+    botao.style.opacity = '0.6';
+    fetch('https://brasilapi.com.br/api/cnpj/v1/' + cnpj)
+      .then(function (r) {
+        if (r.status === 404) { throw new Error('nao-encontrado'); }
+        if (!r.ok) { throw new Error('falha'); }
+        return r.json();
+      })
+      .then(function (d) { mostrar(d, cnpj); })
+      .catch(function (e) {
+        if (e.message === 'nao-encontrado') { erro('CNPJ não encontrado na base da Receita Federal.'); }
+        else { erro('não foi possível consultar agora. Tente novamente em instantes.'); }
+      })
+      .then(function () {
+        botao.disabled = false;
+        botao.style.opacity = '1';
+      });
+  }
+  function limpar() {
+    campo.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = MSG_INICIAL;
+    campo.focus();
+  }
+  botao.addEventListener('click', consultar);
+  document.getElementById('cnpj-limpar').addEventListener('click', limpar);
+  campo.addEventListener('input', function () { campo.value = mascara(campo.value); });
+  campo.addEventListener('keydown', function (e) { if (e.key === 'Enter') { consultar(); } });
+  campo.addEventListener('focus', function () { campo.style.borderColor = '#6366f1'; });
+  campo.addEventListener('blur', function () { campo.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+
+## Como usar a consulta
+
+1. Digite o número do **CNPJ** da empresa no campo acima (a máscara 00.000.000/0000-00 é aplicada automaticamente).
+2. Clique em **Consultar CNPJ** (ou pressione Enter) para buscar os dados.
+3. Veja o resultado: razão social, situação cadastral, endereço, atividades (CNAE), sócios e outras informações.
+4. Use o botão **Limpar** para apagar o CNPJ e fazer uma nova consulta.
+
+Você pode digitar apenas os números ou já com pontos, barra e traço. O sistema confere os dígitos verificadores antes de consultar. Os dados vêm da base pública da Receita Federal e podem estar desatualizados em relação ao cadastro oficial, então, para fins legais, confirme sempre no site da Receita.
+
+## Entendendo os termos
+
+- **CNPJ:** Cadastro Nacional da Pessoa Jurídica, número de identificação de uma empresa na Receita Federal. Tem 14 caracteres, sendo os dois últimos dígitos verificadores. A partir de julho de 2026, o CNPJ também pode conter letras.
+- **Razão Social:** nome oficial da empresa, registrado nos órgãos públicos.
+- **Nome Fantasia:** nome comercial pelo qual a empresa é conhecida pelo público. Pode ser diferente da razão social.
+- **Tipo:** indica se o CNPJ é de uma **matriz** (estabelecimento principal) ou de uma **filial** (unidade adicional).
+- **Natureza Jurídica:** forma legal da empresa, como Sociedade Limitada (LTDA), Empresário Individual ou S.A.
+- **Data da Abertura:** data de início das atividades da empresa.
+- **Situação Cadastral:** condição do CNPJ perante a Receita Federal, como ativa, suspensa, inapta, baixada ou nula.
+- **Capital Social:** valor investido pelos sócios para iniciar e manter a empresa.
+- **Telefone:** número de contato informado no cadastro, com DDD.
+- **E-mail:** endereço de e-mail de contato informado no cadastro.
+- **Endereço:** logradouro, número, complemento e bairro do estabelecimento.
+- **Cidade / UF:** município e unidade da federação (estado) onde a empresa está registrada.
+- **CEP:** Código de Endereçamento Postal do local da empresa.
+- **Optante Simples:** informa se a empresa faz parte do Simples Nacional, regime que unifica o pagamento de vários impostos em uma única guia.
+- **Optante MEI:** informa se a empresa é Microempreendedor Individual, categoria com faturamento anual limitado e tributação simplificada.
+- **CNAE Principal:** Classificação Nacional de Atividades Econômicas, código e descrição da principal atividade da empresa.
+- **CNAE Secundárias:** demais atividades econômicas que a empresa também pode exercer.
+- **Sócios:** pessoas ou empresas que compõem o quadro societário, junto com a qualificação de cada uma (sócio-administrador, sócio, titular etc.).

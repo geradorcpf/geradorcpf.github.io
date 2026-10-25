@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Conversor de Moedas: online e grátis</title>
 <meta name="description" content="Conversor de Moedas: converta valores entre moedas com a cotação do dia. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/conversor-de-moedas/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/conversor-de-moedas/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Conversor de Moedas: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/conversor-de-moedas/">
+<meta property="og:url" content="http://localhost:1313/ferramentas/conversor-de-moedas/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Conversor de Moedas: converta valores entre moedas com a cotação do dia. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,29 +38,216 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Conversor de Moedas</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/conversor-de-moedas/","name":"Conversor de Moedas","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Conversor de Moedas</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/conversor-de-moedas/","name":"Conversor de Moedas","position":3}]}</script>
 <article class="prose page">
   <h1>Conversor de Moedas</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta digitar o valor, escolher a moeda de origem e a moeda de destino abaixo. O resultado aparece na hora, com a cotação do dia.</p>
+<div id="calc-moedas" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">💱 Conversor de Moedas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe o valor, escolha as moedas e veja o resultado na hora.</p>
+<label for="mo-valor" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Valor</label>
+<input id="mo-valor" type="text" inputmode="decimal" placeholder="Ex.: 100" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="mo-de" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">De (moeda de origem)</label>
+<select id="mo-de" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;cursor:pointer;"></select>
+<label for="mo-para" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Para (moeda de destino)</label>
+<select id="mo-para" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;cursor:pointer;"></select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="mo-converter" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Converter</button>
+<button type="button" id="mo-inverter" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">⇅ Inverter</button>
+<button type="button" id="mo-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="mo-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="mo-resultado">preencha o valor e escolha as moedas.</span></div>
+<p id="mo-status" style="margin:10px 0 0;font-size:0.8rem;color:#64748b;line-height:1.4;"></p>
+</div>
+<script>
+(function () {
+  var moedas = [
+    ['ZAR', 'África do Sul (Rande)'], ['ARS', 'Argentina (Peso)'], ['AUD', 'Austrália (Dólar)'],
+    ['BOB', 'Bolívia (Boliviano)'], ['BRL', 'Brasil (Real)'], ['BTN', 'Butão (Rúpia)'],
+    ['CAD', 'Canadá (Dólar)'], ['CLP', 'Chile (Peso)'], ['CNY', 'China (Iuan)'],
+    ['SGD', 'Cingapura (Dólar)'], ['COP', 'Colômbia (Peso)'], ['KRW', 'Coréia do Sul (Won)'],
+    ['DKK', 'Dinamarca (Coroa)'], ['USD', 'Estados Unidos (Dólar)'], ['EUR', 'Europa (Euro)'],
+    ['IDR', 'Indonésia (Rúpia)'], ['ILS', 'Israel (Shekel)'], ['JPY', 'Japão (Iene)'],
+    ['MYR', 'Malásia (Ringgit)'], ['MXN', 'México (Peso)'], ['NGN', 'Nigéria (Naira)'],
+    ['NOK', 'Noruega (Coroa)'], ['NZD', 'Nova Zelândia (Dólar)'], ['GBP', 'Reino Unido (Libra)'],
+    ['RUB', 'Rússia (Rublo)'], ['SEK', 'Suécia (Coroa)'], ['CHF', 'Suíça (Franco)'],
+    ['TWD', 'Taiwan (Dólar)']
+  ];
+  var aproximadas = {
+    ZAR: 18, ARS: 1450, AUD: 1.53, BOB: 6.91, BRL: 5.4, BTN: 88, CAD: 1.4, CLP: 950,
+    CNY: 7.1, SGD: 1.3, COP: 3900, KRW: 1400, DKK: 6.45, USD: 1, EUR: 0.86, IDR: 16600,
+    ILS: 3.3, JPY: 150, MYR: 4.2, MXN: 18.4, NGN: 1450, NOK: 10, NZD: 1.75, GBP: 0.75,
+    RUB: 82, SEK: 9.4, CHF: 0.8, TWD: 30.5
+  };
+  var taxas = aproximadas;
+  var usandoAproximadas = true;
+  var atualizadoEm = '';
+  var valor = document.getElementById('mo-valor');
+  var de = document.getElementById('mo-de');
+  var para = document.getElementById('mo-para');
+  var resultado = document.getElementById('mo-resultado');
+  var caixa = document.getElementById('mo-resposta');
+  var status = document.getElementById('mo-status');
+  var textoInicial = 'preencha o valor e escolha as moedas.';
+  function preencher(sel, padrao) {
+    moedas.forEach(function (m) {
+      var o = document.createElement('option');
+      o.value = m[0];
+      o.textContent = m[1];
+      sel.appendChild(o);
+    });
+    sel.value = padrao;
+  }
+  function numero(v) {
+    var t = String(v).trim().replace(/\s/g, '');
+    if (t.indexOf(',') > -1) { t = t.replace(/\./g, '').replace(',', '.'); }
+    if (t === '' || isNaN(Number(t))) { return NaN; }
+    return Number(t);
+  }
+  function fmt(n, max) {
+    return n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: max });
+  }
+  function esvaziar(no) {
+    while (no.firstChild) { no.removeChild(no.firstChild); }
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function atualizarStatus() {
+    if (usandoAproximadas) {
+      status.textContent = 'Não foi possível obter a cotação atual. Os valores exibidos usam taxas aproximadas.';
+    } else {
+      status.textContent = 'Cotação atualizada em ' + atualizadoEm + '. Valores de referência, podem diferir das taxas praticadas por bancos e casas de câmbio.';
+    }
+  }
+  function converter() {
+    var v = numero(valor.value);
+    if (isNaN(v)) { erro('informe um valor numérico válido.'); return; }
+    if (!(v >= 0)) { erro('o valor não pode ser negativo.'); return; }
+    var fator = taxas[para.value] / taxas[de.value];
+    var total = v * fator;
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    esvaziar(resultado);
+    resultado.appendChild(document.createTextNode(fmt(v, 2) + ' ' + de.value + ' = '));
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.2rem';
+    forte.textContent = fmt(total, 4) + ' ' + para.value;
+    resultado.appendChild(forte);
+    resultado.appendChild(document.createElement('br'));
+    var pequeno = document.createElement('small');
+    pequeno.style.color = '#475569';
+    pequeno.textContent = '1 ' + de.value + ' = ' + fmt(fator, 6) + ' ' + para.value;
+    resultado.appendChild(pequeno);
+  }
+  function reiniciar() {
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = textoInicial;
+  }
+  function automatico() {
+    if (valor.value.trim() === '') { reiniciar(); } else { converter(); }
+  }
+  function inverter() {
+    var tmp = de.value;
+    de.value = para.value;
+    para.value = tmp;
+    automatico();
+  }
+  function limpar() {
+    valor.value = '';
+    de.value = 'USD';
+    para.value = 'BRL';
+    reiniciar();
+    valor.focus();
+  }
+  preencher(de, 'USD');
+  preencher(para, 'BRL');
+  atualizarStatus();
+  document.getElementById('mo-converter').addEventListener('click', converter);
+  document.getElementById('mo-inverter').addEventListener('click', inverter);
+  document.getElementById('mo-limpar').addEventListener('click', limpar);
+  valor.addEventListener('input', automatico);
+  de.addEventListener('change', automatico);
+  para.addEventListener('change', automatico);
+  valor.addEventListener('keydown', function (e) { if (e.key === 'Enter') { converter(); } });
+  [valor, de, para].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+  fetch('https://open.er-api.com/v6/latest/USD')
+    .then(function (r) {
+      if (!r.ok) { throw new Error('http'); }
+      return r.json();
+    })
+    .then(function (d) {
+      if (!d || d.result !== 'success' || !d.rates) { throw new Error('dados'); }
+      var novas = {};
+      Object.keys(aproximadas).forEach(function (cod) {
+        novas[cod] = d.rates[cod] ? d.rates[cod] : aproximadas[cod];
+      });
+      taxas = novas;
+      usandoAproximadas = false;
+      atualizadoEm = new Date(d.time_last_update_unix * 1000).toLocaleString('pt-BR');
+    })
+    .catch(function () {
+      usandoAproximadas = true;
+    })
+    .then(function () {
+      atualizarStatus();
+      if (valor.value.trim() !== '') { converter(); }
+    });
+})();
+</script>
+<h2 id="como-usar-o-conversor">Como usar o conversor</h2>
+<ol>
+<li>Digite o <strong>Valor</strong> que você quer converter no primeiro campo.</li>
+<li>Escolha a moeda de origem em <strong>De (moeda de origem)</strong>, ou seja, a moeda em que o valor está.</li>
+<li>Escolha a moeda de destino em <strong>Para (moeda de destino)</strong>, ou seja, a moeda para a qual você quer converter.</li>
+<li>O resultado aparece automaticamente. Se preferir, clique em <strong>Converter</strong> (ou pressione Enter).</li>
+<li>Use o botão <strong>Inverter</strong> para trocar a moeda de origem com a de destino e fazer a conversão contrária.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o valor, voltar às moedas padrão (Dólar e Real) e fazer um novo cálculo.</li>
+</ol>
+<p>Você pode usar números inteiros ou decimais, com vírgula ou ponto (por exemplo, <code>100,50</code> ou <code>100.50</code>). A cotação é carregada quando a página abre. Se não for possível obter a cotação do dia, o conversor avisa e usa taxas aproximadas.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Moeda:</strong> unidade monetária usada por um país ou região para pagamentos e preços, como o Real (Brasil), o Dólar (Estados Unidos) e o Euro (Europa).</li>
+<li><strong>Valor:</strong> quantia que você deseja converter, expressa na moeda de origem.</li>
+<li><strong>Moeda de origem:</strong> moeda em que o valor informado está. É a moeda que você &ldquo;tem&rdquo;.</li>
+<li><strong>Moeda de destino:</strong> moeda para a qual o valor será convertido. É a moeda que você &ldquo;quer&rdquo;.</li>
+<li><strong>Cotação (taxa de câmbio):</strong> preço de uma moeda em relação a outra. Por exemplo, se 1 USD = 5,40 BRL, a cotação do dólar é de 5,40 reais.</li>
+<li><strong>Câmbio:</strong> troca de uma moeda por outra, feita de acordo com a cotação do momento.</li>
+<li><strong>Código da moeda (ISO 4217):</strong> sigla de três letras que identifica cada moeda, como BRL (Real), USD (Dólar americano), EUR (Euro) e GBP (Libra esterlina).</li>
+<li><strong>Conversão:</strong> cálculo que transforma um valor de uma moeda em outro, multiplicando o valor pela cotação entre as duas moedas.</li>
+<li><strong>Inverter:</strong> troca de lugar a moeda de origem e a de destino, mostrando quanto vale o caminho contrário.</li>
+<li><strong>Cotação do dia:</strong> taxa de câmbio de referência atualizada recentemente. Ela varia ao longo do tempo e pode diferir da taxa cobrada por bancos, corretoras e casas de câmbio, que costumam incluir tarifas e margens.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-matematica">
+  <ul class="cards rel"><li class="c-financas">
+  <a class="card" href="/ferramentas/calculadora-primeiro-milhao/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora do Primeiro Milhão</strong><small>Descubra em quanto tempo você junta o primeiro milhão.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
   <a class="card" href="/ferramentas/conversor-de-medidas/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
     <span class="tx"><strong>Conversor de Medidas</strong><small>Converta comprimento, peso, volume e outras unidades.</small></span>
-  </a>
-</li>
-<li class="c-matematica">
-  <a class="card" href="/ferramentas/conversor-de-numeros-romanos/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
-</span>
-    <span class="tx"><strong>Conversor de Números Romanos</strong><small>Converta números romanos em arábicos e vice-versa.</small></span>
   </a>
 </li>
 <li class="c-dev">
@@ -70,18 +257,18 @@
     <span class="tx"><strong>Conversão de Base Numérica</strong><small>Converta números entre binário, decimal e hexadecimal.</small></span>
   </a>
 </li>
-<li class="c-dev">
-  <a class="card" href="/ferramentas/conversor-de-timestamp/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/calculadora-de-porcentagem/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
 </span>
-    <span class="tx"><strong>Conversor de Timestamp</strong><small>Converta timestamp Unix em data e vice-versa.</small></span>
+    <span class="tx"><strong>Calculadora de Porcentagem</strong><small>Calcule porcentagens, descontos e aumentos.</small></span>
   </a>
 </li>
-<li class="c-midia">
-  <a class="card" href="/ferramentas/converter-jpg-em-pdf/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
+<li class="c-financas">
+  <a class="card" href="/ferramentas/calculadora-de-combustivel/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
 </span>
-    <span class="tx"><strong>Converter JPG em PDF</strong><small>Junte imagens JPG em um arquivo PDF.</small></span>
+    <span class="tx"><strong>Cálculo de Combustível</strong><small>Calcule o gasto de combustível de uma viagem.</small></span>
   </a>
 </li>
 

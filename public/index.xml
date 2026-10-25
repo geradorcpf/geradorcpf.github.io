@@ -6,8 +6,85 @@
     <description>Recent content on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprimir PDF</title>
+      <link>http://localhost:1313/ferramentas/comprimir-pdf/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/comprimir-pdf/</guid>
+      <description>Reduza o tamanho de um arquivo PDF.</description>
+    </item>
+    <item>
+      <title>Consulta de CEP</title>
+      <link>http://localhost:1313/ferramentas/consulta-cep/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/consulta-cep/</guid>
+      <description>Encontre o endereço de um CEP ou o CEP de um endereço.</description>
+    </item>
+    <item>
+      <title>Consulta de CNPJ</title>
+      <link>http://localhost:1313/ferramentas/consulta-cnpj/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/consulta-cnpj/</guid>
+      <description>Consulte a situação e os dados cadastrais de um CNPJ.</description>
+    </item>
+    <item>
+      <title>Consulta de Número do Banco (DOC e TED)</title>
+      <link>http://localhost:1313/ferramentas/consulta-codigo-do-banco/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/consulta-codigo-do-banco/</guid>
+      <description>Encontre o código de um banco para DOC e TED.</description>
+    </item>
+    <item>
+      <title>Contador de Caracteres, Palavras e Linhas</title>
+      <link>http://localhost:1313/ferramentas/contador-de-caracteres-palavras-e-linhas/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/contador-de-caracteres-palavras-e-linhas/</guid>
+      <description>Conte caracteres, palavras, linhas e parágrafos de qualquer texto.</description>
+    </item>
+    <item>
+      <title>Contador de Inscritos em Tempo Real</title>
+      <link>http://localhost:1313/ferramentas/contador-inscritos/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/contador-inscritos/</guid>
+      <description>Acompanhe o número de inscritos de um canal em tempo real.</description>
+    </item>
+    <item>
+      <title>Contador de Ocorrência de Palavra</title>
+      <link>http://localhost:1313/ferramentas/contador-de-ocorrencia-de-palavras/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/contador-de-ocorrencia-de-palavras/</guid>
+      <description>Conte quantas vezes cada palavra aparece no texto.</description>
+    </item>
+    <item>
+      <title>Contagem Regressiva</title>
+      <link>http://localhost:1313/ferramentas/contagem-regressiva/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/contagem-regressiva/</guid>
+      <description>Crie uma contagem regressiva para qualquer data.</description>
+    </item>
+    <item>
+      <title>Conversão de Base Numérica</title>
+      <link>http://localhost:1313/ferramentas/conversor-de-base-numerica/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/conversor-de-base-numerica/</guid>
+      <description>Converta números entre binário, decimal e hexadecimal.</description>
+    </item>
+    <item>
+      <title>Conversor de Medidas</title>
+      <link>http://localhost:1313/ferramentas/conversor-de-medidas/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/conversor-de-medidas/</guid>
+      <description>Converta comprimento, peso, volume e outras unidades.</description>
+    </item>
+    <item>
+      <title>Conversor de Moedas</title>
+      <link>http://localhost:1313/ferramentas/conversor-de-moedas/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/conversor-de-moedas/</guid>
+      <description>Converta valores entre moedas com a cotação do dia.</description>
+    </item>
     <item>
       <title>Cálculo de Rescisão de Contrato</title>
       <link>http://localhost:1313/ferramentas/calculo-de-rescisao/</link>
@@ -56,6 +133,20 @@
       <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/ferramentas/comparar-pdf/</guid>
       <description>Compare dois PDFs e veja o que mudou.</description>
+    </item>
+    <item>
+      <title>Comparar Textos</title>
+      <link>http://localhost:1313/ferramentas/comparar-textos/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/comparar-textos/</guid>
+      <description>Compare dois textos e veja as diferenças.</description>
+    </item>
+    <item>
+      <title>Comprimir Imagem</title>
+      <link>http://localhost:1313/ferramentas/comprimir-imagem/</link>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/comprimir-imagem/</guid>
+      <description>Reduza o peso de imagens sem perder muita qualidade.</description>
     </item>
     <item>
       <title>Calculadora de MDC</title>

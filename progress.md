@@ -40,14 +40,27 @@ https://geradorcpf.github.io/ferramentas/calcular-periodo-fertil/
 https://geradorcpf.github.io/ferramentas/calculo-de-ferias/
 
 24 Oktober 2026
-http://localhost:1313/ferramentas/calculo-de-rescisao/ -- belum submit
-http://localhost:1313/ferramentas/calendario/
-http://localhost:1313/ferramentas/calendario-lunar-2026/
-http://localhost:1313/ferramentas/calendario-lunar-2027/
-http://localhost:1313/ferramentas/capsula-tempo/
-http://localhost:1313/ferramentas/colocar-em-ordem-alfabetica/
-http://localhost:1313/ferramentas/color-picker/
-http://localhost:1313/ferramentas/comparar-pdf/
-http://localhost:1313/ferramentas/comparar-textos/
-http://localhost:1313/ferramentas/comprimir-imagem/
+https://geradorcpf.github.io/ferramentas/calculo-de-rescisao/ 
+https://geradorcpf.github.io/ferramentas/calendario/
+https://geradorcpf.github.io/ferramentas/calendario-lunar-2026/
+https://geradorcpf.github.io/ferramentas/calendario-lunar-2027/
+https://geradorcpf.github.io/ferramentas/capsula-tempo/
+https://geradorcpf.github.io/ferramentas/colocar-em-ordem-alfabetica/
+https://geradorcpf.github.io/ferramentas/color-picker/
+https://geradorcpf.github.io/ferramentas/comparar-pdf/
+https://geradorcpf.github.io/ferramentas/comparar-textos/
+https://geradorcpf.github.io/ferramentas/comprimir-imagem/
+
+25 Oktober 2026
+http://localhost:1313/ferramentas/comprimir-pdf/ -- belum submit
+http://localhost:1313/ferramentas/consulta-cep/
+http://localhost:1313/ferramentas/consulta-cnpj/
+http://localhost:1313/ferramentas/consulta-codigo-do-banco/
+http://localhost:1313/ferramentas/contador-de-caracteres-palavras-e-linhas/
+http://localhost:1313/ferramentas/contador-de-ocorrencia-de-palavras/
+http://localhost:1313/ferramentas/contador-inscritos/  -- tidak perlu submit
+http://localhost:1313/ferramentas/contagem-regressiva/
+http://localhost:1313/ferramentas/conversor-de-base-numerica/
+http://localhost:1313/ferramentas/conversor-de-medidas/
+http://localhost:1313/ferramentas/conversor-de-moedas/ -- tidak perlu submit
 

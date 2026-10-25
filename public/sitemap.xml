@@ -7,6 +7,46 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
+    <loc>http://localhost:1313/ferramentas/calendario/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calendario-lunar-2026/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/capsula-tempo/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/colocar-em-ordem-alfabetica/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/color-picker/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/comparar-pdf/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/comparar-textos/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/comprimir-imagem/</loc>
+    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>http://localhost:1313/ferramentas/</loc>
     <lastmod>2026-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -173,6 +213,11 @@
     <priority>0.8</priority>
   </url><url>
     <loc>http://localhost:1313/ferramentas/calculadora-mmc/</loc>
+    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/calendario-lunar-2027/</loc>
     <lastmod>2026-10-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
