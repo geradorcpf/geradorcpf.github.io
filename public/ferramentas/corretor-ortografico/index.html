@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Corretor Ortográfico: online e grátis</title>
+<title>Corretor Ortográfico</title>
 <meta name="description" content="Corretor Ortográfico: confira a ortografia do seu texto em português. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/corretor-ortografico/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/corretor-ortografico/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Corretor Ortográfico: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/corretor-ortografico/">
+<meta property="og:title" content="Corretor Ortográfico">
+<meta property="og:url" content="http://localhost:1313/ferramentas/corretor-ortografico/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Corretor Ortográfico: confira a ortografia do seu texto em português. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,50 +38,240 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Corretor Ortográfico</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/corretor-ortografico/","name":"Corretor Ortográfico","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Corretor Ortográfico</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/corretor-ortografico/","name":"Corretor Ortográfico","position":3}]}</script>
 <article class="prose page">
   <h1>Corretor Ortográfico</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Cole o seu texto abaixo e clique em <strong>Verificar Texto</strong> para encontrar erros de ortografia, gramática e pontuação.</p>
+<div id="calc-corretor" style="max-width:720px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">✍️ Corretor Ortográfico</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Cole o texto em português e veja os erros marcados na hora.</p>
+<label for="cor-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Seu Texto</label>
+<textarea id="cor-texto" rows="8" maxlength="20000" placeholder="Digite ou cole aqui o seu texto em português..." spellcheck="false" style="width:100%;padding:12px 14px;margin-bottom:6px;font-size:1rem;font-family:inherit;line-height:1.5;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div id="cor-contador" style="margin-bottom:16px;font-size:0.85rem;color:#64748b;text-align:right;">0 / 20.000 caracteres</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="cor-verificar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Verificar Texto</button>
+<button type="button" id="cor-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="cor-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="cor-resultado">cole o texto e clique em "Verificar Texto".</span></div>
+</div>
+<script>
+(function () {
+  var entrada = document.getElementById('cor-texto');
+  var contador = document.getElementById('cor-contador');
+  var caixa = document.getElementById('cor-resposta');
+  var resultado = document.getElementById('cor-resultado');
+  var botao = document.getElementById('cor-verificar');
+  var LIMITE = 20000;
+  var TIPOS = {
+    erro: { fundo: '#fee2e2', borda: '#dc2626', rotulo: 'Erro ortográfico' },
+    gramatica: { fundo: '#fef9c3', borda: '#ca8a04', rotulo: 'Erro gramatical' },
+    sugestao: { fundo: '#dbeafe', borda: '#2563eb', rotulo: 'Sugestão' }
+  };
+  function el(tag, estilo, texto) {
+    var e = document.createElement(tag);
+    if (estilo) { e.style.cssText = estilo; }
+    if (texto !== undefined) { e.textContent = texto; }
+    return e;
+  }
+  function esvaziar(no) {
+    while (no.firstChild) { no.removeChild(no.firstChild); }
+  }
+  function visual(borda, fundo, cor) {
+    caixa.style.borderColor = borda;
+    caixa.style.background = fundo;
+    resultado.style.color = cor;
+  }
+  function mensagem(texto) {
+    visual('#c7d2fe', '#ffffff', '#64748b');
+    esvaziar(resultado);
+    resultado.textContent = texto;
+  }
+  function erro(texto) {
+    visual('#fca5a5', '#fef2f2', '#b91c1c');
+    esvaziar(resultado);
+    resultado.textContent = texto;
+  }
+  function atualizarContador() {
+    contador.textContent = entrada.value.length.toLocaleString('pt-BR') + ' / 20.000 caracteres';
+  }
+  function tipoDe(m) {
+    var t = m.rule && m.rule.issueType ? m.rule.issueType : '';
+    if (t === 'misspelling') { return 'erro'; }
+    if (t === 'grammar') { return 'gramatica'; }
+    return 'sugestao';
+  }
+  function criarBotao(item, valor, texto) {
+    var b = el('button', 'margin:4px 6px 0 0;padding:5px 12px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:8px;cursor:pointer;', valor === '' ? '(remover)' : valor);
+    b.type = 'button';
+    b.addEventListener('click', function () {
+      if (entrada.value !== texto) {
+        erro('o texto foi alterado. Clique em "Verificar Texto" novamente.');
+        return;
+      }
+      entrada.value = texto.slice(0, item.offset) + valor + texto.slice(item.offset + item.length);
+      atualizarContador();
+      verificar();
+    });
+    return b;
+  }
+  function legenda() {
+    var l = el('div', 'display:flex;gap:14px;flex-wrap:wrap;margin:10px 0;font-size:0.85rem;color:#475569;');
+    ['erro', 'gramatica', 'sugestao'].forEach(function (k) {
+      var par = el('span', 'display:inline-flex;align-items:center;gap:6px;');
+      par.appendChild(el('span', 'display:inline-block;width:14px;height:14px;border-radius:4px;background:' + TIPOS[k].fundo + ';border:2px solid ' + TIPOS[k].borda + ';'));
+      par.appendChild(document.createTextNode(TIPOS[k].rotulo));
+      l.appendChild(par);
+    });
+    return l;
+  }
+  function mostrar(texto, matches) {
+    var lista = matches.slice().sort(function (a, b) { return a.offset - b.offset; });
+    var itens = [];
+    var fim = 0;
+    lista.forEach(function (m) {
+      if (m.offset >= fim && m.length > 0) {
+        itens.push(m);
+        fim = m.offset + m.length;
+      }
+    });
+    esvaziar(resultado);
+    if (itens.length === 0) {
+      visual('#86efac', '#f0fdf4', '#166534');
+      resultado.textContent = 'nenhum erro encontrado no seu texto. 🎉';
+      return;
+    }
+    visual('#c7d2fe', '#ffffff', '#1e293b');
+    var resumo = el('div', 'margin-top:4px;');
+    resumo.appendChild(document.createTextNode('foram encontrados '));
+    resumo.appendChild(el('strong', 'font-size:1.2rem;color:#3730a3;', String(itens.length)));
+    resumo.appendChild(document.createTextNode(itens.length === 1 ? ' ponto para revisar:' : ' pontos para revisar:'));
+    resultado.appendChild(resumo);
+    resultado.appendChild(legenda());
+    var marcado = el('div', 'padding:12px 14px;margin-bottom:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;white-space:pre-wrap;word-wrap:break-word;max-height:280px;overflow:auto;line-height:1.8;color:#1e293b;');
+    var pos = 0;
+    itens.forEach(function (m) {
+      var t = TIPOS[tipoDe(m)];
+      if (m.offset > pos) { marcado.appendChild(document.createTextNode(texto.slice(pos, m.offset))); }
+      marcado.appendChild(el('span', 'background:' + t.fundo + ';border-bottom:3px solid ' + t.borda + ';border-radius:3px;padding:0 2px;', texto.slice(m.offset, m.offset + m.length)));
+      pos = m.offset + m.length;
+    });
+    if (texto.length > pos) { marcado.appendChild(document.createTextNode(texto.slice(pos))); }
+    resultado.appendChild(marcado);
+    itens.forEach(function (m) {
+      var t = TIPOS[tipoDe(m)];
+      var cartao = el('div', 'padding:10px 12px;margin-bottom:10px;background:' + t.fundo + ';border-left:5px solid ' + t.borda + ';border-radius:8px;font-size:0.95rem;line-height:1.5;');
+      cartao.appendChild(el('strong', 'color:#1e293b;', t.rotulo + ': "' + texto.slice(m.offset, m.offset + m.length) + '"'));
+      cartao.appendChild(el('div', 'color:#475569;margin:2px 0 4px;', m.message || ''));
+      var reps = m.replacements || [];
+      reps.slice(0, 5).forEach(function (r) {
+        cartao.appendChild(criarBotao(m, r.value, texto));
+      });
+      resultado.appendChild(cartao);
+    });
+  }
+  function verificar() {
+    var texto = entrada.value;
+    if (texto.trim() === '') { erro('digite ou cole um texto para verificar.'); return; }
+    if (texto.length > LIMITE) { erro('o texto passou do limite de 20.000 caracteres.'); return; }
+    botao.disabled = true;
+    botao.style.opacity = '0.6';
+    mensagem('verificando o texto, aguarde...');
+    fetch('https://api.languagetool.org/v2/check', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+      body: 'language=pt-BR&text=' + encodeURIComponent(texto)
+    }).then(function (r) {
+      if (!r.ok) { throw new Error('http'); }
+      return r.json();
+    }).then(function (d) {
+      mostrar(texto, d.matches || []);
+    }).catch(function () {
+      erro('não foi possível verificar o texto agora. Confira sua conexão e tente novamente em instantes.');
+    }).then(function () {
+      botao.disabled = false;
+      botao.style.opacity = '1';
+    });
+  }
+  function limpar() {
+    entrada.value = '';
+    atualizarContador();
+    mensagem('cole o texto e clique em "Verificar Texto".');
+    entrada.focus();
+  }
+  botao.addEventListener('click', verificar);
+  document.getElementById('cor-limpar').addEventListener('click', limpar);
+  entrada.addEventListener('input', atualizarContador);
+  entrada.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { verificar(); }
+  });
+  entrada.addEventListener('focus', function () { entrada.style.borderColor = '#6366f1'; });
+  entrada.addEventListener('blur', function () { entrada.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-o-corretor-ortográfico">Como usar o corretor ortográfico</h2>
+<ol>
+<li>Digite ou cole o seu texto em português no campo <strong>Seu Texto</strong>.</li>
+<li>Clique em <strong>Verificar Texto</strong> (ou pressione Ctrl + Enter) para iniciar a análise.</li>
+<li>Veja o texto com as marcações: <strong>vermelho</strong> para erros ortográficos, <strong>amarelo</strong> para erros gramaticais e <strong>azul</strong> para sugestões.</li>
+<li>Abaixo do texto marcado, leia a explicação de cada ponto e clique em uma das sugestões para aplicar a correção.</li>
+<li>Sempre que alterar o texto por conta própria, clique em <strong>Verificar Texto</strong> de novo para uma nova validação.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o texto e começar outra correção.</li>
+</ol>
+<p>Evite textos muito longos: o limite é de 20.000 caracteres e, quanto maior o texto, mais tempo a análise leva. O corretor funciona apenas em português do Brasil; textos em outros idiomas terão erros apontados em quase todas as palavras. Para analisar o texto, ele é enviado ao serviço LanguageTool, por isso é necessário estar conectado à internet. As sugestões nem sempre fazem o sentido mais adequado, então use o bom senso antes de aceitá-las.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Corretor ortográfico:</strong> ferramenta que confere se as palavras de um texto estão escritas corretamente.</li>
+<li><strong>Erro ortográfico:</strong> palavra escrita de forma incorreta, como letra trocada, faltando ou sobrando, ou acento errado. Aparece em vermelho.</li>
+<li><strong>Erro gramatical:</strong> problema nas regras da língua, como concordância, regência ou uso inadequado de uma palavra. Aparece em amarelo.</li>
+<li><strong>Sugestão:</strong> melhoria opcional de estilo, clareza ou pontuação, que nem sempre é um erro. Aparece em azul.</li>
+<li><strong>Pontuação:</strong> uso de vírgulas, pontos e outros sinais que organizam as frases e dão ritmo ao texto.</li>
+<li><strong>Concordância:</strong> ajuste entre as palavras da frase, como o verbo concordando com o sujeito ou o adjetivo com o substantivo.</li>
+<li><strong>Acentuação:</strong> uso de acentos gráficos (agudo, circunflexo, crase, til) que indicam a pronúncia e distinguem palavras.</li>
+<li><strong>Português do Brasil (pt-BR):</strong> variante do idioma usada pelo corretor, com a ortografia e o vocabulário adotados no Brasil.</li>
+<li><strong>Limite de caracteres:</strong> quantidade máxima de letras, números, espaços e sinais aceita de uma vez, que aqui é de 20.000.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-texto">
-  <a class="card" href="/ferramentas/textos-sinonimos/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Textos Sinônimos</strong><small>Encontre sinônimos para variar as palavras do texto.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/numero-por-extenso/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Número por Extenso</strong><small>Escreva qualquer número por extenso, inclusive valores em reais.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/palavras-que-rimam/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Palavras Que Rimam</strong><small>Encontre palavras que rimam com a sua.</small></span>
-  </a>
-</li>
-<li class="c-aleatorio">
-  <a class="card" href="/ferramentas/gerador-de-palavras-aleatorias/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
-</span>
-    <span class="tx"><strong>Gerador de Palavras Aleatórias</strong><small>Gere palavras aleatórias para jogos e criação de texto.</small></span>
-  </a>
-</li>
-<li class="c-texto">
   <a class="card" href="/ferramentas/cortar-texto-por-caracteres/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
     <span class="tx"><strong>Cortar Texto em X Letras</strong><small>Corte um texto no número de letras que você escolher.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/converter-maiusculas-minusculas/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Converter Maiúsculas e Minúsculas</strong><small>Troque o texto entre maiúsculas, minúsculas e título.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/contador-de-ocorrencia-de-palavras/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Contador de Ocorrência de Palavra</strong><small>Conte quantas vezes cada palavra aparece no texto.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/contador-de-caracteres-palavras-e-linhas/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Contador de Caracteres, Palavras e Linhas</strong><small>Conte caracteres, palavras, linhas e parágrafos de qualquer texto.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/comparar-textos/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Comparar Textos</strong><small>Compare dois textos e veja as diferenças.</small></span>
   </a>
 </li>
 

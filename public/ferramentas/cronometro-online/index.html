@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cronômetro: online e grátis</title>
 <meta name="description" content="Cronômetro: cronômetro com voltas, direto no navegador. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/cronometro-online/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/cronometro-online/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cronômetro: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/cronometro-online/">
+<meta property="og:url" content="http://localhost:1313/ferramentas/cronometro-online/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Cronômetro: cronômetro com voltas, direto no navegador. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,36 +38,157 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Cronômetro</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/cronometro-online/","name":"Cronômetro","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Cronômetro</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/cronometro-online/","name":"Cronômetro","position":3}]}</script>
 <article class="prose page">
   <h1>Cronômetro</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta clicar em <strong>Iniciar</strong> para começar a contar o tempo e em <strong>Volta</strong> para marcar cada parcial.</p>
+<div id="calc-cronometro" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">⏱️ Cronômetro Online</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Marque o tempo e registre as voltas na hora.</p>
+<div aria-live="off" style="margin-bottom:20px;padding:20px 16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;text-align:center;"><span id="cron-visor" style="display:block;font-size:2.4rem;font-weight:700;color:#3730a3;font-variant-numeric:tabular-nums;letter-spacing:1px;line-height:1.2;">00:00:000</span></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="cron-iniciar" style="flex:1;min-width:120px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Iniciar</button>
+<button type="button" id="cron-volta" disabled style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:not-allowed;opacity:0.5;">Volta</button>
+<button type="button" id="cron-zerar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Zerar</button>
+</div>
+<div id="cron-voltas-box" style="display:none;margin-top:20px;background:#ffffff;border:2px solid #c7d2fe;border-radius:12px;overflow:hidden;">
+<div style="display:flex;justify-content:space-between;gap:8px;padding:10px 14px;background:#eef2ff;font-size:0.8rem;font-weight:700;color:#3730a3;"><span style="flex:1;">Volta</span><span style="flex:1;text-align:center;">Parcial</span><span style="flex:1;text-align:right;">Total</span></div>
+<div id="cron-voltas" style="max-height:240px;overflow-y:auto;"></div>
+</div>
+</div>
+<script>
+(function () {
+  var visor = document.getElementById('cron-visor');
+  var btnIniciar = document.getElementById('cron-iniciar');
+  var btnVolta = document.getElementById('cron-volta');
+  var btnZerar = document.getElementById('cron-zerar');
+  var caixaVoltas = document.getElementById('cron-voltas-box');
+  var lista = document.getElementById('cron-voltas');
+  var estado = { rodando: false, inicio: 0, base: 0, ultimaVolta: 0, voltas: [], raf: 0 };
+  function pad(n, t) { return ('000' + n).slice(-t); }
+  function fmt(ms) {
+    var total = Math.floor(ms);
+    var h = Math.floor(total / 3600000);
+    var m = Math.floor(total / 60000) % 60;
+    var s = Math.floor(total / 1000) % 60;
+    var r = total % 1000;
+    var prefixo = h !== 0 ? pad(h, 2) + ':' : '';
+    return prefixo + pad(m, 2) + ':' + pad(s, 2) + ':' + pad(r, 3);
+  }
+  function atual() {
+    return estado.rodando ? estado.base + (performance.now() - estado.inicio) : estado.base;
+  }
+  function habilitarVolta(ativo) {
+    btnVolta.disabled = !ativo;
+    btnVolta.style.opacity = ativo ? '1' : '0.5';
+    btnVolta.style.cursor = ativo ? 'pointer' : 'not-allowed';
+  }
+  function tick() {
+    visor.textContent = fmt(atual());
+    estado.raf = requestAnimationFrame(tick);
+  }
+  function iniciar() {
+    estado.inicio = performance.now();
+    estado.rodando = true;
+    btnIniciar.textContent = 'Pausar';
+    habilitarVolta(true);
+    tick();
+  }
+  function pausar() {
+    cancelAnimationFrame(estado.raf);
+    estado.base = atual();
+    estado.rodando = false;
+    visor.textContent = fmt(estado.base);
+    btnIniciar.textContent = 'Continuar';
+    habilitarVolta(false);
+  }
+  function alternar() {
+    if (estado.rodando) { pausar(); } else { iniciar(); }
+  }
+  function criarCelula(texto, alinhamento, cor, peso) {
+    var el = document.createElement('span');
+    el.style.cssText = 'flex:1;text-align:' + alinhamento + ';color:' + cor + ';font-weight:' + peso + ';font-variant-numeric:tabular-nums;';
+    el.textContent = texto;
+    return el;
+  }
+  function desenhar() {
+    lista.textContent = '';
+    if (estado.voltas.length === 0) { caixaVoltas.style.display = 'none'; return; }
+    caixaVoltas.style.display = 'block';
+    var tempos = estado.voltas.map(function (v) { return v.parcial; });
+    var menor = Math.min.apply(null, tempos);
+    var maior = Math.max.apply(null, tempos);
+    var varias = estado.voltas.length !== 1;
+    estado.voltas.forEach(function (v, i) {
+      var cor = '#1e293b';
+      if (varias && v.parcial === menor) { cor = '#166534'; }
+      if (varias && v.parcial === maior) { cor = '#b91c1c'; }
+      var linha = document.createElement('div');
+      linha.style.cssText = 'display:flex;justify-content:space-between;gap:8px;padding:9px 14px;font-size:0.95rem;border-top:1px solid #e0e7ff;';
+      linha.appendChild(criarCelula('Volta ' + (i + 1), 'left', '#64748b', '600'));
+      linha.appendChild(criarCelula(fmt(v.parcial), 'center', cor, '700'));
+      linha.appendChild(criarCelula(fmt(v.total), 'right', '#475569', '400'));
+      lista.insertBefore(linha, lista.firstChild);
+    });
+  }
+  function marcarVolta() {
+    if (!estado.rodando) { return; }
+    var t = atual();
+    estado.voltas.push({ parcial: t - estado.ultimaVolta, total: t });
+    estado.ultimaVolta = t;
+    desenhar();
+  }
+  function zerar() {
+    cancelAnimationFrame(estado.raf);
+    estado.rodando = false;
+    estado.base = 0;
+    estado.inicio = 0;
+    estado.ultimaVolta = 0;
+    estado.voltas = [];
+    visor.textContent = fmt(0);
+    btnIniciar.textContent = 'Iniciar';
+    habilitarVolta(false);
+    desenhar();
+  }
+  btnIniciar.addEventListener('click', alternar);
+  btnVolta.addEventListener('click', marcarVolta);
+  btnZerar.addEventListener('click', zerar);
+})();
+</script>
+<h2 id="como-usar-o-cronômetro">Como usar o cronômetro</h2>
+<ol>
+<li>Clique em <strong>Iniciar</strong> para começar a contar o tempo.</li>
+<li>Clique em <strong>Volta</strong> a qualquer momento para registrar um tempo parcial sem parar a contagem.</li>
+<li>Clique em <strong>Pausar</strong> para interromper e em <strong>Continuar</strong> para retomar de onde parou.</li>
+<li>Clique em <strong>Zerar</strong> para apagar o tempo e todas as voltas e começar de novo.</li>
+</ol>
+<p>O tempo aparece no formato <strong>minutos:segundos:milésimos</strong> (por exemplo, <code>01:25:340</code>). Quando passa de 1 hora, as horas são exibidas na frente (<code>01:05:25:340</code>). Na lista de voltas, a mais rápida aparece em verde e a mais lenta em vermelho.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Cronômetro:</strong> instrumento que mede o tempo decorrido a partir do momento em que é iniciado, contando para a frente.</li>
+<li><strong>Iniciar:</strong> botão que começa a contagem do tempo a partir de zero.</li>
+<li><strong>Pausar:</strong> botão que interrompe a contagem e mantém o tempo atual na tela.</li>
+<li><strong>Continuar:</strong> botão que retoma a contagem do ponto em que ela foi pausada.</li>
+<li><strong>Zerar:</strong> botão que volta o cronômetro para 00:00:000 e apaga as voltas registradas.</li>
+<li><strong>Volta (lap):</strong> marcação feita durante a contagem, usada para registrar uma etapa sem parar o cronômetro, como cada volta de uma pista.</li>
+<li><strong>Parcial:</strong> tempo gasto em uma volta específica, contado desde a volta anterior.</li>
+<li><strong>Total:</strong> tempo acumulado desde o início da contagem até o momento em que a volta foi marcada.</li>
+<li><strong>Milésimo de segundo:</strong> a milésima parte de um segundo (1 s = 1.000 ms), exibida nos três últimos dígitos do cronômetro.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-util">
-  <a class="card" href="/ferramentas/pomodoro-timer/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
-</span>
-    <span class="tx"><strong>Pomodoro Timer</strong><small>Temporizador Pomodoro para estudar e trabalhar com foco.</small></span>
-  </a>
-</li>
-<li class="c-datas">
+  <ul class="cards rel"><li class="c-datas">
   <a class="card" href="/ferramentas/contagem-regressiva/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
     <span class="tx"><strong>Contagem Regressiva</strong><small>Crie uma contagem regressiva para qualquer data.</small></span>
-  </a>
-</li>
-<li class="c-util">
-  <a class="card" href="/ferramentas/desenhar-online/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
-</span>
-    <span class="tx"><strong>Desenhar Online</strong><small>Quadro de desenho livre no navegador.</small></span>
   </a>
 </li>
 <li class="c-util">
@@ -78,10 +199,24 @@
   </a>
 </li>
 <li class="c-util">
-  <a class="card" href="/ferramentas/teste-de-digitacao/">
+  <a class="card" href="/ferramentas/calculadora-churrasco/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
-    <span class="tx"><strong>Teste de Digitação</strong><small>Meça sua velocidade de digitação em palavras por minuto.</small></span>
+    <span class="tx"><strong>Calculadora de Churrasco</strong><small>Calcule carne, bebida e acompanhamentos por convidado.</small></span>
+  </a>
+</li>
+<li class="c-matematica">
+  <a class="card" href="/ferramentas/area-circulo/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora da Área do Círculo</strong><small>Calcule a área do círculo com a fórmula.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/cortar-texto-por-caracteres/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Cortar Texto em X Letras</strong><small>Corte um texto no número de letras que você escolher.</small></span>
   </a>
 </li>
 

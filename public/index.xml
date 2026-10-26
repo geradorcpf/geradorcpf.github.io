@@ -6,8 +6,78 @@
     <description>Recent content on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conversor de Números Romanos</title>
+      <link>http://localhost:1313/ferramentas/conversor-de-numeros-romanos/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/conversor-de-numeros-romanos/</guid>
+      <description>Converta números romanos em arábicos e vice-versa.</description>
+    </item>
+    <item>
+      <title>Conversor de Timestamp</title>
+      <link>http://localhost:1313/ferramentas/conversor-de-timestamp/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/conversor-de-timestamp/</guid>
+      <description>Converta timestamp Unix em data e vice-versa.</description>
+    </item>
+    <item>
+      <title>Converter Imagem em Texto</title>
+      <link>http://localhost:1313/ferramentas/converter-imagem-em-texto/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/converter-imagem-em-texto/</guid>
+      <description>Extraia o texto de uma imagem com OCR.</description>
+    </item>
+    <item>
+      <title>Converter JPG em PDF</title>
+      <link>http://localhost:1313/ferramentas/converter-jpg-em-pdf/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/converter-jpg-em-pdf/</guid>
+      <description>Junte imagens JPG em um arquivo PDF.</description>
+    </item>
+    <item>
+      <title>Converter Maiúsculas e Minúsculas</title>
+      <link>http://localhost:1313/ferramentas/converter-maiusculas-minusculas/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/converter-maiusculas-minusculas/</guid>
+      <description>Troque o texto entre maiúsculas, minúsculas e título.</description>
+    </item>
+    <item>
+      <title>Converter PDF em JPG</title>
+      <link>http://localhost:1313/ferramentas/converter-pdf-em-jpg/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/converter-pdf-em-jpg/</guid>
+      <description>Transforme as páginas de um PDF em imagens JPG.</description>
+    </item>
+    <item>
+      <title>Converter Texto para HTML</title>
+      <link>http://localhost:1313/ferramentas/converter-texto-em-html/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/converter-texto-em-html/</guid>
+      <description>Transforme texto simples em HTML com parágrafos e quebras.</description>
+    </item>
+    <item>
+      <title>Corretor Ortográfico</title>
+      <link>http://localhost:1313/ferramentas/corretor-ortografico/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/corretor-ortografico/</guid>
+      <description>Confira a ortografia do seu texto em português.</description>
+    </item>
+    <item>
+      <title>Cortar Texto em X Letras</title>
+      <link>http://localhost:1313/ferramentas/cortar-texto-por-caracteres/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/cortar-texto-por-caracteres/</guid>
+      <description>Corte um texto no número de letras que você escolher.</description>
+    </item>
+    <item>
+      <title>Cronômetro</title>
+      <link>http://localhost:1313/ferramentas/cronometro-online/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/cronometro-online/</guid>
+      <description>Cronômetro com voltas, direto no navegador.</description>
+    </item>
     <item>
       <title>Comprimir PDF</title>
       <link>http://localhost:1313/ferramentas/comprimir-pdf/</link>

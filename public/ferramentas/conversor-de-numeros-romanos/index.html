@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Conversor de Números Romanos: online e grátis</title>
+<title>Conversor de Números Romanos</title>
 <meta name="description" content="Conversor de Números Romanos: converta números romanos em arábicos e vice-versa. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/conversor-de-numeros-romanos/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/conversor-de-numeros-romanos/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Conversor de Números Romanos: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/conversor-de-numeros-romanos/">
+<meta property="og:title" content="Conversor de Números Romanos">
+<meta property="og:url" content="http://localhost:1313/ferramentas/conversor-de-numeros-romanos/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Conversor de Números Romanos: converta números romanos em arábicos e vice-versa. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,133 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Conversor de Números Romanos</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/conversor-de-numeros-romanos/","name":"Conversor de Números Romanos","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Conversor de Números Romanos</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/conversor-de-numeros-romanos/","name":"Conversor de Números Romanos","position":3}]}</script>
 <article class="prose page">
   <h1>Conversor de Números Romanos</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta digitar um número decimal ou um número romano abaixo e depois clicar no botão de conversão correspondente.</p>
+<div id="conv-romanos" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🏛️ Conversor de Números Romanos</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Converta decimal em romano e vice-versa (de 1 a 3999).</p>
+<label for="rom-decimal" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Decimal</label>
+<input id="rom-decimal" type="text" inputmode="numeric" placeholder="Ex.: 1994" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:12px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<button type="button" id="rom-para-romano" style="width:100%;padding:13px 18px;margin-bottom:20px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Converter para Romano</button>
+<label for="rom-romano" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Romano</label>
+<input id="rom-romano" type="text" inputmode="text" placeholder="Ex.: MCMXCIV" autocomplete="off" autocapitalize="characters" style="width:100%;padding:12px 14px;margin-bottom:12px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="rom-para-decimal" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Converter para Decimal</button>
+<button type="button" id="rom-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="rom-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="rom-resultado">preencha um dos campos e clique no botão de conversão.</span></div>
+</div>
+<script>
+(function () {
+  var dec = document.getElementById('rom-decimal');
+  var rom = document.getElementById('rom-romano');
+  var resultado = document.getElementById('rom-resultado');
+  var caixa = document.getElementById('rom-resposta');
+  var VALORES = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  var SIMBOLOS = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+  var PADRAO = /^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/;
+  var MSG_INICIAL = 'preencha um dos campos e clique no botão de conversão.';
+  function estilo(borda, fundo, cor) {
+    caixa.style.borderColor = borda;
+    caixa.style.background = fundo;
+    resultado.style.color = cor;
+  }
+  function erro(msg) {
+    estilo('#fca5a5', '#fef2f2', '#b91c1c');
+    resultado.textContent = msg;
+  }
+  function sucesso(rotulo, valor, detalhe) {
+    estilo('#86efac', '#f0fdf4', '#166534');
+    resultado.textContent = '';
+    var texto = document.createTextNode(rotulo + ' ');
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.2rem';
+    forte.textContent = valor;
+    var quebra = document.createElement('br');
+    var pequeno = document.createElement('small');
+    pequeno.style.color = '#475569';
+    pequeno.textContent = detalhe;
+    resultado.appendChild(texto);
+    resultado.appendChild(forte);
+    resultado.appendChild(quebra);
+    resultado.appendChild(pequeno);
+  }
+  function paraRomano() {
+    var t = dec.value.trim();
+    if (t === '') { erro('digite um número decimal.'); return; }
+    if (!/^[0-9]+$/.test(t)) { erro('informe apenas números inteiros positivos.'); return; }
+    var n = parseInt(t, 10);
+    if (Math.max(1, Math.min(3999, n)) !== n) { erro('o número deve estar entre 1 e 3999.'); return; }
+    var original = n;
+    var saida = '';
+    VALORES.forEach(function (v, i) {
+      var vezes = Math.floor(n / v);
+      saida += SIMBOLOS[i].repeat(vezes);
+      n -= vezes * v;
+    });
+    rom.value = saida;
+    sucesso('O número romano é', saida, original.toLocaleString('pt-BR') + ' = ' + saida);
+  }
+  function paraDecimal() {
+    var t = rom.value.trim().toUpperCase();
+    if (t === '') { erro('digite um número romano.'); return; }
+    if (!PADRAO.test(t)) { erro('número romano inválido. Use apenas I, V, X, L, C, D e M em uma sequência válida (até MMMCMXCIX).'); return; }
+    var resto = t;
+    var total = 0;
+    VALORES.forEach(function (v, i) {
+      while (resto.indexOf(SIMBOLOS[i]) === 0) {
+        total += v;
+        resto = resto.slice(SIMBOLOS[i].length);
+      }
+    });
+    rom.value = t;
+    dec.value = String(total);
+    sucesso('O número decimal é', total.toLocaleString('pt-BR'), t + ' = ' + total.toLocaleString('pt-BR'));
+  }
+  function limpar() {
+    dec.value = '';
+    rom.value = '';
+    estilo('#c7d2fe', '#ffffff', '#64748b');
+    resultado.textContent = MSG_INICIAL;
+    dec.focus();
+  }
+  document.getElementById('rom-para-romano').addEventListener('click', paraRomano);
+  document.getElementById('rom-para-decimal').addEventListener('click', paraDecimal);
+  document.getElementById('rom-limpar').addEventListener('click', limpar);
+  dec.addEventListener('keydown', function (e) { if (e.key === 'Enter') { paraRomano(); } });
+  rom.addEventListener('keydown', function (e) { if (e.key === 'Enter') { paraDecimal(); } });
+  [dec, rom].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-o-conversor">Como usar o conversor</h2>
+<ol>
+<li>Para converter <strong>decimal em romano</strong>, digite um número inteiro entre 1 e 3999 no campo <strong>Decimal</strong> (por exemplo, <code>1994</code>).</li>
+<li>Clique em <strong>Converter para Romano</strong> (ou pressione Enter) para ver o resultado (<code>MCMXCIV</code>).</li>
+<li>Para converter <strong>romano em decimal</strong>, digite o número romano no campo <strong>Romano</strong> (por exemplo, <code>MCMXCIV</code>). Letras minúsculas também funcionam.</li>
+<li>Clique em <strong>Converter para Decimal</strong> (ou pressione Enter) para ver o resultado (<code>1.994</code>).</li>
+<li>Use o botão <strong>Limpar</strong> para apagar os campos e fazer uma nova conversão.</li>
+</ol>
+<p>Depois de cada conversão, o campo correspondente é preenchido automaticamente com o valor equivalente. Se o número romano estiver escrito fora das regras (como <code>IIII</code> ou <code>VX</code>), o conversor avisa que ele é inválido.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Número romano:</strong> sistema de numeração criado na Roma Antiga que representa valores com letras do alfabeto latino, como I, V, X, L, C, D e M.</li>
+<li><strong>Número decimal (arábico):</strong> sistema de numeração que usamos no dia a dia, com os algarismos de 0 a 9, como 5, 42 ou 1994.</li>
+<li><strong>Algarismo romano:</strong> cada letra usada para formar um número romano. Os valores são I = 1, V = 5, X = 10, L = 50, C = 100, D = 500 e M = 1000.</li>
+<li><strong>Princípio aditivo:</strong> quando uma letra de menor ou igual valor vem depois de outra, os valores são somados. Exemplos: VI = 5 + 1 = 6 e XXX = 30.</li>
+<li><strong>Princípio subtrativo:</strong> quando uma letra de menor valor vem antes de outra maior, o valor menor é subtraído. Exemplos: IV = 5 − 1 = 4 e XC = 100 − 10 = 90. Só I, X e C podem ser usadas dessa forma.</li>
+<li><strong>Repetição de símbolos:</strong> uma letra pode se repetir até três vezes seguidas (III = 3). Já V, L e D nunca se repetem.</li>
+<li><strong>Limite do conversor:</strong> a notação romana padrão vai de 1 (I) a 3999 (MMMCMXCIX). O zero não tem representação em números romanos.</li>
+<li><strong>Conversão:</strong> processo de transformar um número de um sistema de numeração para outro, sem alterar o seu valor.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 

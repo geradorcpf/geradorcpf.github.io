@@ -52,15 +52,26 @@ https://geradorcpf.github.io/ferramentas/comparar-textos/
 https://geradorcpf.github.io/ferramentas/comprimir-imagem/
 
 25 Oktober 2026
-http://localhost:1313/ferramentas/comprimir-pdf/ -- belum submit
-http://localhost:1313/ferramentas/consulta-cep/
-http://localhost:1313/ferramentas/consulta-cnpj/
-http://localhost:1313/ferramentas/consulta-codigo-do-banco/
-http://localhost:1313/ferramentas/contador-de-caracteres-palavras-e-linhas/
-http://localhost:1313/ferramentas/contador-de-ocorrencia-de-palavras/
-http://localhost:1313/ferramentas/contador-inscritos/  -- tidak perlu submit
-http://localhost:1313/ferramentas/contagem-regressiva/
-http://localhost:1313/ferramentas/conversor-de-base-numerica/
-http://localhost:1313/ferramentas/conversor-de-medidas/
-http://localhost:1313/ferramentas/conversor-de-moedas/ -- tidak perlu submit
+https://geradorcpf.github.io/ferramentas/comprimir-pdf/ 
+https://geradorcpf.github.io/ferramentas/consulta-cep/
+https://geradorcpf.github.io/ferramentas/consulta-cnpj/
+https://geradorcpf.github.io/ferramentas/consulta-codigo-do-banco/
+https://geradorcpf.github.io/ferramentas/contador-de-caracteres-palavras-e-linhas/ -- belum submit
+https://geradorcpf.github.io/ferramentas/contador-de-ocorrencia-de-palavras/
+https://geradorcpf.github.io/ferramentas/contador-inscritos/  -- tidak perlu submit
+https://geradorcpf.github.io/ferramentas/contagem-regressiva/
+https://geradorcpf.github.io/ferramentas/conversor-de-base-numerica/
+https://geradorcpf.github.io/ferramentas/conversor-de-medidas/
+https://geradorcpf.github.io/ferramentas/conversor-de-moedas/ -- tidak perlu submit
 
+26 Oktober 2026
+http://localhost:1313/ferramentas/conversor-de-numeros-romanos/
+http://localhost:1313/ferramentas/conversor-de-timestamp/
+http://localhost:1313/ferramentas/converter-imagem-em-texto/
+http://localhost:1313/ferramentas/converter-jpg-em-pdf/
+http://localhost:1313/ferramentas/converter-maiusculas-minusculas/
+http://localhost:1313/ferramentas/converter-pdf-em-jpg/
+http://localhost:1313/ferramentas/converter-texto-em-html/
+http://localhost:1313/ferramentas/corretor-ortografico/
+http://localhost:1313/ferramentas/cortar-texto-por-caracteres/
+http://localhost:1313/ferramentas/cronometro-online/

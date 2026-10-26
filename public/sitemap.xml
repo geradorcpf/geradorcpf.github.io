@@ -2,6 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/ferramentas/conversor-de-numeros-romanos/</loc>
+    <lastmod>2026-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/</loc>
+    <lastmod>2026-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-10-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/comprimir-pdf/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/consulta-cep/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/consulta-cnpj/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/consulta-codigo-do-banco/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/contador-de-caracteres-palavras-e-linhas/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/contador-inscritos/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/contador-de-ocorrencia-de-palavras/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/contagem-regressiva/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/conversor-de-base-numerica/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/conversor-de-medidas/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/conversor-de-moedas/</loc>
+    <lastmod>2026-10-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>http://localhost:1313/ferramentas/calculo-de-rescisao/</loc>
     <lastmod>2026-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -43,16 +113,6 @@
     <priority>0.8</priority>
   </url><url>
     <loc>http://localhost:1313/ferramentas/comprimir-imagem/</loc>
-    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/ferramentas/</loc>
-    <lastmod>2026-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

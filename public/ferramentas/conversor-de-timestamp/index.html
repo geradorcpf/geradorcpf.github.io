@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Conversor de Timestamp: online e grátis</title>
+<title>Conversor de Timestamp</title>
 <meta name="description" content="Conversor de Timestamp: converta timestamp Unix em data e vice-versa. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/conversor-de-timestamp/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/conversor-de-timestamp/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Conversor de Timestamp: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/conversor-de-timestamp/">
+<meta property="og:title" content="Conversor de Timestamp">
+<meta property="og:url" content="http://localhost:1313/ferramentas/conversor-de-timestamp/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Conversor de Timestamp: converta timestamp Unix em data e vice-versa. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,270 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Conversor de Timestamp</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/conversor-de-timestamp/","name":"Conversor de Timestamp","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Conversor de Timestamp</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/conversor-de-timestamp/","name":"Conversor de Timestamp","position":3}]}</script>
 <article class="prose page">
   <h1>Conversor de Timestamp</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Veja o timestamp atual, digite um timestamp Unix para descobrir a data ou escolha uma data para obter o timestamp e depois clique em <strong>Converter</strong>.</p>
+<div id="calc-timestamp" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🕒 Conversor de Timestamp</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Converta timestamp Unix em data e vice-versa na hora.</p>
+<h3 style="margin:0 0 10px;font-size:1.05rem;color:#3730a3;">Timestamp Atual</h3>
+<div id="ts-atual" style="margin-bottom:12px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#1e293b;font-size:1rem;line-height:1.6;">
+<div><span style="color:#475569;">Segundos: </span><strong id="ts-atual-s" style="font-size:1.2rem;color:#3730a3;word-break:break-all;">-</strong></div>
+<div><span style="color:#475569;">Milissegundos: </span><strong id="ts-atual-ms" style="word-break:break-all;">-</strong></div>
+<div><span style="color:#475569;">Data local: </span><strong id="ts-atual-local">-</strong></div>
+<div><span style="color:#475569;">Data UTC: </span><strong id="ts-atual-utc">-</strong></div>
+</div>
+<button type="button" id="ts-copiar" style="padding:11px 16px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar timestamp atual</button>
+<div style="height:1px;background:#c7d2fe;margin:22px 0;"></div>
+<h3 style="margin:0 0 10px;font-size:1.05rem;color:#3730a3;">Timestamp para Data</h3>
+<label for="ts-entrada" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Timestamp Unix (segundos)</label>
+<input id="ts-entrada" type="text" inputmode="numeric" placeholder="Ex.: 1700000000" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="ts-converter-data" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Converter</button>
+<button type="button" id="ts-usar-atual" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Usar atual</button>
+<button type="button" id="ts-limpar-data" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="ts-resposta-data" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span>digite um timestamp e clique em "Converter".</span></div>
+<div style="height:1px;background:#c7d2fe;margin:22px 0;"></div>
+<h3 style="margin:0 0 10px;font-size:1.05rem;color:#3730a3;">Data para Timestamp</h3>
+<label for="ts-data" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Data</label>
+<input id="ts-data" type="date" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="ts-hora" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Hora (opcional)</label>
+<input id="ts-hora" type="time" step="1" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="ts-fuso" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Fuso horário</label>
+<select id="ts-fuso" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="local">Horário local do navegador</option>
+<option value="utc">UTC</option>
+</select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="ts-converter-ts" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Converter</button>
+<button type="button" id="ts-limpar-ts" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="ts-resposta-ts" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span>escolha uma data e clique em "Converter".</span></div>
+</div>
+<script>
+(function () {
+  function $(id) { return document.getElementById(id); }
+  function p2(n) { return String(n).padStart(2, '0'); }
+  function maiorIgual(a, b) { return Math.max(a, b) === a; }
+  var PLACEHOLDER_DATA = 'digite um timestamp e clique em "Converter".';
+  var PLACEHOLDER_TS = 'escolha uma data e clique em "Converter".';
+  var fusoNome = 'local';
+  try { fusoNome = Intl.DateTimeFormat().resolvedOptions().timeZone || 'local'; } catch (e) { fusoNome = 'local'; }
+  function fmtData(d, utc) {
+    var ano = utc ? d.getUTCFullYear() : d.getFullYear();
+    var mes = (utc ? d.getUTCMonth() : d.getMonth()) + 1;
+    var dia = utc ? d.getUTCDate() : d.getDate();
+    var h = utc ? d.getUTCHours() : d.getHours();
+    var mi = utc ? d.getUTCMinutes() : d.getMinutes();
+    var s = utc ? d.getUTCSeconds() : d.getSeconds();
+    return p2(dia) + '/' + p2(mes) + '/' + String(ano).padStart(4, '0') + ' ' + p2(h) + ':' + p2(mi) + ':' + p2(s);
+  }
+  function offset(d) {
+    var m = -d.getTimezoneOffset();
+    var sinal = Math.sign(m) === -1 ? '-' : '+';
+    var a = Math.abs(m);
+    return 'UTC' + sinal + p2(Math.floor(a / 60)) + ':' + p2(a % 60);
+  }
+  function relativo(ms) {
+    var diff = Math.round((Date.now() - ms) / 1000);
+    var futuro = Math.sign(diff) === -1;
+    var abs = Math.abs(diff);
+    if (abs === 0) { return 'agora'; }
+    var unidades = [['ano', 'anos', 31536000], ['mês', 'meses', 2592000], ['dia', 'dias', 86400], ['hora', 'horas', 3600], ['minuto', 'minutos', 60], ['segundo', 'segundos', 1]];
+    for (var i = 0; i !== unidades.length; i++) {
+      var n = Math.floor(abs / unidades[i][2]);
+      if (n !== 0) {
+        var nome = n === 1 ? unidades[i][0] : unidades[i][1];
+        return (futuro ? 'em ' : 'há ') + n + ' ' + nome;
+      }
+    }
+    return 'agora';
+  }
+  function limparCaixa(box) { while (box.firstChild) { box.removeChild(box.firstChild); } }
+  function cabecalho(box) {
+    limparCaixa(box);
+    var s = document.createElement('strong');
+    s.style.color = '#3730a3';
+    s.textContent = 'Resposta:';
+    box.appendChild(s);
+    box.appendChild(document.createTextNode(' '));
+  }
+  function estilo(box, borda, fundo, cor) {
+    box.style.borderColor = borda;
+    box.style.background = fundo;
+    box.style.color = cor;
+  }
+  function neutro(box, texto) {
+    cabecalho(box);
+    estilo(box, '#c7d2fe', '#ffffff', '#64748b');
+    var sp = document.createElement('span');
+    sp.textContent = texto;
+    box.appendChild(sp);
+  }
+  function erro(box, msg) {
+    cabecalho(box);
+    estilo(box, '#fca5a5', '#fef2f2', '#b91c1c');
+    var sp = document.createElement('span');
+    sp.textContent = msg;
+    box.appendChild(sp);
+  }
+  function sucesso(box, itens) {
+    cabecalho(box);
+    estilo(box, '#86efac', '#f0fdf4', '#166534');
+    itens.forEach(function (it) {
+      var linha = document.createElement('div');
+      linha.style.marginTop = '6px';
+      var r = document.createElement('span');
+      r.style.color = '#475569';
+      r.textContent = it[0] + ': ';
+      var v = document.createElement('strong');
+      v.style.wordBreak = 'break-all';
+      if (it[2]) { v.style.fontSize = '1.2rem'; }
+      v.textContent = it[1];
+      linha.appendChild(r);
+      linha.appendChild(v);
+      box.appendChild(linha);
+    });
+  }
+  function atualizar() {
+    var agora = new Date();
+    $('ts-atual-s').textContent = String(Math.floor(agora.getTime() / 1000));
+    $('ts-atual-ms').textContent = String(agora.getTime());
+    $('ts-atual-local').textContent = fmtData(agora, false);
+    $('ts-atual-utc').textContent = fmtData(agora, true);
+  }
+  function copiar(texto, botao) {
+    var original = botao.textContent;
+    function feito() {
+      botao.textContent = 'Copiado!';
+      setTimeout(function () { botao.textContent = original; }, 1500);
+    }
+    try {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(texto).then(feito, function () {});
+        return;
+      }
+    } catch (e) {}
+    var ta = document.createElement('textarea');
+    ta.value = texto;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); feito(); } catch (e2) {}
+    document.body.removeChild(ta);
+  }
+  function converterParaData() {
+    var box = $('ts-resposta-data');
+    var bruto = $('ts-entrada').value.trim().replace(/[\s.,]/g, '');
+    if (!/^-?\d+$/.test(bruto)) { erro(box, 'informe um timestamp válido (apenas números).'); return; }
+    var n = Number(bruto);
+    var emMs = maiorIgual(Math.abs(n), 1e11);
+    var ms = emMs ? n : n * 1000;
+    var d = new Date(ms);
+    if (isNaN(d.getTime())) { erro(box, 'esse timestamp está fora do intervalo de datas suportado.'); return; }
+    sucesso(box, [
+      ['Data local (' + fusoNome + ', ' + offset(d) + ')', fmtData(d, false), true],
+      ['Data UTC', fmtData(d, true)],
+      ['ISO 8601', d.toISOString()],
+      ['Relativo', relativo(ms)],
+      ['Unidade detectada', emMs ? 'milissegundos' : 'segundos']
+    ]);
+  }
+  function converterParaTimestamp() {
+    var box = $('ts-resposta-ts');
+    var dv = $('ts-data').value;
+    if (!dv) { erro(box, 'escolha uma data.'); return; }
+    var tv = $('ts-hora').value || '00:00:00';
+    var dp = dv.split('-').map(Number);
+    var hp = tv.split(':').map(Number);
+    var h = hp[0] || 0;
+    var mi = hp[1] || 0;
+    var s = hp[2] || 0;
+    var utc = $('ts-fuso').value === 'utc';
+    var ms = utc ? Date.UTC(dp[0], dp[1] - 1, dp[2], h, mi, s) : new Date(dp[0], dp[1] - 1, dp[2], h, mi, s).getTime();
+    if (isNaN(ms)) { erro(box, 'data ou hora inválida.'); return; }
+    var d = new Date(ms);
+    sucesso(box, [
+      ['Timestamp (segundos)', String(Math.floor(ms / 1000)), true],
+      ['Timestamp (milissegundos)', String(ms)],
+      ['ISO 8601', d.toISOString()]
+    ]);
+  }
+  function limparData() {
+    $('ts-entrada').value = '';
+    neutro($('ts-resposta-data'), PLACEHOLDER_DATA);
+    $('ts-entrada').focus();
+  }
+  function limparTs() {
+    $('ts-data').value = '';
+    $('ts-hora').value = '';
+    $('ts-fuso').value = 'local';
+    neutro($('ts-resposta-ts'), PLACEHOLDER_TS);
+    $('ts-data').focus();
+  }
+  function usarAtual() {
+    $('ts-entrada').value = String(Math.floor(Date.now() / 1000));
+    converterParaData();
+  }
+  $('ts-copiar').addEventListener('click', function () { copiar($('ts-atual-s').textContent, $('ts-copiar')); });
+  $('ts-converter-data').addEventListener('click', converterParaData);
+  $('ts-converter-ts').addEventListener('click', converterParaTimestamp);
+  $('ts-usar-atual').addEventListener('click', usarAtual);
+  $('ts-limpar-data').addEventListener('click', limparData);
+  $('ts-limpar-ts').addEventListener('click', limparTs);
+  $('ts-entrada').addEventListener('keydown', function (e) { if (e.key === 'Enter') { converterParaData(); } });
+  [$('ts-data'), $('ts-hora')].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { converterParaTimestamp(); } });
+  });
+  [$('ts-entrada'), $('ts-data'), $('ts-hora'), $('ts-fuso')].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+  atualizar();
+  setInterval(atualizar, 1000);
+})();
+</script>
+<h2 id="como-usar-o-conversor">Como usar o conversor</h2>
+<ol>
+<li>Veja o <strong>Timestamp Atual</strong> no topo da ferramenta. Ele é atualizado a cada segundo e pode ser copiado com o botão <strong>Copiar timestamp atual</strong>.</li>
+<li>Para descobrir a data de um timestamp, digite o número no campo <strong>Timestamp Unix (segundos)</strong> e clique em <strong>Converter</strong>. O botão <strong>Usar atual</strong> preenche o campo com o timestamp de agora.</li>
+<li>Para descobrir o timestamp de uma data, escolha a <strong>Data</strong>, informe a <strong>Hora</strong> (opcional) e selecione o <strong>Fuso horário</strong>. Depois clique em <strong>Converter</strong>.</li>
+<li>Use o botão <strong>Limpar</strong> de cada seção para apagar os campos e fazer uma nova conversão.</li>
+</ol>
+<p>Se você digitar um timestamp com 11 dígitos ou mais, o conversor entende que o valor está em milissegundos e avisa isso no resultado. Se a hora ficar em branco, será usado 00:00:00.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Timestamp Unix:</strong> número de segundos passados desde 1º de janeiro de 1970, às 00:00:00 UTC.</li>
+<li><strong>Epoch time:</strong> outro nome do timestamp Unix. A &ldquo;época&rdquo; (epoch) é a data de origem da contagem, 01/01/1970.</li>
+<li><strong>UTC:</strong> horário universal coordenado, usado como referência para todos os fusos horários e sem horário de verão.</li>
+<li><strong>Fuso horário:</strong> diferença de horas de uma região em relação ao UTC, como UTC-03:00 em Brasília.</li>
+<li><strong>Horário local:</strong> data e hora no fuso horário configurado no seu navegador ou dispositivo.</li>
+<li><strong>Segundos:</strong> unidade padrão do timestamp Unix, com 10 dígitos para datas atuais.</li>
+<li><strong>Milissegundos:</strong> milésimos de segundo. Muitas linguagens, como JavaScript, usam timestamps com 13 dígitos nessa unidade.</li>
+<li><strong>ISO 8601:</strong> formato padrão internacional de data e hora, como <code>2023-11-14T22:13:20.000Z</code>. A letra Z indica UTC.</li>
+<li><strong>Tempo relativo:</strong> distância entre a data convertida e o momento atual, como &ldquo;há 2 dias&rdquo; ou &ldquo;em 3 horas&rdquo;.</li>
+</ul>
+<h2 id="o-que-é-timestamp-unix">O que é Timestamp Unix?</h2>
+<p>O timestamp Unix é uma forma simples e universal de representar data e hora com um único número. Ele é muito usado em programação, por exemplo:</p>
+<ul>
+<li>Armazenamento de datas em bancos de dados.</li>
+<li>APIs e sistemas de sincronização.</li>
+<li>Logs e registros de eventos.</li>
+<li>Cálculos de diferença entre datas.</li>
+</ul>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Qual é a data do timestamp <strong>1700000000</strong>?</p>
+<ol>
+<li>Digite <code>1700000000</code> no campo <strong>Timestamp Unix (segundos)</strong>.</li>
+<li>Clique em <strong>Converter</strong>.</li>
+<li>O resultado em UTC é <strong>14/11/2023 22:13:20</strong>.</li>
+</ol>
+<p><strong>Resposta:</strong> o timestamp 1700000000 corresponde a 14 de novembro de 2023, às 22:13:20 (UTC).</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -64,24 +322,24 @@
   </a>
 </li>
 <li class="c-dev">
-  <a class="card" href="/ferramentas/tradutor-codigo-binario/">
+  <a class="card" href="/ferramentas/color-picker/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
 </span>
-    <span class="tx"><strong>Tradutor de Código Binário</strong><small>Converta texto em código binário e vice-versa.</small></span>
+    <span class="tx"><strong>Color Picker</strong><small>Escolha uma cor e copie os códigos HEX, RGB e HSL.</small></span>
   </a>
 </li>
-<li class="c-matematica">
-  <a class="card" href="/ferramentas/conversor-de-numeros-romanos/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M12 6.5v6M9 9.5h6"/><path d="M9 17h6"/></svg>
+<li class="c-dev">
+  <a class="card" href="/ferramentas/base64-codificar-decodificar/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
 </span>
-    <span class="tx"><strong>Conversor de Números Romanos</strong><small>Converta números romanos em arábicos e vice-versa.</small></span>
+    <span class="tx"><strong>Base64 Decodificar e Codificar</strong><small>Codifique texto em Base64 ou decodifique de volta.</small></span>
   </a>
 </li>
-<li class="c-financas">
-  <a class="card" href="/ferramentas/conversor-de-moedas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+<li class="c-dev">
+  <a class="card" href="/ferramentas/calcular-crc32/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
 </span>
-    <span class="tx"><strong>Conversor de Moedas</strong><small>Converta valores entre moedas com a cotação do dia.</small></span>
+    <span class="tx"><strong>Calcular CRC32</strong><small>Calcule o checksum CRC32 de um texto.</small></span>
   </a>
 </li>
 
