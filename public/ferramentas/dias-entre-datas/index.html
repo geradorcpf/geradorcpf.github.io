@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contador de Dias entre Datas: online e grátis</title>
+<title>Contador de Dias entre Datas</title>
 <meta name="description" content="Contador de Dias entre Datas: conte quantos dias existem entre duas datas. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/dias-entre-datas/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/dias-entre-datas/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Contador de Dias entre Datas: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/dias-entre-datas/">
+<meta property="og:title" content="Contador de Dias entre Datas">
+<meta property="og:url" content="http://localhost:1313/ferramentas/dias-entre-datas/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Contador de Dias entre Datas: conte quantos dias existem entre duas datas. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,32 +38,133 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Contador de Dias entre Datas</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/dias-entre-datas/","name":"Contador de Dias entre Datas","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Contador de Dias entre Datas</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/dias-entre-datas/","name":"Contador de Dias entre Datas","position":3}]}</script>
 <article class="prose page">
   <h1>Contador de Dias entre Datas</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Basta escolher a data de início e a data de fim abaixo e depois clicar em <strong>Calcular Dias</strong>.</p>
+<div id="calc-dias" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📅 Contador de Dias entre Datas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha as duas datas e veja o resultado na hora.</p>
+<label for="dias-inicio" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Data de início</label>
+<input id="dias-inicio" type="date" min="0001-01-01" max="9999-12-31" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="dias-fim" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Data de fim</label>
+<input id="dias-fim" type="date" min="0001-01-01" max="9999-12-31" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="dias-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular Dias</button>
+<button type="button" id="dias-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="dias-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="dias-resultado">selecione as duas datas e clique em "Calcular Dias".</span></div>
+</div>
+<script>
+(function () {
+  var inicio = document.getElementById('dias-inicio');
+  var fim = document.getElementById('dias-fim');
+  var resultado = document.getElementById('dias-resultado');
+  var caixa = document.getElementById('dias-resposta');
+  var MSG_PADRAO = 'selecione as duas datas e clique em "Calcular Dias".';
+  var MS_DIA = 86400000;
+  function lerData(v) {
+    var p = String(v).split('-');
+    if (p.length !== 3) { return NaN; }
+    var y = Number(p[0]);
+    var m = Number(p[1]);
+    var d = Number(p[2]);
+    var t = Date.UTC(y, m - 1, d);
+    if (isNaN(t)) { return NaN; }
+    var c = new Date(t);
+    if (c.getUTCFullYear() !== y || c.getUTCMonth() !== m - 1 || c.getUTCDate() !== d) { return NaN; }
+    return t;
+  }
+  function fmt(n) { return n.toLocaleString('pt-BR'); }
+  function plural(n, singular, pluralTxt) { return n === 1 ? singular : pluralTxt; }
+  function limparResultado() {
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    limparResultado();
+    resultado.appendChild(document.createTextNode(msg));
+  }
+  function sucesso(diff, iniTxt, fimTxt) {
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    limparResultado();
+    var semanas = Math.floor(diff / 7);
+    var resto = diff % 7;
+    resultado.appendChild(document.createTextNode('Existem '));
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.2rem';
+    forte.appendChild(document.createTextNode(fmt(diff) + ' ' + plural(diff, 'dia', 'dias')));
+    resultado.appendChild(forte);
+    resultado.appendChild(document.createTextNode(' entre as duas datas.'));
+    resultado.appendChild(document.createElement('br'));
+    var pequeno = document.createElement('small');
+    pequeno.style.color = '#475569';
+    pequeno.appendChild(document.createTextNode('De ' + iniTxt + ' até ' + fimTxt + ' (equivale a ' + fmt(semanas) + ' ' + plural(semanas, 'semana', 'semanas') + ' e ' + resto + ' ' + plural(resto, 'dia', 'dias') + ').'));
+    resultado.appendChild(pequeno);
+  }
+  function dataBR(v) {
+    var p = v.split('-');
+    return p[2] + '/' + p[1] + '/' + p[0];
+  }
+  function calcular() {
+    var a = lerData(inicio.value);
+    var b = lerData(fim.value);
+    if (isNaN(a) || isNaN(b)) { erro('data inválida. Informe as duas datas.'); return; }
+    var diff = Math.round((b - a) / MS_DIA);
+    if (diff === 0) { erro('a data de início não pode ser igual à data de fim.'); return; }
+    if (Math.sign(diff) === -1) { erro('a data de início não pode ser posterior à data de fim.'); return; }
+    sucesso(diff, dataBR(inicio.value), dataBR(fim.value));
+  }
+  function limpar() {
+    inicio.value = '';
+    fim.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    limparResultado();
+    resultado.appendChild(document.createTextNode(MSG_PADRAO));
+    inicio.focus();
+  }
+  document.getElementById('dias-calcular').addEventListener('click', calcular);
+  document.getElementById('dias-limpar').addEventListener('click', limpar);
+  [inicio, fim].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-calculadora">Como usar a calculadora</h2>
+<ol>
+<li>Escolha a <strong>Data de início</strong> no primeiro campo. Você pode digitar a data ou selecioná-la clicando no calendário.</li>
+<li>Escolha a <strong>Data de fim</strong> no segundo campo, da mesma forma.</li>
+<li>Clique em <strong>Calcular Dias</strong> (ou pressione Enter) para ver quantos dias existem entre as duas datas.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar as datas e fazer uma nova contagem.</li>
+</ol>
+<p>A data de início deve ser anterior à data de fim. Se as datas forem iguais, se a data de início for posterior à data de fim ou se alguma data estiver vazia ou inválida, a calculadora mostra uma mensagem de erro.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Data de início:</strong> primeiro dia do período que você quer contar.</li>
+<li><strong>Data de fim:</strong> último dia do período, ou seja, a data até a qual a contagem é feita.</li>
+<li><strong>Dias entre datas:</strong> quantidade de dias que separa a data de início da data de fim. O dia de início não entra na contagem, mas o dia de fim entra.</li>
+<li><strong>Semana:</strong> período de 7 dias seguidos. O resultado também mostra a diferença em semanas e dias restantes.</li>
+<li><strong>Calendário:</strong> seletor visual que permite escolher o dia, o mês e o ano com um clique, sem precisar digitar.</li>
+<li><strong>Data inválida:</strong> data que não existe no calendário (como 31/02) ou campo deixado em branco.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-datas">
-  <a class="card" href="/ferramentas/subtrair-dias-em-datas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Subtrair Dias em Datas</strong><small>Descubra a data resultante ao subtrair dias de uma data.</small></span>
-  </a>
-</li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/somar-dias-em-datas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Somar Dias em Datas</strong><small>Descubra a data resultante ao somar dias a uma data.</small></span>
-  </a>
-</li>
-<li class="c-datas">
   <a class="card" href="/ferramentas/dia-do-ano/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
@@ -71,17 +172,31 @@
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/estacao-ano-hoje/">
+  <a class="card" href="/ferramentas/calendario/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Estação do Ano Hoje</strong><small>Veja em qual estação do ano estamos e quando muda.</small></span>
+    <span class="tx"><strong>Calendário 2026</strong><small>Calendário de 2026 com feriados e datas importantes.</small></span>
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/feriados-2026/">
+  <a class="card" href="/ferramentas/calculadora-dias-uteis/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Feriados 2026</strong><small>Lista de feriados nacionais de 2026.</small></span>
+    <span class="tx"><strong>Calculadora de Dias Úteis</strong><small>Conte os dias úteis entre duas datas, descontando feriados.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/calendario-lunar-2027/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Calendário Lunar 2027</strong><small>Veja as fases da lua mês a mês em 2027.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/calendario-lunar-2026/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Calendário Lunar 2026</strong><small>Veja as fases da lua mês a mês em 2026.</small></span>
   </a>
 </li>
 

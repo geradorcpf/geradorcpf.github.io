@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dado Online: grátis</title>
+<title>Dado Online</title>
 <meta name="description" content="Dado Online: jogue um ou mais dados online. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/dado-online/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/dado-online/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dado Online: grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/dado-online/">
+<meta property="og:title" content="Dado Online">
+<meta property="og:url" content="http://localhost:1313/ferramentas/dado-online/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Dado Online: jogue um ou mais dados online. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,50 +38,195 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Dado Online</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/dado-online/","name":"Dado Online","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Dado Online</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/dado-online/","name":"Dado Online","position":3}]}</script>
 <article class="prose page">
   <h1>Dado Online</h1>
   
-  
+  <!--sudah dikerjakan-->
+<p>Escolha a quantidade de dados abaixo e depois clique em <strong>Jogar</strong>.</p>
+<div id="dado-online" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🎲 Dado Online</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha quantos dados quer jogar e veja o resultado na hora.</p>
+<label for="dado-quantidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Quantidade de dados</label>
+<select id="dado-quantidade" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="dado-jogar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Jogar</button>
+<button type="button" id="dado-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="dado-palco" aria-hidden="true" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;"></div>
+<div id="dado-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="dado-resultado">escolha a quantidade e clique em "Jogar".</span></div>
+</div>
+<script>
+(function () {
+  var qtd = document.getElementById('dado-quantidade');
+  var palco = document.getElementById('dado-palco');
+  var resultado = document.getElementById('dado-resultado');
+  var caixa = document.getElementById('dado-resposta');
+  var botao = document.getElementById('dado-jogar');
+  var rolando = false;
+  var padroes = {
+    1: [4],
+    2: [0, 8],
+    3: [0, 4, 8],
+    4: [0, 2, 6, 8],
+    5: [0, 2, 4, 6, 8],
+    6: [0, 2, 3, 5, 6, 8]
+  };
+  var posicoes = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  var opcoes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  opcoes.forEach(function (n) {
+    var o = document.createElement('option');
+    o.value = String(n);
+    o.textContent = n === 1 ? '1 dado' : n + ' dados';
+    qtd.appendChild(o);
+  });
+  function sortear() {
+    return Math.floor(Math.random() * 6) + 1;
+  }
+  function sortearVarios(n) {
+    var lista = [];
+    opcoes.slice(0, n).forEach(function () { lista.push(sortear()); });
+    return lista;
+  }
+  function criarDado(valor) {
+    var dado = document.createElement('div');
+    dado.style.cssText = 'display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:3px;width:60px;height:60px;padding:8px;background:#ffffff;border:2px solid #c7d2fe;border-radius:12px;box-shadow:0 4px 10px rgba(79,70,229,0.18);box-sizing:border-box;';
+    posicoes.forEach(function (p) {
+      var celula = document.createElement('div');
+      if (padroes[valor].indexOf(p) !== -1) {
+        celula.style.cssText = 'background:#4f46e5;border-radius:50%;';
+      }
+      dado.appendChild(celula);
+    });
+    return dado;
+  }
+  function mostrar(valores) {
+    palco.textContent = '';
+    valores.forEach(function (v) { palco.appendChild(criarDado(v)); });
+  }
+  function somar(valores) {
+    return valores.reduce(function (total, v) { return total + v; }, 0);
+  }
+  function exibirResultado(valores) {
+    var soma = somar(valores);
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.textContent = '';
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.2rem';
+    forte.textContent = String(soma);
+    if (valores.length === 1) {
+      resultado.appendChild(document.createTextNode('O dado caiu no número '));
+      resultado.appendChild(forte);
+      return;
+    }
+    resultado.appendChild(document.createTextNode('A soma dos dados é '));
+    resultado.appendChild(forte);
+    resultado.appendChild(document.createElement('br'));
+    var detalhe = document.createElement('small');
+    detalhe.style.color = '#475569';
+    detalhe.textContent = valores.join(' + ') + ' = ' + soma;
+    resultado.appendChild(detalhe);
+  }
+  function jogar() {
+    if (rolando) { return; }
+    rolando = true;
+    botao.style.opacity = '0.7';
+    var n = Number(qtd.value);
+    var passos = 0;
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'jogando...';
+    var timer = setInterval(function () {
+      passos += 1;
+      if (passos === 10) {
+        clearInterval(timer);
+        var final = sortearVarios(n);
+        mostrar(final);
+        exibirResultado(final);
+        rolando = false;
+        botao.style.opacity = '1';
+        return;
+      }
+      mostrar(sortearVarios(n));
+    }, 80);
+  }
+  function limpar() {
+    if (rolando) { return; }
+    palco.textContent = '';
+    qtd.value = '1';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'escolha a quantidade e clique em "Jogar".';
+  }
+  botao.addEventListener('click', jogar);
+  document.getElementById('dado-limpar').addEventListener('click', limpar);
+  qtd.addEventListener('focus', function () { qtd.style.borderColor = '#6366f1'; });
+  qtd.addEventListener('blur', function () { qtd.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-o-dado-online">Como usar o dado online</h2>
+<ol>
+<li>No campo <strong>Quantidade de dados</strong>, escolha de 1 a 14 dados.</li>
+<li>Clique em <strong>Jogar</strong> para lançar os dados.</li>
+<li>Aguarde a animação rápida: os dados aparecem com as faces sorteadas.</li>
+<li>Veja o resultado no quadro <strong>Resposta</strong>. Com mais de um dado, a soma e os valores de cada dado são exibidos.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o resultado e voltar para 1 dado.</li>
+</ol>
+<p>Você pode jogar quantas vezes quiser. Cada lançamento é independente dos anteriores e não precisa de cadastro.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Dado:</strong> pequeno cubo com seis faces numeradas de 1 a 6, usado em jogos de tabuleiro, RPG e sorteios.</li>
+<li><strong>Face:</strong> cada lado do dado. A face voltada para cima é o número que &ldquo;saiu&rdquo;.</li>
+<li><strong>Jogar (ou lançar):</strong> ação de rolar o dado para obter um número ao acaso.</li>
+<li><strong>Quantidade de dados:</strong> número de dados lançados ao mesmo tempo, de 1 a 14.</li>
+<li><strong>Soma:</strong> total obtido ao somar os números de todos os dados lançados.</li>
+<li><strong>Resultado aleatório:</strong> número sorteado sem padrão previsível, em que cada face tem a mesma chance (1 em 6) de sair.</li>
+<li><strong>Sorteio:</strong> escolha feita ao acaso, como decidir quem começa um jogo ou resolver um empate.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-aleatorio">
-  <a class="card" href="/ferramentas/roleta-online/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+  <ul class="cards rel"><li class="c-util">
+  <a class="card" href="/ferramentas/cronometro-online/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
-    <span class="tx"><strong>Roleta Online</strong><small>Gire a roleta e sorteie uma opção.</small></span>
+    <span class="tx"><strong>Cronômetro</strong><small>Cronômetro com voltas, direto no navegador.</small></span>
   </a>
 </li>
-<li class="c-aleatorio">
-  <a class="card" href="/ferramentas/gerador-de-nicks/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+<li class="c-util">
+  <a class="card" href="/ferramentas/desenhar-online/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
-    <span class="tx"><strong>Gerador de Nicks</strong><small>Gere nicks e apelidos criativos para jogos e redes.</small></span>
+    <span class="tx"><strong>Desenhar Online</strong><small>Quadro de desenho livre no navegador.</small></span>
   </a>
 </li>
-<li class="c-aleatorio">
-  <a class="card" href="/ferramentas/gerador-de-numeros-aleatorios/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/cortar-texto-por-caracteres/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Gerador de Números Aleatórios</strong><small>Sorteie números aleatórios dentro do intervalo que quiser.</small></span>
+    <span class="tx"><strong>Cortar Texto em X Letras</strong><small>Corte um texto no número de letras que você escolher.</small></span>
   </a>
 </li>
-<li class="c-aleatorio">
-  <a class="card" href="/ferramentas/gerador-de-numeros-mega-sena/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/dia-do-ano/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Gerador de Números da Megasena</strong><small>Gere palpites de seis dezenas para a Mega-Sena.</small></span>
+    <span class="tx"><strong>Dia do Ano</strong><small>Descubra qual é o dia do ano de hoje.</small></span>
   </a>
 </li>
-<li class="c-aleatorio">
-  <a class="card" href="/ferramentas/sorteio/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/corretor-ortografico/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Sorteio Online</strong><small>Sorteie nomes ou itens de uma lista.</small></span>
+    <span class="tx"><strong>Corretor Ortográfico</strong><small>Confira a ortografia do seu texto em português.</small></span>
   </a>
 </li>
 

@@ -56,8 +56,8 @@ https://geradorcpf.github.io/ferramentas/comprimir-pdf/
 https://geradorcpf.github.io/ferramentas/consulta-cep/
 https://geradorcpf.github.io/ferramentas/consulta-cnpj/
 https://geradorcpf.github.io/ferramentas/consulta-codigo-do-banco/
-https://geradorcpf.github.io/ferramentas/contador-de-caracteres-palavras-e-linhas/ -- belum submit
-https://geradorcpf.github.io/ferramentas/contador-de-ocorrencia-de-palavras/
+https://geradorcpf.github.io/ferramentas/contador-de-caracteres-palavras-e-linhas/ 
+https://geradorcpf.github.io/ferramentas/contador-de-ocorrencia-de-palavras/ 
 https://geradorcpf.github.io/ferramentas/contador-inscritos/  -- tidak perlu submit
 https://geradorcpf.github.io/ferramentas/contagem-regressiva/
 https://geradorcpf.github.io/ferramentas/conversor-de-base-numerica/
@@ -65,13 +65,25 @@ https://geradorcpf.github.io/ferramentas/conversor-de-medidas/
 https://geradorcpf.github.io/ferramentas/conversor-de-moedas/ -- tidak perlu submit
 
 26 Oktober 2026
-http://localhost:1313/ferramentas/conversor-de-numeros-romanos/
-http://localhost:1313/ferramentas/conversor-de-timestamp/
-http://localhost:1313/ferramentas/converter-imagem-em-texto/
-http://localhost:1313/ferramentas/converter-jpg-em-pdf/
-http://localhost:1313/ferramentas/converter-maiusculas-minusculas/
-http://localhost:1313/ferramentas/converter-pdf-em-jpg/
-http://localhost:1313/ferramentas/converter-texto-em-html/
-http://localhost:1313/ferramentas/corretor-ortografico/
-http://localhost:1313/ferramentas/cortar-texto-por-caracteres/
-http://localhost:1313/ferramentas/cronometro-online/
+https://geradorcpf.github.io/ferramentas/conversor-de-numeros-romanos/
+https://geradorcpf.github.io/ferramentas/conversor-de-timestamp/
+https://geradorcpf.github.io/ferramentas/converter-imagem-em-texto/
+https://geradorcpf.github.io/ferramentas/converter-jpg-em-pdf/
+https://geradorcpf.github.io/ferramentas/converter-maiusculas-minusculas/
+https://geradorcpf.github.io/ferramentas/converter-pdf-em-jpg/
+https://geradorcpf.github.io/ferramentas/converter-texto-em-html/
+https://geradorcpf.github.io/ferramentas/corretor-ortografico/ 
+https://geradorcpf.github.io/ferramentas/cortar-texto-por-caracteres/
+https://geradorcpf.github.io/ferramentas/cronometro-online/
+
+27 Oktober 2026
+http://localhost:1313/ferramentas/dado-online/ -- belum submit
+http://localhost:1313/ferramentas/desenhar-online/
+http://localhost:1313/ferramentas/dia-do-ano/
+http://localhost:1313/ferramentas/dias-entre-datas/
+http://localhost:1313/ferramentas/distancia-entre-cidades/
+http://localhost:1313/ferramentas/dividir-pdf/
+http://localhost:1313/ferramentas/dividir-string/
+http://localhost:1313/ferramentas/dns-lookup/
+http://localhost:1313/ferramentas/emojis-para-copiar/
+http://localhost:1313/ferramentas/emoticons-para-copiar/

@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dia do Ano: online e grátis</title>
+<title>Dia do Ano</title>
 <meta name="description" content="Dia do Ano: descubra qual é o dia do ano de hoje. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/dia-do-ano/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/dia-do-ano/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dia do Ano: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/dia-do-ano/">
+<meta property="og:title" content="Dia do Ano">
+<meta property="og:url" content="http://localhost:1313/ferramentas/dia-do-ano/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Dia do Ano: descubra qual é o dia do ano de hoje. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,75 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Dia do Ano</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/dia-do-ano/","name":"Dia do Ano","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Dia do Ano</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/dia-do-ano/","name":"Dia do Ano","position":3}]}</script>
 <article class="prose page">
   <h1>Dia do Ano</h1>
   
-  
+  <!--INI SUDAH DIKERJAKAN-->
+<p>Veja abaixo em qual dia do ano estamos hoje. O resultado é atualizado automaticamente, sem precisar digitar nada.</p>
+<div id="calc-dia-ano" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📅 Dia do Ano</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Descubra qual é o dia do ano de hoje.</p>
+<div id="dda-resposta" aria-live="polite" style="padding:16px;background:#f0fdf4;border:2px dashed #86efac;border-radius:12px;color:#166534;font-size:1rem;line-height:1.6;text-align:center;">
+<div style="font-size:0.9rem;font-weight:600;color:#3730a3;">Hoje é o</div>
+<div style="font-size:2.4rem;font-weight:800;line-height:1.2;color:#166534;">Dia <span id="dda-numero">--</span></div>
+<div id="dda-data" style="margin-top:4px;font-size:1rem;color:#475569;">carregando...</div>
+</div>
+<div style="margin-top:18px;">
+<div style="height:10px;background:#ffffff;border:2px solid #c7d2fe;border-radius:999px;overflow:hidden;box-sizing:content-box;">
+<div id="dda-barra" style="height:100%;width:0%;background:linear-gradient(135deg,#4f46e5,#6366f1);border-radius:999px;"></div>
+</div>
+<p id="dda-resumo" style="margin:10px 0 0;font-size:0.9rem;color:#64748b;text-align:center;"></p>
+</div>
+</div>
+<script>
+(function () {
+  var numeroEl = document.getElementById('dda-numero');
+  var dataEl = document.getElementById('dda-data');
+  var barraEl = document.getElementById('dda-barra');
+  var resumoEl = document.getElementById('dda-resumo');
+  var semana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+  var meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+  function fmt(n) { return n.toLocaleString('pt-BR'); }
+  function atualizar() {
+    var hoje = new Date();
+    var ano = hoje.getFullYear();
+    var mes = hoje.getMonth();
+    var dia = hoje.getDate();
+    var numero = Math.round((Date.UTC(ano, mes, dia) - Date.UTC(ano, 0, 0)) / 86400000);
+    var bissexto = new Date(ano, 1, 29).getMonth() === 1;
+    var total = bissexto ? 366 : 365;
+    var restantes = total - numero;
+    var percentual = Math.round((numero / total) * 1000) / 10;
+    numeroEl.textContent = fmt(numero);
+    dataEl.textContent = semana[hoje.getDay()] + ', ' + dia + ' de ' + meses[mes] + ' de ' + ano;
+    barraEl.style.width = percentual + '%';
+    resumoEl.textContent = 'Dia ' + fmt(numero) + ' de ' + fmt(total) + ' (' + String(percentual).replace('.', ',') + '% do ano). Restam ' + fmt(restantes) + (restantes === 1 ? ' dia' : ' dias') + '.';
+  }
+  atualizar();
+  setInterval(atualizar, 60000);
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Abra esta página: o <strong>Dia do Ano</strong> de hoje aparece automaticamente na caixa acima.</li>
+<li>Veja o número do dia em destaque, junto com o dia da semana e a data completa.</li>
+<li>Confira a barra de progresso e o resumo logo abaixo para saber quanto do ano já passou e quantos dias ainda restam.</li>
+<li>Mantenha a página aberta se quiser: ela se atualiza sozinha quando a data muda.</li>
+</ol>
+<p>A ferramenta usa a data e o fuso horário configurados no seu dispositivo, então não é necessário digitar nem informar nada.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Dia do ano:</strong> número de ordem do dia dentro do ano, contando o dia 1º de janeiro como dia 1. Também é chamado de data ordinal.</li>
+<li><strong>Dia da semana:</strong> nome do dia dentro da semana, de domingo a sábado.</li>
+<li><strong>Calendário gregoriano:</strong> calendário usado na maior parte do mundo, que divide o ano em 12 meses.</li>
+<li><strong>Ano bissexto:</strong> ano com 366 dias, porque fevereiro tem 29 dias. Ocorre, em geral, a cada 4 anos.</li>
+<li><strong>Ano comum:</strong> ano com 365 dias, em que fevereiro tem 28 dias.</li>
+<li><strong>Dias restantes:</strong> quantidade de dias que faltam para terminar o ano, sem contar o dia de hoje.</li>
+<li><strong>Progresso do ano:</strong> porcentagem do ano que já passou, calculada dividindo o dia do ano pelo total de dias do ano.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -57,31 +120,31 @@
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/estacao-ano-hoje/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Estação do Ano Hoje</strong><small>Veja em qual estação do ano estamos e quando muda.</small></span>
-  </a>
-</li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/feriados-2026/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Feriados 2026</strong><small>Lista de feriados nacionais de 2026.</small></span>
-  </a>
-</li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/calendario-2026/">
+  <a class="card" href="/ferramentas/calendario/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
     <span class="tx"><strong>Calendário 2026</strong><small>Calendário de 2026 com feriados e datas importantes.</small></span>
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/subtrair-dias-em-datas/">
+  <a class="card" href="/ferramentas/calculadora-dias-uteis/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Subtrair Dias em Datas</strong><small>Descubra a data resultante ao subtrair dias de uma data.</small></span>
+    <span class="tx"><strong>Calculadora de Dias Úteis</strong><small>Conte os dias úteis entre duas datas, descontando feriados.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/calendario-lunar-2027/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Calendário Lunar 2027</strong><small>Veja as fases da lua mês a mês em 2027.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/calendario-lunar-2026/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Calendário Lunar 2026</strong><small>Veja as fases da lua mês a mês em 2026.</small></span>
   </a>
 </li>
 

@@ -6,8 +6,78 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contador de Dias entre Datas</title>
+      <link>http://localhost:1313/ferramentas/dias-entre-datas/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/dias-entre-datas/</guid>
+      <description>Conte quantos dias existem entre duas datas.</description>
+    </item>
+    <item>
+      <title>Dado Online</title>
+      <link>http://localhost:1313/ferramentas/dado-online/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/dado-online/</guid>
+      <description>Jogue um ou mais dados online.</description>
+    </item>
+    <item>
+      <title>Desenhar Online</title>
+      <link>http://localhost:1313/ferramentas/desenhar-online/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/desenhar-online/</guid>
+      <description>Quadro de desenho livre no navegador.</description>
+    </item>
+    <item>
+      <title>Dia do Ano</title>
+      <link>http://localhost:1313/ferramentas/dia-do-ano/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/dia-do-ano/</guid>
+      <description>Descubra qual é o dia do ano de hoje.</description>
+    </item>
+    <item>
+      <title>Distância Entre Cidades</title>
+      <link>http://localhost:1313/ferramentas/distancia-entre-cidades/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/distancia-entre-cidades/</guid>
+      <description>Calcule a distância entre duas cidades.</description>
+    </item>
+    <item>
+      <title>Dividir PDF</title>
+      <link>http://localhost:1313/ferramentas/dividir-pdf/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/dividir-pdf/</guid>
+      <description>Separe as páginas de um PDF em arquivos menores.</description>
+    </item>
+    <item>
+      <title>Dividir String</title>
+      <link>http://localhost:1313/ferramentas/dividir-string/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/dividir-string/</guid>
+      <description>Divida um texto em partes usando um separador.</description>
+    </item>
+    <item>
+      <title>DNS Lookup</title>
+      <link>http://localhost:1313/ferramentas/dns-lookup/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/dns-lookup/</guid>
+      <description>Consulte registros DNS (A, MX, TXT e outros) de um domínio.</description>
+    </item>
+    <item>
+      <title>Emojis para Copiar e Colar</title>
+      <link>http://localhost:1313/ferramentas/emojis-para-copiar/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/emojis-para-copiar/</guid>
+      <description>Copie e cole emojis de todas as categorias.</description>
+    </item>
+    <item>
+      <title>Emoticons para Copiar</title>
+      <link>http://localhost:1313/ferramentas/emoticons-para-copiar/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/emoticons-para-copiar/</guid>
+      <description>Copie emoticons de texto com um clique.</description>
+    </item>
     <item>
       <title>Conversor de Números Romanos</title>
       <link>http://localhost:1313/ferramentas/conversor-de-numeros-romanos/</link>
