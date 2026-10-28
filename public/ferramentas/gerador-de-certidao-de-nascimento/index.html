@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de Certidões de Nascimento: online e grátis</title>
+<title>Gerador de Certidões de Nascimento</title>
 <meta name="description" content="Gerador de Certidões de Nascimento: gere números válidos de certidão de nascimento. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-certidao-de-nascimento/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de Certidões de Nascimento: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-certidao-de-nascimento/">
+<meta property="og:title" content="Gerador de Certidões de Nascimento">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de Certidões de Nascimento: gere números válidos de certidão de nascimento. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,131 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Certidões de Nascimento</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-certidao-de-nascimento/","name":"Gerador de Certidões de Nascimento","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Certidões de Nascimento</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/","name":"Gerador de Certidões de Nascimento","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de Certidões de Nascimento</h1>
   
-  
+  <p>Basta escolher se quer a pontuação e depois clicar em <strong>Gerar Certidão</strong>.</p>
+<div id="calc-certidao" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📄 Gerador de Certidão de Nascimento</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha a opção e gere um número válido na hora.</p>
+<label for="cert-pontuacao" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Gerar com pontuação?</label>
+<select id="cert-pontuacao" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="sim">Sim</option>
+<option value="nao">Não</option>
+</select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="cert-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar Certidão</button>
+<button type="button" id="cert-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="cert-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="cert-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;word-break:break-all;"><strong style="color:#3730a3;">Resposta:</strong> <span id="cert-resultado">clique em "Gerar Certidão".</span></div>
+</div>
+<script>
+(function () {
+  var pont = document.getElementById('cert-pontuacao');
+  var resultado = document.getElementById('cert-resultado');
+  var caixa = document.getElementById('cert-resposta');
+  var botaoCopiar = document.getElementById('cert-copiar');
+  var ultimo = '';
+  function aleatorio(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+  function zeros(n, tam) { return ('000000000' + n).slice(-tam); }
+  function digito(base) {
+    var soma = 0;
+    var mult = 32 - base.length;
+    var i = 0;
+    while (i !== base.length) {
+      soma += Number(base.charAt(i)) * mult;
+      mult++;
+      if (mult > 10) { mult = 0; }
+      i++;
+    }
+    var dv = soma % 11;
+    return dv === 10 ? 1 : dv;
+  }
+  function montar() {
+    var ano = new Date().getFullYear();
+    var base = zeros(aleatorio(100000, 999999), 6) + '01' + '55' + zeros(aleatorio(2000, ano), 4) + '1' + zeros(aleatorio(1, 99999), 5) + zeros(aleatorio(1, 299), 3) + zeros(aleatorio(1, 9999999), 7);
+    var d1 = digito(base);
+    var d2 = digito(base + String(d1));
+    var dv = String(d1) + String(d2);
+    if (pont.value === 'sim') {
+      return [base.slice(0, 6), base.slice(6, 8), base.slice(8, 10), base.slice(10, 14), base.slice(14, 15), base.slice(15, 20), base.slice(20, 23), base.slice(23, 30)].join('.') + '-' + dv;
+    }
+    return base + dv;
+  }
+  function mostrar() {
+    ultimo = montar();
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.style.fontWeight = '700';
+    resultado.style.fontFamily = 'ui-monospace,SFMono-Regular,Menlo,Consolas,monospace';
+    resultado.textContent = ultimo;
+    botaoCopiar.textContent = 'Copiar';
+  }
+  function copiar() {
+    if (ultimo === '') { return; }
+    var feito = function () { botaoCopiar.textContent = 'Copiado!'; };
+    var alternativo = function () {
+      var t = document.createElement('textarea');
+      t.value = ultimo;
+      t.style.position = 'fixed';
+      t.style.opacity = '0';
+      document.body.appendChild(t);
+      t.select();
+      try { document.execCommand('copy'); feito(); } catch (e) { botaoCopiar.textContent = 'Erro'; }
+      document.body.removeChild(t);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(ultimo).then(feito, alternativo);
+    } else {
+      alternativo();
+    }
+  }
+  function limpar() {
+    ultimo = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.style.fontWeight = 'normal';
+    resultado.style.fontFamily = 'inherit';
+    resultado.textContent = 'clique em "Gerar Certidão".';
+    botaoCopiar.textContent = 'Copiar';
+  }
+  document.getElementById('cert-gerar').addEventListener('click', mostrar);
+  botaoCopiar.addEventListener('click', copiar);
+  document.getElementById('cert-limpar').addEventListener('click', limpar);
+  pont.addEventListener('change', function () { if (ultimo !== '') { mostrar(); } });
+  pont.addEventListener('focus', function () { pont.style.borderColor = '#6366f1'; });
+  pont.addEventListener('blur', function () { pont.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-o-gerador">Como usar o gerador</h2>
+<ol>
+<li>Escolha no campo <strong>Gerar com pontuação?</strong> se o número deve sair com pontos e hífen (<strong>Sim</strong>) ou só com dígitos (<strong>Não</strong>).</li>
+<li>Clique em <strong>Gerar Certidão</strong> para criar um novo número de certidão de nascimento.</li>
+<li>Clique em <strong>Copiar</strong> para levar o número para a área de transferência.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o resultado e começar de novo.</li>
+</ol>
+<p>Cada clique em <strong>Gerar Certidão</strong> cria um número diferente. Se você mudar a opção de pontuação depois de gerar, o número é gerado de novo no novo formato.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Certidão de nascimento:</strong> documento emitido pelo cartório que comprova o registro de uma pessoa e é a base para os demais documentos civis.</li>
+<li><strong>Número da certidão (matrícula):</strong> código de 32 dígitos que identifica o registro de forma única em todo o país.</li>
+<li><strong>Pontuação:</strong> pontos e hífen usados para separar as partes do número, como em 000000.00.00.0000.0.00000.000.0000000-00.</li>
+<li><strong>Código do cartório:</strong> os 6 primeiros dígitos, que identificam o cartório onde o registro foi feito.</li>
+<li><strong>Acervo:</strong> 2 dígitos que indicam o acervo do cartório em que o registro está guardado.</li>
+<li><strong>Serviço de registro civil:</strong> 2 dígitos que indicam o tipo de serviço prestado pelo cartório (registro civil das pessoas naturais).</li>
+<li><strong>Ano de registro:</strong> 4 dígitos com o ano em que o registro foi lavrado.</li>
+<li><strong>Tipo de livro:</strong> 1 dígito que indica o tipo do registro. Nas certidões de nascimento, o valor é 1.</li>
+<li><strong>Livro, folha e termo:</strong> posição exata do registro dentro do cartório. O livro tem 5 dígitos, a folha tem 3 e o termo tem 7.</li>
+<li><strong>Dígitos verificadores:</strong> os 2 últimos dígitos, calculados a partir dos anteriores para conferir se o número segue a regra de formação.</li>
+<li><strong>Dados de teste:</strong> números fictícios usados por estudantes, programadores e testadores para validar sistemas e formulários.</li>
+</ul>
+<p><strong>Importante:</strong> os números são gerados de forma aleatória, respeitando a regra de formação, e servem apenas para testes de software. Eles não correspondem a registros reais, e o uso indevido é de responsabilidade de quem os utiliza.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -57,31 +176,31 @@
   </a>
 </li>
 <li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-certidao-de-obito/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Gerador de Certidões de Óbito</strong><small>Gere números válidos de certidão de óbito.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-certidoes/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Gerador de Certidões de Nascimento, Casamento e Óbito</strong><small>Gere números de certidão de nascimento, casamento e óbito.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
-  <a class="card" href="/ferramentas/validador-de-certidoes/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Validador de Certidões</strong><small>Confira se o número de uma certidão é válido.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
   <a class="card" href="/ferramentas/gerador-de-cep/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
     <span class="tx"><strong>Gerador de CEP</strong><small>Gere CEPs aleatórios no formato correto para testes.</small></span>
+  </a>
+</li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/gerador-de-cartao-de-credito/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Número de Cartão de Crédito</strong><small>Gere números de cartão válidos para testes de pagamento.</small></span>
+  </a>
+</li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/consulta-codigo-do-banco/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Consulta de Número do Banco (DOC e TED)</strong><small>Encontre o código de um banco para DOC e TED.</small></span>
+  </a>
+</li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/consulta-cnpj/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Consulta de CNPJ</strong><small>Consulte a situação e os dados cadastrais de um CNPJ.</small></span>
   </a>
 </li>
 

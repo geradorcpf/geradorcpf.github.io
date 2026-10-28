@@ -1,11 +1,198 @@
 ---
 title: "Gerador de Número de Cartão de Crédito"
-seoTitle: "Gerador de Número de Cartão de Crédito: online e grátis"
+seoTitle: "Gerador de Número de Cartão de Crédito"
 description: "Gerador de Número de Cartão de Crédito: gere números de cartão válidos para testes de pagamento. Grátis e online, sem cadastro."
 summary: "Gere números de cartão válidos para testes de pagamento."
-date: 2026-10-20
-draft: true
+date: 2026-10-28
+draft: false
 category: "documentos"
 tags: ["cartão de crédito", "pagamentos", "gerador", "dados de teste", "documentos"]
 keywords: ["gerador de número de cartão de crédito", "gerador de número de cartão de crédito online", "cartão de crédito", "pagamentos", "gerador"]
 ---
+
+Escolha a bandeira, defina a quantidade e clique em **Gerar Cartão**. Os dados servem apenas para testar sistemas em desenvolvimento.
+
+<div id="gerador-cartao" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">💳 Gerador de Número de Cartão de Crédito</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Gere números válidos para testes de pagamento.</p>
+<label for="cc-bandeira" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Bandeira do Cartão</label>
+<select id="cc-bandeira" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="master">MasterCard</option>
+<option value="visa">Visa 16 Dígitos</option>
+<option value="amex">American Express</option>
+<option value="diners">Diners Club</option>
+<option value="discover">Discover</option>
+<option value="enroute">enRoute</option>
+<option value="jcb">JCB</option>
+<option value="voyager">Voyager</option>
+<option value="hiper">HiperCard</option>
+<option value="aura">Aura</option>
+</select>
+<label for="cc-quantidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Quantidade (1 a 10)</label>
+<input id="cc-quantidade" type="text" inputmode="numeric" value="1" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="cc-formato" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Formatação do Número</label>
+<select id="cc-formato" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="com">Com espaços</option>
+<option value="sem">Sem espaços</option>
+</select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="cc-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar Cartão</button>
+<button type="button" id="cc-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="cc-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="cc-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="cc-resultado">escolha a bandeira e clique em "Gerar Cartão".</span></div>
+</div>
+<script>
+(function () {
+  var bandeira = document.getElementById('cc-bandeira');
+  var quantidade = document.getElementById('cc-quantidade');
+  var formato = document.getElementById('cc-formato');
+  var resultado = document.getElementById('cc-resultado');
+  var caixa = document.getElementById('cc-resposta');
+  var ultimoTexto = '';
+  var BANDEIRAS = {
+    master: { tam: 16, luhn: true, cvv: 3, grupos: [4, 4, 4, 4], prefixo: function () { return String(51 + randInt(5)); } },
+    visa: { tam: 16, luhn: true, cvv: 3, grupos: [4, 4, 4, 4], prefixo: function () { return '4'; } },
+    amex: { tam: 15, luhn: true, cvv: 4, grupos: [4, 6, 5], prefixo: function () { return randInt(2) === 0 ? '34' : '37'; } },
+    diners: { tam: 14, luhn: true, cvv: 3, grupos: [4, 6, 4], prefixo: function () { return '36'; } },
+    discover: { tam: 16, luhn: true, cvv: 3, grupos: [4, 4, 4, 4], prefixo: function () { return '6011'; } },
+    enroute: { tam: 15, luhn: false, cvv: 3, grupos: [4, 6, 5], prefixo: function () { return randInt(2) === 0 ? '2014' : '2149'; } },
+    jcb: { tam: 16, luhn: true, cvv: 3, grupos: [4, 4, 4, 4], prefixo: function () { return '35' + String(28 + randInt(62)); } },
+    voyager: { tam: 15, luhn: true, cvv: 3, grupos: [4, 6, 5], prefixo: function () { return '8699'; } },
+    hiper: { tam: 16, luhn: true, cvv: 3, grupos: [4, 4, 4, 4], prefixo: function () { return '606282'; } },
+    aura: { tam: 16, luhn: true, cvv: 3, grupos: [4, 4, 4, 4], prefixo: function () { return '50'; } }
+  };
+  function randInt(max) {
+    if (window.crypto && window.crypto.getRandomValues) {
+      var arr = new Uint32Array(1);
+      window.crypto.getRandomValues(arr);
+      return arr[0] % max;
+    }
+    return Math.floor(Math.random() * max);
+  }
+  function digitosAleatorios(qtd) {
+    var s = '';
+    while (s.length !== qtd) { s += String(randInt(10)); }
+    return s;
+  }
+  function digitoLuhn(corpo) {
+    var soma = 0;
+    var dobrar = true;
+    for (var i = corpo.length - 1; i !== -1; i--) {
+      var d = Number(corpo.charAt(i));
+      if (dobrar) {
+        d = d * 2;
+        if (d >= 10) { d = d - 9; }
+      }
+      soma += d;
+      dobrar = !dobrar;
+    }
+    return String((10 - (soma % 10)) % 10);
+  }
+  function gerarNumero(cfg) {
+    var corpo = cfg.prefixo();
+    corpo += digitosAleatorios(cfg.tam - 1 - corpo.length);
+    if (cfg.luhn) { return corpo + digitoLuhn(corpo); }
+    return corpo + String(randInt(10));
+  }
+  function formatar(numero, grupos) {
+    var partes = [];
+    var pos = 0;
+    grupos.forEach(function (g) {
+      partes.push(numero.substr(pos, g));
+      pos += g;
+    });
+    return partes.join(' ');
+  }
+  function dois(n) { return ('0' + n).slice(-2); }
+  function validade() {
+    var ano = new Date().getFullYear() + 1 + randInt(5);
+    return dois(randInt(12) + 1) + '/' + ano;
+  }
+  function codigo(qtd) { return digitosAleatorios(qtd); }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+    ultimoTexto = '';
+  }
+  function gerar() {
+    var qtd = parseInt(String(quantidade.value).trim(), 10);
+    if (isNaN(qtd) || qtd === 0 || qtd !== Math.abs(qtd) || qtd > 10) {
+      erro('informe uma quantidade inteira entre 1 e 10.');
+      return;
+    }
+    var cfg = BANDEIRAS[bandeira.value];
+    var linhas = [];
+    for (var i = 0; i !== qtd; i++) {
+      var num = gerarNumero(cfg);
+      var texto = formato.value === 'com' ? formatar(num, cfg.grupos) : num;
+      linhas.push('Número: ' + texto + ' | Validade: ' + validade() + ' | CVV: ' + codigo(cfg.cvv));
+    }
+    ultimoTexto = linhas.join('\n');
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.style.whiteSpace = 'pre-wrap';
+    resultado.style.wordBreak = 'break-word';
+    resultado.textContent = ultimoTexto;
+  }
+  function copiar() {
+    if (ultimoTexto === '') { erro('gere um cartão antes de copiar.'); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(ultimoTexto);
+    } else {
+      var area = document.createElement('textarea');
+      area.value = ultimoTexto;
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand('copy');
+      document.body.removeChild(area);
+    }
+  }
+  function limpar() {
+    quantidade.value = '1';
+    bandeira.selectedIndex = 0;
+    formato.selectedIndex = 0;
+    ultimoTexto = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.style.whiteSpace = 'normal';
+    resultado.textContent = 'escolha a bandeira e clique em "Gerar Cartão".';
+  }
+  document.getElementById('cc-gerar').addEventListener('click', gerar);
+  document.getElementById('cc-copiar').addEventListener('click', copiar);
+  document.getElementById('cc-limpar').addEventListener('click', limpar);
+  quantidade.addEventListener('keydown', function (e) { if (e.key === 'Enter') { gerar(); } });
+  [bandeira, quantidade, formato].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+
+**Importante:** os números gerados aqui são fictícios e servem apenas para testar sistemas em desenvolvimento. Eles não pertencem a nenhuma conta real e não funcionam para compras.
+
+## Como usar o gerador
+
+1. Escolha a **Bandeira do Cartão** na lista (MasterCard, Visa, American Express etc.).
+2. Informe a **Quantidade** de cartões que deseja gerar, de 1 a 10.
+3. Selecione a **Formatação do Número**: com espaços (ex.: `4111 1111 1111 1111`) ou sem espaços.
+4. Clique em **Gerar Cartão** (ou pressione Enter no campo de quantidade).
+5. Use o botão **Copiar** para levar o resultado para a área de transferência.
+6. Use o botão **Limpar** para restaurar os valores iniciais e começar de novo.
+
+Cada linha do resultado traz o número do cartão, a data de validade e o código de segurança (CVV).
+
+## Entendendo os termos
+
+- **Cartão de crédito:** cartão de pagamento que permite comprar agora e pagar depois, dentro de um limite definido pelo banco emissor.
+- **Bandeira:** rede que processa as transações do cartão, como Visa, MasterCard ou American Express. Ela define as regras e o formato do número.
+- **Número do cartão:** sequência de 14 a 16 dígitos impressa no cartão. Os primeiros dígitos indicam a bandeira e o último é um dígito de verificação.
+- **Prefixo (BIN):** dígitos iniciais do número, que identificam a bandeira e o emissor. Por exemplo, números Visa começam com 4.
+- **Algoritmo de Luhn:** cálculo matemático que valida o número do cartão e detecta erros de digitação. O gerador usa esse cálculo para criar números com formato válido.
+- **Data de validade:** mês e ano até quando o cartão pode ser usado, no formato MM/AAAA.
+- **CVV (código de segurança):** código de 3 dígitos (4 no American Express) usado para confirmar compras online.
+- **Dados de teste:** informações fictícias usadas por programadores, analistas e testadores para validar formulários e fluxos de pagamento sem usar dados reais.

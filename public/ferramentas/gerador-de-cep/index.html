@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de CEP: online e grátis</title>
+<title>Gerador de CEP</title>
 <meta name="description" content="Gerador de CEP: gere CEPs aleatórios no formato correto para testes. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-cep/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-cep/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de CEP: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-cep/">
+<meta property="og:title" content="Gerador de CEP">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-cep/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de CEP: gere CEPs aleatórios no formato correto para testes. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,226 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de CEP</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-cep/","name":"Gerador de CEP","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de CEP</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-cep/","name":"Gerador de CEP","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de CEP</h1>
   
-  
+  <p>Para gerar um CEP de qualquer lugar do Brasil, basta clicar em <strong>Gerar CEP</strong>. Se quiser, escolha antes um estado, a quantidade de CEPs e se eles devem sair com ou sem pontuação.</p>
+<div id="gerador-cep" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📮 Gerador de CEP</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha as opções e gere CEPs aleatórios na hora.</p>
+<label for="cep-estado" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Estado (opcional)</label>
+<select id="cep-estado" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="">Qualquer estado (Brasil inteiro)</option>
+<option value="AC">AC - Acre</option>
+<option value="AL">AL - Alagoas</option>
+<option value="AP">AP - Amapá</option>
+<option value="AM">AM - Amazonas</option>
+<option value="BA">BA - Bahia</option>
+<option value="CE">CE - Ceará</option>
+<option value="DF">DF - Distrito Federal</option>
+<option value="ES">ES - Espírito Santo</option>
+<option value="GO">GO - Goiás</option>
+<option value="MA">MA - Maranhão</option>
+<option value="MT">MT - Mato Grosso</option>
+<option value="MS">MS - Mato Grosso do Sul</option>
+<option value="MG">MG - Minas Gerais</option>
+<option value="PA">PA - Pará</option>
+<option value="PB">PB - Paraíba</option>
+<option value="PR">PR - Paraná</option>
+<option value="PE">PE - Pernambuco</option>
+<option value="PI">PI - Piauí</option>
+<option value="RJ">RJ - Rio de Janeiro</option>
+<option value="RN">RN - Rio Grande do Norte</option>
+<option value="RS">RS - Rio Grande do Sul</option>
+<option value="RO">RO - Rondônia</option>
+<option value="RR">RR - Roraima</option>
+<option value="SC">SC - Santa Catarina</option>
+<option value="SP">SP - São Paulo</option>
+<option value="SE">SE - Sergipe</option>
+<option value="TO">TO - Tocantins</option>
+</select>
+<label for="cep-quantidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Quantidade (1 a 50)</label>
+<input id="cep-quantidade" type="text" inputmode="numeric" value="1" placeholder="Ex.: 5" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<span style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Gerar com pontuação?</span>
+<div style="display:flex;gap:20px;margin-bottom:20px;">
+<label for="cep-pontuacao-sim" style="display:flex;align-items:center;gap:6px;font-size:1rem;cursor:pointer;"><input type="radio" id="cep-pontuacao-sim" name="cep-pontuacao" value="sim" checked> Sim</label>
+<label for="cep-pontuacao-nao" style="display:flex;align-items:center;gap:6px;font-size:1rem;cursor:pointer;"><input type="radio" id="cep-pontuacao-nao" name="cep-pontuacao" value="nao"> Não</label>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="cep-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar CEP</button>
+<button type="button" id="cep-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="cep-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="cep-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong>
+<div id="cep-resultado" style="margin-top:6px;">escolha as opções e clique em "Gerar CEP".</div></div>
+</div>
+<script>
+(function () {
+  var faixas = {
+    AC: [[69900000, 69999999]],
+    AL: [[57000000, 57999999]],
+    AP: [[68900000, 68999999]],
+    AM: [[69000000, 69299999], [69400000, 69899999]],
+    BA: [[40000000, 48999999]],
+    CE: [[60000000, 63999999]],
+    DF: [[70000000, 72799999], [73000000, 73699999]],
+    ES: [[29000000, 29999999]],
+    GO: [[72800000, 72999999], [73700000, 76799999]],
+    MA: [[65000000, 65999999]],
+    MT: [[78000000, 78899999]],
+    MS: [[79000000, 79999999]],
+    MG: [[30000000, 39999999]],
+    PA: [[66000000, 68899999]],
+    PB: [[58000000, 58999999]],
+    PR: [[80000000, 87999999]],
+    PE: [[50000000, 56999999]],
+    PI: [[64000000, 64999999]],
+    RJ: [[20000000, 28999999]],
+    RN: [[59000000, 59999999]],
+    RS: [[90000000, 99999999]],
+    RO: [[76800000, 76999999], [78900000, 78999999]],
+    RR: [[69300000, 69399999]],
+    SC: [[88000000, 89999999]],
+    SP: [[1000000, 19999999]],
+    SE: [[49000000, 49999999]],
+    TO: [[77000000, 77995999]]
+  };
+  var ufs = Object.keys(faixas);
+  var estado = document.getElementById('cep-estado');
+  var quantidade = document.getElementById('cep-quantidade');
+  var resultado = document.getElementById('cep-resultado');
+  var caixa = document.getElementById('cep-resposta');
+  var botaoCopiar = document.getElementById('cep-copiar');
+  var lista = [];
+  function sortear(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  function gerarNumero(uf) {
+    var f = faixas[uf];
+    var total = 0;
+    f.forEach(function (r) { total += r[1] - r[0] + 1; });
+    var pos = sortear(0, total - 1);
+    var alvo = f[0][0];
+    for (var i = 0; i !== f.length; i++) {
+      var tam = f[i][1] - f[i][0] + 1;
+      if (pos >= tam) {
+        pos -= tam;
+      } else {
+        alvo = f[i][0] + pos;
+        break;
+      }
+    }
+    var s = String(alvo);
+    while (s.length !== 8) { s = '0' + s; }
+    return s;
+  }
+  function formatar(s, comPontuacao) {
+    return comPontuacao ? s.slice(0, 5) + '-' + s.slice(5) : s;
+  }
+  function limparResultado() {
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+  }
+  function erro(msg) {
+    lista = [];
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    limparResultado();
+    resultado.textContent = msg;
+  }
+  function gerar() {
+    var q = parseInt(quantidade.value, 10);
+    if (!(q > 0) || q > 50) { erro('informe uma quantidade entre 1 e 50.'); return; }
+    var comPontuacao = document.getElementById('cep-pontuacao-sim').checked;
+    lista = [];
+    limparResultado();
+    for (var i = 0; i !== q; i++) {
+      var uf = estado.value !== '' ? estado.value : ufs[sortear(0, ufs.length - 1)];
+      var cep = formatar(gerarNumero(uf), comPontuacao);
+      lista.push({ cep: cep, uf: uf });
+      var linha = document.createElement('div');
+      linha.style.cssText = 'padding:6px 0;border-bottom:1px solid #e2e8f0;';
+      var numero = document.createElement('strong');
+      numero.style.cssText = 'font-size:1.2rem;letter-spacing:0.5px;';
+      numero.textContent = cep;
+      var sigla = document.createElement('small');
+      sigla.style.cssText = 'margin-left:10px;color:#475569;';
+      sigla.textContent = uf;
+      linha.appendChild(numero);
+      linha.appendChild(sigla);
+      resultado.appendChild(linha);
+    }
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+  }
+  function copiarFallback(texto) {
+    var area = document.createElement('textarea');
+    area.value = texto;
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(area);
+  }
+  function copiar() {
+    if (lista.length === 0) { erro('gere um CEP antes de copiar.'); return; }
+    var texto = lista.map(function (item) { return item.cep; }).join('\n');
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(texto).catch(function () { copiarFallback(texto); });
+    } else {
+      copiarFallback(texto);
+    }
+    botaoCopiar.textContent = 'Copiado!';
+    setTimeout(function () { botaoCopiar.textContent = 'Copiar'; }, 1500);
+  }
+  function limpar() {
+    lista = [];
+    estado.value = '';
+    quantidade.value = '1';
+    document.getElementById('cep-pontuacao-sim').checked = true;
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    limparResultado();
+    resultado.textContent = 'escolha as opções e clique em "Gerar CEP".';
+    quantidade.focus();
+  }
+  document.getElementById('cep-gerar').addEventListener('click', gerar);
+  botaoCopiar.addEventListener('click', copiar);
+  document.getElementById('cep-limpar').addEventListener('click', limpar);
+  quantidade.addEventListener('keydown', function (e) { if (e.key === 'Enter') { gerar(); } });
+  [estado, quantidade].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-o-gerador">Como usar o gerador</h2>
+<ol>
+<li>No campo <strong>Estado</strong>, escolha um estado (UF) ou deixe em &ldquo;Qualquer estado&rdquo; para gerar CEPs de todo o Brasil.</li>
+<li>Em <strong>Quantidade</strong>, informe quantos CEPs você quer gerar de uma só vez (de 1 a 50).</li>
+<li>Em <strong>Gerar com pontuação?</strong>, marque <strong>Sim</strong> para o formato com hífen (<code>12345-678</code>) ou <strong>Não</strong> para apenas números (<code>12345678</code>).</li>
+<li>Clique em <strong>Gerar CEP</strong> (ou pressione Enter no campo de quantidade) para ver os resultados.</li>
+<li>Clique em <strong>Copiar</strong> para copiar todos os CEPs gerados, um por linha, e use <strong>Limpar</strong> para voltar às opções iniciais.</li>
+</ol>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>CEP:</strong> sigla de Código de Endereçamento Postal, um código de 8 dígitos usado no Brasil para identificar ruas, bairros, cidades e outros pontos de entrega.</li>
+<li><strong>Correios:</strong> empresa responsável por criar, manter e distribuir os CEPs no país.</li>
+<li><strong>Estado (UF):</strong> unidade federativa do Brasil, representada por uma sigla de duas letras, como SP, RJ ou MG. Cada estado tem faixas de CEP próprias.</li>
+<li><strong>Faixa de CEP:</strong> intervalo de números reservado a um estado. Por exemplo, os CEPs de São Paulo começam entre 01000-000 e 19999-999.</li>
+<li><strong>Pontuação:</strong> o hífen que separa os 5 primeiros dígitos dos 3 últimos no formato <code>12345-678</code>.</li>
+<li><strong>Sufixo:</strong> os 3 últimos dígitos do CEP, que ajudam a identificar o ponto de distribuição, como a rua ou o logradouro.</li>
+<li><strong>Quantidade:</strong> número de CEPs gerados em uma única vez.</li>
+<li><strong>Dados de teste:</strong> valores fictícios usados para testar formulários, cadastros e sistemas sem precisar de informações reais.</li>
+</ul>
+<h2 id="aviso-importante">Aviso importante</h2>
+<p>Os CEPs são sorteados dentro das faixas oficiais de cada estado e seguem o formato correto, mas <strong>não são consultados em uma base de endereços</strong>. Isso significa que um CEP gerado pode não corresponder a uma rua real. Use o gerador apenas para testes de software, formulários e validações de formato.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -78,10 +292,10 @@
   </a>
 </li>
 <li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-certidao-de-obito/">
+  <a class="card" href="/ferramentas/consulta-codigo-do-banco/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
-    <span class="tx"><strong>Gerador de Certidões de Óbito</strong><small>Gere números válidos de certidão de óbito.</small></span>
+    <span class="tx"><strong>Consulta de Número do Banco (DOC e TED)</strong><small>Encontre o código de um banco para DOC e TED.</small></span>
   </a>
 </li>
 

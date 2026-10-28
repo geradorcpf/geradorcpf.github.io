@@ -77,13 +77,25 @@ https://geradorcpf.github.io/ferramentas/cortar-texto-por-caracteres/
 https://geradorcpf.github.io/ferramentas/cronometro-online/
 
 27 Oktober 2026
-http://localhost:1313/ferramentas/dado-online/ -- belum submit
-http://localhost:1313/ferramentas/desenhar-online/
-http://localhost:1313/ferramentas/dia-do-ano/
-http://localhost:1313/ferramentas/dias-entre-datas/
-http://localhost:1313/ferramentas/distancia-entre-cidades/
-http://localhost:1313/ferramentas/dividir-pdf/
-http://localhost:1313/ferramentas/dividir-string/
-http://localhost:1313/ferramentas/dns-lookup/
-http://localhost:1313/ferramentas/emojis-para-copiar/
-http://localhost:1313/ferramentas/emoticons-para-copiar/
+https://geradorcpf.github.io/ferramentas/dado-online/ 
+https://geradorcpf.github.io/ferramentas/desenhar-online/
+https://geradorcpf.github.io/ferramentas/dia-do-ano/
+https://geradorcpf.github.io/ferramentas/dias-entre-datas/
+https://geradorcpf.github.io/ferramentas/distancia-entre-cidades/
+https://geradorcpf.github.io/ferramentas/dividir-pdf/
+https://geradorcpf.github.io/ferramentas/dividir-string/
+https://geradorcpf.github.io/ferramentas/dns-lookup/
+https://geradorcpf.github.io/ferramentas/emojis-para-copiar/
+https://geradorcpf.github.io/ferramentas/emoticons-para-copiar/
+
+28 Oktober 2026
+http://localhost:1313/ferramentas/estacao-ano-hoje/ -- belum submit
+http://localhost:1313/ferramentas/fase-lua-hoje/
+http://localhost:1313/ferramentas/feriados-2026/
+http://localhost:1313/ferramentas/feriados-2027/
+http://localhost:1313/ferramentas/foto-preto-e-branco/
+http://localhost:1313/ferramentas/gasolina-ou-etanol/
+http://localhost:1313/ferramentas/gerador-de-cartao-de-credito/
+http://localhost:1313/ferramentas/gerador-de-cep/
+http://localhost:1313/ferramentas/gerador-de-certidao-de-casamento/
+http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/

@@ -6,8 +6,78 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Estação do Ano Hoje</title>
+      <link>http://localhost:1313/ferramentas/estacao-ano-hoje/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/estacao-ano-hoje/</guid>
+      <description>Veja em qual estação do ano estamos e quando muda.</description>
+    </item>
+    <item>
+      <title>Fase da Lua Hoje</title>
+      <link>http://localhost:1313/ferramentas/fase-lua-hoje/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/fase-lua-hoje/</guid>
+      <description>Veja a fase da lua de hoje.</description>
+    </item>
+    <item>
+      <title>Feriados 2026</title>
+      <link>http://localhost:1313/ferramentas/feriados-2026/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/feriados-2026/</guid>
+      <description>Lista de feriados nacionais de 2026.</description>
+    </item>
+    <item>
+      <title>Feriados 2027</title>
+      <link>http://localhost:1313/ferramentas/feriados-2027/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/feriados-2027/</guid>
+      <description>Lista de feriados nacionais de 2027.</description>
+    </item>
+    <item>
+      <title>Foto em Preto e Branco</title>
+      <link>http://localhost:1313/ferramentas/foto-preto-e-branco/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/foto-preto-e-branco/</guid>
+      <description>Transforme uma foto em preto e branco.</description>
+    </item>
+    <item>
+      <title>Gasolina ou Etanol: qual compensa</title>
+      <link>http://localhost:1313/ferramentas/gasolina-ou-etanol/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gasolina-ou-etanol/</guid>
+      <description>Descubra se compensa abastecer com gasolina ou etanol.</description>
+    </item>
+    <item>
+      <title>Gerador de CEP</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-cep/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-cep/</guid>
+      <description>Gere CEPs aleatórios no formato correto para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Certidões de Casamento</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-certidao-de-casamento/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-certidao-de-casamento/</guid>
+      <description>Gere números válidos de certidão de casamento.</description>
+    </item>
+    <item>
+      <title>Gerador de Certidões de Nascimento</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/</guid>
+      <description>Gere números válidos de certidão de nascimento.</description>
+    </item>
+    <item>
+      <title>Gerador de Número de Cartão de Crédito</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-cartao-de-credito/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-cartao-de-credito/</guid>
+      <description>Gere números de cartão válidos para testes de pagamento.</description>
+    </item>
     <item>
       <title>Contador de Dias entre Datas</title>
       <link>http://localhost:1313/ferramentas/dias-entre-datas/</link>
