@@ -2,6 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/ferramentas/estacao-ano-hoje/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/fase-lua-hoje/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/feriados-2026/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/feriados-2027/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/foto-preto-e-branco/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gasolina-ou-etanol/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-cep/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-certidao-de-casamento/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-cartao-de-credito/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>http://localhost:1313/ferramentas/dias-entre-datas/</loc>
     <lastmod>2026-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -48,16 +108,6 @@
     <priority>0.8</priority>
   </url><url>
     <loc>http://localhost:1313/ferramentas/emoticons-para-copiar/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/ferramentas/</loc>
-    <lastmod>2026-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

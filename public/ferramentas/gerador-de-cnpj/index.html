@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de CNPJ: online e grátis</title>
+<title>Gerador de CNPJ</title>
 <meta name="description" content="Gerador de CNPJ: gere CNPJs válidos, com ou sem pontuação, para testes. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-cnpj/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-cnpj/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de CNPJ: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-cnpj/">
+<meta property="og:title" content="Gerador de CNPJ">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-cnpj/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de CNPJ: gere CNPJs válidos, com ou sem pontuação, para testes. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,131 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de CNPJ</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-cnpj/","name":"Gerador de CNPJ","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de CNPJ</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-cnpj/","name":"Gerador de CNPJ","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de CNPJ</h1>
   
-  
+  <p>Basta escolher as opções abaixo e depois clicar em <strong>Gerar CNPJ</strong>.</p>
+<div id="gerador-cnpj" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🏢 Gerador de CNPJ</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha as opções e gere um CNPJ válido para testes.</p>
+<label for="cnpj-pontuacao" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Gerar com pontuação?</label>
+<select id="cnpj-pontuacao" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="sim">Sim</option>
+<option value="nao">Não</option>
+</select>
+<label for="cnpj-formato" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Formato</label>
+<select id="cnpj-formato" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="num">Numérico (atual)</option>
+<option value="alfa">Alfanumérico (IN RFB 2.229/2024)</option>
+</select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="cnpj-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar CNPJ</button>
+<button type="button" id="cnpj-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+</div>
+<div id="cnpj-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">CNPJ gerado:</strong> <span id="cnpj-resultado">clique em "Gerar CNPJ".</span></div>
+</div>
+<script>
+(function () {
+  var selPontuacao = document.getElementById('cnpj-pontuacao');
+  var selFormato = document.getElementById('cnpj-formato');
+  var resultado = document.getElementById('cnpj-resultado');
+  var caixa = document.getElementById('cnpj-resposta');
+  var btnCopiar = document.getElementById('cnpj-copiar');
+  var atual = '';
+  var NUMEROS = '0123456789';
+  var ALFANUM = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var PESOS1 = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+  var PESOS2 = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+  function sorteio(n) { return Math.floor(Math.random() * n); }
+  function digito(base, pesos) {
+    var soma = 0;
+    for (var i = 0; i !== base.length; i++) {
+      soma += (base.charCodeAt(i) - 48) * pesos[i];
+    }
+    var resto = soma % 11;
+    return resto === 0 ? 0 : (resto === 1 ? 0 : 11 - resto);
+  }
+  function raizAleatoria(alfabeto) {
+    var raiz = '';
+    for (var i = 0; i !== 8; i++) { raiz += alfabeto.charAt(sorteio(alfabeto.length)); }
+    return raiz;
+  }
+  function todosIguais(t) { return t === new Array(t.length + 1).join(t.charAt(0)); }
+  function formatar(c) {
+    return c.substr(0, 2) + '.' + c.substr(2, 3) + '.' + c.substr(5, 3) + '/' + c.substr(8, 4) + '-' + c.substr(12, 2);
+  }
+  function gerar() {
+    var alfabeto = selFormato.value === 'alfa' ? ALFANUM : NUMEROS;
+    var raiz = raizAleatoria(alfabeto);
+    while (todosIguais(raiz)) { raiz = raizAleatoria(alfabeto); }
+    var base = raiz + '0001';
+    var d1 = digito(base, PESOS1);
+    var d2 = digito(base + d1, PESOS2);
+    var cnpj = base + d1 + d2;
+    atual = selPontuacao.value === 'sim' ? formatar(cnpj) : cnpj;
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.innerHTML = '<strong style="font-size:1.2rem;letter-spacing:0.5px;">' + atual + '</strong>';
+    btnCopiar.textContent = 'Copiar';
+  }
+  function copiado() { btnCopiar.textContent = 'Copiado!'; }
+  function copiarFallback(texto) {
+    var ta = document.createElement('textarea');
+    ta.value = texto;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); copiado(); } catch (e) { }
+    document.body.removeChild(ta);
+  }
+  function copiar() {
+    if (atual === '') {
+      caixa.style.borderColor = '#fca5a5';
+      caixa.style.background = '#fef2f2';
+      resultado.style.color = '#b91c1c';
+      resultado.textContent = 'gere um CNPJ antes de copiar.';
+      return;
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(atual).then(copiado, function () { copiarFallback(atual); });
+    } else {
+      copiarFallback(atual);
+    }
+  }
+  document.getElementById('cnpj-gerar').addEventListener('click', gerar);
+  btnCopiar.addEventListener('click', copiar);
+  [selPontuacao, selFormato].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Em <strong>Gerar com pontuação?</strong>, escolha <strong>Sim</strong> para receber o CNPJ com pontos, barra e traço (<code>12.345.678/0001-95</code>) ou <strong>Não</strong> para receber apenas os caracteres (<code>12345678000195</code>).</li>
+<li>Em <strong>Formato</strong>, escolha <strong>Numérico (atual)</strong> para o CNPJ tradicional, só com números, ou <strong>Alfanumérico (IN RFB 2.229/2024)</strong> para o novo padrão, que também usa letras.</li>
+<li>Clique em <strong>Gerar CNPJ</strong> para criar um novo número válido. Clique de novo sempre que quiser outro.</li>
+<li>Clique em <strong>Copiar</strong> para levar o CNPJ para a área de transferência e colar onde precisar.</li>
+</ol>
+<p>Os números são gerados de forma aleatória, respeitando as regras de criação do documento. Eles servem para <strong>testes e desenvolvimento</strong> e não pertencem a empresas reais. O uso indevido dos dados gerados é de responsabilidade de quem os utiliza.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>CNPJ:</strong> Cadastro Nacional da Pessoa Jurídica, número que identifica uma empresa perante a Receita Federal do Brasil.</li>
+<li><strong>CNPJ válido:</strong> número cujos dígitos verificadores batem com o cálculo oficial. Isso não significa que a empresa exista de fato.</li>
+<li><strong>Raiz (base):</strong> os 8 primeiros caracteres, que identificam a empresa em si.</li>
+<li><strong>Ordem (filial):</strong> os 4 caracteres seguintes, que identificam o estabelecimento. Aqui usamos <code>0001</code>, que indica a matriz.</li>
+<li><strong>Dígitos verificadores:</strong> os 2 últimos dígitos, calculados a partir dos anteriores para conferir se o número é válido.</li>
+<li><strong>Com pontuação:</strong> CNPJ escrito no formato <code>XX.XXX.XXX/XXXX-XX</code>, com pontos, barra e traço.</li>
+<li><strong>Sem pontuação:</strong> CNPJ escrito apenas com os 14 caracteres, sem separadores.</li>
+<li><strong>Formato numérico:</strong> padrão atual, em que os 12 primeiros caracteres são apenas números de 0 a 9.</li>
+<li><strong>Formato alfanumérico:</strong> novo padrão da Receita Federal (IN RFB 2.229/2024), em que os 12 primeiros caracteres podem ser números ou letras de A a Z. Os dois dígitos verificadores continuam sendo números.</li>
+<li><strong>Dados de teste:</strong> informações fictícias usadas para testar sistemas, formulários e cadastros sem precisar de documentos reais.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -57,13 +176,6 @@
   </a>
 </li>
 <li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-inscricao-estadual/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Gerador de Inscrição Estadual</strong><small>Gere inscrições estaduais válidas para qualquer estado.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
   <a class="card" href="/ferramentas/gerador-de-cnh/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
@@ -71,17 +183,24 @@
   </a>
 </li>
 <li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-pessoas/">
+  <a class="card" href="/ferramentas/consulta-cnpj/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
-    <span class="tx"><strong>Gerador de Documentos de Pessoas</strong><small>Gere pessoas fictícias com nome, CPF, RG, endereço e telefone.</small></span>
+    <span class="tx"><strong>Consulta de CNPJ</strong><small>Consulte a situação e os dados cadastrais de um CNPJ.</small></span>
   </a>
 </li>
 <li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-pis-pasep/">
+  <a class="card" href="/ferramentas/gerador-de-certidoes/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
-    <span class="tx"><strong>Gerador de PIS/PASEP</strong><small>Gere números de PIS/PASEP válidos para testes.</small></span>
+    <span class="tx"><strong>Gerador de Certidões de Nascimento, Casamento e Óbito</strong><small>Gere números de certidão de nascimento, casamento e óbito.</small></span>
+  </a>
+</li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/gerador-de-certidao-de-obito/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Certidões de Óbito</strong><small>Gere números válidos de certidão de óbito.</small></span>
   </a>
 </li>
 

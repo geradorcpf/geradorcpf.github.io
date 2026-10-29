@@ -6,8 +6,78 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gerador de Certidões de Nascimento, Casamento e Óbito</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-certidoes/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-certidoes/</guid>
+      <description>Gere números de certidão de nascimento, casamento e óbito.</description>
+    </item>
+    <item>
+      <title>Gerador de Certidões de Óbito</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-certidao-de-obito/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-certidao-de-obito/</guid>
+      <description>Gere números válidos de certidão de óbito.</description>
+    </item>
+    <item>
+      <title>Gerador de CNH</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-cnh/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-cnh/</guid>
+      <description>Gere números de CNH válidos para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de CNPJ</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-cnpj/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-cnpj/</guid>
+      <description>Gere CNPJs válidos, com ou sem pontuação, para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Código de Barras</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-codigo-de-barras/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-codigo-de-barras/</guid>
+      <description>Crie códigos de barras nos formatos mais usados.</description>
+    </item>
+    <item>
+      <title>Gerador de Código de Barras em Lote</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-codigo-de-barras-em-lote/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-codigo-de-barras-em-lote/</guid>
+      <description>Crie vários códigos de barras de uma só vez.</description>
+    </item>
+    <item>
+      <title>Gerador de Conta Bancária</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-conta-bancaria/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-conta-bancaria/</guid>
+      <description>Gere agência e conta bancária válidas para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Currículo</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-curriculo/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-curriculo/</guid>
+      <description>Monte um currículo profissional e baixe em PDF.</description>
+    </item>
+    <item>
+      <title>Gerador de Documentos de Empresas</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-empresas/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-empresas/</guid>
+      <description>Gere empresas fictícias com CNPJ, inscrição estadual e CEP.</description>
+    </item>
+    <item>
+      <title>Gerador de Email Temporário</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-email-temporario/</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-email-temporario/</guid>
+      <description>Crie um e-mail descartável para receber mensagens.</description>
+    </item>
     <item>
       <title>Estação do Ano Hoje</title>
       <link>http://localhost:1313/ferramentas/estacao-ano-hoje/</link>

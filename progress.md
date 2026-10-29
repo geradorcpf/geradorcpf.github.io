@@ -89,13 +89,26 @@ https://geradorcpf.github.io/ferramentas/emojis-para-copiar/
 https://geradorcpf.github.io/ferramentas/emoticons-para-copiar/
 
 28 Oktober 2026
-http://localhost:1313/ferramentas/estacao-ano-hoje/ -- belum submit
-http://localhost:1313/ferramentas/fase-lua-hoje/
-http://localhost:1313/ferramentas/feriados-2026/
-http://localhost:1313/ferramentas/feriados-2027/
-http://localhost:1313/ferramentas/foto-preto-e-branco/
-http://localhost:1313/ferramentas/gasolina-ou-etanol/
-http://localhost:1313/ferramentas/gerador-de-cartao-de-credito/
-http://localhost:1313/ferramentas/gerador-de-cep/
-http://localhost:1313/ferramentas/gerador-de-certidao-de-casamento/
-http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/
+https://geradorcpf.github.io/ferramentas/estacao-ano-hoje/ 
+https://geradorcpf.github.io/ferramentas/fase-lua-hoje/ 
+https://geradorcpf.github.io/ferramentas/feriados-2026/
+https://geradorcpf.github.io/ferramentas/feriados-2027/
+https://geradorcpf.github.io/ferramentas/foto-preto-e-branco/
+https://geradorcpf.github.io/ferramentas/gasolina-ou-etanol/
+https://geradorcpf.github.io/ferramentas/gerador-de-cartao-de-credito/
+https://geradorcpf.github.io/ferramentas/gerador-de-cep/
+https://geradorcpf.github.io/ferramentas/gerador-de-certidao-de-casamento/
+https://geradorcpf.github.io/ferramentas/gerador-de-certidao-de-nascimento/ 
+
+29 Oktober 2026
+http://localhost:1313/ferramentas/gerador-de-certidao-de-obito/  -- belum submit
+http://localhost:1313/ferramentas/gerador-de-certidoes/
+http://localhost:1313/ferramentas/gerador-de-cnh/
+http://localhost:1313/ferramentas/gerador-de-cnpj/
+http://localhost:1313/ferramentas/gerador-de-codigo-de-barras-em-lote/
+http://localhost:1313/ferramentas/gerador-de-codigo-de-barras/
+http://localhost:1313/ferramentas/gerador-de-conta-bancaria/
+http://localhost:1313/ferramentas/gerador-de-curriculo/
+http://localhost:1313/ferramentas/gerador-de-email-temporario/
+http://localhost:1313/ferramentas/gerador-de-empresas/
+
