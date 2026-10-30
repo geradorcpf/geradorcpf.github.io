@@ -2,6 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/ferramentas/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-certidoes/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-certidao-de-obito/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-cnh/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-cnpj/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-codigo-de-barras/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-codigo-de-barras-em-lote/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-conta-bancaria/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-curriculo/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-empresas/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-email-temporario/</loc>
+    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>http://localhost:1313/ferramentas/estacao-ano-hoje/</loc>
     <lastmod>2026-10-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,11 +78,6 @@
     <priority>0.8</priority>
   </url><url>
     <loc>http://localhost:1313/ferramentas/feriados-2027/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/ferramentas/</loc>
     <lastmod>2026-10-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -48,11 +103,6 @@
     <priority>0.8</priority>
   </url><url>
     <loc>http://localhost:1313/ferramentas/gerador-de-certidao-de-nascimento/</loc>
-    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-10-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -101,14 +101,27 @@ https://geradorcpf.github.io/ferramentas/gerador-de-certidao-de-casamento/
 https://geradorcpf.github.io/ferramentas/gerador-de-certidao-de-nascimento/ 
 
 29 Oktober 2026
-http://localhost:1313/ferramentas/gerador-de-certidao-de-obito/  -- belum submit
-http://localhost:1313/ferramentas/gerador-de-certidoes/
-http://localhost:1313/ferramentas/gerador-de-cnh/
-http://localhost:1313/ferramentas/gerador-de-cnpj/
-http://localhost:1313/ferramentas/gerador-de-codigo-de-barras-em-lote/
-http://localhost:1313/ferramentas/gerador-de-codigo-de-barras/
-http://localhost:1313/ferramentas/gerador-de-conta-bancaria/
-http://localhost:1313/ferramentas/gerador-de-curriculo/
-http://localhost:1313/ferramentas/gerador-de-email-temporario/
-http://localhost:1313/ferramentas/gerador-de-empresas/
+https://geradorcpf.github.io/ferramentas/gerador-de-certidao-de-obito/  
+https://geradorcpf.github.io/ferramentas/gerador-de-certidoes/
+https://geradorcpf.github.io/ferramentas/gerador-de-cnh/
+https://geradorcpf.github.io/ferramentas/gerador-de-cnpj/
+https://geradorcpf.github.io/ferramentas/gerador-de-codigo-de-barras-em-lote/
+https://geradorcpf.github.io/ferramentas/gerador-de-codigo-de-barras/
+https://geradorcpf.github.io/ferramentas/gerador-de-conta-bancaria/
+https://geradorcpf.github.io/ferramentas/gerador-de-curriculo/
+https://geradorcpf.github.io/ferramentas/gerador-de-email-temporario/
+https://geradorcpf.github.io/ferramentas/gerador-de-empresas/
 
+30 Oktober 2026
+http://localhost:1313/ferramentas/gerador-de-hash-md5/ -- belum submit
+http://localhost:1313/ferramentas/gerador-de-hash-sha1/
+http://localhost:1313/ferramentas/gerador-de-imagem-placeholder/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-acre/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-alagoas/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-amapa/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-amazonas/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-bahia/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-ceara/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-distrito-federal/
+
+31 Oktober 2026

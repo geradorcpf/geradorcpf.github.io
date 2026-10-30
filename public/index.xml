@@ -6,8 +6,78 @@
     <description>Recent content on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 29 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gerador de Hash MD5</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-hash-md5/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-hash-md5/</guid>
+      <description>Gere o hash MD5 de um texto.</description>
+    </item>
+    <item>
+      <title>Gerador de Hash SHA1</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-hash-sha1/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-hash-sha1/</guid>
+      <description>Gere o hash SHA1 de um texto.</description>
+    </item>
+    <item>
+      <title>Gerador de Imagem Placeholder</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-imagem-placeholder/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-imagem-placeholder/</guid>
+      <description>Gere imagens de espaço reservado no tamanho e cor desejados.</description>
+    </item>
+    <item>
+      <title>Gerador de Inscrição Estadual da Bahia (BA)</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-bahia/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-bahia/</guid>
+      <description>Gere inscrições estaduais válidas para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Inscrição Estadual de Alagoas (AL)</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-alagoas/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-alagoas/</guid>
+      <description>Gere inscrições estaduais válidas para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Inscrição Estadual do Acre (AC)</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-acre/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-acre/</guid>
+      <description>Gere inscrições estaduais válidas para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Inscrição Estadual do Amapá (AP)</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-amapa/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-amapa/</guid>
+      <description>Gere inscrições estaduais válidas para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Inscrição Estadual do Amazonas (AM)</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-amazonas/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-amazonas/</guid>
+      <description>Gere inscrições estaduais válidas para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Inscrição Estadual do Ceará (CE)</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-ceara/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-ceara/</guid>
+      <description>Gere inscrições estaduais válidas para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Inscrição Estadual do Distrito Federal (DF)</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-distrito-federal/</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-distrito-federal/</guid>
+      <description>Gere inscrições estaduais válidas para testes.</description>
+    </item>
     <item>
       <title>Gerador de Certidões de Nascimento, Casamento e Óbito</title>
       <link>http://localhost:1313/ferramentas/gerador-de-certidoes/</link>
