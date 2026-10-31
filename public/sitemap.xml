@@ -3,7 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/ferramentas/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-hash-md5/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-hash-sha1/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-imagem-placeholder/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-bahia/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-alagoas/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-acre/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-amapa/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-amazonas/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-ceara/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-distrito-federal/</loc>
+    <lastmod>2026-10-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
@@ -38,11 +93,6 @@
     <priority>0.8</priority>
   </url><url>
     <loc>http://localhost:1313/ferramentas/gerador-de-conta-bancaria/</loc>
-    <lastmod>2026-10-29T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-10-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
