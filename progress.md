@@ -125,15 +125,27 @@ https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-ceara/
 https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-distrito-federal/
 
 31 Oktober 2026
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-espirito-santo/ -- belum submit
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-goias/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-maranhao/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-mato-grosso-do-sul/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-mato-grosso/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-minas-gerais/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-para/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-paraiba/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-parana/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-pernambuco/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-espirito-santo/ 
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-goias/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-maranhao/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-mato-grosso-do-sul/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-mato-grosso/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-minas-gerais/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-para/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-paraiba/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-parana/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-pernambuco/
 
 1 November 2026
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-piaui/ -- belum submit
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rio-de-janeiro/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rio-grande-do-norte/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rio-grande-do-sul/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rondonia/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-roraima/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-santa-catarina/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-sao-paulo/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-sergipe/
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-tocantins/
+
+2 November 2026
