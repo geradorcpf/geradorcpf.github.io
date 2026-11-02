@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de PIS/PASEP: online e grátis</title>
+<title>Gerador de PIS/PASEP</title>
 <meta name="description" content="Gerador de PIS/PASEP: gere números de PIS/PASEP válidos para testes. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-pis-pasep/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-pis-pasep/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de PIS/PASEP: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-pis-pasep/">
+<meta property="og:title" content="Gerador de PIS/PASEP">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-pis-pasep/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de PIS/PASEP: gere números de PIS/PASEP válidos para testes. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,25 +38,159 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de PIS/PASEP</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-pis-pasep/","name":"Gerador de PIS/PASEP","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de PIS/PASEP</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-pis-pasep/","name":"Gerador de PIS/PASEP","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de PIS/PASEP</h1>
   
-  
+  <p>Basta escolher se quer a pontuação e depois clicar em <strong>Gerar PIS</strong>.</p>
+<div id="gerador-pis" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔢 Gerador de PIS/PASEP</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Gere um número válido para testes na hora.</p>
+<span style="display:block;margin-bottom:8px;font-weight:600;font-size:0.95rem;">Gerar com pontuação?</span>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+<label for="pis-pont-sim" style="display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:1rem;font-weight:600;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;"><input id="pis-pont-sim" type="radio" name="pis-pontuacao" value="sim" checked style="margin:0;accent-color:#4f46e5;">Sim</label>
+<label for="pis-pont-nao" style="display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:1rem;font-weight:600;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;"><input id="pis-pont-nao" type="radio" name="pis-pontuacao" value="nao" style="margin:0;accent-color:#4f46e5;">Não</label>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="pis-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar PIS</button>
+<button type="button" id="pis-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="pis-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="pis-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">PIS/PASEP gerado:</strong> <span id="pis-resultado">clique em "Gerar PIS" para criar um número.</span><div id="pis-status" style="margin-top:6px;font-size:0.85rem;color:#475569;"></div></div>
+</div>
+<script>
+(function () {
+  var radSim = document.getElementById('pis-pont-sim');
+  var radNao = document.getElementById('pis-pont-nao');
+  var resultado = document.getElementById('pis-resultado');
+  var caixa = document.getElementById('pis-resposta');
+  var status = document.getElementById('pis-status');
+  var textoInicial = 'clique em "Gerar PIS" para criar um número.';
+  var pesos = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+  var atual = '';
+  function aleatorio(n) {
+    var v;
+    var c = window.crypto;
+    if (c) {
+      if (c.getRandomValues) {
+        var arr = new Uint32Array(1);
+        c.getRandomValues(arr);
+        v = arr[0];
+      }
+    }
+    if (v === undefined) { v = Math.floor(Math.random() * 4294967296); }
+    return v % n;
+  }
+  function gerarNumero() {
+    var digitos = [];
+    var soma = 0;
+    pesos.forEach(function (peso) {
+      var d = aleatorio(10);
+      digitos.push(d);
+      soma += d * peso;
+    });
+    var dv = 11 - (soma % 11);
+    if (dv === 10 || dv === 11) { dv = 0; }
+    digitos.push(dv);
+    return digitos.join('');
+  }
+  function formatar(n) {
+    if (radSim.checked) {
+      return n.slice(0, 3) + '.' + n.slice(3, 8) + '.' + n.slice(8, 10) + '-' + n.slice(10);
+    }
+    return n;
+  }
+  function mensagem(msg) { status.textContent = msg; }
+  function mostrar() {
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.4rem';
+    forte.style.letterSpacing = '1px';
+    forte.style.fontFamily = 'ui-monospace,SFMono-Regular,Menlo,Consolas,monospace';
+    forte.textContent = formatar(atual);
+    resultado.textContent = '';
+    resultado.appendChild(forte);
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+  }
+  function gerar() {
+    atual = gerarNumero();
+    mensagem('');
+    mostrar();
+  }
+  function copiarAntigo(texto) {
+    var area = document.createElement('textarea');
+    area.value = texto;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.top = '0';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(area);
+    mensagem(ok ? 'Número copiado!' : 'Não foi possível copiar. Selecione o número e copie manualmente.');
+  }
+  function copiar() {
+    if (atual === '') { mensagem('Gere um número antes de copiar.'); return; }
+    var texto = formatar(atual);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(texto).then(
+        function () { mensagem('Número copiado!'); },
+        function () { copiarAntigo(texto); }
+      );
+    } else {
+      copiarAntigo(texto);
+    }
+  }
+  function limpar() {
+    atual = '';
+    radSim.checked = true;
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = textoInicial;
+    mensagem('');
+  }
+  function trocarOpcao() {
+    if (atual !== '') { mostrar(); }
+  }
+  document.getElementById('pis-gerar').addEventListener('click', gerar);
+  document.getElementById('pis-copiar').addEventListener('click', copiar);
+  document.getElementById('pis-limpar').addEventListener('click', limpar);
+  radSim.addEventListener('change', trocarOpcao);
+  radNao.addEventListener('change', trocarOpcao);
+})();
+</script>
+<h2 id="como-usar-o-gerador">Como usar o gerador</h2>
+<ol>
+<li>Escolha <strong>Sim</strong> ou <strong>Não</strong> em &ldquo;Gerar com pontuação?&rdquo; para definir se o número terá pontos e hífen (<code>123.45678.90-1</code>) ou apenas dígitos (<code>12345678901</code>).</li>
+<li>Clique em <strong>Gerar PIS</strong> (ou em <strong>Gerar PIS</strong> novamente) para criar um novo número válido.</li>
+<li>Clique em <strong>Copiar</strong> para levar o número para a área de transferência e colá-lo no seu sistema ou formulário de teste.</li>
+<li>Se trocar a opção de pontuação depois de gerar, o mesmo número é exibido no novo formato, sem precisar gerar outro.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o resultado e voltar ao estado inicial.</li>
+</ol>
+<p>Os números são gerados de forma aleatória no seu navegador, respeitando a regra de cálculo do dígito verificador. Use-os apenas para testes de software, demonstrações e estudos.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>PIS (Programa de Integração Social):</strong> programa que cadastra o trabalhador de empresa privada e dá acesso a benefícios como o abono salarial e o seguro-desemprego.</li>
+<li><strong>PASEP (Programa de Formação do Patrimônio do Servidor Público):</strong> programa equivalente ao PIS, voltado aos servidores públicos.</li>
+<li><strong>PIS/PASEP:</strong> número de 11 dígitos que identifica o trabalhador em um desses programas. Na prática, ele segue o mesmo formato nos dois casos.</li>
+<li><strong>NIS (Número de Identificação Social):</strong> número de identificação do cidadão nos programas sociais. O PIS/PASEP é um dos tipos de NIS.</li>
+<li><strong>Dígito verificador:</strong> o último dígito do número, calculado a partir dos 10 primeiros. Ele serve para detectar erros de digitação e de validação.</li>
+<li><strong>Pontuação:</strong> a máscara com pontos e hífen aplicada ao número, no formato <code>000.00000.00-0</code>.</li>
+<li><strong>Número válido:</strong> número que passa na conta do dígito verificador. Ele pode ser aceito por um sistema, mas isso não significa que pertença a uma pessoa real.</li>
+<li><strong>Dados de teste:</strong> informações fictícias usadas por programadores e testadores para verificar o funcionamento de formulários, cadastros e sistemas.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-documentos">
-  <a class="card" href="/ferramentas/validador-de-pis-pasep/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Validador de PIS/PASEP</strong><small>Confira se um PIS/PASEP é válido.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
   <a class="card" href="/ferramentas/gerador-de-pessoas/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
@@ -64,24 +198,31 @@
   </a>
 </li>
 <li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-rg/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Gerador de RG</strong><small>Gere números de RG válidos para testes.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-titulo-de-eleitor/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Gerador de Título de Eleitor</strong><small>Gere números de título de eleitor válidos para testes.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
   <a class="card" href="/ferramentas/gerador-de-cnpj/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
     <span class="tx"><strong>Gerador de CNPJ</strong><small>Gere CNPJs válidos, com ou sem pontuação, para testes.</small></span>
+  </a>
+</li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/gerador-de-cnh/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de CNH</strong><small>Gere números de CNH válidos para testes.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/calculadora-de-horas/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora de Horas</strong><small>Some e subtraia horas e minutos.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/calculadora-dias-uteis/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Calculadora de Dias Úteis</strong><small>Conte os dias úteis entre duas datas, descontando feriados.</small></span>
   </a>
 </li>
 

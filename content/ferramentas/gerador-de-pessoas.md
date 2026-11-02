@@ -1,11 +1,398 @@
 ---
 title: "Gerador de Documentos de Pessoas"
-seoTitle: "Gerador de Documentos de Pessoas: online e grátis"
+seoTitle: "Gerador de Documentos de Pessoas"
 description: "Gerador de Documentos de Pessoas: gere pessoas fictícias com nome, CPF, RG, endereço e telefone. Grátis e online, sem cadastro."
 summary: "Gere pessoas fictícias com nome, CPF, RG, endereço e telefone."
-date: 2026-10-20
-draft: true
+date: 2026-11-02
+draft: false
 category: "documentos"
 tags: ["cpf", "rg", "pessoas", "gerador", "dados de teste", "documentos"]
 keywords: ["gerador de documentos de pessoas", "gerador de documentos de pessoas online", "cpf", "rg", "pessoas"]
 ---
+
+Basta escolher as opções abaixo (todas são opcionais) e clicar em **Gerar Pessoa**.
+
+<div id="ger-pessoas" style="max-width:760px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">👤 Gerador de Documentos de Pessoas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha as opções e gere pessoas fictícias na hora.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:20px;">
+<div>
+<label for="ger-sexo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Sexo</label>
+<select id="ger-sexo" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="A">Aleatório</option>
+<option value="M">Masculino</option>
+<option value="F">Feminino</option>
+</select>
+</div>
+<div>
+<label for="ger-idade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Idade (opcional)</label>
+<select id="ger-idade" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+</div>
+<div>
+<label for="ger-estado" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Estado (opcional)</label>
+<select id="ger-estado" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+</div>
+<div>
+<label for="ger-cidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Cidade (opcional)</label>
+<select id="ger-cidade" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+</div>
+<div>
+<label for="ger-pont" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Gerar com pontuação?</label>
+<select id="ger-pont" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="S">Sim</option>
+<option value="N">Não</option>
+</select>
+</div>
+<div>
+<label for="ger-qtd" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Quantas pessoas? (1 a 30)</label>
+<input id="ger-qtd" type="text" inputmode="numeric" value="1" placeholder="Ex.: 5" autocomplete="off" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="ger-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar Pessoa</button>
+<button type="button" id="ger-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="ger-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="ger-msg">escolha as opções e clique em "Gerar Pessoa".</span><div id="ger-cards"></div></div>
+<div id="ger-json-area" style="display:none;margin-top:16px;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
+<button type="button" id="ger-copiar-json" style="padding:10px 16px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar JSON</button>
+<button type="button" id="ger-baixar-json" style="padding:10px 16px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Baixar JSON</button>
+</div>
+<pre id="ger-json" style="margin:0;padding:14px;max-height:320px;overflow:auto;background:#ffffff;border:2px solid #c7d2fe;border-radius:12px;color:#1e293b;font-size:0.85rem;line-height:1.5;white-space:pre-wrap;word-break:break-word;"></pre>
+</div>
+</div>
+<script>
+(function () {
+  var DADOS = [
+    'AC|68|69900|69999|Rio Branco,Cruzeiro do Sul,Sena Madureira',
+    'AL|82|57000|57999|Maceió,Arapiraca,Palmeira dos Índios',
+    'AM|92|69000|69299|Manaus,Parintins,Itacoatiara',
+    'AP|96|68900|68999|Macapá,Santana,Laranjal do Jari',
+    'BA|71|40000|48999|Salvador,Feira de Santana,Vitória da Conquista,Ilhéus',
+    'CE|85|60000|63999|Fortaleza,Juazeiro do Norte,Sobral',
+    'DF|61|70000|73699|Brasília,Taguatinga,Ceilândia',
+    'ES|27|29000|29999|Vitória,Vila Velha,Serra',
+    'GO|62|73700|76799|Goiânia,Anápolis,Aparecida de Goiânia',
+    'MA|98|65000|65999|São Luís,Imperatriz,Caxias',
+    'MG|31|30000|39999|Belo Horizonte,Uberlândia,Juiz de Fora,Contagem',
+    'MS|67|79000|79999|Campo Grande,Dourados,Três Lagoas',
+    'MT|65|78000|78899|Cuiabá,Várzea Grande,Rondonópolis',
+    'PA|91|66000|68899|Belém,Santarém,Marabá',
+    'PB|83|58000|58999|João Pessoa,Campina Grande,Patos',
+    'PE|81|50000|56999|Recife,Olinda,Caruaru,Petrolina',
+    'PI|86|64000|64999|Teresina,Parnaíba,Picos',
+    'PR|41|80000|87999|Curitiba,Londrina,Maringá,Cascavel',
+    'RJ|21|20000|28999|Rio de Janeiro,Niterói,Petrópolis,Campos dos Goytacazes',
+    'RN|84|59000|59999|Natal,Mossoró,Parnamirim',
+    'RO|69|76800|76999|Porto Velho,Ji-Paraná,Ariquemes',
+    'RR|95|69300|69399|Boa Vista,Rorainópolis,Caracaraí',
+    'RS|51|90000|99999|Porto Alegre,Caxias do Sul,Pelotas,Santa Maria',
+    'SC|48|88000|89999|Florianópolis,Joinville,Blumenau,Chapecó',
+    'SE|79|49000|49999|Aracaju,Nossa Senhora do Socorro,Lagarto',
+    'SP|11|1000|19999|São Paulo,Campinas,Santos,Ribeirão Preto',
+    'TO|63|77000|77995|Palmas,Araguaína,Gurupi'
+  ];
+  var ESTADOS = DADOS.map(function (s) {
+    var p = s.split('|');
+    return { uf: p[0], ddd: p[1], a: Number(p[2]), b: Number(p[3]), cidades: p[4].split(',') };
+  });
+  var HOMENS = 'João,Pedro,Lucas,Gabriel,Mateus,Rafael,Gustavo,Felipe,Carlos,Bruno,Rodrigo,Thiago,Marcelo,André,Fernando,Daniel,Eduardo,Leonardo,Ricardo,Vinícius,Henrique,Paulo,Diego,Renato,Sérgio,Antônio,José,Francisco,Miguel,Arthur'.split(',');
+  var MULHERES = 'Maria,Ana,Juliana,Fernanda,Camila,Beatriz,Larissa,Patrícia,Amanda,Gabriela,Letícia,Mariana,Bruna,Aline,Carolina,Vanessa,Renata,Tatiane,Luciana,Isabela,Priscila,Sandra,Cláudia,Helena,Laura,Sofia,Rafaela,Débora,Simone,Raquel'.split(',');
+  var SOBRENOMES = 'Silva,Santos,Oliveira,Souza,Rodrigues,Ferreira,Alves,Pereira,Lima,Gomes,Costa,Ribeiro,Martins,Carvalho,Almeida,Lopes,Soares,Fernandes,Vieira,Barbosa,Rocha,Dias,Nascimento,Andrade,Moreira,Nunes,Marques,Machado,Mendes,Freitas,Cardoso,Ramos,Gonçalves,Santana,Teixeira,Araújo,Pinto,Correia,Cavalcante,Monteiro'.split(',');
+  var RUAS = 'Rua das Acácias,Rua Sete de Setembro,Avenida Brasil,Rua São José,Rua XV de Novembro,Avenida Getúlio Vargas,Rua das Palmeiras,Travessa da Paz,Rua Tiradentes,Avenida Central,Rua Dom Pedro II,Alameda dos Ipês,Rua Santos Dumont,Rua da Liberdade,Avenida Independência'.split(',');
+  var BAIRROS = 'Centro,Jardim América,Vila Nova,Bela Vista,Santa Maria,São Pedro,Boa Vista,Jardim das Flores,Vila Operária,Alto da Colina,Parque Industrial,Cidade Nova,Liberdade,Planalto,Vila Esperança'.split(',');
+  var CORES = 'Azul,Verde,Vermelho,Amarelo,Roxo,Laranja,Rosa,Preto,Branco,Cinza,Marrom,Turquesa'.split(',');
+  var SANGUE = 'A+,A-,B+,B-,AB+,AB-,O+,O-'.split(',');
+  var DOMINIOS = 'email.com.br,exemplo.com.br,teste.com.br,correio.com.br'.split(',');
+  var SIGNOS = ['Capricórnio', 'Aquário', 'Peixes', 'Áries', 'Touro', 'Gêmeos', 'Câncer', 'Leão', 'Virgem', 'Libra', 'Escorpião', 'Sagitário', 'Capricórnio'];
+  var CORTES = [19, 18, 20, 19, 20, 20, 22, 22, 22, 22, 21, 21];
+  var CARACTERES = 'abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  var GRUPOS = [
+    ['Dados Pessoais', [['Nome', 'nome'], ['CPF', 'cpf'], ['RG', 'rg'], ['Data de Nascimento', 'data_nasc'], ['Sexo', 'sexo'], ['Signo', 'signo']]],
+    ['Filiação', [['Mãe', 'mae'], ['Pai', 'pai']]],
+    ['Online', [['E-Mail', 'email'], ['Senha', 'senha']]],
+    ['Endereço', [['CEP', 'cep'], ['Endereço', 'endereco'], ['Número', 'numero'], ['Bairro', 'bairro'], ['Cidade', 'cidade'], ['Estado', 'estado']]],
+    ['Telefones', [['Telefone', 'telefone_fixo'], ['Celular', 'celular']]],
+    ['Características Físicas', [['Altura', 'altura'], ['Peso', 'peso'], ['Tipo Sanguíneo', 'tipo_sanguineo']]],
+    ['Outros', [['Cor Favorita', 'cor_favorita']]]
+  ];
+  var ESTILO_CARD = 'margin-top:14px;padding:16px;background:#ffffff;border:1px solid #c7d2fe;border-radius:12px;color:#1e293b;text-align:left;';
+  var ESTILO_NUM = 'font-weight:700;font-size:1.05rem;color:#4f46e5;margin-bottom:4px;';
+  var ESTILO_H3 = 'margin:14px 0 4px;font-size:0.95rem;color:#3730a3;';
+  var ESTILO_LINHA = 'display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid #eef2ff;font-size:0.95rem;';
+  var ESTILO_ROTULO = 'color:#64748b;flex-shrink:0;';
+  var ESTILO_VALOR = 'font-weight:600;color:#1e293b;text-align:right;word-break:break-word;cursor:pointer;';
+  var jsonAtual = '';
+  var selSexo = document.getElementById('ger-sexo');
+  var selIdade = document.getElementById('ger-idade');
+  var selEstado = document.getElementById('ger-estado');
+  var selCidade = document.getElementById('ger-cidade');
+  var selPont = document.getElementById('ger-pont');
+  var inQtd = document.getElementById('ger-qtd');
+  var caixa = document.getElementById('ger-resposta');
+  var msg = document.getElementById('ger-msg');
+  var cards = document.getElementById('ger-cards');
+  var areaJson = document.getElementById('ger-json-area');
+  var preJson = document.getElementById('ger-json');
+  function el(tag, estilo, texto) {
+    var e = document.createElement(tag);
+    if (estilo) { e.style.cssText = estilo; }
+    if (texto !== undefined) { e.textContent = texto; }
+    return e;
+  }
+  function rnd(a, b) { return a + Math.floor(Math.random() * (b - a + 1)); }
+  function pick(lista) { return lista[rnd(0, lista.length - 1)]; }
+  function pad(n, t) { return ('0000000000' + n).slice(-t); }
+  function range(n) { return Array.apply(null, Array(n)).map(function (x, i) { return i; }); }
+  function digitos(n) { return range(n).map(function () { return rnd(0, 9); }); }
+  function simples(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z]/g, ''); }
+  function dvCpf(nums) {
+    var peso = nums.length + 1;
+    var soma = 0;
+    nums.forEach(function (d, i) { soma += d * (peso - i); });
+    return ((soma * 10) % 11) % 10;
+  }
+  function gerarCpf() {
+    var n;
+    do { n = digitos(9); } while (n.every(function (d) { return d === n[0]; }));
+    n.push(dvCpf(n));
+    n.push(dvCpf(n));
+    return n.join('');
+  }
+  function gerarRg() {
+    var n = digitos(8);
+    var soma = 0;
+    n.forEach(function (d, i) { soma += d * (i + 2); });
+    var r = 11 - (soma % 11);
+    var dv = r === 10 ? 'X' : (r === 11 ? '0' : String(r));
+    return n.join('') + dv;
+  }
+  function fmtCpf(c) { return c.slice(0, 3) + '.' + c.slice(3, 6) + '.' + c.slice(6, 9) + '-' + c.slice(9); }
+  function fmtRg(r) { return r.slice(0, 2) + '.' + r.slice(2, 5) + '.' + r.slice(5, 8) + '-' + r.slice(8); }
+  function fmtCep(c) { return c.slice(0, 5) + '-' + c.slice(5); }
+  function fmtFixo(t) { return '(' + t.slice(0, 2) + ') ' + t.slice(2, 6) + '-' + t.slice(6); }
+  function fmtCel(t) { return '(' + t.slice(0, 2) + ') ' + t.slice(2, 7) + '-' + t.slice(7); }
+  function nascimento(idade) {
+    var hoje = new Date();
+    var d = new Date(hoje.getFullYear() - idade, hoje.getMonth(), hoje.getDate());
+    d.setDate(d.getDate() - rnd(0, 364));
+    return d;
+  }
+  function signo(d) {
+    var m = d.getMonth();
+    var dia = d.getDate();
+    return Math.min(dia, CORTES[m]) === dia ? SIGNOS[m] : SIGNOS[m + 1];
+  }
+  function senha() {
+    return range(rnd(8, 10)).map(function () { return CARACTERES.charAt(rnd(0, CARACTERES.length - 1)); }).join('');
+  }
+  function gerarPessoa(op) {
+    var sexo = op.sexo === 'A' ? pick(['M', 'F']) : op.sexo;
+    var est = op.uf ? ESTADOS.filter(function (e) { return e.uf === op.uf; })[0] : pick(ESTADOS);
+    var cidade = op.cidade ? op.cidade : pick(est.cidades);
+    var idade = op.idade ? Number(op.idade) : rnd(18, 80);
+    var nasc = nascimento(idade);
+    var s1 = pick(SOBRENOMES);
+    var s2 = pick(SOBRENOMES);
+    var primeiro = sexo === 'M' ? pick(HOMENS) : pick(MULHERES);
+    var cpf = gerarCpf();
+    var rg = gerarRg();
+    var cep = pad(rnd(est.a, est.b), 5) + pad(rnd(0, 999), 3);
+    var fixo = est.ddd + pick(['2', '3', '4', '5']) + pad(rnd(0, 9999999), 7);
+    var cel = est.ddd + '9' + pad(rnd(0, 99999999), 8);
+    var p = op.pont === 'S';
+    return {
+      nome: primeiro + ' ' + s1 + ' ' + s2,
+      cpf: p ? fmtCpf(cpf) : cpf,
+      rg: p ? fmtRg(rg) : rg,
+      data_nasc: pad(nasc.getDate(), 2) + '/' + pad(nasc.getMonth() + 1, 2) + '/' + nasc.getFullYear(),
+      sexo: sexo === 'M' ? 'Masculino' : 'Feminino',
+      signo: signo(nasc),
+      mae: pick(MULHERES) + ' ' + pick(SOBRENOMES) + ' ' + s1,
+      pai: pick(HOMENS) + ' ' + pick(SOBRENOMES) + ' ' + s2,
+      email: simples(primeiro) + '.' + simples(s2) + rnd(1, 99) + '@' + pick(DOMINIOS),
+      senha: senha(),
+      cep: p ? fmtCep(cep) : cep,
+      endereco: pick(RUAS),
+      numero: String(rnd(1, 9999)),
+      bairro: pick(BAIRROS),
+      cidade: cidade,
+      estado: est.uf,
+      telefone_fixo: p ? fmtFixo(fixo) : fixo,
+      celular: p ? fmtCel(cel) : cel,
+      altura: (rnd(150, 199) / 100).toFixed(2).replace('.', ','),
+      peso: String(rnd(50, 110)),
+      tipo_sanguineo: pick(SANGUE),
+      cor_favorita: pick(CORES)
+    };
+  }
+  function copiar(texto, depois) {
+    function alternativo() {
+      var t = document.createElement('textarea');
+      t.value = texto;
+      t.style.position = 'fixed';
+      t.style.opacity = '0';
+      document.body.appendChild(t);
+      t.select();
+      try { document.execCommand('copy'); } catch (e) { }
+      document.body.removeChild(t);
+      depois();
+    }
+    try {
+      navigator.clipboard.writeText(texto).then(depois, alternativo);
+    } catch (e) {
+      alternativo();
+    }
+  }
+  function piscar(elemento, textoNovo) {
+    var antigo = elemento.textContent;
+    elemento.textContent = textoNovo;
+    setTimeout(function () { elemento.textContent = antigo; }, 900);
+  }
+  function linha(rotulo, valor) {
+    var l = el('div', ESTILO_LINHA);
+    var v = el('span', ESTILO_VALOR, valor);
+    v.title = 'Clique para copiar';
+    v.addEventListener('click', function () {
+      var original = valor;
+      copiar(original, function () { piscar(v, 'Copiado!'); });
+    });
+    l.appendChild(el('span', ESTILO_ROTULO, rotulo));
+    l.appendChild(v);
+    return l;
+  }
+  function mostrar(lista) {
+    cards.textContent = '';
+    lista.forEach(function (p, i) {
+      var card = el('div', ESTILO_CARD);
+      if (lista.length !== 1) { card.appendChild(el('div', ESTILO_NUM, 'Pessoa ' + (i + 1))); }
+      GRUPOS.forEach(function (g) {
+        card.appendChild(el('h3', ESTILO_H3, g[0]));
+        g[1].forEach(function (c) { card.appendChild(linha(c[0], p[c[1]])); });
+      });
+      cards.appendChild(card);
+    });
+  }
+  function erro(texto) {
+    caixa.style.borderStyle = 'dashed';
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    msg.style.color = '#b91c1c';
+    msg.textContent = texto;
+    cards.textContent = '';
+    areaJson.style.display = 'none';
+  }
+  function gerar() {
+    var q = parseInt(inQtd.value.trim(), 10);
+    if (isNaN(q) || Math.min(30, Math.max(1, q)) !== q) { erro('insira um número de pessoas entre 1 e 30.'); return; }
+    var op = { sexo: selSexo.value, idade: selIdade.value, uf: selEstado.value, cidade: selCidade.value, pont: selPont.value };
+    var lista = range(q).map(function () { return gerarPessoa(op); });
+    caixa.style.borderStyle = 'solid';
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    msg.style.color = '#166534';
+    msg.textContent = (q === 1 ? '1 pessoa gerada.' : q + ' pessoas geradas.') + ' Clique em qualquer valor para copiá-lo.';
+    mostrar(lista);
+    jsonAtual = JSON.stringify(lista, null, 2);
+    preJson.textContent = jsonAtual;
+    areaJson.style.display = 'block';
+  }
+  function limpar() {
+    selSexo.value = 'A';
+    selIdade.value = '';
+    selEstado.value = '';
+    preencherCidades();
+    selPont.value = 'S';
+    inQtd.value = '1';
+    caixa.style.borderStyle = 'dashed';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    msg.style.color = '#64748b';
+    msg.textContent = 'escolha as opções e clique em "Gerar Pessoa".';
+    cards.textContent = '';
+    areaJson.style.display = 'none';
+    jsonAtual = '';
+  }
+  function opcao(valor, texto) {
+    var o = document.createElement('option');
+    o.value = valor;
+    o.textContent = texto;
+    return o;
+  }
+  function preencherCidades() {
+    selCidade.textContent = '';
+    selCidade.appendChild(opcao('', 'Qualquer cidade'));
+    var uf = selEstado.value;
+    if (uf) {
+      ESTADOS.filter(function (e) { return e.uf === uf; })[0].cidades.forEach(function (c) { selCidade.appendChild(opcao(c, c)); });
+    }
+  }
+  selIdade.appendChild(opcao('', 'Aleatória'));
+  range(63).forEach(function (i) { selIdade.appendChild(opcao(String(i + 18), String(i + 18) + ' anos')); });
+  selEstado.appendChild(opcao('', 'Qualquer estado'));
+  ESTADOS.forEach(function (e) { selEstado.appendChild(opcao(e.uf, e.uf)); });
+  preencherCidades();
+  selEstado.addEventListener('change', preencherCidades);
+  document.getElementById('ger-gerar').addEventListener('click', gerar);
+  document.getElementById('ger-limpar').addEventListener('click', limpar);
+  document.getElementById('ger-copiar-json').addEventListener('click', function () {
+    var botao = document.getElementById('ger-copiar-json');
+    copiar(jsonAtual, function () { piscar(botao, 'Copiado!'); });
+  });
+  document.getElementById('ger-baixar-json').addEventListener('click', function () {
+    var blob = new Blob([jsonAtual], { type: 'application/json' });
+    var link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'pessoas.json';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+  inQtd.addEventListener('keydown', function (e) { if (e.key === 'Enter') { gerar(); } });
+  [selSexo, selIdade, selEstado, selCidade, selPont, inQtd].forEach(function (c) {
+    c.addEventListener('focus', function () { c.style.borderColor = '#6366f1'; });
+    c.addEventListener('blur', function () { c.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+
+## Como usar o gerador
+
+1. Escolha o **Sexo** da pessoa (Masculino, Feminino ou Aleatório).
+2. Se quiser, selecione uma **Idade** entre 18 e 80 anos. Ela define a data de nascimento. Deixe em "Aleatória" para sortear.
+3. Se quiser, selecione o **Estado** e, depois, a **Cidade**. Sem escolha, o gerador sorteia os dois.
+4. Em **Gerar com pontuação?**, escolha "Sim" para documentos com pontos e traços (como `123.456.789-09`) ou "Não" para apenas números.
+5. Informe **Quantas pessoas** quer gerar, de 1 a 30.
+6. Clique em **Gerar Pessoa** (ou pressione Enter no campo de quantidade).
+7. Clique em qualquer valor do resultado para copiá-lo. Para pegar tudo de uma vez, use **Copiar JSON** ou **Baixar JSON**.
+8. Use o botão **Limpar** para voltar às opções iniciais e apagar o resultado.
+
+Os dados são gerados no seu navegador e não são enviados nem guardados em nenhum servidor. Eles servem para testes de software, preenchimento de formulários de demonstração e estudos. Os números respeitam as regras de formação de cada documento, mas são sorteados e podem coincidir, por acaso, com números de pessoas reais. Não use esses dados para fins ilegais ou para se passar por outra pessoa.
+
+## Entendendo os termos
+
+- **Nome:** nome completo fictício, formado por um primeiro nome e dois sobrenomes.
+- **CPF:** Cadastro de Pessoas Físicas, número de 11 dígitos que identifica o contribuinte no Brasil. Os dois últimos são dígitos verificadores calculados a partir dos nove primeiros.
+- **RG:** Registro Geral, documento de identidade com 8 dígitos mais um dígito verificador, que pode ser um número ou a letra X.
+- **Data de Nascimento:** dia, mês e ano em que a pessoa nasceu, coerente com a idade escolhida.
+- **Sexo:** sexo da pessoa gerada, Masculino ou Feminino.
+- **Signo:** signo do zodíaco definido pela data de nascimento.
+- **Filiação:** nomes dos pais da pessoa.
+- **Mãe:** nome completo fictício da mãe.
+- **Pai:** nome completo fictício do pai.
+- **E-Mail:** endereço de e-mail fictício, montado a partir do nome da pessoa.
+- **Senha:** sequência aleatória de letras e números, útil para testar cadastros e logins.
+- **CEP:** Código de Endereçamento Postal, com 8 dígitos. Aqui ele é sorteado dentro da faixa do estado escolhido e não corresponde a um logradouro real.
+- **Endereço:** nome da rua, avenida ou travessa (fictício).
+- **Número:** número da residência na rua.
+- **Bairro:** bairro onde a pessoa mora.
+- **Cidade:** município da pessoa, sorteado entre as cidades do estado ou escolhido por você.
+- **Estado:** unidade da federação, indicada pela sigla (SP, RJ, MG etc.).
+- **Telefone:** telefone fixo com DDD do estado e 8 dígitos.
+- **Celular:** telefone celular com DDD do estado e 9 dígitos, começando por 9.
+- **Altura:** altura da pessoa em metros.
+- **Peso:** peso da pessoa em quilos.
+- **Tipo Sanguíneo:** grupo sanguíneo do sistema ABO e fator Rh (A+, O-, AB+ etc.).
+- **Cor Favorita:** cor preferida da pessoa, escolhida ao acaso.
+- **Pontuação:** pontos, traços e parênteses usados na formatação de CPF, RG, CEP e telefones.
+- **JSON:** formato de texto estruturado, muito usado por programas e APIs, que reúne todos os dados gerados para copiar ou baixar.

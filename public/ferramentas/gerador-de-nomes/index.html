@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de Nomes: online e grátis</title>
+<title>Gerador de Nomes</title>
 <meta name="description" content="Gerador de Nomes: gere nomes e sobrenomes brasileiros aleatórios. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-nomes/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-nomes/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de Nomes: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-nomes/">
+<meta property="og:title" content="Gerador de Nomes">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-nomes/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de Nomes: gere nomes e sobrenomes brasileiros aleatórios. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,217 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Nomes</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-nomes/","name":"Gerador de Nomes","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Nomes</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-nomes/","name":"Gerador de Nomes","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de Nomes</h1>
   
-  
+  <p>Basta escolher a raça, o gênero e a quantidade abaixo e depois clicar em <strong>Gerar Nomes</strong>.</p>
+<div id="calc-gerador-nomes" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🎲 Gerador de Nomes</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha as opções e gere nomes na hora.</p>
+<label for="ger-raca" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Raça</label>
+<select id="ger-raca" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="aleatorio">Aleatório</option>
+<option value="humano">Humano</option>
+<option value="elfo">Elfo</option>
+<option value="anao">Anão</option>
+<option value="orc">Orc</option>
+<option value="dragao">Dragão</option>
+</select>
+<label for="ger-genero" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Gênero</label>
+<select id="ger-genero" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="m">Masculino</option>
+<option value="f">Feminino</option>
+</select>
+<label for="ger-quantidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Quantidade (1 a 50)</label>
+<input id="ger-quantidade" type="text" inputmode="numeric" placeholder="Ex.: 10" value="10" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="ger-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar Nomes</button>
+<button type="button" id="ger-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar Todos</button>
+<button type="button" id="ger-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="ger-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="ger-resultado">escolha as opções e clique em "Gerar Nomes".</span></div>
+</div>
+<script>
+(function () {
+  var selRaca = document.getElementById('ger-raca');
+  var selGenero = document.getElementById('ger-genero');
+  var inpQtd = document.getElementById('ger-quantidade');
+  var resultado = document.getElementById('ger-resultado');
+  var caixa = document.getElementById('ger-resposta');
+  var atual = [];
+  var MSG_INICIAL = 'escolha as opções e clique em "Gerar Nomes".';
+  var RACAS = ['humano', 'elfo', 'anao', 'orc', 'dragao'];
+  var HUM_M = ['João', 'Pedro', 'Lucas', 'Gabriel', 'Mateus', 'Rafael', 'Carlos', 'Rodrigo', 'Felipe', 'Bruno', 'Thiago', 'Gustavo', 'Eduardo', 'Henrique', 'Fernando', 'André', 'Marcelo', 'Daniel', 'Leonardo', 'Ricardo'];
+  var HUM_F = ['Maria', 'Ana', 'Juliana', 'Camila', 'Fernanda', 'Beatriz', 'Larissa', 'Patrícia', 'Aline', 'Mariana', 'Letícia', 'Carolina', 'Amanda', 'Renata', 'Bianca', 'Gabriela', 'Luana', 'Vanessa', 'Isabela', 'Priscila'];
+  var HUM_S = ['Silva', 'Santos', 'Oliveira', 'Souza', 'Pereira', 'Costa', 'Rodrigues', 'Almeida', 'Nascimento', 'Lima', 'Araújo', 'Fernandes', 'Carvalho', 'Gomes', 'Martins', 'Rocha', 'Ribeiro', 'Alves', 'Monteiro', 'Barbosa'];
+  var ELF_PM = ['aeg', 'bara', 'beleg', 'celeb', 'el', 'fela', 'gal'];
+  var ELF_SM = ['bor', 'las', 'randir', 'rod', 'thalion', 'thir', 'uil'];
+  var ELF_PF = ['fan', 'galadh', 'gil', 'mel', 'mor', 'sael'];
+  var ELF_SF = ['anor', 'dis', 'el', 'uilos'];
+  var ANA_P = ['g', 'k', 'l', 't', 'dw', 'thr'];
+  var ANA_S = ['ori', 'óin', 'íli', 'alin', 'orin', 'osi', 'imli', 'ormur'];
+  var ANA_C = ['Martelo de Ferro', 'Barba de Pedra', 'Punho de Aço', 'Forjador', 'Mineiro', 'Escudo de Carvalho', 'Machado de Prata', 'Filho da Montanha', 'Ferreiro', 'Cavador de Ouro'];
+  var ORC_S = ['Gor', 'Mog', 'Thrak', 'Urz', 'Krag', 'Dur', 'Bol', 'Zug', 'Rak', 'Naz', 'Gul', 'Varg'];
+  var ORC_T = ['bolg', 'mush', 'thak', 'nash', 'zul', 'krim', 'dagh', 'rukh'];
+  var DRA_P = ['Vyr', 'Thar', 'Zy', 'Ignar', 'Kael', 'Draz', 'Sar', 'Mor', 'Aur', 'Ny'];
+  var DRA_SM = ['ax', 'ion', 'rath', 'ynth', 'oth', 'akar', 'us'];
+  var DRA_SF = ['ia', 'yra', 'ithra', 'ael', 'essa', 'una', 'ira'];
+  var DRA_E = ['Sopro de Fogo', 'Asa de Sombra', 'Escama Rubra', 'Garra de Gelo', 'Coração de Brasa', 'Olhar de Tempestade', 'Guardião do Tesouro', 'Senhor das Cinzas'];
+  function pick(lista) { return lista[Math.floor(Math.random() * lista.length)]; }
+  function cap(t) { return t.charAt(0).toUpperCase() + t.slice(1); }
+  function humano(f) {
+    var s1 = pick(HUM_S);
+    var s2 = pick(HUM_S);
+    while (s2 === s1) { s2 = pick(HUM_S); }
+    return pick(f ? HUM_F : HUM_M) + ' ' + s1 + ' ' + s2;
+  }
+  function elfoNome(f) {
+    return f ? cap(pick(ELF_PF) + pick(ELF_SF)) : cap(pick(ELF_PM) + pick(ELF_SM));
+  }
+  function elfo(f) { return elfoNome(f) + ' ' + elfoNome(f); }
+  function anao() { return cap(pick(ANA_P) + pick(ANA_S)) + ' ' + pick(ANA_C); }
+  function orc(f) {
+    var nome = pick(ORC_S) + pick(['osh', 'om']) + (f ? 'a' : '');
+    return nome + ' ' + cap((f ? 'gra' : 'gro') + pick(ORC_T));
+  }
+  function dragao(f) { return cap(pick(DRA_P) + pick(f ? DRA_SF : DRA_SM)) + ' ' + pick(DRA_E); }
+  function gerarUm(raca, f) {
+    if (raca === 'aleatorio') { raca = pick(RACAS); }
+    if (raca === 'humano') { return humano(f); }
+    if (raca === 'elfo') { return elfo(f); }
+    if (raca === 'anao') { return anao(); }
+    if (raca === 'orc') { return orc(f); }
+    return dragao(f);
+  }
+  function fallback(texto) {
+    var ta = document.createElement('textarea');
+    ta.value = texto;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+  function aviso(msg) {
+    var el = document.getElementById('ger-aviso');
+    if (el) { el.textContent = msg; }
+  }
+  function copiar(texto, msg) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(function () { aviso(msg); }, function () { fallback(texto); aviso(msg); });
+    } else {
+      fallback(texto);
+      aviso(msg);
+    }
+  }
+  function erro(msg) {
+    atual = [];
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.display = 'inline';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function mostrar(lista) {
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.display = 'block';
+    resultado.style.color = '#166534';
+    resultado.textContent = '';
+    var dica = document.createElement('div');
+    dica.style.cssText = 'margin:4px 0 10px;font-size:0.9rem;color:#475569;';
+    dica.textContent = lista.length + ' nome(s) gerado(s). Clique em um nome para copiar.';
+    resultado.appendChild(dica);
+    var grade = document.createElement('div');
+    grade.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;';
+    lista.forEach(function (nome) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = nome;
+      b.title = 'Clique para copiar';
+      b.style.cssText = 'padding:8px 12px;font-size:0.95rem;font-weight:600;color:#166534;background:#ffffff;border:2px solid #86efac;border-radius:10px;cursor:pointer;';
+      b.addEventListener('click', function () { copiar(nome, 'Copiado: ' + nome); });
+      grade.appendChild(b);
+    });
+    resultado.appendChild(grade);
+    var av = document.createElement('div');
+    av.id = 'ger-aviso';
+    av.style.cssText = 'margin-top:10px;font-size:0.9rem;font-weight:600;color:#166534;';
+    resultado.appendChild(av);
+  }
+  function gerar() {
+    var t = String(inpQtd.value).trim();
+    var q = Number(t);
+    if (t === '' || isNaN(q) || q % 1 !== 0) { erro('informe uma quantidade válida (número inteiro).'); return; }
+    if (q === 0 || q > 50 || q !== Math.abs(q)) { erro('a quantidade deve ficar entre 1 e 50.'); return; }
+    var f = selGenero.value === 'f';
+    var lista = [];
+    var tentativas = 0;
+    while (lista.length !== q && tentativas !== 2000) {
+      var n = gerarUm(selRaca.value, f);
+      if (lista.indexOf(n) === -1) { lista.push(n); }
+      tentativas++;
+    }
+    atual = lista;
+    mostrar(lista);
+  }
+  function copiarTodos() {
+    if (atual.length === 0) { erro('gere os nomes primeiro para poder copiá-los.'); return; }
+    copiar(atual.join('\n'), 'Todos os nomes foram copiados.');
+  }
+  function limpar() {
+    atual = [];
+    selRaca.value = 'aleatorio';
+    selGenero.value = 'm';
+    inpQtd.value = '10';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.display = 'inline';
+    resultado.style.color = '#64748b';
+    resultado.textContent = MSG_INICIAL;
+    selRaca.focus();
+  }
+  document.getElementById('ger-gerar').addEventListener('click', gerar);
+  document.getElementById('ger-copiar').addEventListener('click', copiarTodos);
+  document.getElementById('ger-limpar').addEventListener('click', limpar);
+  inpQtd.addEventListener('keydown', function (e) { if (e.key === 'Enter') { gerar(); } });
+  [selRaca, selGenero, inpQtd].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-calculadora">Como usar a calculadora</h2>
+<ol>
+<li>Escolha a <strong>Raça</strong> do nome no primeiro campo (ou deixe em <strong>Aleatório</strong> para misturar todas).</li>
+<li>Escolha o <strong>Gênero</strong>: Masculino ou Feminino.</li>
+<li>Digite a <strong>Quantidade</strong> de nomes que deseja gerar (de 1 a 50).</li>
+<li>Clique em <strong>Gerar Nomes</strong> (ou pressione Enter no campo de quantidade) para ver o resultado.</li>
+<li>Clique sobre um nome para copiá-lo, ou use <strong>Copiar Todos</strong> para copiar a lista inteira.</li>
+<li>Use o botão <strong>Limpar</strong> para voltar às opções iniciais e fazer uma nova geração.</li>
+</ol>
+<p>Cada clique em <strong>Gerar Nomes</strong> cria uma nova lista, e os nomes de uma mesma lista não se repetem.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Nome:</strong> palavra que identifica a pessoa ou o personagem, também chamada de primeiro nome ou nome próprio.</li>
+<li><strong>Sobrenome:</strong> parte do nome que indica a família, o clã, a tribo ou uma característica. Nos humanos são dois sobrenomes brasileiros; nas outras raças funciona como apelido ou título.</li>
+<li><strong>Raça:</strong> tipo de pessoa ou criatura para o qual o nome é gerado, o que muda o estilo e a sonoridade do resultado.</li>
+<li><strong>Aleatório:</strong> sorteia uma raça diferente para cada nome gerado.</li>
+<li><strong>Humano:</strong> nomes e sobrenomes brasileiros comuns, úteis também como dados de teste.</li>
+<li><strong>Elfo:</strong> nomes elegantes formados pela união de um prefixo e um sufixo, como em histórias de fantasia.</li>
+<li><strong>Anão:</strong> nomes curtos de sonoridade nórdica, seguidos de um clã ou profissão como sobrenome.</li>
+<li><strong>Orc:</strong> nomes fortes e curtos, com terminações como -osh e -om, e sobrenome que indica a tribo.</li>
+<li><strong>Dragão:</strong> nomes imponentes de sonoridade rústica, acompanhados de um título como Asa de Sombra.</li>
+<li><strong>Gênero:</strong> define se o nome terá forma masculina ou feminina. Nos anões, o nome é o mesmo para os dois gêneros.</li>
+<li><strong>Quantidade:</strong> número de nomes que serão gerados de uma só vez.</li>
+<li><strong>Prefixo e sufixo:</strong> pedaços de palavra colocados no início e no fim para formar um nome novo.</li>
+<li><strong>Nome de fantasia:</strong> nome inventado para personagens de jogos, histórias e RPG, ou para usar como apelido.</li>
+<li><strong>Copiar:</strong> envia o nome clicado, ou a lista inteira, para a área de transferência, pronto para colar em outro lugar.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -63,13 +268,6 @@
     <span class="tx"><strong>Gerador de Nicks</strong><small>Gere nicks e apelidos criativos para jogos e redes.</small></span>
   </a>
 </li>
-<li class="c-aleatorio">
-  <a class="card" href="/ferramentas/sorteio/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
-</span>
-    <span class="tx"><strong>Sorteio Online</strong><small>Sorteie nomes ou itens de uma lista.</small></span>
-  </a>
-</li>
 <li class="c-documentos">
   <a class="card" href="/ferramentas/gerador-de-inscricao-estadual-tocantins/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
@@ -82,6 +280,13 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
     <span class="tx"><strong>Gerador de Inscrição Estadual de Sergipe (SE)</strong><small>Gere inscrições estaduais válidas para testes.</small></span>
+  </a>
+</li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/gerador-de-pis-pasep/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de PIS/PASEP</strong><small>Gere números de PIS/PASEP válidos para testes.</small></span>
   </a>
 </li>
 

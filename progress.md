@@ -137,15 +137,27 @@ https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-parana/
 https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-pernambuco/
 
 1 November 2026
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-piaui/ -- belum submit
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rio-de-janeiro/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rio-grande-do-norte/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rio-grande-do-sul/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rondonia/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-roraima/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-santa-catarina/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-sao-paulo/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-sergipe/
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-tocantins/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-piaui/ 
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rio-de-janeiro/ -- belum submit
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rio-grande-do-norte/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rio-grande-do-sul/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rondonia/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-roraima/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-santa-catarina/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-sao-paulo/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-sergipe/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-tocantins/
 
 2 November 2026
+http://localhost:1313/ferramentas/gerador-de-inscricao-estadual/
+http://localhost:1313/ferramentas/gerador-de-link-whatsapp/
+http://localhost:1313/ferramentas/gerador-de-meta-tags/
+http://localhost:1313/ferramentas/gerador-de-nicks/
+http://localhost:1313/ferramentas/gerador-de-nomes/
+http://localhost:1313/ferramentas/gerador-de-numeros-aleatorios/
+http://localhost:1313/ferramentas/gerador-de-numeros-mega-sena/
+http://localhost:1313/ferramentas/gerador-de-palavras-aleatorias/
+http://localhost:1313/ferramentas/gerador-de-pessoas/
+http://localhost:1313/ferramentas/gerador-de-pis-pasep/
+
+3 November 2026

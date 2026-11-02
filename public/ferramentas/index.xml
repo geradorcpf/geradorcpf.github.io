@@ -6,8 +6,78 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gerador de Documentos de Pessoas</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-pessoas/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-pessoas/</guid>
+      <description>Gere pessoas fictícias com nome, CPF, RG, endereço e telefone.</description>
+    </item>
+    <item>
+      <title>Gerador de Inscrição Estadual</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual/</guid>
+      <description>Gere inscrições estaduais válidas para qualquer estado.</description>
+    </item>
+    <item>
+      <title>Gerador de Link para WhatsApp</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-link-whatsapp/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-link-whatsapp/</guid>
+      <description>Crie um link para abrir conversa no WhatsApp com mensagem pronta.</description>
+    </item>
+    <item>
+      <title>Gerador de Meta Tags</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-meta-tags/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-meta-tags/</guid>
+      <description>Monte as meta tags de título, descrição e redes sociais.</description>
+    </item>
+    <item>
+      <title>Gerador de Nicks</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-nicks/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-nicks/</guid>
+      <description>Gere nicks e apelidos criativos para jogos e redes.</description>
+    </item>
+    <item>
+      <title>Gerador de Nomes</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-nomes/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-nomes/</guid>
+      <description>Gere nomes e sobrenomes brasileiros aleatórios.</description>
+    </item>
+    <item>
+      <title>Gerador de Números Aleatórios</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-numeros-aleatorios/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-numeros-aleatorios/</guid>
+      <description>Sorteie números aleatórios dentro do intervalo que quiser.</description>
+    </item>
+    <item>
+      <title>Gerador de Números da Megasena</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-numeros-mega-sena/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-numeros-mega-sena/</guid>
+      <description>Gere palpites de seis dezenas para a Mega-Sena.</description>
+    </item>
+    <item>
+      <title>Gerador de Palavras Aleatórias</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-palavras-aleatorias/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-palavras-aleatorias/</guid>
+      <description>Gere palavras aleatórias para jogos e criação de texto.</description>
+    </item>
+    <item>
+      <title>Gerador de PIS/PASEP</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-pis-pasep/</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-pis-pasep/</guid>
+      <description>Gere números de PIS/PASEP válidos para testes.</description>
+    </item>
     <item>
       <title>Gerador de Inscrição Estadual de Rondônia (RO)</title>
       <link>http://localhost:1313/ferramentas/gerador-de-inscricao-estadual-rondonia/</link>

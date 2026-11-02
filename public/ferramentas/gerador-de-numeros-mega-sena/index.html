@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de Números da Megasena: online e grátis</title>
+<title>Gerador de Números da Megasena</title>
 <meta name="description" content="Gerador de Números da Megasena: gere palpites de seis dezenas para a Mega-Sena. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-numeros-mega-sena/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-numeros-mega-sena/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de Números da Megasena: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-numeros-mega-sena/">
+<meta property="og:title" content="Gerador de Números da Megasena">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-numeros-mega-sena/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de Números da Megasena: gere palpites de seis dezenas para a Mega-Sena. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,123 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Números da Megasena</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-numeros-mega-sena/","name":"Gerador de Números da Megasena","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Números da Megasena</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-numeros-mega-sena/","name":"Gerador de Números da Megasena","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de Números da Megasena</h1>
   
-  
+  <p>Basta escolher quantos números você quer no seu jogo e depois clicar em <strong>Gerar Números</strong>.</p>
+<div id="calc-megasena" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🍀 Gerador de Números da Megasena</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha a quantidade de dezenas e gere seu palpite na hora.</p>
+<label for="mega-quantidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Quantidade de números</label>
+<select id="mega-quantidade" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="6">6 Números</option>
+<option value="7">7 Números</option>
+<option value="8">8 Números</option>
+<option value="9">9 Números</option>
+<option value="10">10 Números</option>
+<option value="11">11 Números</option>
+<option value="12">12 Números</option>
+<option value="13">13 Números</option>
+<option value="14">14 Números</option>
+<option value="15">15 Números</option>
+</select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="mega-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar Números</button>
+<button type="button" id="mega-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="mega-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="mega-resultado">escolha a quantidade e clique em "Gerar Números".</span></div>
+</div>
+<script>
+(function () {
+  var seletor = document.getElementById('mega-quantidade');
+  var resultado = document.getElementById('mega-resultado');
+  var caixa = document.getElementById('mega-resposta');
+  var textoInicial = 'escolha a quantidade e clique em "Gerar Números".';
+  function aleatorio() {
+    try {
+      var buf = new Uint32Array(1);
+      window.crypto.getRandomValues(buf);
+      return buf[0] / 4294967296;
+    } catch (e) {
+      return Math.random();
+    }
+  }
+  function sortear(qtd) {
+    var pool = [];
+    var i;
+    for (i = 1; i !== 61; i++) { pool.push(i); }
+    for (i = 59; i > 0; i--) {
+      var j = Math.floor(aleatorio() * (i + 1));
+      var t = pool[i];
+      pool[i] = pool[j];
+      pool[j] = t;
+    }
+    return pool.slice(0, qtd).sort(function (x, y) { return x - y; });
+  }
+  function dois(n) { return n > 9 ? String(n) : '0' + n; }
+  function bola(n) {
+    var el = document.createElement('span');
+    el.textContent = dois(n);
+    el.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:4px;border-radius:50%;background:linear-gradient(135deg,#4f46e5,#6366f1);color:#ffffff;font-weight:700;font-size:1.05rem;box-shadow:0 4px 10px rgba(79,70,229,0.35);';
+    return el;
+  }
+  function gerar() {
+    var qtd = parseInt(seletor.value, 10);
+    var numeros = sortear(qtd);
+    var rotulo = document.createElement('div');
+    var forte = document.createElement('strong');
+    var lista = document.createElement('div');
+    var i;
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    forte.style.fontSize = '1.1rem';
+    forte.textContent = 'Seu palpite com ' + qtd + ' números:';
+    rotulo.appendChild(forte);
+    for (i = 0; i !== numeros.length; i++) { lista.appendChild(bola(numeros[i])); }
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+    resultado.appendChild(rotulo);
+    resultado.appendChild(lista);
+  }
+  function limpar() {
+    seletor.value = '6';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+    resultado.textContent = textoInicial;
+    seletor.focus();
+  }
+  document.getElementById('mega-gerar').addEventListener('click', gerar);
+  document.getElementById('mega-limpar').addEventListener('click', limpar);
+  seletor.addEventListener('focus', function () { seletor.style.borderColor = '#6366f1'; });
+  seletor.addEventListener('blur', function () { seletor.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-o-gerador">Como usar o gerador</h2>
+<ol>
+<li>No campo <strong>Quantidade de números</strong>, escolha quantas dezenas terá o seu jogo, de 6 a 15.</li>
+<li>Clique em <strong>Gerar Números</strong> para sortear o palpite.</li>
+<li>Os números aparecem em ordem crescente, dentro das bolinhas, prontos para você marcar no volante.</li>
+<li>Clique em <strong>Gerar Números</strong> de novo quantas vezes quiser para obter novos palpites.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o resultado e voltar à opção de 6 números.</li>
+</ol>
+<p>Os números são sorteados entre 1 e 60, sem repetição dentro do mesmo jogo. Lembre-se de que o gerador cria palpites aleatórios: ele não aumenta nem diminui a chance de ganhar, e todas as combinações têm a mesma probabilidade.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Mega-Sena:</strong> loteria da Caixa Econômica Federal em que se escolhem dezenas entre 1 e 60 e se concorre a prêmios ao acertar 4, 5 ou 6 delas.</li>
+<li><strong>Dezena:</strong> cada um dos números que podem ser marcados no volante, de 01 a 60.</li>
+<li><strong>Palpite:</strong> conjunto de dezenas escolhido para apostar, neste caso gerado de forma aleatória.</li>
+<li><strong>Aposta simples:</strong> jogo com 6 dezenas, a quantidade mínima permitida.</li>
+<li><strong>Aposta com mais dezenas:</strong> jogo com 7 a 15 dezenas. Quanto mais dezenas, maiores as combinações cobertas e também o valor da aposta.</li>
+<li><strong>Volante:</strong> cartela da loteria onde as dezenas escolhidas são marcadas.</li>
+<li><strong>Sorteio:</strong> extração das seis dezenas vencedoras feita pela Caixa.</li>
+<li><strong>Número aleatório:</strong> número escolhido ao acaso, sem padrão e sem influência de sorteios anteriores.</li>
+<li><strong>Ordem crescente:</strong> organização dos números do menor para o maior, que facilita a conferência do jogo.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -57,31 +168,31 @@
   </a>
 </li>
 <li class="c-aleatorio">
-  <a class="card" href="/ferramentas/sorteador/">
+  <a class="card" href="/ferramentas/dado-online/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
 </span>
-    <span class="tx"><strong>Sorteador de Números Aleatórios</strong><small>Sorteie um ou vários números aleatórios.</small></span>
+    <span class="tx"><strong>Dado Online</strong><small>Jogue um ou mais dados online.</small></span>
   </a>
 </li>
 <li class="c-aleatorio">
-  <a class="card" href="/ferramentas/lista-aleatoria/">
+  <a class="card" href="/ferramentas/gerador-de-palavras-aleatorias/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
 </span>
-    <span class="tx"><strong>Lista Aleatória</strong><small>Embaralhe uma lista em ordem aleatória.</small></span>
+    <span class="tx"><strong>Gerador de Palavras Aleatórias</strong><small>Gere palavras aleatórias para jogos e criação de texto.</small></span>
   </a>
 </li>
 <li class="c-aleatorio">
-  <a class="card" href="/ferramentas/roleta-online/">
+  <a class="card" href="/ferramentas/gerador-de-nomes/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
 </span>
-    <span class="tx"><strong>Roleta Online</strong><small>Gire a roleta e sorteie uma opção.</small></span>
+    <span class="tx"><strong>Gerador de Nomes</strong><small>Gere nomes e sobrenomes brasileiros aleatórios.</small></span>
   </a>
 </li>
 <li class="c-aleatorio">
-  <a class="card" href="/ferramentas/sorteio/">
+  <a class="card" href="/ferramentas/gerador-de-nicks/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
 </span>
-    <span class="tx"><strong>Sorteio Online</strong><small>Sorteie nomes ou itens de uma lista.</small></span>
+    <span class="tx"><strong>Gerador de Nicks</strong><small>Gere nicks e apelidos criativos para jogos e redes.</small></span>
   </a>
 </li>
 
