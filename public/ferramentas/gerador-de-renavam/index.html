@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de Renavam: online e grátis</title>
+<title>Gerador de Renavam</title>
 <meta name="description" content="Gerador de Renavam: gere números de Renavam válidos para testes. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-renavam/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-renavam/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de Renavam: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-renavam/">
+<meta property="og:title" content="Gerador de Renavam">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-renavam/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de Renavam: gere números de Renavam válidos para testes. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,32 +38,116 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Renavam</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-renavam/","name":"Gerador de Renavam","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Renavam</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-renavam/","name":"Gerador de Renavam","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de Renavam</h1>
   
-  
+  <p>Basta clicar em <strong>Gerar Renavam</strong> abaixo para criar um número de Renavam válido, feito para testes de sistemas e formulários.</p>
+<div id="gerador-renavam" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🚗 Gerador de Renavam</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Clique no botão e receba um Renavam válido na hora.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="ren-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar Renavam</button>
+<button type="button" id="ren-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="ren-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="ren-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="ren-resultado">clique em "Gerar Renavam".</span></div>
+</div>
+<script>
+(function () {
+  var resultado = document.getElementById('ren-resultado');
+  var caixa = document.getElementById('ren-resposta');
+  var btnCopiar = document.getElementById('ren-copiar');
+  var atual = '';
+  var pesos = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+  function aleatorio(max) { return Math.floor(Math.random() * max); }
+  function criarRenavam() {
+    var digitos = [1 + aleatorio(9)];
+    while (digitos.length !== 10) { digitos.push(aleatorio(10)); }
+    var soma = 0;
+    digitos.forEach(function (d, i) { soma += d * pesos[i]; });
+    var dv = (soma * 10) % 11;
+    if (dv === 10) { dv = 0; }
+    digitos.push(dv);
+    return digitos.join('');
+  }
+  function gerar() {
+    atual = criarRenavam();
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.innerHTML = '<strong style="font-size:1.4rem;letter-spacing:2px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;">' + atual + '</strong><br><small style="color:#475569;">Renavam válido de 11 dígitos, gerado aleatoriamente.</small>';
+    btnCopiar.textContent = 'Copiar';
+  }
+  function avisoCopiado() {
+    btnCopiar.textContent = 'Copiado!';
+    setTimeout(function () { btnCopiar.textContent = 'Copiar'; }, 1800);
+  }
+  function copiarAlternativo() {
+    var campo = document.createElement('textarea');
+    campo.value = atual;
+    campo.setAttribute('readonly', '');
+    campo.style.position = 'fixed';
+    campo.style.opacity = '0';
+    document.body.appendChild(campo);
+    campo.select();
+    try { document.execCommand('copy'); avisoCopiado(); } catch (e) { btnCopiar.textContent = 'Erro ao copiar'; }
+    document.body.removeChild(campo);
+  }
+  function copiar() {
+    if (atual === '') {
+      caixa.style.borderColor = '#fca5a5';
+      caixa.style.background = '#fef2f2';
+      resultado.style.color = '#b91c1c';
+      resultado.textContent = 'gere um Renavam antes de copiar.';
+      return;
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(atual).then(avisoCopiado, copiarAlternativo);
+    } else {
+      copiarAlternativo();
+    }
+  }
+  function limpar() {
+    atual = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'clique em "Gerar Renavam".';
+    btnCopiar.textContent = 'Copiar';
+  }
+  document.getElementById('ren-gerar').addEventListener('click', gerar);
+  btnCopiar.addEventListener('click', copiar);
+  document.getElementById('ren-limpar').addEventListener('click', limpar);
+})();
+</script>
+<h2 id="como-usar-o-gerador">Como usar o gerador</h2>
+<ol>
+<li>Clique no botão <strong>Gerar Renavam</strong> para criar um novo número.</li>
+<li>Veja o Renavam de 11 dígitos exibido na caixa de resposta.</li>
+<li>Clique em <strong>Copiar</strong> para levar o número para a área de transferência e colar onde precisar.</li>
+<li>Clique em <strong>Gerar Renavam</strong> quantas vezes quiser para obter novos números, ou use <strong>Limpar</strong> para apagar o resultado.</li>
+</ol>
+<p>Os números são criados de forma aleatória, seguindo a regra de cálculo do dígito verificador. Eles servem apenas para testes de software, preenchimento de formulários de desenvolvimento e estudos. Não correspondem a veículos reais, e o uso indevido dos dados é de responsabilidade de quem os utiliza.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Renavam:</strong> sigla de Registro Nacional de Veículos Automotores, o número que identifica cada veículo registrado no Brasil. Aparece no documento do veículo (CRLV).</li>
+<li><strong>Gerador de Renavam:</strong> ferramenta que cria números de Renavam com estrutura válida, sem precisar consultar nenhum veículo real.</li>
+<li><strong>Número válido:</strong> número que respeita o formato e o cálculo do dígito verificador, por isso passa em validações de formulários e sistemas.</li>
+<li><strong>Dígito verificador:</strong> último dígito do Renavam, calculado a partir dos 10 dígitos anteriores. Serve para detectar erros de digitação.</li>
+<li><strong>11 dígitos:</strong> tamanho padrão atual do Renavam. Números antigos com 9 dígitos são completados com zeros à esquerda.</li>
+<li><strong>Dados de teste:</strong> informações fictícias usadas por programadores, analistas e testadores para verificar o funcionamento de sistemas.</li>
+<li><strong>CRLV:</strong> Certificado de Registro e Licenciamento de Veículo, o documento que traz o Renavam, a placa e os dados do veículo.</li>
+<li><strong>Aleatório:</strong> cada clique gera uma combinação diferente de dígitos, sem relação com veículos existentes.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-documentos">
-  <a class="card" href="/ferramentas/gerador-de-veiculos/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Gerador de Veículos</strong><small>Gere veículos fictícios com placa, Renavam e chassi.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
-  <a class="card" href="/ferramentas/validador-de-renavam/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
-</span>
-    <span class="tx"><strong>Validador de RENAVAM</strong><small>Confira se um Renavam é válido.</small></span>
-  </a>
-</li>
-<li class="c-documentos">
   <a class="card" href="/ferramentas/gerador-de-placa-de-veiculo/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
@@ -77,11 +161,25 @@
     <span class="tx"><strong>Gerador de CNH</strong><small>Gere números de CNH válidos para testes.</small></span>
   </a>
 </li>
+<li class="c-financas">
+  <a class="card" href="/ferramentas/calculadora-de-combustivel/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+</span>
+    <span class="tx"><strong>Cálculo de Combustível</strong><small>Calcule o gasto de combustível de uma viagem.</small></span>
+  </a>
+</li>
+<li class="c-financas">
+  <a class="card" href="/ferramentas/gasolina-ou-etanol/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+</span>
+    <span class="tx"><strong>Gasolina ou Etanol: qual compensa</strong><small>Descubra se compensa abastecer com gasolina ou etanol.</small></span>
+  </a>
+</li>
 <li class="c-documentos">
-  <a class="card" href="/ferramentas/validador-de-cnh/">
+  <a class="card" href="/ferramentas/gerador-de-rg/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
-    <span class="tx"><strong>Validador de CNH</strong><small>Confira se uma CNH é válida.</small></span>
+    <span class="tx"><strong>Gerador de RG</strong><small>Gere números de RG válidos para testes.</small></span>
   </a>
 </li>
 

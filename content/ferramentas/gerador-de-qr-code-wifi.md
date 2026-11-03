@@ -1,11 +1,464 @@
 ---
 title: "Gerador de QR Code Wi-Fi"
-seoTitle: "Gerador de QR Code Wi-Fi: online e grátis"
+seoTitle: "Gerador de QR Code Wi-Fi"
 description: "Gerador de QR Code Wi-Fi: crie um QR Code para conectar ao Wi-Fi sem digitar a senha. Grátis e online, sem cadastro."
 summary: "Crie um QR Code para conectar ao Wi-Fi sem digitar a senha."
-date: 2026-10-20
-draft: true
+date: 2026-11-03
+draft: false
 category: "midia"
 tags: ["qr code", "wi-fi", "códigos", "gerador"]
 keywords: ["gerador de qr code wi-fi", "gerador de qr code wi-fi online", "qr code", "wi-fi", "códigos"]
 ---
+Basta digitar o nome da rede e a senha abaixo e depois clicar em **Gerar QR Code do Wi-Fi**.
+
+<div id="gerador-wifi" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📶 Gerador de QR Code Wi-Fi</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe os dados da rede e gere o QR Code na hora.</p>
+<label for="wifi-ssid" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Rede Wi-Fi</label>
+<input id="wifi-ssid" type="text" placeholder="Ex.: MinhaRede" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="wifi-senha" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Senha Wi-Fi</label>
+<input id="wifi-senha" type="text" placeholder="Ex.: senha1234" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="wifi-tipo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Tipo de segurança</label>
+<select id="wifi-tipo" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;cursor:pointer;">
+<option value="WPA">WPA/WPA2/WPA3</option>
+<option value="WEP">WEP</option>
+<option value="nopass">Sem senha</option>
+</select>
+<label for="wifi-oculta" style="display:flex;align-items:center;gap:8px;margin-bottom:20px;font-size:0.95rem;cursor:pointer;"><input id="wifi-oculta" type="checkbox" style="width:18px;height:18px;accent-color:#4f46e5;cursor:pointer;"> Rede oculta</label>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="wifi-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar QR Code do Wi-Fi</button>
+<button type="button" id="wifi-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="wifi-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="wifi-resultado">preencha os campos e clique em "Gerar QR Code do Wi-Fi".</span></div>
+<div id="wifi-qr-area" style="display:none;margin-top:20px;text-align:center;">
+<canvas id="wifi-canvas" width="10" height="10" style="width:100%;max-width:260px;height:auto;background:#ffffff;padding:12px;border:2px solid #c7d2fe;border-radius:12px;box-sizing:border-box;"></canvas>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
+<button type="button" id="wifi-baixar" style="flex:1;min-width:140px;padding:12px 16px;font-size:0.95rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Baixar PNG</button>
+<button type="button" id="wifi-imprimir" style="flex:1;min-width:140px;padding:12px 16px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Placa para imprimir</button>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  var EXP = [];
+  var LOG = [];
+  var x = 1;
+  var i;
+  for (i = 0; 255 > i; i++) { EXP[i] = x; LOG[x] = i; x = x * 2; if (x > 255) { x = x ^ 285; } }
+  for (i = 255; 512 > i; i++) { EXP[i] = EXP[i - 255]; }
+  var BLK = [null, [10, [[1, 16]]], [16, [[1, 28]]], [26, [[1, 44]]], [18, [[2, 32]]], [24, [[2, 43]]], [16, [[4, 27]]], [18, [[4, 31]]], [22, [[2, 38], [2, 39]]], [22, [[3, 36], [2, 37]]], [26, [[4, 43], [1, 44]]]];
+  var ALN = [null, [], [6, 18], [6, 22], [6, 26], [6, 30], [6, 34], [6, 22, 38], [6, 24, 42], [6, 26, 46], [6, 28, 50]];
+  function bit(v, k) { return Math.floor(v / Math.pow(2, k)) % 2; }
+  function mul(a, b) { if (a === 0) { return 0; } if (b === 0) { return 0; } return EXP[LOG[a] + LOG[b]]; }
+  function rsGen(n) {
+    var g = [1];
+    for (var a = 0; n > a; a++) {
+      var ng = [];
+      for (var j = 0; g.length + 1 > j; j++) { ng.push(0); }
+      for (j = 0; g.length > j; j++) {
+        ng[j] = ng[j] ^ g[j];
+        ng[j + 1] = ng[j + 1] ^ mul(g[j], EXP[a]);
+      }
+      g = ng;
+    }
+    return g;
+  }
+  function rsEnc(d, n) {
+    var g = rsGen(n);
+    var r = [];
+    var j;
+    for (j = 0; n > j; j++) { r.push(0); }
+    for (var k = 0; d.length > k; k++) {
+      var f = d[k] ^ r[0];
+      r.shift();
+      r.push(0);
+      if (f !== 0) { for (j = 0; n > j; j++) { r[j] = r[j] ^ mul(g[j + 1], f); } }
+    }
+    return r;
+  }
+  function bch(data, poly, dbits, pdeg) {
+    var v = data * Math.pow(2, pdeg);
+    for (var k = dbits + pdeg - 1; k >= pdeg; k--) {
+      if (bit(v, k) === 1) { v = v ^ (poly * Math.pow(2, k - pdeg)); }
+    }
+    return data * Math.pow(2, pdeg) + v;
+  }
+  function totalData(ver) {
+    var t = 0;
+    var bl = BLK[ver][1];
+    for (var k = 0; bl.length > k; k++) { t = t + bl[k][0] * bl[k][1]; }
+    return t;
+  }
+  function pickVersion(n) {
+    for (var v = 1; 11 > v; v++) {
+      var need = 4 + (v > 9 ? 16 : 8) + 8 * n;
+      if (totalData(v) * 8 >= need) { return v; }
+    }
+    return 0;
+  }
+  function dataWords(bytes, ver) {
+    var bits = [];
+    function push(v, len) { for (var q = len - 1; q >= 0; q--) { bits.push(bit(v, q)); } }
+    push(4, 4);
+    push(bytes.length, ver > 9 ? 16 : 8);
+    var k;
+    for (k = 0; bytes.length > k; k++) { push(bytes[k], 8); }
+    var total = totalData(ver);
+    for (k = 0; 4 > k; k++) { if (total * 8 > bits.length) { bits.push(0); } }
+    while (bits.length % 8 !== 0) { bits.push(0); }
+    var words = [];
+    for (k = 0; bits.length > k; k = k + 8) {
+      var w = 0;
+      for (var q = 0; 8 > q; q++) { w = w * 2 + bits[k + q]; }
+      words.push(w);
+    }
+    var pad = [236, 17];
+    var pi = 0;
+    while (total > words.length) { words.push(pad[pi % 2]); pi++; }
+    return words;
+  }
+  function allWords(bytes, ver) {
+    var data = dataWords(bytes, ver);
+    var ecn = BLK[ver][0];
+    var bl = BLK[ver][1];
+    var blocks = [];
+    var eccs = [];
+    var pos = 0;
+    var maxd = 0;
+    var g, b, i2, j2;
+    for (g = 0; bl.length > g; g++) {
+      for (b = 0; bl[g][0] > b; b++) {
+        var part = data.slice(pos, pos + bl[g][1]);
+        pos = pos + bl[g][1];
+        blocks.push(part);
+        eccs.push(rsEnc(part, ecn));
+        if (part.length > maxd) { maxd = part.length; }
+      }
+    }
+    var out = [];
+    for (i2 = 0; maxd > i2; i2++) {
+      for (j2 = 0; blocks.length > j2; j2++) { if (blocks[j2].length > i2) { out.push(blocks[j2][i2]); } }
+    }
+    for (i2 = 0; ecn > i2; i2++) {
+      for (j2 = 0; eccs.length > j2; j2++) { out.push(eccs[j2][i2]); }
+    }
+    return out;
+  }
+  function maskOn(k, i, j) {
+    if (k === 0) { return (i + j) % 2 === 0; }
+    if (k === 1) { return i % 2 === 0; }
+    if (k === 2) { return j % 3 === 0; }
+    if (k === 3) { return (i + j) % 3 === 0; }
+    if (k === 4) { return (Math.floor(i / 2) + Math.floor(j / 3)) % 2 === 0; }
+    if (k === 5) { return ((i * j) % 2) + ((i * j) % 3) === 0; }
+    if (k === 6) { return (((i * j) % 2) + ((i * j) % 3)) % 2 === 0; }
+    return (((i + j) % 2) + ((i * j) % 3)) % 2 === 0;
+  }
+  function makeMatrix(bits, ver, mask) {
+    var size = 17 + 4 * ver;
+    var m = [];
+    var res = [];
+    var r, c, k, n;
+    for (r = 0; size > r; r++) {
+      m.push([]);
+      res.push([]);
+      for (c = 0; size > c; c++) { m[r].push(false); res[r].push(false); }
+    }
+    function ok(v) { if (0 > v) { return false; } return size > v; }
+    function put(rr, cc, v) {
+      if (!ok(rr)) { return; }
+      if (!ok(cc)) { return; }
+      m[rr][cc] = v;
+      res[rr][cc] = true;
+    }
+    function finder(r0, c0) {
+      for (var dr = -1; 8 > dr; dr++) {
+        for (var dc = -1; 8 > dc; dc++) {
+          var dark = false;
+          if (Math.min(dr, dc) >= 0) {
+            if (6 >= Math.max(dr, dc)) {
+              dark = Math.min(Math.min(dr, dc), Math.min(6 - dr, 6 - dc)) !== 1;
+            }
+          }
+          put(r0 + dr, c0 + dc, dark);
+        }
+      }
+    }
+    finder(0, 0);
+    finder(0, size - 7);
+    finder(size - 7, 0);
+    var al = ALN[ver];
+    for (var a = 0; al.length > a; a++) {
+      for (var b = 0; al.length > b; b++) {
+        var skip = false;
+        if (a === 0) { if (b === 0) { skip = true; } if (b === al.length - 1) { skip = true; } }
+        if (b === 0) { if (a === al.length - 1) { skip = true; } }
+        if (!skip) {
+          for (var dr = -2; 3 > dr; dr++) {
+            for (var dc = -2; 3 > dc; dc++) {
+              put(al[a] + dr, al[b] + dc, Math.max(Math.abs(dr), Math.abs(dc)) !== 1);
+            }
+          }
+        }
+      }
+    }
+    for (n = 8; size - 8 > n; n++) {
+      if (!res[6][n]) { put(6, n, n % 2 === 0); }
+      if (!res[n][6]) { put(n, 6, n % 2 === 0); }
+    }
+    for (n = 0; 9 > n; n++) { res[8][n] = true; res[n][8] = true; }
+    for (n = size - 8; size > n; n++) { res[8][n] = true; res[n][8] = true; }
+    if (ver > 6) {
+      for (n = 0; 6 > n; n++) {
+        for (k = size - 11; size - 8 > k; k++) { res[n][k] = true; res[k][n] = true; }
+      }
+    }
+    var bi = 0;
+    var up = true;
+    for (c = size - 1; c > 0; c = c - 2) {
+      if (c === 6) { c = 5; }
+      for (k = 0; size > k; k++) {
+        r = up ? size - 1 - k : k;
+        for (var d = 0; 2 > d; d++) {
+          var cc = c - d;
+          if (res[r][cc]) { continue; }
+          var v = false;
+          if (bits.length > bi) { v = bits[bi] === 1; }
+          bi++;
+          if (maskOn(mask, r, cc)) { v = !v; }
+          m[r][cc] = v;
+        }
+      }
+      up = !up;
+    }
+    var fb = bch(mask, 1335, 5, 10) ^ 21522;
+    for (n = 0; 15 > n; n++) {
+      var bt = bit(fb, n) === 1;
+      if (6 > n) { m[n][8] = bt; } else if (8 > n) { m[n + 1][8] = bt; } else { m[size - 15 + n][8] = bt; }
+      if (8 > n) { m[8][size - n - 1] = bt; } else if (9 > n) { m[8][7] = bt; } else { m[8][14 - n] = bt; }
+    }
+    m[size - 8][8] = true;
+    if (ver > 6) {
+      var vb = bch(ver, 7973, 6, 12);
+      for (n = 0; 18 > n; n++) {
+        var vt = bit(vb, n) === 1;
+        m[Math.floor(n / 3)][(n % 3) + size - 11] = vt;
+        m[(n % 3) + size - 11][Math.floor(n / 3)] = vt;
+      }
+    }
+    return m;
+  }
+  function linePen(L) {
+    var n = L.length;
+    var p = 0;
+    var run = 1;
+    var i3, k;
+    for (i3 = 1; n > i3; i3++) {
+      if (L[i3] === L[i3 - 1]) { run++; } else { if (run > 4) { p = p + run - 2; } run = 1; }
+    }
+    if (run > 4) { p = p + run - 2; }
+    var pat = [true, false, true, true, true, false, true];
+    for (i3 = 0; n - 6 > i3; i3++) {
+      var hit = true;
+      for (k = 0; 7 > k; k++) { if (L[i3 + k] !== pat[k]) { hit = false; } }
+      if (hit) {
+        var before = i3 >= 4;
+        var after = n >= i3 + 11;
+        for (k = 1; 5 > k; k++) {
+          if (before) { if (L[i3 - k]) { before = false; } }
+          if (after) { if (L[i3 + 6 + k]) { after = false; } }
+        }
+        if (before) { p = p + 40; }
+        if (after) { p = p + 40; }
+      }
+    }
+    return p;
+  }
+  function penalty(m) {
+    var n = m.length;
+    var p = 0;
+    var dark = 0;
+    var r, c, t;
+    for (r = 0; n > r; r++) { for (c = 0; n > c; c++) { if (m[r][c]) { dark++; } } }
+    for (t = 0; 2 > t; t++) {
+      for (r = 0; n > r; r++) {
+        var line = [];
+        for (c = 0; n > c; c++) { line.push(t === 0 ? m[r][c] : m[c][r]); }
+        p = p + linePen(line);
+      }
+    }
+    for (r = 0; n - 1 > r; r++) {
+      for (c = 0; n - 1 > c; c++) {
+        var v = m[r][c];
+        if (m[r][c + 1] === v) { if (m[r + 1][c] === v) { if (m[r + 1][c + 1] === v) { p = p + 3; } } }
+      }
+    }
+    p = p + Math.floor(Math.abs(dark * 100 / (n * n) - 50) / 5) * 10;
+    return p;
+  }
+  function encode(texto) {
+    var bytes = Array.prototype.slice.call(new TextEncoder().encode(texto));
+    var ver = pickVersion(bytes.length);
+    if (ver === 0) { return null; }
+    var words = allWords(bytes, ver);
+    var bits = [];
+    for (var w = 0; words.length > w; w++) {
+      for (var q = 7; q >= 0; q--) { bits.push(bit(words[w], q)); }
+    }
+    var best = null;
+    var bp = 0;
+    for (var mk = 0; 8 > mk; mk++) {
+      var mm = makeMatrix(bits, ver, mk);
+      var pp = penalty(mm);
+      if (best === null) { best = mm; bp = pp; } else if (bp > pp) { best = mm; bp = pp; }
+    }
+    return best;
+  }
+  // ---- UI ----
+  var ssid = document.getElementById('wifi-ssid');
+  var senha = document.getElementById('wifi-senha');
+  var tipo = document.getElementById('wifi-tipo');
+  var oculta = document.getElementById('wifi-oculta');
+  var caixa = document.getElementById('wifi-resposta');
+  var resultado = document.getElementById('wifi-resultado');
+  var area = document.getElementById('wifi-qr-area');
+  var canvas = document.getElementById('wifi-canvas');
+  var padrao = 'preencha os campos e clique em "Gerar QR Code do Wi-Fi".';
+  function esc(s) { return s.replace(/([\\;,:"])/g, '\\$1'); }
+  function mostrar(ok, antes, destaque, depois) {
+    caixa.style.borderColor = ok ? '#86efac' : '#fca5a5';
+    caixa.style.background = ok ? '#f0fdf4' : '#fef2f2';
+    resultado.style.color = ok ? '#166534' : '#b91c1c';
+    resultado.textContent = antes;
+    if (destaque) {
+      var s = document.createElement('strong');
+      s.textContent = destaque;
+      resultado.appendChild(s);
+      resultado.appendChild(document.createTextNode(depois));
+    }
+  }
+  function erro(msg) {
+    area.style.display = 'none';
+    mostrar(false, msg);
+  }
+  function desenhar(m) {
+    var n = m.length;
+    var q = 4;
+    var s = Math.ceil(420 / (n + 2 * q));
+    var tam = (n + 2 * q) * s;
+    canvas.width = tam;
+    canvas.height = tam;
+    var g = canvas.getContext('2d');
+    g.fillStyle = '#ffffff';
+    g.fillRect(0, 0, tam, tam);
+    g.fillStyle = '#000000';
+    for (var r = 0; n > r; r++) {
+      for (var c = 0; n > c; c++) {
+        if (m[r][c]) { g.fillRect((c + q) * s, (r + q) * s, s, s); }
+      }
+    }
+  }
+  function gerar() {
+    var nome = ssid.value;
+    var t = tipo.value;
+    if (nome.trim() === '') { erro('informe o nome da rede Wi-Fi.'); ssid.focus(); return; }
+    if (t !== 'nopass') {
+      if (senha.value === '') { erro('informe a senha do Wi-Fi ou escolha "Sem senha".'); senha.focus(); return; }
+    }
+    var texto = 'WIFI:T:' + t + ';S:' + esc(nome) + ';';
+    if (t !== 'nopass') { texto = texto + 'P:' + esc(senha.value) + ';'; }
+    if (oculta.checked) { texto = texto + 'H:true;'; }
+    texto = texto + ';';
+    var m = encode(texto);
+    if (m === null) { erro('os dados são grandes demais para o QR Code. Use um nome ou senha mais curtos.'); return; }
+    desenhar(m);
+    area.style.display = 'block';
+    mostrar(true, 'QR Code gerado para a rede ', nome, '. Aponte a câmera do celular para se conectar.');
+  }
+  function baixar() {
+    var a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = 'qrcode-wifi.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+  function imprimir() {
+    var w = window.open('', '_blank');
+    if (!w) { mostrar(false, 'permita pop-ups no navegador para imprimir a placa.'); return; }
+    var d = w.document;
+    d.title = 'Wi-Fi';
+    d.body.style.cssText = 'font-family:system-ui,sans-serif;text-align:center;padding:40px;';
+    var h = d.createElement('h1');
+    h.textContent = 'Conecte-se ao Wi-Fi';
+    var p1 = d.createElement('p');
+    p1.style.cssText = 'font-size:22px;';
+    p1.textContent = 'Rede: ' + ssid.value;
+    var img = d.createElement('img');
+    img.src = canvas.toDataURL('image/png');
+    img.style.cssText = 'width:320px;height:320px;';
+    var p2 = d.createElement('p');
+    p2.textContent = 'Aponte a câmera do celular para o QR Code.';
+    d.body.appendChild(h);
+    d.body.appendChild(p1);
+    d.body.appendChild(img);
+    d.body.appendChild(p2);
+    setTimeout(function () { w.focus(); w.print(); }, 400);
+  }
+  function limpar() {
+    ssid.value = '';
+    senha.value = '';
+    tipo.value = 'WPA';
+    oculta.checked = false;
+    senha.disabled = false;
+    senha.style.opacity = '1';
+    area.style.display = 'none';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = padrao;
+    ssid.focus();
+  }
+  function ajustarTipo() {
+    var sem = tipo.value === 'nopass';
+    senha.disabled = sem;
+    senha.style.opacity = sem ? '0.5' : '1';
+    if (sem) { senha.value = ''; }
+  }
+  document.getElementById('wifi-gerar').addEventListener('click', gerar);
+  document.getElementById('wifi-limpar').addEventListener('click', limpar);
+  document.getElementById('wifi-baixar').addEventListener('click', baixar);
+  document.getElementById('wifi-imprimir').addEventListener('click', imprimir);
+  tipo.addEventListener('change', ajustarTipo);
+  [ssid, senha].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { gerar(); } });
+  });
+  [ssid, senha, tipo].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+
+## Como usar o gerador
+
+1. Digite o nome da sua rede no campo **Rede Wi-Fi**, exatamente como aparece na lista de redes do celular.
+2. Digite a senha no campo **Senha Wi-Fi**.
+3. Escolha o **Tipo de segurança**. Na maioria das redes domésticas, o padrão **WPA/WPA2/WPA3** é o correto. Se a rede não tem senha, escolha **Sem senha**.
+4. Marque **Rede oculta** somente se o nome da rede não aparece na lista de redes disponíveis.
+5. Clique em **Gerar QR Code do Wi-Fi** (ou pressione Enter) para ver o QR Code.
+6. Use **Baixar PNG** para salvar a imagem ou **Placa para imprimir** para abrir uma página pronta para imprimir e deixar à vista de visitantes e clientes.
+7. Use o botão **Limpar** para apagar os dados e criar um novo QR Code.
+
+Para conectar, basta abrir a câmera do celular e apontar para o QR Code. Ele funciona na maioria dos aparelhos modernos (Android 10 ou superior e iPhone com iOS 11 ou superior). O QR Code é gerado no seu próprio navegador, e a senha não é enviada para nenhum servidor.
+
+## Entendendo os termos
+
+- **Wi-Fi:** tecnologia de rede sem fio que conecta celulares, computadores e outros aparelhos à internet.
+- **Rede Wi-Fi (SSID):** nome da rede, o mesmo que aparece na lista de redes disponíveis do aparelho.
+- **Senha Wi-Fi:** chave de acesso exigida para entrar na rede. Ela precisa ser digitada exatamente como foi configurada no roteador, respeitando maiúsculas e minúsculas.
+- **Tipo de segurança:** protocolo que protege a rede. O WPA/WPA2/WPA3 é o mais comum e seguro, o WEP é antigo e menos seguro, e "Sem senha" é usado em redes abertas.
+- **Rede oculta:** rede que não divulga o seu nome. Para entrar nela, o aparelho precisa saber o nome antecipadamente, por isso a opção deve ser marcada no QR Code.
+- **QR Code:** código de barras em formato de quadrado que a câmera do celular lê e transforma em texto ou ação.
+- **Texto de conexão Wi-Fi:** o conteúdo guardado dentro do QR Code, em um formato como `WIFI:T:WPA;S:nome;P:senha;;`, que o celular entende e usa para conectar à rede.
+- **Placa para imprimir:** página com o QR Code e o nome da rede, pronta para ser impressa e colocada em um local visível.

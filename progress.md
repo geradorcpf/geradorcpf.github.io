@@ -138,7 +138,7 @@ https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-pernambuc
 
 1 November 2026
 https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-piaui/ 
-https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rio-de-janeiro/ -- belum submit
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rio-de-janeiro/ 
 https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rio-grande-do-norte/
 https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rio-grande-do-sul/
 https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-rondonia/
@@ -149,15 +149,27 @@ https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-sergipe/
 https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-tocantins/
 
 2 November 2026
-http://localhost:1313/ferramentas/gerador-de-inscricao-estadual/
-http://localhost:1313/ferramentas/gerador-de-link-whatsapp/
-http://localhost:1313/ferramentas/gerador-de-meta-tags/
-http://localhost:1313/ferramentas/gerador-de-nicks/
-http://localhost:1313/ferramentas/gerador-de-nomes/
-http://localhost:1313/ferramentas/gerador-de-numeros-aleatorios/
-http://localhost:1313/ferramentas/gerador-de-numeros-mega-sena/
-http://localhost:1313/ferramentas/gerador-de-palavras-aleatorias/
-http://localhost:1313/ferramentas/gerador-de-pessoas/
-http://localhost:1313/ferramentas/gerador-de-pis-pasep/
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual/ -- belum submit
+https://geradorcpf.github.io/ferramentas/gerador-de-link-whatsapp/ 
+https://geradorcpf.github.io/ferramentas/gerador-de-meta-tags/
+https://geradorcpf.github.io/ferramentas/gerador-de-nicks/
+https://geradorcpf.github.io/ferramentas/gerador-de-nomes/
+https://geradorcpf.github.io/ferramentas/gerador-de-numeros-aleatorios/
+https://geradorcpf.github.io/ferramentas/gerador-de-numeros-mega-sena/
+https://geradorcpf.github.io/ferramentas/gerador-de-palavras-aleatorias/
+https://geradorcpf.github.io/ferramentas/gerador-de-pessoas/
+https://geradorcpf.github.io/ferramentas/gerador-de-pis-pasep/
 
 3 November 2026
+http://localhost:1313/ferramentas/gerador-de-placa-de-veiculo/
+http://localhost:1313/ferramentas/gerador-de-qr-code-pix/
+http://localhost:1313/ferramentas/gerador-de-qr-code-wifi/
+http://localhost:1313/ferramentas/gerador-de-qr-code/
+http://localhost:1313/ferramentas/gerador-de-renavam/
+http://localhost:1313/ferramentas/gerador-de-rg/
+http://localhost:1313/ferramentas/gerador-de-senha/
+http://localhost:1313/ferramentas/gerador-de-texto-lorem-ipsum/
+http://localhost:1313/ferramentas/gerador-de-titulo-de-eleitor/
+http://localhost:1313/ferramentas/gerador-de-uuid/
+
+4 November 2026

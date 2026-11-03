@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de Senhas: online e grátis</title>
+<title>Gerador de Senhas</title>
 <meta name="description" content="Gerador de Senhas: crie senhas fortes e aleatórias com o tamanho que quiser. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-senha/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-senha/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de Senhas: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-senha/">
+<meta property="og:title" content="Gerador de Senhas">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-senha/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de Senhas: crie senhas fortes e aleatórias com o tamanho que quiser. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,43 +38,195 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Senhas</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-senha/","name":"Gerador de Senhas","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de Senhas</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-senha/","name":"Gerador de Senhas","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de Senhas</h1>
   
-  
+  <!--INI SUDAH DIKERJAKAN-->
+<p>Basta escolher o tamanho e os tipos de caracteres abaixo e depois clicar em <strong>Gerar Senha</strong>.</p>
+<div id="calc-senha" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔐 Gerador de Senhas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha as opções e gere senhas fortes na hora.</p>
+<label for="sen-tamanho" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Tamanho da Senha (máximo 32)</label>
+<input id="sen-tamanho" type="text" inputmode="numeric" value="12" placeholder="Ex.: 12" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label style="display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:0.95rem;cursor:pointer;"><input id="sen-maiusculas" type="checkbox" checked style="width:18px;height:18px;accent-color:#4f46e5;cursor:pointer;">Incluir Letras Maiúsculas</label>
+<label style="display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:0.95rem;cursor:pointer;"><input id="sen-minusculas" type="checkbox" checked style="width:18px;height:18px;accent-color:#4f46e5;cursor:pointer;">Incluir Letras Minúsculas</label>
+<label style="display:flex;align-items:center;gap:10px;margin-bottom:10px;font-size:0.95rem;cursor:pointer;"><input id="sen-numeros" type="checkbox" checked style="width:18px;height:18px;accent-color:#4f46e5;cursor:pointer;">Incluir Números</label>
+<label style="display:flex;align-items:center;gap:10px;margin-bottom:16px;font-size:0.95rem;cursor:pointer;"><input id="sen-especiais" type="checkbox" checked style="width:18px;height:18px;accent-color:#4f46e5;cursor:pointer;">Incluir Caracteres Especiais (!@#$%&amp;*()-+.,;?{[}]^&gt;&lt;:)</label>
+<label for="sen-quantidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Número de Senhas Geradas (máximo 50)</label>
+<input id="sen-quantidade" type="text" inputmode="numeric" value="1" placeholder="Ex.: 1" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="sen-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar Senha</button>
+<button type="button" id="sen-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="sen-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="sen-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="sen-mensagem">escolha as opções e clique em "Gerar Senha".</span><div id="sen-lista"></div></div>
+</div>
+<script>
+(function () {
+  var tamanho = document.getElementById('sen-tamanho');
+  var quantidade = document.getElementById('sen-quantidade');
+  var chMai = document.getElementById('sen-maiusculas');
+  var chMin = document.getElementById('sen-minusculas');
+  var chNum = document.getElementById('sen-numeros');
+  var chEsp = document.getElementById('sen-especiais');
+  var caixa = document.getElementById('sen-resposta');
+  var mensagem = document.getElementById('sen-mensagem');
+  var lista = document.getElementById('sen-lista');
+  var btnCopiar = document.getElementById('sen-copiar');
+  var MAI = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var MIN = 'abcdefghijklmnopqrstuvwxyz';
+  var NUM = '0123456789';
+  var ESP = '!@#$%&*()-+.,;?{[}]^\x3E\x3C:';
+  var atuais = [];
+  function inteiro(v) {
+    var t = String(v).trim();
+    if (!/^\d+$/.test(t)) { return NaN; }
+    return Number(t);
+  }
+  function sorteio(n) {
+    var a = new Uint32Array(1);
+    var limite = Math.floor(4294967296 / n) * n;
+    do { crypto.getRandomValues(a); } while (a[0] >= limite);
+    return a[0] % n;
+  }
+  function esvaziar() {
+    while (lista.firstChild) { lista.removeChild(lista.firstChild); }
+  }
+  function erro(msg) {
+    atuais = [];
+    esvaziar();
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    mensagem.style.color = '#b91c1c';
+    mensagem.textContent = msg;
+  }
+  function criarSenha(len, grupos, todos) {
+    var chars = [];
+    var i;
+    for (i = 0; i !== grupos.length && chars.length !== len; i++) {
+      chars.push(grupos[i].charAt(sorteio(grupos[i].length)));
+    }
+    while (chars.length !== len) {
+      chars.push(todos.charAt(sorteio(todos.length)));
+    }
+    for (var j = chars.length - 1; j > 0; j--) {
+      var k = sorteio(j + 1);
+      var tmp = chars[j];
+      chars[j] = chars[k];
+      chars[k] = tmp;
+    }
+    return chars.join('');
+  }
+  function gerar() {
+    var len = inteiro(tamanho.value);
+    var qtd = inteiro(quantidade.value);
+    if (isNaN(len) || len === 0 || len > 32) { erro('informe um tamanho entre 1 e 32.'); return; }
+    if (isNaN(qtd) || qtd === 0 || qtd > 50) { erro('informe uma quantidade entre 1 e 50.'); return; }
+    var grupos = [];
+    if (chMai.checked) { grupos.push(MAI); }
+    if (chMin.checked) { grupos.push(MIN); }
+    if (chNum.checked) { grupos.push(NUM); }
+    if (chEsp.checked) { grupos.push(ESP); }
+    if (grupos.length === 0) { erro('selecione pelo menos um tipo de caractere.'); return; }
+    var todos = grupos.join('');
+    atuais = [];
+    esvaziar();
+    for (var n = 0; n !== qtd; n++) {
+      var senha = criarSenha(len, grupos, todos);
+      atuais.push(senha);
+      var linha = document.createElement('div');
+      linha.textContent = senha;
+      linha.style.cssText = 'margin-top:8px;padding:10px 12px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1.05rem;font-weight:700;color:#166534;word-break:break-all;';
+      lista.appendChild(linha);
+    }
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    mensagem.style.color = '#166534';
+    mensagem.textContent = qtd === 1 ? 'senha gerada com sucesso.' : 'senhas geradas com sucesso.';
+  }
+  function copiar() {
+    if (atuais.length === 0) { return; }
+    var texto = atuais.join('\n');
+    function feito() {
+      btnCopiar.textContent = 'Copiado!';
+      setTimeout(function () { btnCopiar.textContent = 'Copiar'; }, 1500);
+    }
+    function alternativa() {
+      var area = document.createElement('textarea');
+      area.value = texto;
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      try { document.execCommand('copy'); feito(); } catch (e) {}
+      document.body.removeChild(area);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(feito, alternativa);
+    } else {
+      alternativa();
+    }
+  }
+  function limpar() {
+    tamanho.value = '12';
+    quantidade.value = '1';
+    chMai.checked = true;
+    chMin.checked = true;
+    chNum.checked = true;
+    chEsp.checked = true;
+    atuais = [];
+    esvaziar();
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    mensagem.style.color = '#64748b';
+    mensagem.textContent = 'escolha as opções e clique em "Gerar Senha".';
+    tamanho.focus();
+  }
+  document.getElementById('sen-gerar').addEventListener('click', gerar);
+  btnCopiar.addEventListener('click', copiar);
+  document.getElementById('sen-limpar').addEventListener('click', limpar);
+  [tamanho, quantidade].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { gerar(); } });
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-o-gerador">Como usar o gerador</h2>
+<ol>
+<li>Digite o <strong>Tamanho da Senha</strong> no primeiro campo (de 1 a 32 caracteres).</li>
+<li>Marque os tipos de caracteres que deseja usar: <strong>letras maiúsculas</strong>, <strong>letras minúsculas</strong>, <strong>números</strong> e <strong>caracteres especiais</strong>.</li>
+<li>Informe o <strong>Número de Senhas Geradas</strong> (de 1 a 50) se quiser várias senhas de uma vez.</li>
+<li>Clique em <strong>Gerar Senha</strong> (ou pressione Enter) para ver o resultado.</li>
+<li>Use o botão <strong>Copiar</strong> para levar as senhas para a área de transferência e o botão <strong>Limpar</strong> para voltar às opções iniciais.</li>
+</ol>
+<p>Pelo menos um tipo de caractere precisa estar marcado. Quanto maior a senha e mais tipos de caracteres você usar, mais forte ela fica. Cada senha gerada contém ao menos um caractere de cada tipo selecionado, desde que o tamanho permita.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Senha:</strong> sequência de caracteres usada para provar sua identidade e proteger o acesso a contas, aplicativos e arquivos.</li>
+<li><strong>Senha forte:</strong> senha longa, imprevisível e que mistura diferentes tipos de caracteres, o que a torna difícil de adivinhar ou descobrir.</li>
+<li><strong>Senha aleatória:</strong> senha formada por caracteres sorteados, sem seguir nomes, datas ou padrões que alguém possa deduzir.</li>
+<li><strong>Tamanho da senha:</strong> quantidade de caracteres da senha. Neste gerador, o máximo é de 32.</li>
+<li><strong>Letras maiúsculas:</strong> letras de A a Z escritas em caixa alta, como <code>A</code>, <code>B</code> e <code>C</code>.</li>
+<li><strong>Letras minúsculas:</strong> letras de a a z escritas em caixa baixa, como <code>a</code>, <code>b</code> e <code>c</code>.</li>
+<li><strong>Números:</strong> dígitos de 0 a 9.</li>
+<li><strong>Caracteres especiais:</strong> símbolos como <code>!@#$%&amp;*()-+.,;?{[}]^&gt;&lt;:</code>, que aumentam a variedade da senha.</li>
+<li><strong>Número de senhas geradas:</strong> quantidade de senhas diferentes criadas de uma só vez a cada clique em <strong>Gerar Senha</strong>.</li>
+<li><strong>Ataque de força bruta:</strong> técnica em que o invasor testa todas as combinações possíveis até acertar a senha. Senhas longas e variadas tornam esse ataque muito mais demorado.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-dev">
-  <a class="card" href="/ferramentas/mensagem-autodestrutiva/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
-</span>
-    <span class="tx"><strong>Mensagem Autodestrutiva</strong><small>Envie uma mensagem que se apaga depois de lida.</small></span>
-  </a>
-</li>
-<li class="c-dev">
-  <a class="card" href="/ferramentas/texto-criptografado/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
-</span>
-    <span class="tx"><strong>Texto Criptografado</strong><small>Criptografe e descriptografe mensagens com uma senha.</small></span>
-  </a>
-</li>
-<li class="c-rede">
+  <ul class="cards rel"><li class="c-rede">
   <a class="card" href="/ferramentas/gerador-de-email-temporario/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
 </span>
     <span class="tx"><strong>Gerador de Email Temporário</strong><small>Crie um e-mail descartável para receber mensagens.</small></span>
-  </a>
-</li>
-<li class="c-rede">
-  <a class="card" href="/ferramentas/teste-de-portas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
-</span>
-    <span class="tx"><strong>Teste de Portas</strong><small>Verifique se uma porta está aberta em um endereço.</small></span>
   </a>
 </li>
 <li class="c-documentos">
@@ -82,6 +234,27 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
 </span>
     <span class="tx"><strong>Gerador de RG</strong><small>Gere números de RG válidos para testes.</small></span>
+  </a>
+</li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/gerador-de-renavam/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Renavam</strong><small>Gere números de Renavam válidos para testes.</small></span>
+  </a>
+</li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/gerador-de-titulo-de-eleitor/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Título de Eleitor</strong><small>Gere números de título de eleitor válidos para testes.</small></span>
+  </a>
+</li>
+<li class="c-midia">
+  <a class="card" href="/ferramentas/gerador-de-qr-code-wifi/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de QR Code Wi-Fi</strong><small>Crie um QR Code para conectar ao Wi-Fi sem digitar a senha.</small></span>
   </a>
 </li>
 

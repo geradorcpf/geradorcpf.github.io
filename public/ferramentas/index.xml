@@ -6,8 +6,78 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gerador de Placas de Automóveis</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-placa-de-veiculo/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-placa-de-veiculo/</guid>
+      <description>Gere placas no padrão antigo e no Mercosul.</description>
+    </item>
+    <item>
+      <title>Gerador de QR Code</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-qr-code/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-qr-code/</guid>
+      <description>Crie QR Codes de links e textos e baixe a imagem.</description>
+    </item>
+    <item>
+      <title>Gerador de QR Code Pix</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-qr-code-pix/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-qr-code-pix/</guid>
+      <description>Crie um QR Code Pix para receber pagamentos.</description>
+    </item>
+    <item>
+      <title>Gerador de QR Code Wi-Fi</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-qr-code-wifi/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-qr-code-wifi/</guid>
+      <description>Crie um QR Code para conectar ao Wi-Fi sem digitar a senha.</description>
+    </item>
+    <item>
+      <title>Gerador de Renavam</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-renavam/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-renavam/</guid>
+      <description>Gere números de Renavam válidos para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de RG</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-rg/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-rg/</guid>
+      <description>Gere números de RG válidos para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de Senhas</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-senha/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-senha/</guid>
+      <description>Crie senhas fortes e aleatórias com o tamanho que quiser.</description>
+    </item>
+    <item>
+      <title>Gerador de Texto Lorem Ipsum</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-texto-lorem-ipsum/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-texto-lorem-ipsum/</guid>
+      <description>Gere texto Lorem Ipsum para layouts e protótipos.</description>
+    </item>
+    <item>
+      <title>Gerador de Título de Eleitor</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-titulo-de-eleitor/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-titulo-de-eleitor/</guid>
+      <description>Gere números de título de eleitor válidos para testes.</description>
+    </item>
+    <item>
+      <title>Gerador de UUID</title>
+      <link>http://localhost:1313/ferramentas/gerador-de-uuid/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/gerador-de-uuid/</guid>
+      <description>Gere UUIDs v4 prontos para copiar.</description>
+    </item>
     <item>
       <title>Gerador de Documentos de Pessoas</title>
       <link>http://localhost:1313/ferramentas/gerador-de-pessoas/</link>

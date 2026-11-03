@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerador de QR Code Pix: online e grátis</title>
+<title>Gerador de QR Code Pix</title>
 <meta name="description" content="Gerador de QR Code Pix: crie um QR Code Pix para receber pagamentos. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/gerador-de-qr-code-pix/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/gerador-de-qr-code-pix/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gerador de QR Code Pix: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/gerador-de-qr-code-pix/">
+<meta property="og:title" content="Gerador de QR Code Pix">
+<meta property="og:url" content="http://localhost:1313/ferramentas/gerador-de-qr-code-pix/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Gerador de QR Code Pix: crie um QR Code Pix para receber pagamentos. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,495 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de QR Code Pix</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/gerador-de-qr-code-pix/","name":"Gerador de QR Code Pix","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Gerador de QR Code Pix</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/gerador-de-qr-code-pix/","name":"Gerador de QR Code Pix","position":3}]}</script>
 <article class="prose page">
   <h1>Gerador de QR Code Pix</h1>
   
-  
+  <p>Basta preencher os dados do recebedor abaixo e depois clicar em <strong>Gerar QR Code do Pix</strong>.</p>
+<div id="gerador-pix" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📱 Gerador de QR Code Pix</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe os dados e veja o QR Code na hora.</p>
+<label for="pix-chave" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Chave Pix</label>
+<input id="pix-chave" type="text" placeholder="Ex.: 123.456.789-09, e-mail ou +5511999998888" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pix-nome" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Nome do beneficiário</label>
+<input id="pix-nome" type="text" maxlength="25" placeholder="Ex.: Maria da Silva" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pix-cidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Cidade do beneficiário</label>
+<input id="pix-cidade" type="text" maxlength="15" placeholder="Ex.: São Paulo" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pix-valor" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Valor (opcional)</label>
+<input id="pix-valor" type="text" inputmode="decimal" placeholder="Ex.: 25,90" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<button type="button" id="pix-mais" aria-expanded="false" style="width:100%;padding:11px 18px;margin-bottom:16px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Mostrar mais configurações</button>
+<div id="pix-avancado" style="display:none;">
+<label for="pix-descricao" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Descrição (opcional)</label>
+<input id="pix-descricao" type="text" maxlength="60" placeholder="Ex.: Pedido 123" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pix-txid" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Identificador da transação (opcional)</label>
+<input id="pix-txid" type="text" maxlength="25" placeholder="Ex.: PEDIDO123" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;">
+<button type="button" id="pix-gerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Gerar QR Code do Pix</button>
+<button type="button" id="pix-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="pix-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="pix-resultado">preencha os campos e clique em "Gerar QR Code do Pix".</span>
+<div id="pix-saida" style="display:none;margin-top:16px;text-align:center;">
+<canvas id="pix-canvas" width="10" height="10" style="width:280px;max-width:100%;height:auto;border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;image-rendering:pixelated;"></canvas>
+<label for="pix-payload" style="display:block;margin:16px 0 6px;font-weight:600;font-size:0.95rem;color:#1e293b;text-align:left;">Pix Copia e Cola</label>
+<textarea id="pix-payload" readonly rows="5" style="width:100%;padding:12px 14px;font-size:0.85rem;font-family:ui-monospace,Menlo,Consolas,monospace;border:2px solid #c7d2fe;border-radius:10px;background:#f8fafc;color:#1e293b;box-sizing:border-box;resize:vertical;word-break:break-all;"></textarea>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+<button type="button" id="pix-copiar" style="flex:1;min-width:140px;padding:11px 18px;font-size:0.95rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;">Copiar código</button>
+<button type="button" id="pix-baixar" style="flex:1;min-width:140px;padding:11px 18px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Baixar PNG</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  var el = {
+    chave: document.getElementById('pix-chave'),
+    nome: document.getElementById('pix-nome'),
+    cidade: document.getElementById('pix-cidade'),
+    valor: document.getElementById('pix-valor'),
+    descricao: document.getElementById('pix-descricao'),
+    txid: document.getElementById('pix-txid')
+  };
+  var resultado = document.getElementById('pix-resultado');
+  var caixa = document.getElementById('pix-resposta');
+  var saida = document.getElementById('pix-saida');
+  var canvas = document.getElementById('pix-canvas');
+  var payloadEl = document.getElementById('pix-payload');
+  var avancado = document.getElementById('pix-avancado');
+  var btnMais = document.getElementById('pix-mais');
+  var btnCopiar = document.getElementById('pix-copiar');
+  var ECC = [-1, 10, 16, 26, 18, 24, 16, 18, 22, 22, 26, 30, 22, 22, 24, 24, 28, 28, 26, 26, 26, 26, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28];
+  var BLK = [-1, 1, 1, 1, 2, 2, 4, 4, 4, 5, 5, 5, 8, 9, 9, 10, 10, 11, 13, 14, 16, 17, 17, 18, 20, 21, 23, 25, 26, 28, 29, 31, 33, 35, 37, 38, 40, 43, 45, 47, 49];
+  function bit(x, i) { return Math.floor(x / Math.pow(2, i)) % 2 === 1; }
+  function numero(v) {
+    var t = String(v).trim().replace(/\s/g, '');
+    if (t.indexOf(',') > -1) { t = t.replace(/\./g, '').replace(',', '.'); }
+    if (t === '' || isNaN(Number(t))) { return NaN; }
+    return Number(t);
+  }
+  function semAcento(t) {
+    return String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\x20-\x7E]/g, '');
+  }
+  function normalizarChave(c) {
+    var k = String(c).trim();
+    if (k === '') { return ''; }
+    if (k.indexOf('@') > -1) { return k.toLowerCase(); }
+    if (/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(k)) { return k.toLowerCase(); }
+    if (k.charAt(0) === '+') { return '+' + k.replace(/\D/g, ''); }
+    if (/^[0-9.\-\/\s()]+$/.test(k)) { return k.replace(/\D/g, ''); }
+    return k;
+  }
+  function tlv(id, v) {
+    var n = String(v.length);
+    if (n.length === 1) { n = '0' + n; }
+    return id + n + v;
+  }
+  function crc16(str) {
+    var crc = 0xFFFF;
+    for (var i = 0; i < str.length; i++) {
+      crc = crc ^ (str.charCodeAt(i) << 8);
+      for (var j = 0; j < 8; j++) {
+        if (crc >= 32768) { crc = ((crc << 1) ^ 0x1021) % 65536; } else { crc = (crc << 1) % 65536; }
+      }
+    }
+    var h = crc.toString(16).toUpperCase();
+    while (h.length < 4) { h = '0' + h; }
+    return h;
+  }
+  function montarPayload() {
+    var chave = normalizarChave(el.chave.value);
+    var nome = semAcento(el.nome.value).trim().toUpperCase().slice(0, 25);
+    var cidade = semAcento(el.cidade.value).trim().toUpperCase().slice(0, 15);
+    var valorTxt = el.valor.value.trim();
+    var desc = semAcento(el.descricao.value).trim();
+    var txid = el.txid.value.trim();
+    if (chave === '') { return { erro: 'informe a chave Pix.' }; }
+    if (/^[\x20-\x7E]+$/.test(chave) === false) { return { erro: 'a chave Pix contém caracteres inválidos.' }; }
+    if (nome === '') { return { erro: 'informe o nome do beneficiário.' }; }
+    if (cidade === '') { return { erro: 'informe a cidade do beneficiário.' }; }
+    var valor = null;
+    if (valorTxt !== '') {
+      var v = numero(valorTxt);
+      if (isNaN(v) || v <= 0) { return { erro: 'informe um valor válido, maior que zero.' }; }
+      if (v > 9999999999.99) { return { erro: 'o valor informado é muito alto.' }; }
+      valor = v.toFixed(2);
+    }
+    if (txid === '') { txid = '***'; } else if (/^[A-Za-z0-9]{1,25}$/.test(txid) === false) { return { erro: 'o identificador deve ter apenas letras e números (até 25 caracteres).' }; }
+    var conta = tlv('00', 'br.gov.bcb.pix') + tlv('01', chave);
+    if (desc !== '') { conta += tlv('02', desc); }
+    if (conta.length > 99) { return { erro: 'a chave Pix e a descrição juntas estão muito longas. Reduza o tamanho.' }; }
+    var p = tlv('00', '01') + tlv('01', '11') + tlv('26', conta) + tlv('52', '0000') + tlv('53', '986');
+    if (valor !== null) { p += tlv('54', valor); }
+    p += tlv('58', 'BR') + tlv('59', nome) + tlv('60', cidade) + tlv('62', tlv('05', txid)) + '6304';
+    return { payload: p + crc16(p) };
+  }
+  function rawModulos(v) {
+    var r = (16 * v + 128) * v + 64;
+    if (v >= 2) {
+      var na = Math.floor(v / 7) + 2;
+      r -= (25 * na - 10) * na - 55;
+      if (v >= 7) { r -= 36; }
+    }
+    return r;
+  }
+  function dadosCw(v) { return Math.floor(rawModulos(v) / 8) - ECC[v] * BLK[v]; }
+  function gfMul(x, y) {
+    var z = 0;
+    for (var i = 7; i >= 0; i--) {
+      z = (z << 1) ^ (z >= 128 ? 0x11D : 0);
+      if (bit(y, i)) { z = z ^ x; }
+    }
+    return z;
+  }
+  function rsDivisor(deg) {
+    var r = [];
+    var i, j;
+    for (i = 0; i < deg; i++) { r.push(0); }
+    r[deg - 1] = 1;
+    var root = 1;
+    for (i = 0; i < deg; i++) {
+      for (j = 0; j < deg; j++) {
+        r[j] = gfMul(r[j], root);
+        if (j + 1 < deg) { r[j] = r[j] ^ r[j + 1]; }
+      }
+      root = gfMul(root, 2);
+    }
+    return r;
+  }
+  function rsResto(data, div) {
+    var r = [];
+    for (var i = 0; i < div.length; i++) { r.push(0); }
+    data.forEach(function (b) {
+      var f = b ^ r.shift();
+      r.push(0);
+      div.forEach(function (c, k) { r[k] = r[k] ^ gfMul(c, f); });
+    });
+    return r;
+  }
+  function entrelacar(v, dados) {
+    var nb = BLK[v];
+    var eccLen = ECC[v];
+    var raw = Math.floor(rawModulos(v) / 8);
+    var curtos = nb - (raw % nb);
+    var lenCurto = Math.floor(raw / nb);
+    var blocos = [];
+    var div = rsDivisor(eccLen);
+    var k = 0;
+    var i, j;
+    for (i = 0; i < nb; i++) {
+      var n = lenCurto - eccLen + (i < curtos ? 0 : 1);
+      var d = dados.slice(k, k + n);
+      k += n;
+      var e = rsResto(d, div);
+      if (i < curtos) { d.push(0); }
+      blocos.push(d.concat(e));
+    }
+    var out = [];
+    for (i = 0; i < blocos[0].length; i++) {
+      for (j = 0; j < nb; j++) {
+        if (i !== lenCurto - eccLen || j >= curtos) { out.push(blocos[j][i]); }
+      }
+    }
+    return out;
+  }
+  function alinhamentos(v) {
+    if (v === 1) { return []; }
+    var na = Math.floor(v / 7) + 2;
+    var size = v * 4 + 17;
+    var step = v === 32 ? 26 : Math.ceil((v * 4 + 4) / (na * 2 - 2)) * 2;
+    var r = [6];
+    for (var i = 0, pos = size - 7; i < na - 1; i++, pos -= step) { r.splice(1, 0, pos); }
+    return r;
+  }
+  function criarQr(texto) {
+    var bytes = Array.prototype.slice.call(new TextEncoder().encode(texto));
+    var v, cc;
+    for (v = 1; v <= 40; v++) {
+      cc = v < 10 ? 8 : 16;
+      if (4 + cc + bytes.length * 8 <= dadosCw(v) * 8) { break; }
+    }
+    if (v > 40) { return null; }
+    var bits = [];
+    function put(val, n) { for (var q = n - 1; q >= 0; q--) { bits.push(bit(val, q) ? 1 : 0); } }
+    put(4, 4);
+    put(bytes.length, cc);
+    bytes.forEach(function (b) { put(b, 8); });
+    var cap = dadosCw(v) * 8;
+    put(0, Math.min(4, cap - bits.length));
+    while (bits.length % 8 !== 0) { bits.push(0); }
+    var dados = [];
+    var i, j, x, y;
+    for (i = 0; i < bits.length; i += 8) {
+      var byt = 0;
+      for (j = 0; j < 8; j++) { byt = byt * 2 + bits[i + j]; }
+      dados.push(byt);
+    }
+    for (var pad = 0xEC; dados.length < cap / 8; pad = (pad === 0xEC ? 0x11 : 0xEC)) { dados.push(pad); }
+    var size = v * 4 + 17;
+    var mod = [];
+    var fn = [];
+    for (y = 0; y < size; y++) {
+      mod.push([]);
+      fn.push([]);
+      for (x = 0; x < size; x++) { mod[y].push(false); fn[y].push(false); }
+    }
+    function dentro(a, b) { return a >= 0 ? (a < size ? (b >= 0 ? b < size : false) : false) : false; }
+    function setF(a, b, c) { mod[b][a] = c; fn[b][a] = true; }
+    function finder(cx, cy) {
+      for (var dy = -4; dy <= 4; dy++) {
+        for (var dx = -4; dx <= 4; dx++) {
+          var dist = Math.max(Math.abs(dx), Math.abs(dy));
+          if (dentro(cx + dx, cy + dy)) { setF(cx + dx, cy + dy, dist !== 2 ? dist !== 4 : false); }
+        }
+      }
+    }
+    function alin(cx, cy) {
+      for (var dy = -2; dy <= 2; dy++) {
+        for (var dx = -2; dx <= 2; dx++) { setF(cx + dx, cy + dy, Math.max(Math.abs(dx), Math.abs(dy)) !== 1); }
+      }
+    }
+    function formato(m) {
+      var r = m;
+      var t;
+      for (t = 0; t < 10; t++) { r = (r << 1) ^ (bit(r, 9) ? 0x537 : 0); }
+      var b = ((m << 10) ^ r) ^ 0x5412;
+      for (t = 0; t <= 5; t++) { setF(8, t, bit(b, t)); }
+      setF(8, 7, bit(b, 6));
+      setF(8, 8, bit(b, 7));
+      setF(7, 8, bit(b, 8));
+      for (t = 9; t < 15; t++) { setF(14 - t, 8, bit(b, t)); }
+      for (t = 0; t < 8; t++) { setF(size - 1 - t, 8, bit(b, t)); }
+      for (t = 8; t < 15; t++) { setF(8, size - 15 + t, bit(b, t)); }
+      setF(8, size - 8, true);
+    }
+    function versao() {
+      if (v < 7) { return; }
+      var r = v;
+      var t;
+      for (t = 0; t < 12; t++) { r = (r << 1) ^ (bit(r, 11) ? 0x1F25 : 0); }
+      var b = v * 4096 + r;
+      for (t = 0; t < 18; t++) {
+        var c = bit(b, t);
+        var a1 = size - 11 + (t % 3);
+        var b1 = Math.floor(t / 3);
+        setF(a1, b1, c);
+        setF(b1, a1, c);
+      }
+    }
+    for (i = 0; i < size; i++) { setF(6, i, i % 2 === 0); setF(i, 6, i % 2 === 0); }
+    finder(3, 3);
+    finder(size - 4, 3);
+    finder(3, size - 4);
+    var al = alinhamentos(v);
+    var n = al.length;
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n; j++) {
+        if (i === 0) {
+          if (j === 0 || j === n - 1) { continue; }
+        } else if (i === n - 1) {
+          if (j === 0) { continue; }
+        }
+        alin(al[i], al[j]);
+      }
+    }
+    formato(0);
+    versao();
+    var tudo = entrelacar(v, dados);
+    var idx = 0;
+    for (var right = size - 1; right >= 1; right -= 2) {
+      if (right === 6) { right = 5; }
+      for (var vert = 0; vert < size; vert++) {
+        for (j = 0; j < 2; j++) {
+          x = right - j;
+          y = bit(right + 1, 1) ? vert : size - 1 - vert;
+          if (fn[y][x] === false) {
+            if (idx < tudo.length * 8) {
+              mod[y][x] = bit(tudo[Math.floor(idx / 8)], 7 - (idx % 8));
+              idx++;
+            }
+          }
+        }
+      }
+    }
+    function mascara(m) {
+      var inv;
+      for (var yy = 0; yy < size; yy++) {
+        for (var xx = 0; xx < size; xx++) {
+          if (fn[yy][xx]) { continue; }
+          switch (m) {
+            case 0: inv = (xx + yy) % 2 === 0; break;
+            case 1: inv = yy % 2 === 0; break;
+            case 2: inv = xx % 3 === 0; break;
+            case 3: inv = (xx + yy) % 3 === 0; break;
+            case 4: inv = (Math.floor(xx / 3) + Math.floor(yy / 2)) % 2 === 0; break;
+            case 5: inv = xx * yy % 2 + xx * yy % 3 === 0; break;
+            case 6: inv = (xx * yy % 2 + xx * yy % 3) % 2 === 0; break;
+            default: inv = ((xx + yy) % 2 + xx * yy % 3) % 2 === 0;
+          }
+          if (inv) { mod[yy][xx] = !mod[yy][xx]; }
+        }
+      }
+    }
+    function penalidade() {
+      var p = 0;
+      var escuros = 0;
+      var run, a, b;
+      for (a = 0; a < size; a++) {
+        run = 1;
+        for (b = 1; b < size; b++) {
+          if (mod[a][b] === mod[a][b - 1]) { run++; if (run === 5) { p += 3; } else if (run > 5) { p++; } } else { run = 1; }
+        }
+        run = 1;
+        for (b = 1; b < size; b++) {
+          if (mod[b][a] === mod[b - 1][a]) { run++; if (run === 5) { p += 3; } else if (run > 5) { p++; } } else { run = 1; }
+        }
+      }
+      for (a = 0; a < size; a++) {
+        for (b = 0; b < size; b++) {
+          if (mod[a][b]) { escuros++; }
+          if (a < size - 1 ? b < size - 1 : false) {
+            if (mod[a][b] === mod[a][b + 1]) {
+              if (mod[a][b] === mod[a + 1][b]) {
+                if (mod[a][b] === mod[a + 1][b + 1]) { p += 3; }
+              }
+            }
+          }
+        }
+      }
+      var total = size * size;
+      var k = Math.ceil(Math.abs(escuros * 20 - total * 10) / total) - 1;
+      return p + k * 10;
+    }
+    var melhor = 0;
+    var melhorPen = Infinity;
+    for (var m = 0; m < 8; m++) {
+      mascara(m);
+      formato(m);
+      var pen = penalidade();
+      if (pen < melhorPen) { melhorPen = pen; melhor = m; }
+      mascara(m);
+    }
+    mascara(melhor);
+    formato(melhor);
+    return { size: size, mod: mod };
+  }
+  function desenhar(qr) {
+    var s = 6;
+    var q = 4;
+    var tam = (qr.size + q * 2) * s;
+    canvas.width = tam;
+    canvas.height = tam;
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, tam, tam);
+    ctx.fillStyle = '#000000';
+    for (var y = 0; y < qr.size; y++) {
+      for (var x = 0; x < qr.size; x++) {
+        if (qr.mod[y][x]) { ctx.fillRect((x + q) * s, (y + q) * s, s, s); }
+      }
+    }
+  }
+  function erro(msg) {
+    saida.style.display = 'none';
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function gerar() {
+    var r = montarPayload();
+    if (r.erro) { erro(r.erro); return; }
+    var qr = criarQr(r.payload);
+    if (qr === null) { erro('os dados informados são longos demais para gerar o QR Code.'); return; }
+    desenhar(qr);
+    payloadEl.value = r.payload;
+    saida.style.display = 'block';
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.textContent = 'QR Code Pix gerado! Teste a leitura no app do seu banco antes de usar.';
+  }
+  function limpar() {
+    Object.keys(el).forEach(function (k) { el[k].value = ''; });
+    saida.style.display = 'none';
+    payloadEl.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'preencha os campos e clique em "Gerar QR Code do Pix".';
+    el.chave.focus();
+  }
+  function copiado() {
+    btnCopiar.textContent = 'Copiado!';
+    setTimeout(function () { btnCopiar.textContent = 'Copiar código'; }, 1500);
+  }
+  function copiar() {
+    payloadEl.focus();
+    payloadEl.select();
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(payloadEl.value).then(copiado, function () {
+        document.execCommand('copy');
+        copiado();
+      });
+    } else {
+      document.execCommand('copy');
+      copiado();
+    }
+  }
+  function baixar() {
+    var a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = 'qr-code-pix.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+  function alternar() {
+    var aberto = avancado.style.display !== 'none';
+    avancado.style.display = aberto ? 'none' : 'block';
+    btnMais.setAttribute('aria-expanded', aberto ? 'false' : 'true');
+    btnMais.textContent = aberto ? 'Mostrar mais configurações' : 'Ocultar configurações adicionais';
+  }
+  document.getElementById('pix-gerar').addEventListener('click', gerar);
+  document.getElementById('pix-limpar').addEventListener('click', limpar);
+  btnCopiar.addEventListener('click', copiar);
+  document.getElementById('pix-baixar').addEventListener('click', baixar);
+  btnMais.addEventListener('click', alternar);
+  Object.keys(el).forEach(function (k) {
+    var campo = el[k];
+    campo.addEventListener('keydown', function (e) { if (e.key === 'Enter') { gerar(); } });
+    campo.addEventListener('focus', function () { campo.style.borderColor = '#6366f1'; });
+    campo.addEventListener('blur', function () { campo.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<p><strong>Atenção:</strong> antes de receber qualquer pagamento, confira se todos os dados estão corretos e teste a leitura do QR Code no aplicativo do seu banco. O QR Code gerado é do tipo estático: ele pode ser usado em mais de uma transação e pode ter um valor definido ou ficar em aberto para o pagador digitar o valor.</p>
+<h2 id="como-usar-o-gerador">Como usar o gerador</h2>
+<ol>
+<li>Digite a <strong>Chave Pix</strong> que vai receber o pagamento (CPF, CNPJ, e-mail, celular ou chave aleatória).</li>
+<li>Informe o <strong>Nome do beneficiário</strong> e a <strong>Cidade do beneficiário</strong>, do mesmo jeito que aparecem no cadastro da sua conta.</li>
+<li>Se quiser cobrar um valor fixo, preencha o campo <strong>Valor</strong>. Deixe em branco para que o pagador digite o valor ao escanear.</li>
+<li>Se precisar, clique em <strong>Mostrar mais configurações</strong> para preencher a <strong>Descrição</strong> e o <strong>Identificador da transação</strong>.</li>
+<li>Clique em <strong>Gerar QR Code do Pix</strong> (ou pressione Enter) para ver o QR Code e o código Pix Copia e Cola.</li>
+<li>Use <strong>Copiar código</strong> para copiar o Pix Copia e Cola ou <strong>Baixar PNG</strong> para salvar a imagem do QR Code.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar os dados e fazer um novo QR Code.</li>
+</ol>
+<p>Se a chave for um número de celular, digite com o código do país, por exemplo <code>+5511999998888</code>. Para CPF e CNPJ, pode digitar com ou sem pontos e traço. O valor aceita vírgula ou ponto (por exemplo, <code>25,90</code> ou <code>25.90</code>). O nome e a cidade são convertidos para letras maiúsculas e sem acentos, como exige o padrão do Pix.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Pix:</strong> sistema de pagamentos instantâneos do Banco Central do Brasil, que funciona 24 horas por dia, todos os dias.</li>
+<li><strong>Chave Pix:</strong> identificação da conta que recebe o dinheiro. Pode ser CPF, CNPJ, e-mail, número de celular ou chave aleatória.</li>
+<li><strong>Nome do beneficiário:</strong> nome de quem recebe o pagamento, com até 25 caracteres.</li>
+<li><strong>Cidade do beneficiário:</strong> cidade de quem recebe o pagamento, com até 15 caracteres.</li>
+<li><strong>Valor:</strong> quantia a ser paga. É opcional: se ficar em branco, o pagador escolhe o valor.</li>
+<li><strong>Descrição:</strong> texto curto opcional que aparece para o pagador, como &ldquo;Pedido 123&rdquo;.</li>
+<li><strong>Identificador da transação (TxID):</strong> código opcional de até 25 letras e números, usado para identificar e conciliar o pagamento. Se não for informado, o padrão é <code>***</code>.</li>
+<li><strong>QR Code estático:</strong> QR Code com dados fixos, que pode ser usado várias vezes e não expira.</li>
+<li><strong>Pix Copia e Cola:</strong> texto do Pix que contém os mesmos dados do QR Code e pode ser colado no aplicativo do banco para pagar.</li>
+<li><strong>BR Code:</strong> padrão do Banco Central para os QR Codes e códigos de pagamento do Pix.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -63,25 +546,25 @@
     <span class="tx"><strong>Gerador de QR Code Wi-Fi</strong><small>Crie um QR Code para conectar ao Wi-Fi sem digitar a senha.</small></span>
   </a>
 </li>
+<li class="c-documentos">
+  <a class="card" href="/ferramentas/gerador-de-cartao-de-credito/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.5c.7-1.6 1.9-2.5 3.5-2.5s2.8.9 3.5 2.5"/><path d="M15 10h3M15 14h3"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Número de Cartão de Crédito</strong><small>Gere números de cartão válidos para testes de pagamento.</small></span>
+  </a>
+</li>
 <li class="c-midia">
-  <a class="card" href="/ferramentas/leitor-qr-code-online/">
+  <a class="card" href="/ferramentas/gerador-de-codigo-de-barras-em-lote/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
 </span>
-    <span class="tx"><strong>Leitor de QR Code Online</strong><small>Leia um QR Code a partir de imagem ou câmera.</small></span>
+    <span class="tx"><strong>Gerador de Código de Barras em Lote</strong><small>Crie vários códigos de barras de uma só vez.</small></span>
   </a>
 </li>
-<li class="c-financas">
-  <a class="card" href="/ferramentas/nota-promissoria-online/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+<li class="c-midia">
+  <a class="card" href="/ferramentas/gerador-de-codigo-de-barras/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
 </span>
-    <span class="tx"><strong>Nota Promissória Online</strong><small>Preencha e baixe uma nota promissória.</small></span>
-  </a>
-</li>
-<li class="c-financas">
-  <a class="card" href="/ferramentas/recibo-online/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
-</span>
-    <span class="tx"><strong>Recibo Online</strong><small>Preencha e baixe um recibo de pagamento.</small></span>
+    <span class="tx"><strong>Gerador de Código de Barras</strong><small>Crie códigos de barras nos formatos mais usados.</small></span>
   </a>
 </li>
 
