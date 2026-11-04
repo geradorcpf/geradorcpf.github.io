@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Informações de Caractere: online e grátis</title>
+<title>Informações de Caractere</title>
 <meta name="description" content="Informações de Caractere: veja código, Unicode e HTML de qualquer caractere. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/informacoes-de-caractere/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/informacoes-de-caractere/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Informações de Caractere: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/informacoes-de-caractere/">
+<meta property="og:title" content="Informações de Caractere">
+<meta property="og:url" content="http://localhost:1313/ferramentas/informacoes-de-caractere/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Informações de Caractere: veja código, Unicode e HTML de qualquer caractere. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,29 +38,161 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Informações de Caractere</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/informacoes-de-caractere/","name":"Informações de Caractere","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Informações de Caractere</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/informacoes-de-caractere/","name":"Informações de Caractere","position":3}]}</script>
 <article class="prose page">
   <h1>Informações de Caractere</h1>
   
-  
+  <p>Basta digitar o caractere abaixo e depois clicar em <strong>Informações do Caractere</strong> para ver o código ASCII (decimal), hexadecimal, Unicode, HTML e mais.</p>
+<div id="info-caractere" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔤 Informações de Caractere</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Digite um caractere e veja o resultado na hora.</p>
+<label for="car-entrada" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Digite o caractere</label>
+<input id="car-entrada" type="text" placeholder="Ex.: A" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="car-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Informações do Caractere</button>
+<button type="button" id="car-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="car-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <div id="car-resultado">preencha o campo e clique em "Informações do Caractere".</div></div>
+</div>
+<script>
+(function () {
+  var entrada = document.getElementById('car-entrada');
+  var resultado = document.getElementById('car-resultado');
+  var caixa = document.getElementById('car-resposta');
+  var E = String.fromCharCode(38);
+  var BARRA = String.fromCharCode(92);
+  var MSG_PADRAO = 'preencha o campo e clique em "Informações do Caractere".';
+  function pad(s, n) {
+    s = String(s);
+    while (n > s.length) { s = '0' + s; }
+    return s;
+  }
+  function hexa(n) { return n.toString(16).toUpperCase(); }
+  function binario(n) {
+    var s = n.toString(2);
+    while (s.length % 8 !== 0) { s = '0' + s; }
+    return s;
+  }
+  function utf8(ch) {
+    var bytes = new TextEncoder().encode(ch);
+    var out = [];
+    for (var i = 0; i !== bytes.length; i++) { out.push(pad(hexa(bytes[i]), 2)); }
+    return out.join(' ');
+  }
+  function nomeEspecial(cp) {
+    if (cp === 32) { return '(espaço)'; }
+    if (cp === 9) { return '(tabulação)'; }
+    if (cp === 10) { return '(quebra de linha)'; }
+    if (cp === 13) { return '(retorno de carro)'; }
+    if (cp === 160) { return '(espaço sem quebra)'; }
+    if (31 >= cp) { return '(caractere de controle)'; }
+    if (cp >= 127) { if (159 >= cp) { return '(caractere de controle)'; } }
+    return '';
+  }
+  function texto(msg, cor) {
+    resultado.textContent = msg;
+    resultado.style.color = cor;
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    texto(msg, '#b91c1c');
+  }
+  function linha(rotulo, valor) {
+    var l = document.createElement('div');
+    l.style.cssText = 'display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid #e2e8f0;';
+    var a = document.createElement('span');
+    a.style.cssText = 'font-weight:600;color:#475569;';
+    a.textContent = rotulo;
+    var b = document.createElement('span');
+    b.style.cssText = 'font-family:ui-monospace,Menlo,Consolas,monospace;color:#166534;word-break:break-all;text-align:right;';
+    b.textContent = valor;
+    l.appendChild(a);
+    l.appendChild(b);
+    return l;
+  }
+  function calcular() {
+    var v = entrada.value;
+    if (v === '') { erro('digite um caractere.'); return; }
+    var chars = Array.from(v);
+    var ch = chars[0];
+    var cp = ch.codePointAt(0);
+    var especial = nomeEspecial(cp);
+    var linhas = [];
+    linhas.push(['Caractere', especial === '' ? ch : especial]);
+    linhas.push(['Está na tabela ASCII?', 127 >= cp ? 'Sim' : 'Não (fora de 0–127)']);
+    linhas.push(['Decimal', String(cp)]);
+    linhas.push(['Hexadecimal', '0x' + hexa(cp)]);
+    linhas.push(['Octal', cp.toString(8)]);
+    linhas.push(['Binário', binario(cp)]);
+    linhas.push(['Unicode', 'U+' + pad(hexa(cp), 4)]);
+    linhas.push(['UTF-8 (bytes)', utf8(ch)]);
+    linhas.push(['HTML decimal', E + '#' + cp + ';']);
+    linhas.push(['HTML hexadecimal', E + '#x' + hexa(cp) + ';']);
+    linhas.push(['Escape JavaScript', cp > 65535 ? BARRA + 'u{' + hexa(cp) + '}' : BARRA + 'u' + pad(hexa(cp), 4)]);
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+    for (var i = 0; i !== linhas.length; i++) {
+      resultado.appendChild(linha(linhas[i][0], linhas[i][1]));
+    }
+    if (chars.length > 1) {
+      var nota = document.createElement('div');
+      nota.style.cssText = 'margin-top:10px;font-size:0.85rem;color:#475569;';
+      nota.textContent = 'Você digitou ' + chars.length + ' caracteres. Apenas o primeiro foi analisado.';
+      resultado.appendChild(nota);
+    }
+  }
+  function limpar() {
+    entrada.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    texto(MSG_PADRAO, '#64748b');
+    entrada.focus();
+  }
+  document.getElementById('car-calcular').addEventListener('click', calcular);
+  document.getElementById('car-limpar').addEventListener('click', limpar);
+  entrada.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+  entrada.addEventListener('focus', function () { entrada.style.borderColor = '#6366f1'; });
+  entrada.addEventListener('blur', function () { entrada.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Digite (ou cole) um caractere no campo <strong>Digite o caractere</strong>. Pode ser letra, número, símbolo, acento ou até um emoji.</li>
+<li>Clique em <strong>Informações do Caractere</strong> (ou pressione Enter) para ver o resultado.</li>
+<li>Confira a lista de valores logo abaixo: decimal, hexadecimal, Unicode, HTML e outros.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o campo e consultar outro caractere.</li>
+</ol>
+<p>Se você digitar mais de um caractere, a ferramenta analisa apenas o primeiro e avisa na resposta. Por exemplo, ao digitar <code>A</code>, o resultado mostra decimal 65, hexadecimal 0x41 e Unicode U+0041.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Caractere:</strong> qualquer símbolo individual de um texto, como letra, número, pontuação, espaço ou emoji.</li>
+<li><strong>Tabela ASCII:</strong> padrão antigo que associa um número de 0 a 127 a letras sem acento, números, pontuação e caracteres de controle.</li>
+<li><strong>Decimal:</strong> o código do caractere escrito na base 10, a numeração do dia a dia. Para letras da tabela ASCII, é o próprio código ASCII.</li>
+<li><strong>Hexadecimal:</strong> o mesmo código escrito na base 16 (0 a 9 e A a F), muito usado em programação. Aparece com o prefixo <code>0x</code>.</li>
+<li><strong>Octal:</strong> o mesmo código escrito na base 8 (dígitos de 0 a 7).</li>
+<li><strong>Binário:</strong> o mesmo código escrito na base 2 (apenas 0 e 1), do jeito que o computador guarda a informação.</li>
+<li><strong>Unicode:</strong> padrão universal que dá um código único a praticamente todo caractere de todos os idiomas, além de símbolos e emojis. É escrito como <code>U+</code> seguido do código em hexadecimal.</li>
+<li><strong>Ponto de código (code point):</strong> o número que identifica um caractere no Unicode, o mesmo valor mostrado em decimal e hexadecimal.</li>
+<li><strong>UTF-8 (bytes):</strong> forma de gravar o caractere em bytes. Caracteres ASCII usam 1 byte e os demais usam de 2 a 4 bytes.</li>
+<li><strong>HTML decimal e hexadecimal:</strong> códigos como <code>&amp;#65;</code> e <code>&amp;#x41;</code> que exibem o caractere em uma página HTML, mesmo que ele não esteja no teclado ou no arquivo.</li>
+<li><strong>Escape JavaScript:</strong> forma de escrever o caractere dentro de um texto em JavaScript, como <code>\u0041</code>, ou <code>\u{1F600}</code> para códigos acima de FFFF.</li>
+<li><strong>Caractere de controle:</strong> código que não representa um símbolo visível, mas uma ação, como tabulação, quebra de linha ou retorno de carro.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-dev">
-  <a class="card" href="/ferramentas/tabela-ascii/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
-</span>
-    <span class="tx"><strong>Tabela ASCII</strong><small>Consulte a tabela ASCII com códigos decimais, hex e binários.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/simbolos/">
+  <ul class="cards rel"><li class="c-texto">
+  <a class="card" href="/ferramentas/contador-de-caracteres-palavras-e-linhas/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Símbolos para Copiar</strong><small>Copie símbolos especiais com um clique.</small></span>
+    <span class="tx"><strong>Contador de Caracteres, Palavras e Linhas</strong><small>Conte caracteres, palavras, linhas e parágrafos de qualquer texto.</small></span>
   </a>
 </li>
 <li class="c-texto">
@@ -70,18 +202,25 @@
     <span class="tx"><strong>Cortar Texto em X Letras</strong><small>Corte um texto no número de letras que você escolher.</small></span>
   </a>
 </li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/contador-de-caracteres-palavras-e-linhas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Contador de Caracteres, Palavras e Linhas</strong><small>Conte caracteres, palavras, linhas e parágrafos de qualquer texto.</small></span>
-  </a>
-</li>
 <li class="c-dev">
   <a class="card" href="/ferramentas/gerador-de-uuid/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
 </span>
     <span class="tx"><strong>Gerador de UUID</strong><small>Gere UUIDs v4 prontos para copiar.</small></span>
+  </a>
+</li>
+<li class="c-dev">
+  <a class="card" href="/ferramentas/gerador-de-meta-tags/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Meta Tags</strong><small>Monte as meta tags de título, descrição e redes sociais.</small></span>
+  </a>
+</li>
+<li class="c-dev">
+  <a class="card" href="/ferramentas/base64-codificar-decodificar/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
+</span>
+    <span class="tx"><strong>Base64 Decodificar e Codificar</strong><small>Codifique texto em Base64 ou decodifique de volta.</small></span>
   </a>
 </li>
 

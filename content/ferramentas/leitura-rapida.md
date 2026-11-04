@@ -1,11 +1,204 @@
 ---
 title: "Leitura Rápida"
-seoTitle: "Leitura Rápida: online e grátis"
+seoTitle: "Leitura Rápida"
 description: "Leitura Rápida: treine leitura dinâmica e aumente sua velocidade. Grátis e online, sem cadastro."
 summary: "Treine leitura dinâmica e aumente sua velocidade."
-date: 2026-10-20
-draft: true
+date: 2026-11-04
+draft: false
 category: "util"
 tags: ["leitura", "estudos", "produtividade"]
 keywords: ["leitura rápida", "leitura rápida online", "leitura", "estudos", "produtividade"]
 ---
+
+Basta colar um texto abaixo e depois clicar em **Ler Rápido**. As palavras aparecem uma de cada vez, em sequência.
+
+<div id="leitura-rapida" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">⚡ Leitura Rápida</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Cole um texto, ajuste a velocidade e leia uma palavra de cada vez.</p>
+<label for="lr-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Texto</label>
+<textarea id="lr-texto" rows="6" placeholder="Cole ou digite aqui o texto que você quer ler." style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;">
+<div style="flex:1;min-width:120px;">
+<label for="lr-ppm" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">PPM</label>
+<input id="lr-ppm" type="text" inputmode="numeric" value="300" placeholder="Ex.: 300" autocomplete="off" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="flex:1;min-width:120px;">
+<label for="lr-fundo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Fundo</label>
+<select id="lr-fundo" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="branco">Branco</option>
+<option value="preto">Preto</option>
+</select>
+</div>
+<div style="flex:1;min-width:120px;">
+<label for="lr-fonte" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Fonte</label>
+<select id="lr-fonte" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="24">Pequena</option>
+<option value="32" selected>Média</option>
+<option value="44">Grande</option>
+<option value="56">Extra grande</option>
+</select>
+</div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="lr-ler" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Ler Rápido</button>
+<button type="button" id="lr-reiniciar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Reiniciar</button>
+<button type="button" id="lr-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="lr-palco" aria-live="off" style="margin-top:20px;padding:16px;min-height:120px;display:flex;align-items:center;justify-content:center;text-align:center;background:#ffffff;color:#1e293b;border:2px dashed #c7d2fe;border-radius:12px;font-size:32px;font-weight:700;line-height:1.3;overflow-wrap:anywhere;box-sizing:border-box;"><span id="lr-palavra" style="color:#64748b;font-size:1rem;font-weight:400;">preencha o texto e clique em "Ler Rápido".</span></div>
+<div id="lr-status" aria-live="polite" style="margin-top:12px;font-size:0.9rem;color:#64748b;"><strong style="color:#3730a3;">Resposta:</strong> <span id="lr-info">aguardando o texto.</span></div>
+</div>
+<script>
+(function () {
+  var texto = document.getElementById('lr-texto');
+  var ppmEl = document.getElementById('lr-ppm');
+  var fundoEl = document.getElementById('lr-fundo');
+  var fonteEl = document.getElementById('lr-fonte');
+  var btnLer = document.getElementById('lr-ler');
+  var btnReiniciar = document.getElementById('lr-reiniciar');
+  var btnLimpar = document.getElementById('lr-limpar');
+  var palco = document.getElementById('lr-palco');
+  var palavraEl = document.getElementById('lr-palavra');
+  var info = document.getElementById('lr-info');
+  var PADRAO = 'preencha o texto e clique em "Ler Rápido".';
+  var palavras = [];
+  var indice = 0;
+  var timer = null;
+  var lendo = false;
+  function obterPpm() {
+    var v = parseInt(String(ppmEl.value).replace(/\s/g, ''), 10);
+    if (isNaN(v)) { v = 300; }
+    return Math.min(1500, Math.max(50, v));
+  }
+  function aplicarEstilo() {
+    var escuro = fundoEl.value === 'preto';
+    palco.style.background = escuro ? '#0f172a' : '#ffffff';
+    palco.style.borderColor = escuro ? '#334155' : '#c7d2fe';
+    palavraEl.style.color = escuro ? '#f8fafc' : '#1e293b';
+    if (palavras.length === 0 && !lendo) { palavraEl.style.color = escuro ? '#94a3b8' : '#64748b'; }
+    var tam = parseInt(fonteEl.value, 10);
+    if (palavraEl.getAttribute('data-ativa') === '1') {
+      palavraEl.style.fontSize = tam + 'px';
+      palavraEl.style.fontWeight = '700';
+    }
+  }
+  function mostrarPalavra(p) {
+    palavraEl.setAttribute('data-ativa', '1');
+    palavraEl.textContent = p;
+    palavraEl.style.fontSize = parseInt(fonteEl.value, 10) + 'px';
+    palavraEl.style.fontWeight = '700';
+    palavraEl.style.color = fundoEl.value === 'preto' ? '#f8fafc' : '#1e293b';
+  }
+  function mostrarPadrao(msg) {
+    palavraEl.setAttribute('data-ativa', '0');
+    palavraEl.textContent = msg;
+    palavraEl.style.fontSize = '1rem';
+    palavraEl.style.fontWeight = '400';
+    palavraEl.style.color = fundoEl.value === 'preto' ? '#94a3b8' : '#64748b';
+  }
+  function status(msg, cor) {
+    info.style.color = cor || '#64748b';
+    info.textContent = msg;
+  }
+  function preparar() {
+    var t = texto.value.replace(/\s+/g, ' ').trim();
+    palavras = t === '' ? [] : t.split(' ');
+  }
+  function parar() {
+    if (timer !== null) { clearTimeout(timer); timer = null; }
+    lendo = false;
+  }
+  function proxima() {
+    if (indice >= palavras.length) {
+      parar();
+      var total = palavras.length;
+      indice = 0;
+      btnLer.textContent = 'Ler Rápido';
+      status('leitura concluída (' + total + ' palavras).', '#166534');
+      return;
+    }
+    var p = palavras[indice];
+    mostrarPalavra(p);
+    indice = indice + 1;
+    status('palavra ' + indice + ' de ' + palavras.length + ' a ' + obterPpm() + ' PPM.');
+    var atraso = 60000 / obterPpm();
+    if (/[.!?]$/.test(p)) { atraso = atraso * 1.8; }
+    else if (/[,;:]$/.test(p)) { atraso = atraso * 1.4; }
+    timer = setTimeout(proxima, atraso);
+  }
+  function alternar() {
+    if (lendo) {
+      parar();
+      btnLer.textContent = 'Continuar';
+      status('leitura pausada na palavra ' + indice + ' de ' + palavras.length + '.');
+      return;
+    }
+    if (indice === 0 || palavras.length === 0) {
+      preparar();
+      indice = 0;
+    }
+    if (palavras.length === 0) {
+      status('cole ou digite um texto antes de começar.', '#b91c1c');
+      texto.focus();
+      return;
+    }
+    lendo = true;
+    btnLer.textContent = 'Pausar';
+    proxima();
+  }
+  function reiniciar() {
+    parar();
+    indice = 0;
+    btnLer.textContent = 'Ler Rápido';
+    mostrarPadrao(PADRAO);
+    status('leitura reiniciada.');
+  }
+  function limpar() {
+    parar();
+    indice = 0;
+    palavras = [];
+    texto.value = '';
+    btnLer.textContent = 'Ler Rápido';
+    mostrarPadrao(PADRAO);
+    status('aguardando o texto.');
+    texto.focus();
+  }
+  btnLer.addEventListener('click', alternar);
+  btnReiniciar.addEventListener('click', reiniciar);
+  btnLimpar.addEventListener('click', limpar);
+  texto.addEventListener('input', function () {
+    if (lendo || indice !== 0) { reiniciar(); }
+    palavras = [];
+  });
+  fundoEl.addEventListener('change', aplicarEstilo);
+  fonteEl.addEventListener('change', aplicarEstilo);
+  [texto, ppmEl, fundoEl, fonteEl].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+  aplicarEstilo();
+})();
+</script>
+
+## Como usar a ferramenta
+
+1. Cole ou digite o texto que você quer ler no campo **Texto**.
+2. Informe a velocidade desejada em **PPM** (palavras por minuto). Se estiver começando, use 200 a 300.
+3. Escolha a cor de **Fundo** (branco ou preto) e o tamanho da **Fonte** que fique mais confortável para seus olhos.
+4. Clique em **Ler Rápido** para iniciar. As palavras aparecem uma de cada vez na caixa de leitura.
+5. Use **Pausar** para parar um instante e **Continuar** para retomar do ponto em que parou.
+6. Clique em **Reiniciar** para voltar ao início do mesmo texto, ou em **Limpar** para apagar tudo e colar outro texto.
+
+A ferramenta faz uma pequena pausa extra após vírgulas e pontos, o que ajuda a acompanhar o sentido das frases. Aumente a velocidade aos poucos, conforme você se sentir confortável.
+
+## Entendendo os termos
+
+- **Leitura rápida:** técnica para ler mais depressa, aqui exibindo uma palavra por vez no mesmo ponto da tela, sem que os olhos precisem se mover pela linha.
+- **Leitura dinâmica:** nome mais comum no Brasil para o conjunto de técnicas que buscam aumentar a velocidade de leitura mantendo a compreensão.
+- **PPM:** sigla de palavras por minuto, a medida da velocidade de leitura. Quanto maior o valor, mais rápido as palavras trocam na tela.
+- **Fundo:** cor de fundo da caixa de leitura. O fundo preto costuma ser mais agradável em ambientes escuros.
+- **Fonte:** tamanho das letras exibidas durante a leitura, de pequena a extra grande.
+- **Ler Rápido:** botão que inicia a exibição das palavras do texto colado.
+- **Pausar / Continuar:** interrompe a leitura e retoma a partir da mesma palavra.
+- **Reiniciar:** volta ao começo do texto sem apagá-lo.
+- **Limpar:** apaga o texto e deixa a ferramenta pronta para um novo uso.
+- **Compreensão:** quanto do texto você realmente entendeu. Velocidade só vale a pena se o entendimento se mantém.

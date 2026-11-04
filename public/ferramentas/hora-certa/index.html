@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hora Certa: online e grátis</title>
+<title>Hora Certa</title>
 <meta name="description" content="Hora Certa: veja a hora certa agora, com data e fuso horário. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/hora-certa/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/hora-certa/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hora Certa: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/hora-certa/">
+<meta property="og:title" content="Hora Certa">
+<meta property="og:url" content="http://localhost:1313/ferramentas/hora-certa/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Hora Certa: veja a hora certa agora, com data e fuso horário. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,43 +38,267 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Hora Certa</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/hora-certa/","name":"Hora Certa","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Hora Certa</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/hora-certa/","name":"Hora Certa","position":3}]}</script>
 <article class="prose page">
   <h1>Hora Certa</h1>
   
-  
+  <p>Veja abaixo a hora certa agora no seu dispositivo e nas principais cidades do Brasil e do mundo. Você também pode adicionar outras cidades à lista.</p>
+<div id="hora-certa" style="max-width:520px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🕐 Hora Certa</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Hora, data e fuso horário atualizados a cada segundo.</p>
+<div aria-live="off" style="margin-bottom:20px;padding:16px;background:#f0fdf4;border:2px solid #86efac;border-radius:12px;color:#166534;font-size:1rem;line-height:1.6;text-align:center;">
+<strong style="color:#3730a3;">Hora no seu dispositivo</strong><br>
+<span id="hc-local-hora" style="display:block;font-size:2.4rem;font-weight:700;letter-spacing:1px;">--:--:--</span>
+<span id="hc-local-data" style="display:block;color:#475569;font-size:0.95rem;"></span>
+<small id="hc-local-zona" style="color:#475569;"></small>
+</div>
+<strong style="display:block;margin-bottom:10px;color:#3730a3;">Cidades</strong>
+<div id="hc-lista" style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;"></div>
+<label for="hc-cidade" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Adicionar cidade</label>
+<select id="hc-cidade" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="hc-adicionar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Adicionar</button>
+<button type="button" id="hc-restaurar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Restaurar lista</button>
+</div>
+</div>
+<script>
+(function () {
+  var catalogo = [
+    ['Brasília', 'America/Sao_Paulo'],
+    ['Manaus', 'America/Manaus'],
+    ['Fernando de Noronha', 'America/Noronha'],
+    ['São Paulo', 'America/Sao_Paulo'],
+    ['Recife', 'America/Recife'],
+    ['Fortaleza', 'America/Fortaleza'],
+    ['Salvador', 'America/Bahia'],
+    ['Cuiabá', 'America/Cuiaba'],
+    ['Rio de Janeiro', 'America/Sao_Paulo'],
+    ['Belém', 'America/Belem'],
+    ['Porto Alegre', 'America/Sao_Paulo'],
+    ['Rio Branco', 'America/Rio_Branco'],
+    ['Lisboa', 'Europe/Lisbon'],
+    ['Londres', 'Europe/London'],
+    ['Paris', 'Europe/Paris'],
+    ['Madri', 'Europe/Madrid'],
+    ['Roma', 'Europe/Rome'],
+    ['Berlim', 'Europe/Berlin'],
+    ['Nova York', 'America/New_York'],
+    ['Chicago', 'America/Chicago'],
+    ['Los Angeles', 'America/Los_Angeles'],
+    ['Cidade do México', 'America/Mexico_City'],
+    ['Buenos Aires', 'America/Argentina/Buenos_Aires'],
+    ['Dubai', 'Asia/Dubai'],
+    ['Jacarta', 'Asia/Jakarta'],
+    ['Tóquio', 'Asia/Tokyo'],
+    ['Pequim', 'Asia/Shanghai'],
+    ['Sydney', 'Australia/Sydney'],
+    ['UTC (Tempo Universal)', 'UTC']
+  ];
+  var padrao = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  var chave = 'hora-certa-cidades';
+  var selecionadas = padrao.slice();
+  var linhas = [];
+  var agora = new Date();
+  var cacheFmt = {};
+  var lista = document.getElementById('hc-lista');
+  var seletor = document.getElementById('hc-cidade');
+  var estCard = 'display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;';
+  var estBotaoRemover = 'padding:2px 10px;font-size:1.1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;';
+  function el(tag, estilo, texto) {
+    var e = document.createElement(tag);
+    if (estilo) { e.setAttribute('style', estilo); }
+    if (texto) { e.textContent = texto; }
+    return e;
+  }
+  function formatador(id, zona, opcoes, idioma) {
+    var k = id + '|' + zona;
+    if (!cacheFmt[k]) {
+      opcoes.timeZone = zona;
+      cacheFmt[k] = new Intl.DateTimeFormat(idioma, opcoes);
+    }
+    return cacheFmt[k];
+  }
+  function fmtHora(zona) {
+    return formatador('h', zona, { hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' }, 'pt-BR').format(agora);
+  }
+  function fmtData(zona) {
+    var t = formatador('d', zona, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }, 'pt-BR').format(agora);
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
+  function fmtOffset(zona) {
+    var k = 'o|' + zona;
+    if (!cacheFmt[k]) {
+      try {
+        cacheFmt[k] = new Intl.DateTimeFormat('en-US', { timeZone: zona, timeZoneName: 'longOffset' });
+      } catch (e) {
+        cacheFmt[k] = new Intl.DateTimeFormat('en-US', { timeZone: zona, timeZoneName: 'short' });
+      }
+    }
+    var nome = '';
+    cacheFmt[k].formatToParts(agora).forEach(function (p) {
+      if (p.type === 'timeZoneName') { nome = p.value; }
+    });
+    nome = nome.replace('GMT', 'UTC');
+    return nome === 'UTC' ? 'UTC+00:00' : nome;
+  }
+  var zonaLocal = 'UTC';
+  try {
+    zonaLocal = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+  } catch (e) {
+    zonaLocal = 'UTC';
+  }
+  function salvar() {
+    try { localStorage.setItem(chave, JSON.stringify(selecionadas)); } catch (e) {}
+  }
+  function carregar() {
+    try {
+      var bruto = localStorage.getItem(chave);
+      if (bruto) {
+        var lido = JSON.parse(bruto);
+        if (Array.isArray(lido)) {
+          selecionadas = lido.filter(function (i) { return typeof i === 'number' && catalogo[i] !== undefined; });
+        }
+      }
+    } catch (e) {
+      selecionadas = padrao.slice();
+    }
+  }
+  function preencherSeletor() {
+    while (seletor.firstChild) { seletor.removeChild(seletor.firstChild); }
+    catalogo.forEach(function (c, i) {
+      if (selecionadas.indexOf(i) === -1) {
+        var o = document.createElement('option');
+        o.value = String(i);
+        o.textContent = c[0];
+        seletor.appendChild(o);
+      }
+    });
+  }
+  function desenhar() {
+    while (lista.firstChild) { lista.removeChild(lista.firstChild); }
+    linhas = [];
+    if (selecionadas.length === 0) {
+      lista.appendChild(el('span', 'color:#64748b;font-size:0.95rem;', 'Nenhuma cidade na lista. Adicione uma cidade abaixo.'));
+    }
+    selecionadas.forEach(function (idx) {
+      var c = catalogo[idx];
+      var card = el('div', estCard);
+      var esq = el('div', 'min-width:0;');
+      var nome = el('strong', 'display:block;color:#3730a3;font-size:1rem;', c[0]);
+      var dataEl = el('span', 'display:block;color:#475569;font-size:0.85rem;', '');
+      var zonaEl = el('small', 'color:#64748b;', '');
+      esq.appendChild(nome);
+      esq.appendChild(dataEl);
+      esq.appendChild(zonaEl);
+      var dir = el('div', 'display:flex;align-items:center;gap:10px;');
+      var horaEl = el('span', 'font-size:1.5rem;font-weight:700;color:#166534;', '--:--:--');
+      var rem = el('button', estBotaoRemover, '\u00d7');
+      rem.type = 'button';
+      rem.setAttribute('aria-label', 'Remover ' + c[0]);
+      rem.addEventListener('click', function () {
+        selecionadas = selecionadas.filter(function (i) { return i !== idx; });
+        salvar();
+        desenhar();
+        preencherSeletor();
+      });
+      dir.appendChild(horaEl);
+      dir.appendChild(rem);
+      card.appendChild(esq);
+      card.appendChild(dir);
+      lista.appendChild(card);
+      linhas.push({ zona: c[1], hora: horaEl, data: dataEl, fuso: zonaEl });
+    });
+    atualizar();
+  }
+  function atualizar() {
+    agora = new Date();
+    document.getElementById('hc-local-hora').textContent = fmtHora(zonaLocal);
+    document.getElementById('hc-local-data').textContent = fmtData(zonaLocal);
+    document.getElementById('hc-local-zona').textContent = zonaLocal.replace(/_/g, ' ') + ' (' + fmtOffset(zonaLocal) + ')';
+    linhas.forEach(function (l) {
+      l.hora.textContent = fmtHora(l.zona);
+      l.data.textContent = fmtData(l.zona);
+      l.fuso.textContent = fmtOffset(l.zona);
+    });
+  }
+  function adicionar() {
+    if (seletor.value === '') { return; }
+    var idx = Number(seletor.value);
+    if (selecionadas.indexOf(idx) === -1) { selecionadas.push(idx); }
+    salvar();
+    desenhar();
+    preencherSeletor();
+  }
+  function restaurar() {
+    selecionadas = padrao.slice();
+    salvar();
+    desenhar();
+    preencherSeletor();
+  }
+  document.getElementById('hc-adicionar').addEventListener('click', adicionar);
+  document.getElementById('hc-restaurar').addEventListener('click', restaurar);
+  seletor.addEventListener('focus', function () { seletor.style.borderColor = '#6366f1'; });
+  seletor.addEventListener('blur', function () { seletor.style.borderColor = '#c7d2fe'; });
+  carregar();
+  desenhar();
+  preencherSeletor();
+  setInterval(atualizar, 1000);
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Veja no quadro verde a <strong>hora certa</strong> do seu dispositivo, com a data e o fuso horário.</li>
+<li>Confira na lista <strong>Cidades</strong> a hora atual de cada cidade (Brasília, Manaus, Fernando de Noronha e outras).</li>
+<li>Para incluir outra cidade, escolha-a no campo <strong>Adicionar cidade</strong> e clique em <strong>Adicionar</strong>.</li>
+<li>Para tirar uma cidade da lista, clique no botão <strong>×</strong> ao lado do horário dela.</li>
+<li>Clique em <strong>Restaurar lista</strong> para voltar às cidades mais populares.</li>
+</ol>
+<p>A hora é atualizada automaticamente a cada segundo, sem precisar recarregar a página. O horário é calculado a partir do relógio do seu dispositivo, então ele precisa estar com a data e a hora corretas. A lista de cidades fica salva no seu navegador.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Hora certa:</strong> horário exato neste momento em determinado lugar, usado como referência para acertar relógios e marcar compromissos.</li>
+<li><strong>Fuso horário:</strong> faixa do planeta que adota o mesmo horário oficial. A Terra é dividida em 24 fusos principais, e a hora muda de um fuso para outro.</li>
+<li><strong>UTC:</strong> sigla de Tempo Universal Coordenado, o padrão mundial de referência para as horas. Os demais fusos são definidos pela diferença em relação a ele, como UTC-03:00.</li>
+<li><strong>Diferença de fuso (offset):</strong> número de horas que um lugar está adiantado (+) ou atrasado (-) em relação ao UTC. Em Brasília, por exemplo, é de UTC-03:00.</li>
+<li><strong>Horário de Brasília:</strong> horário oficial do Brasil, usado como referência nacional, equivalente a UTC-03:00.</li>
+<li><strong>Fernando de Noronha:</strong> arquipélago brasileiro que está um fuso à frente de Brasília (UTC-02:00).</li>
+<li><strong>Horário de verão:</strong> adiantamento do relógio em uma hora durante o verão. No Brasil ele não é mais aplicado desde 2019, mas outros países ainda o utilizam, o que altera a diferença de horas ao longo do ano.</li>
+<li><strong>Formato 24 horas:</strong> forma de mostrar as horas de 00 a 23, sem usar AM e PM.</li>
+<li><strong>Data:</strong> dia da semana, dia do mês, mês e ano correspondentes ao horário da cidade. Ela pode ser diferente entre cidades distantes.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-datas">
-  <a class="card" href="/ferramentas/semana-do-ano/">
+  <a class="card" href="/ferramentas/calcular-idade/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Semana do Ano</strong><small>Descubra em que semana do ano estamos.</small></span>
+    <span class="tx"><strong>Calcular Idade</strong><small>Descubra sua idade exata em anos, meses e dias.</small></span>
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/signos-datas/">
+  <a class="card" href="/ferramentas/calendario/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Signos e Datas</strong><small>Veja o signo de cada data e as datas de cada signo.</small></span>
+    <span class="tx"><strong>Calendário 2026</strong><small>Calendário de 2026 com feriados e datas importantes.</small></span>
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/somar-dias-em-datas/">
+  <a class="card" href="/ferramentas/contagem-regressiva/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Somar Dias em Datas</strong><small>Descubra a data resultante ao somar dias a uma data.</small></span>
+    <span class="tx"><strong>Contagem Regressiva</strong><small>Crie uma contagem regressiva para qualquer data.</small></span>
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/subtrair-dias-em-datas/">
+  <a class="card" href="/ferramentas/feriados-2027/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Subtrair Dias em Datas</strong><small>Descubra a data resultante ao subtrair dias de uma data.</small></span>
+    <span class="tx"><strong>Feriados 2027</strong><small>Lista de feriados nacionais de 2027.</small></span>
   </a>
 </li>
 <li class="c-datas">

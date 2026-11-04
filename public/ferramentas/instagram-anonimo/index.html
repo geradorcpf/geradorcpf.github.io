@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Instagram Anônimo: online e grátis</title>
+<title>Instagram Anônimo</title>
 <meta name="description" content="Instagram Anônimo: visualize perfis públicos do Instagram sem entrar na conta. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/instagram-anonimo/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/instagram-anonimo/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Instagram Anônimo: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/instagram-anonimo/">
+<meta property="og:title" content="Instagram Anônimo">
+<meta property="og:url" content="http://localhost:1313/ferramentas/instagram-anonimo/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Instagram Anônimo: visualize perfis públicos do Instagram sem entrar na conta. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,50 +38,107 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Instagram Anônimo</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/instagram-anonimo/","name":"Instagram Anônimo","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Instagram Anônimo</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/instagram-anonimo/","name":"Instagram Anônimo","position":3}]}</script>
 <article class="prose page">
   <h1>Instagram Anônimo</h1>
   
-  
+  <p>Veja stories no Instagram sem aparecer na lista de visualizações. Verifique se o seu navegador é compatível e instale a extensão pelo botão abaixo.</p>
+<div id="ig-anonimo" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🕶️ Instagram Anônimo</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Extensão para o navegador Chrome (ou Kiwi Browser no Android).</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<a id="ig-instalar" href="https://chromewebstore.google.com/detail/anonymous-stories/djagffgjghpihfffmiomblhinennkkig" target="_blank" rel="noopener noreferrer" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);text-align:center;text-decoration:none;box-sizing:border-box;">Instalar extensão</a>
+<button type="button" id="ig-verificar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Verificar navegador</button>
+</div>
+<div id="ig-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="ig-resultado">clique em "Verificar navegador" para saber se a extensão funciona no seu aparelho.</span></div>
+</div>
+<script>
+(function () {
+  var botao = document.getElementById('ig-verificar');
+  var resultado = document.getElementById('ig-resultado');
+  var caixa = document.getElementById('ig-resposta');
+  function mostrar(ok, msg) {
+    caixa.style.borderColor = ok ? '#86efac' : '#fca5a5';
+    caixa.style.background = ok ? '#f0fdf4' : '#fef2f2';
+    resultado.style.color = ok ? '#166534' : '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function verificar() {
+    var ua = navigator.userAgent || '';
+    var chromium = ua.indexOf('Chrome') > -1 || ua.indexOf('Chromium') > -1;
+    var android = ua.indexOf('Android') > -1;
+    if (!chromium) {
+      mostrar(false, 'este navegador não é compatível. Use o Chrome no computador ou o Kiwi Browser no Android.');
+      return;
+    }
+    if (android) {
+      mostrar(true, 'no Android, a extensão exige o Kiwi Browser. Se você já está nele, é só clicar em "Instalar extensão".');
+      return;
+    }
+    mostrar(true, 'seu navegador parece compatível. Clique em "Instalar extensão".');
+  }
+  botao.addEventListener('click', verificar);
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Abra o site no <strong>Chrome</strong> (computador) ou no <strong>Kiwi Browser</strong> (Android).</li>
+<li>Clique em <strong>Instalar extensão</strong> e adicione a extensão <strong>Anonymous Stories</strong> pela Chrome Web Store.</li>
+<li>Acesse o seu Instagram normalmente e assista aos stories que quiser. Com a extensão ligada, eles não são marcados como visualizados.</li>
+<li>Para voltar ao normal, clique no ícone da extensão na barra do navegador e deixe-a <strong>desligada</strong>.</li>
+</ol>
+<p>Use o botão <strong>Verificar navegador</strong> se tiver dúvida sobre a compatibilidade. A extensão funciona no seu próprio Instagram, inclusive com stories de contas privadas que você já segue.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Instagram Anônimo:</strong> nome dado a ferramentas que permitem ver conteúdo do Instagram sem deixar rastro da sua visita.</li>
+<li><strong>Story:</strong> foto ou vídeo que fica disponível por 24 horas no perfil de alguém.</li>
+<li><strong>Visualização de story:</strong> registro que o Instagram mostra ao autor com os nomes de quem assistiu ao story.</li>
+<li><strong>Extensão:</strong> pequeno programa instalado no navegador que adiciona recursos a ele.</li>
+<li><strong>Chrome Web Store:</strong> loja oficial de extensões do Google Chrome.</li>
+<li><strong>Kiwi Browser:</strong> navegador para Android que aceita extensões do Chrome.</li>
+<li><strong>Conta privada:</strong> perfil em que só os seguidores aprovados podem ver as publicações e os stories.</li>
+<li><strong>Ligar e desligar a extensão:</strong> ao clicar no ícone dela, você escolhe se os stories assistidos ficam ocultos ou voltam a ser marcados como vistos.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-social">
-  <a class="card" href="/ferramentas/nao-seguidores-instagram/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
-</span>
-    <span class="tx"><strong>Não Seguidores no Instagram</strong><small>Veja quem você segue no Instagram e não segue você de volta.</small></span>
-  </a>
-</li>
-<li class="c-social">
-  <a class="card" href="/ferramentas/ordenar-conta-instagram/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
-</span>
-    <span class="tx"><strong>Ordenar Conta do Instagram</strong><small>Organize as contas que você segue no Instagram.</small></span>
-  </a>
-</li>
-<li class="c-social">
-  <a class="card" href="/ferramentas/quem-deixou-de-me-seguir/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
-</span>
-    <span class="tx"><strong>Quem Deixou de me Seguir?</strong><small>Descubra quem deixou de seguir você no Instagram.</small></span>
-  </a>
-</li>
-<li class="c-dev">
-  <a class="card" href="/ferramentas/mensagem-autodestrutiva/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
-</span>
-    <span class="tx"><strong>Mensagem Autodestrutiva</strong><small>Envie uma mensagem que se apaga depois de lida.</small></span>
-  </a>
-</li>
-<li class="c-rede">
+  <ul class="cards rel"><li class="c-rede">
   <a class="card" href="/ferramentas/gerador-de-email-temporario/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
 </span>
     <span class="tx"><strong>Gerador de Email Temporário</strong><small>Crie um e-mail descartável para receber mensagens.</small></span>
+  </a>
+</li>
+<li class="c-social">
+  <a class="card" href="/ferramentas/contador-inscritos/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
+</span>
+    <span class="tx"><strong>Contador de Inscritos em Tempo Real</strong><small>Acompanhe o número de inscritos de um canal em tempo real.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/letras-diferentes/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Letras Diferentes</strong><small>Converta seu texto em letras diferentes para bio e perfis.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/emoticons-para-copiar/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Emoticons para Copiar</strong><small>Copie emoticons de texto com um clique.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/emojis-para-copiar/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Emojis para Copiar e Colar</strong><small>Copie e cole emojis de todas as categorias.</small></span>
   </a>
 </li>
 

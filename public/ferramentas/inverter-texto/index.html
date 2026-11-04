@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inverter Texto: online e grátis</title>
+<title>Inverter Texto</title>
 <meta name="description" content="Inverter Texto: inverta a ordem dos caracteres de um texto. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/inverter-texto/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/inverter-texto/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Inverter Texto: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/inverter-texto/">
+<meta property="og:title" content="Inverter Texto">
+<meta property="og:url" content="http://localhost:1313/ferramentas/inverter-texto/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Inverter Texto: inverta a ordem dos caracteres de um texto. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,25 +38,122 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Inverter Texto</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/inverter-texto/","name":"Inverter Texto","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Inverter Texto</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/inverter-texto/","name":"Inverter Texto","position":3}]}</script>
 <article class="prose page">
   <h1>Inverter Texto</h1>
   
-  
+  <p>Basta digitar uma palavra, frase ou texto abaixo e depois clicar em <strong>Inverter Texto</strong>.</p>
+<div id="inv-texto-box" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔄 Inverter Texto</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Digite o texto e veja o resultado invertido na hora.</p>
+<label for="inv-entrada" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Texto</label>
+<textarea id="inv-entrada" rows="4" placeholder="Ex.: Olá, mundo!" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="inv-inverter" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Inverter Texto</button>
+<button type="button" id="inv-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="inv-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="inv-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="inv-resultado" style="white-space:pre-wrap;word-break:break-word;">digite um texto e clique em "Inverter Texto".</span></div>
+</div>
+<script>
+(function () {
+  var entrada = document.getElementById('inv-entrada');
+  var resultado = document.getElementById('inv-resultado');
+  var caixa = document.getElementById('inv-resposta');
+  var botaoCopiar = document.getElementById('inv-copiar');
+  var ultimo = '';
+  var padrao = 'digite um texto e clique em "Inverter Texto".';
+  function partes(texto) {
+    var s = texto.normalize('NFC');
+    if (typeof Intl !== 'undefined') {
+      if (Intl.Segmenter) {
+        var seg = new Intl.Segmenter(undefined, { granularity: 'grapheme' });
+        return Array.from(seg.segment(s), function (x) { return x.segment; });
+      }
+    }
+    return Array.from(s);
+  }
+  function inverter(texto) {
+    return partes(texto).reverse().join('');
+  }
+  function erro(msg) {
+    ultimo = '';
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function calcular() {
+    var texto = entrada.value;
+    if (texto.trim() === '') { erro('digite algum texto para inverter.'); return; }
+    ultimo = inverter(texto);
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.textContent = ultimo;
+  }
+  function copiarFallback(texto) {
+    var tmp = document.createElement('textarea');
+    tmp.value = texto;
+    tmp.style.position = 'fixed';
+    tmp.style.opacity = '0';
+    document.body.appendChild(tmp);
+    tmp.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(tmp);
+  }
+  function copiar() {
+    if (ultimo === '') { erro('inverta um texto antes de copiar.'); return; }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(ultimo).catch(function () { copiarFallback(ultimo); });
+    } else {
+      copiarFallback(ultimo);
+    }
+    botaoCopiar.textContent = 'Copiado!';
+    setTimeout(function () { botaoCopiar.textContent = 'Copiar'; }, 1500);
+  }
+  function limpar() {
+    entrada.value = '';
+    ultimo = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = padrao;
+    entrada.focus();
+  }
+  document.getElementById('inv-inverter').addEventListener('click', calcular);
+  botaoCopiar.addEventListener('click', copiar);
+  document.getElementById('inv-limpar').addEventListener('click', limpar);
+  entrada.addEventListener('focus', function () { entrada.style.borderColor = '#6366f1'; });
+  entrada.addEventListener('blur', function () { entrada.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Digite ou cole a palavra, frase ou texto no campo <strong>Texto</strong>.</li>
+<li>Clique em <strong>Inverter Texto</strong> para ver o resultado na hora.</li>
+<li>Clique em <strong>Copiar</strong> para levar o texto invertido para a área de transferência.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o campo e inverter um novo texto.</li>
+</ol>
+<p>A ferramenta inverte a ordem dos caracteres, do último para o primeiro. Por exemplo, o texto <code>Olá, mundo!</code> vira <code>!odnum ,álO</code>. Letras com acento, números, espaços, pontuação e emojis também são invertidos normalmente.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Inverter texto:</strong> escrever um texto de trás para frente, de modo que o último caractere passe a ser o primeiro.</li>
+<li><strong>Caractere:</strong> cada símbolo individual de um texto, como uma letra, número, espaço, sinal de pontuação ou emoji.</li>
+<li><strong>String:</strong> termo da programação para uma sequência de caracteres, ou seja, um texto.</li>
+<li><strong>Texto invertido:</strong> resultado da inversão, também chamado de texto de trás para frente ou texto espelhado.</li>
+<li><strong>Palíndromo:</strong> palavra ou frase que continua igual quando lida de trás para frente, como &ldquo;arara&rdquo; ou &ldquo;ovo&rdquo;.</li>
+<li><strong>Espaços e pontuação:</strong> também contam como caracteres, por isso mudam de posição junto com as letras.</li>
+<li><strong>Copiar:</strong> ação que envia o texto invertido para a área de transferência, pronta para colar em outro lugar.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-texto">
-  <a class="card" href="/ferramentas/texto-de-cabeca-para-baixo/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Texto de Cabeça para Baixo</strong><small>Vire seu texto de cabeça para baixo.</small></span>
-  </a>
-</li>
-<li class="c-texto">
   <a class="card" href="/ferramentas/letras-diferentes/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
@@ -64,24 +161,31 @@
   </a>
 </li>
 <li class="c-texto">
-  <a class="card" href="/ferramentas/letras-empilhadas/">
+  <a class="card" href="/ferramentas/colocar-em-ordem-alfabetica/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Letras Empilhadas</strong><small>Empilhe as letras do seu texto em formatos criativos.</small></span>
+    <span class="tx"><strong>Colocar em Ordem Alfabética</strong><small>Ordene uma lista de palavras em ordem alfabética.</small></span>
   </a>
 </li>
 <li class="c-texto">
-  <a class="card" href="/ferramentas/letras-personalizadas/">
+  <a class="card" href="/ferramentas/comparar-textos/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Letras Personalizadas</strong><small>Transforme texto em letras estilizadas para copiar e colar.</small></span>
+    <span class="tx"><strong>Comparar Textos</strong><small>Compare dois textos e veja as diferenças.</small></span>
   </a>
 </li>
 <li class="c-texto">
-  <a class="card" href="/ferramentas/numero-por-extenso/">
+  <a class="card" href="/ferramentas/contador-de-caracteres-palavras-e-linhas/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Número por Extenso</strong><small>Escreva qualquer número por extenso, inclusive valores em reais.</small></span>
+    <span class="tx"><strong>Contador de Caracteres, Palavras e Linhas</strong><small>Conte caracteres, palavras, linhas e parágrafos de qualquer texto.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/contador-de-ocorrencia-de-palavras/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Contador de Ocorrência de Palavra</strong><small>Conte quantas vezes cada palavra aparece no texto.</small></span>
   </a>
 </li>
 

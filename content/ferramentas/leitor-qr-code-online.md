@@ -1,11 +1,262 @@
 ---
 title: "Leitor de QR Code Online"
-seoTitle: "Leitor de QR Code Online: grátis"
+seoTitle: "Leitor de QR Code Online"
 description: "Leitor de QR Code Online: leia um QR Code a partir de imagem ou câmera. Grátis e online, sem cadastro."
 summary: "Leia um QR Code a partir de imagem ou câmera."
-date: 2026-10-20
-draft: true
+date: 2026-11-04
+draft: false
 category: "midia"
 tags: ["qr code", "leitor", "códigos"]
 keywords: ["leitor de qr code online", "qr code", "leitor", "códigos"]
 ---
+
+<div class="qrr" id="qrr">
+<style>
+.qrr{max-width:640px;margin:0 auto 24px;padding:20px;border:1px solid #d9dee5;border-radius:12px;background:#f8f9fb;color:#1f2933;font-family:inherit;box-sizing:border-box}
+.qrr *{box-sizing:border-box}
+.qrr [hidden]{display:none!important}
+.qrr-actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px}
+.qrr-btn{appearance:none;border:1px solid #2563eb;background:#2563eb;color:#fff;padding:10px 18px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;line-height:1.2;transition:background .15s,opacity .15s}
+.qrr-btn:hover{background:#1d4ed8}
+.qrr-btn:disabled{opacity:.5;cursor:not-allowed}
+.qrr-btn-sec{background:#fff;color:#2563eb}
+.qrr-btn-sec:hover{background:#eaf1ff}
+.qrr-view{position:relative;margin:0 0 14px;border-radius:10px;overflow:hidden;background:#000}
+.qrr-view video{display:block;width:100%;max-height:420px;object-fit:cover}
+.qrr-status{min-height:20px;margin:0 0 12px;font-size:14px;color:#52606d}
+.qrr-status.qrr-err{color:#b42318}
+.qrr-status.qrr-ok{color:#067647}
+.qrr-result label{display:block;margin:0 0 6px;font-size:14px;font-weight:600;color:#1f2933}
+.qrr-result textarea{display:block;width:100%;padding:10px 12px;border:1px solid #cbd2d9;border-radius:8px;background:#fff;color:#1f2933;font-family:inherit;font-size:15px;line-height:1.4;resize:vertical;margin:0 0 12px}
+.qrr-link{display:inline-block;padding:10px 18px;border:1px solid #2563eb;border-radius:8px;background:#fff;color:#2563eb;font-size:15px;font-weight:600;text-decoration:none;line-height:1.2}
+.qrr-link:hover{background:#eaf1ff}
+@media (prefers-color-scheme:dark){.qrr{background:#1b222c;border-color:#323f4b;color:#e4e7eb}.qrr-status{color:#9aa5b1}.qrr-status.qrr-err{color:#f97066}.qrr-status.qrr-ok{color:#47cd89}.qrr-btn-sec,.qrr-link{background:#1b222c;color:#7aa7ff;border-color:#7aa7ff}.qrr-btn-sec:hover,.qrr-link:hover{background:#243042}.qrr-result label{color:#e4e7eb}.qrr-result textarea{background:#11161d;border-color:#323f4b;color:#e4e7eb}}
+</style>
+<div class="qrr-actions">
+<button type="button" class="qrr-btn" id="qrr-open">Abrir Câmera</button>
+<button type="button" class="qrr-btn qrr-btn-sec" id="qrr-close" disabled>Fechar</button>
+<button type="button" class="qrr-btn qrr-btn-sec" id="qrr-upload">Enviar Imagem</button>
+<input type="file" id="qrr-file" accept="image/*" hidden>
+</div>
+<div class="qrr-view" id="qrr-view" hidden><video id="qrr-video" playsinline muted></video></div>
+<canvas id="qrr-canvas" hidden></canvas>
+<div class="qrr-status" id="qrr-status" role="status" aria-live="polite"></div>
+<div class="qrr-result" id="qrr-result" hidden>
+<label for="qrr-text">Conteúdo lido</label>
+<textarea id="qrr-text" rows="4" readonly></textarea>
+<div class="qrr-actions">
+<button type="button" class="qrr-btn" id="qrr-copy">Copiar</button>
+<a class="qrr-link" id="qrr-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Abrir link</a>
+</div>
+</div>
+<script>
+(function () {
+  var JSQR_URLS = [
+    'https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js',
+    'https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js'
+  ];
+  var MAX_SIDE = 1600;
+  function $(id) { return document.getElementById(id); }
+  var btnOpen = $('qrr-open'), btnClose = $('qrr-close'), btnUpload = $('qrr-upload');
+  var fileInput = $('qrr-file'), view = $('qrr-view'), video = $('qrr-video');
+  var canvas = $('qrr-canvas'), statusEl = $('qrr-status'), resultBox = $('qrr-result');
+  var textEl = $('qrr-text'), btnCopy = $('qrr-copy'), linkEl = $('qrr-link');
+  var ctx = canvas.getContext('2d', { willReadFrequently: true });
+  var stream = null, timer = null, busy = false, jsqrPromise = null, detector = null;
+  try {
+    if ('BarcodeDetector' in window) { detector = new window.BarcodeDetector({ formats: ['qr_code'] }); }
+  } catch (e) { detector = null; }
+  function setStatus(msg, type) {
+    statusEl.textContent = msg || '';
+    statusEl.className = 'qrr-status' + (type === 'err' ? ' qrr-err' : type === 'ok' ? ' qrr-ok' : '');
+  }
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.onload = resolve;
+      s.onerror = function () { reject(new Error('Falha ao carregar ' + src)); };
+      document.head.appendChild(s);
+    });
+  }
+  function ensureJsQR() {
+    if (typeof window.jsQR === 'function') { return Promise.resolve(); }
+    if (jsqrPromise) { return jsqrPromise; }
+    jsqrPromise = loadScript(JSQR_URLS[0]).catch(function () {
+      return loadScript(JSQR_URLS[1]);
+    }).then(function () {
+      if (typeof window.jsQR !== 'function') { throw new Error('jsQR indisponível'); }
+    });
+    jsqrPromise.catch(function () { jsqrPromise = null; });
+    return jsqrPromise;
+  }
+  function decodeCanvas() {
+    if (detector) {
+      return detector.detect(canvas).then(function (codes) {
+        return codes && codes.length ? codes[0].rawValue : null;
+      }).catch(function () { return null; });
+    }
+    return ensureJsQR().then(function () {
+      var img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      var code = window.jsQR(img.data, img.width, img.height, { inversionAttempts: 'attemptBoth' });
+      return code && code.data ? code.data : null;
+    });
+  }
+  function showResult(text) {
+    textEl.value = text;
+    resultBox.hidden = false;
+    var isUrl = /^https?:\/\/\S+$/i.test(text.trim());
+    if (isUrl) { linkEl.href = text.trim(); linkEl.hidden = false; }
+    else { linkEl.hidden = true; linkEl.removeAttribute('href'); }
+    setStatus('QR Code lido com sucesso.', 'ok');
+  }
+  function stopCamera() {
+    if (timer) { clearTimeout(timer); timer = null; }
+    if (stream) {
+      stream.getTracks().forEach(function (t) { t.stop(); });
+      stream = null;
+    }
+    video.srcObject = null;
+    view.hidden = true;
+    btnClose.disabled = true;
+    btnOpen.disabled = false;
+  }
+  function tick() {
+    if (!stream) { return; }
+    if (video.readyState >= 2 && video.videoWidth > 0 && !busy) {
+      busy = true;
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      decodeCanvas().then(function (text) {
+        busy = false;
+        if (text) { stopCamera(); showResult(text); }
+        else if (stream) { timer = setTimeout(tick, 200); }
+      }).catch(function () {
+        busy = false;
+        stopCamera();
+        setStatus('Não foi possível carregar o leitor. Verifique sua conexão e tente novamente.', 'err');
+      });
+    } else {
+      timer = setTimeout(tick, 200);
+    }
+  }
+  function openCamera() {
+    resultBox.hidden = true;
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      setStatus('Seu navegador não permite acessar a câmera. Use a opção Enviar Imagem.', 'err');
+      return;
+    }
+    btnOpen.disabled = true;
+    setStatus('Solicitando acesso à câmera...');
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: 'environment' } }, audio: false })
+      .then(function (s) {
+        stream = s;
+        video.srcObject = s;
+        view.hidden = false;
+        btnClose.disabled = false;
+        return video.play();
+      })
+      .then(function () {
+        setStatus('Aponte a câmera para o QR Code.');
+        tick();
+      })
+      .catch(function () {
+        stopCamera();
+        setStatus('Não foi possível acessar a câmera. Verifique a permissão do navegador ou use Enviar Imagem.', 'err');
+      });
+  }
+  function readImageFile(file) {
+    if (!file) { return; }
+    stopCamera();
+    resultBox.hidden = true;
+    if (!/^image\//.test(file.type)) {
+      setStatus('Selecione um arquivo de imagem válido.', 'err');
+      return;
+    }
+    setStatus('Lendo imagem...');
+    var url = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function () {
+      var w = img.naturalWidth, h = img.naturalHeight;
+      var scale = Math.min(1, MAX_SIDE / Math.max(w, h));
+      canvas.width = Math.max(1, Math.round(w * scale));
+      canvas.height = Math.max(1, Math.round(h * scale));
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      URL.revokeObjectURL(url);
+      decodeCanvas().then(function (text) {
+        if (text) { showResult(text); }
+        else { setStatus('Nenhum QR Code encontrado na imagem.', 'err'); }
+      }).catch(function () {
+        setStatus('Não foi possível carregar o leitor. Verifique sua conexão e tente novamente.', 'err');
+      });
+    };
+    img.onerror = function () {
+      URL.revokeObjectURL(url);
+      setStatus('Não foi possível abrir essa imagem.', 'err');
+    };
+    img.src = url;
+  }
+  function copyText() {
+    var text = textEl.value;
+    if (!text) { return; }
+    function fallback() {
+      textEl.focus();
+      textEl.select();
+      try { document.execCommand('copy'); setStatus('Conteúdo copiado.', 'ok'); }
+      catch (e) { setStatus('Não foi possível copiar automaticamente.', 'err'); }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        setStatus('Conteúdo copiado.', 'ok');
+      }).catch(fallback);
+    } else { fallback(); }
+  }
+  btnOpen.addEventListener('click', openCamera);
+  btnClose.addEventListener('click', function () { stopCamera(); setStatus(''); });
+  btnUpload.addEventListener('click', function () { fileInput.click(); });
+  fileInput.addEventListener('change', function () {
+    readImageFile(fileInput.files && fileInput.files[0]);
+    fileInput.value = '';
+  });
+  btnCopy.addEventListener('click', copyText);
+  window.addEventListener('pagehide', stopCamera);
+})();
+</script>
+</div>
+
+## Como usar o leitor de QR Code online
+
+1. Escolha como deseja ler o código: clique em **Abrir Câmera** para escanear ao vivo ou em **Enviar Imagem** para usar uma foto ou captura de tela.
+2. Se optar pela câmera, permita o acesso quando o navegador pedir e aponte para o QR Code, mantendo-o inteiro, nítido e bem iluminado dentro do quadro.
+3. Se optar pela imagem, selecione o arquivo no seu dispositivo. A leitura é feita automaticamente.
+4. Quando o código for reconhecido, o conteúdo aparece no campo **Conteúdo lido**.
+5. Use **Copiar** para copiar o texto ou, se o conteúdo for um endereço da web, **Abrir link** para acessá-lo.
+6. Para encerrar a câmera antes de ler um código, clique em **Fechar**.
+
+A leitura acontece no seu próprio navegador: a imagem e a câmera não são enviadas para nenhum servidor. Confira sempre o endereço antes de abrir links de QR Codes desconhecidos.
+
+## Termos e definições
+
+**QR Code:** código de barras bidimensional em formato de quadrado, capaz de guardar texto, links, contatos, dados de Wi-Fi e outras informações.
+
+**Leitor de QR Code:** ferramenta que identifica o desenho do QR Code e o converte de volta no conteúdo original.
+
+**Escanear:** capturar o QR Code com a câmera ou a partir de uma imagem para que ele seja interpretado.
+
+**Decodificação:** processo de transformar os módulos (quadradinhos pretos e brancos) do QR Code em texto legível.
+
+**Conteúdo lido:** informação que estava armazenada no QR Code, como um link, um texto ou um número de telefone.
+
+**URL (link):** endereço de uma página na internet. É o conteúdo mais comum em QR Codes.
+
+**Câmera:** dispositivo usado para escanear o código ao vivo. Exige a permissão do navegador e, na maioria deles, uma conexão segura (HTTPS).
+
+**Enviar Imagem:** opção para ler um QR Code salvo como arquivo, como uma foto, um print ou uma imagem recebida por mensagem.
+
+**Correção de erros:** recurso do QR Code que permite ler o código mesmo quando parte dele está suja, danificada ou coberta.
+
+**Código de barras 2D:** código que guarda informação na horizontal e na vertical, o que permite armazenar mais dados que o código de barras tradicional.

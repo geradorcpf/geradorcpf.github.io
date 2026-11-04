@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leitura Rápida: online e grátis</title>
+<title>Leitura Rápida</title>
 <meta name="description" content="Leitura Rápida: treine leitura dinâmica e aumente sua velocidade. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/leitura-rapida/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/leitura-rapida/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leitura Rápida: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/leitura-rapida/">
+<meta property="og:title" content="Leitura Rápida">
+<meta property="og:url" content="http://localhost:1313/ferramentas/leitura-rapida/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Leitura Rápida: treine leitura dinâmica e aumente sua velocidade. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,50 +38,240 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Leitura Rápida</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/leitura-rapida/","name":"Leitura Rápida","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Leitura Rápida</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/leitura-rapida/","name":"Leitura Rápida","position":3}]}</script>
 <article class="prose page">
   <h1>Leitura Rápida</h1>
   
-  
+  <p>Basta colar um texto abaixo e depois clicar em <strong>Ler Rápido</strong>. As palavras aparecem uma de cada vez, em sequência.</p>
+<div id="leitura-rapida" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">⚡ Leitura Rápida</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Cole um texto, ajuste a velocidade e leia uma palavra de cada vez.</p>
+<label for="lr-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Texto</label>
+<textarea id="lr-texto" rows="6" placeholder="Cole ou digite aqui o texto que você quer ler." style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;">
+<div style="flex:1;min-width:120px;">
+<label for="lr-ppm" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">PPM</label>
+<input id="lr-ppm" type="text" inputmode="numeric" value="300" placeholder="Ex.: 300" autocomplete="off" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+</div>
+<div style="flex:1;min-width:120px;">
+<label for="lr-fundo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Fundo</label>
+<select id="lr-fundo" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="branco">Branco</option>
+<option value="preto">Preto</option>
+</select>
+</div>
+<div style="flex:1;min-width:120px;">
+<label for="lr-fonte" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Fonte</label>
+<select id="lr-fonte" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<option value="24">Pequena</option>
+<option value="32" selected>Média</option>
+<option value="44">Grande</option>
+<option value="56">Extra grande</option>
+</select>
+</div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="lr-ler" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Ler Rápido</button>
+<button type="button" id="lr-reiniciar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Reiniciar</button>
+<button type="button" id="lr-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="lr-palco" aria-live="off" style="margin-top:20px;padding:16px;min-height:120px;display:flex;align-items:center;justify-content:center;text-align:center;background:#ffffff;color:#1e293b;border:2px dashed #c7d2fe;border-radius:12px;font-size:32px;font-weight:700;line-height:1.3;overflow-wrap:anywhere;box-sizing:border-box;"><span id="lr-palavra" style="color:#64748b;font-size:1rem;font-weight:400;">preencha o texto e clique em "Ler Rápido".</span></div>
+<div id="lr-status" aria-live="polite" style="margin-top:12px;font-size:0.9rem;color:#64748b;"><strong style="color:#3730a3;">Resposta:</strong> <span id="lr-info">aguardando o texto.</span></div>
+</div>
+<script>
+(function () {
+  var texto = document.getElementById('lr-texto');
+  var ppmEl = document.getElementById('lr-ppm');
+  var fundoEl = document.getElementById('lr-fundo');
+  var fonteEl = document.getElementById('lr-fonte');
+  var btnLer = document.getElementById('lr-ler');
+  var btnReiniciar = document.getElementById('lr-reiniciar');
+  var btnLimpar = document.getElementById('lr-limpar');
+  var palco = document.getElementById('lr-palco');
+  var palavraEl = document.getElementById('lr-palavra');
+  var info = document.getElementById('lr-info');
+  var PADRAO = 'preencha o texto e clique em "Ler Rápido".';
+  var palavras = [];
+  var indice = 0;
+  var timer = null;
+  var lendo = false;
+  function obterPpm() {
+    var v = parseInt(String(ppmEl.value).replace(/\s/g, ''), 10);
+    if (isNaN(v)) { v = 300; }
+    return Math.min(1500, Math.max(50, v));
+  }
+  function aplicarEstilo() {
+    var escuro = fundoEl.value === 'preto';
+    palco.style.background = escuro ? '#0f172a' : '#ffffff';
+    palco.style.borderColor = escuro ? '#334155' : '#c7d2fe';
+    palavraEl.style.color = escuro ? '#f8fafc' : '#1e293b';
+    if (palavras.length === 0 && !lendo) { palavraEl.style.color = escuro ? '#94a3b8' : '#64748b'; }
+    var tam = parseInt(fonteEl.value, 10);
+    if (palavraEl.getAttribute('data-ativa') === '1') {
+      palavraEl.style.fontSize = tam + 'px';
+      palavraEl.style.fontWeight = '700';
+    }
+  }
+  function mostrarPalavra(p) {
+    palavraEl.setAttribute('data-ativa', '1');
+    palavraEl.textContent = p;
+    palavraEl.style.fontSize = parseInt(fonteEl.value, 10) + 'px';
+    palavraEl.style.fontWeight = '700';
+    palavraEl.style.color = fundoEl.value === 'preto' ? '#f8fafc' : '#1e293b';
+  }
+  function mostrarPadrao(msg) {
+    palavraEl.setAttribute('data-ativa', '0');
+    palavraEl.textContent = msg;
+    palavraEl.style.fontSize = '1rem';
+    palavraEl.style.fontWeight = '400';
+    palavraEl.style.color = fundoEl.value === 'preto' ? '#94a3b8' : '#64748b';
+  }
+  function status(msg, cor) {
+    info.style.color = cor || '#64748b';
+    info.textContent = msg;
+  }
+  function preparar() {
+    var t = texto.value.replace(/\s+/g, ' ').trim();
+    palavras = t === '' ? [] : t.split(' ');
+  }
+  function parar() {
+    if (timer !== null) { clearTimeout(timer); timer = null; }
+    lendo = false;
+  }
+  function proxima() {
+    if (indice >= palavras.length) {
+      parar();
+      var total = palavras.length;
+      indice = 0;
+      btnLer.textContent = 'Ler Rápido';
+      status('leitura concluída (' + total + ' palavras).', '#166534');
+      return;
+    }
+    var p = palavras[indice];
+    mostrarPalavra(p);
+    indice = indice + 1;
+    status('palavra ' + indice + ' de ' + palavras.length + ' a ' + obterPpm() + ' PPM.');
+    var atraso = 60000 / obterPpm();
+    if (/[.!?]$/.test(p)) { atraso = atraso * 1.8; }
+    else if (/[,;:]$/.test(p)) { atraso = atraso * 1.4; }
+    timer = setTimeout(proxima, atraso);
+  }
+  function alternar() {
+    if (lendo) {
+      parar();
+      btnLer.textContent = 'Continuar';
+      status('leitura pausada na palavra ' + indice + ' de ' + palavras.length + '.');
+      return;
+    }
+    if (indice === 0 || palavras.length === 0) {
+      preparar();
+      indice = 0;
+    }
+    if (palavras.length === 0) {
+      status('cole ou digite um texto antes de começar.', '#b91c1c');
+      texto.focus();
+      return;
+    }
+    lendo = true;
+    btnLer.textContent = 'Pausar';
+    proxima();
+  }
+  function reiniciar() {
+    parar();
+    indice = 0;
+    btnLer.textContent = 'Ler Rápido';
+    mostrarPadrao(PADRAO);
+    status('leitura reiniciada.');
+  }
+  function limpar() {
+    parar();
+    indice = 0;
+    palavras = [];
+    texto.value = '';
+    btnLer.textContent = 'Ler Rápido';
+    mostrarPadrao(PADRAO);
+    status('aguardando o texto.');
+    texto.focus();
+  }
+  btnLer.addEventListener('click', alternar);
+  btnReiniciar.addEventListener('click', reiniciar);
+  btnLimpar.addEventListener('click', limpar);
+  texto.addEventListener('input', function () {
+    if (lendo || indice !== 0) { reiniciar(); }
+    palavras = [];
+  });
+  fundoEl.addEventListener('change', aplicarEstilo);
+  fonteEl.addEventListener('change', aplicarEstilo);
+  [texto, ppmEl, fundoEl, fonteEl].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+  aplicarEstilo();
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Cole ou digite o texto que você quer ler no campo <strong>Texto</strong>.</li>
+<li>Informe a velocidade desejada em <strong>PPM</strong> (palavras por minuto). Se estiver começando, use 200 a 300.</li>
+<li>Escolha a cor de <strong>Fundo</strong> (branco ou preto) e o tamanho da <strong>Fonte</strong> que fique mais confortável para seus olhos.</li>
+<li>Clique em <strong>Ler Rápido</strong> para iniciar. As palavras aparecem uma de cada vez na caixa de leitura.</li>
+<li>Use <strong>Pausar</strong> para parar um instante e <strong>Continuar</strong> para retomar do ponto em que parou.</li>
+<li>Clique em <strong>Reiniciar</strong> para voltar ao início do mesmo texto, ou em <strong>Limpar</strong> para apagar tudo e colar outro texto.</li>
+</ol>
+<p>A ferramenta faz uma pequena pausa extra após vírgulas e pontos, o que ajuda a acompanhar o sentido das frases. Aumente a velocidade aos poucos, conforme você se sentir confortável.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Leitura rápida:</strong> técnica para ler mais depressa, aqui exibindo uma palavra por vez no mesmo ponto da tela, sem que os olhos precisem se mover pela linha.</li>
+<li><strong>Leitura dinâmica:</strong> nome mais comum no Brasil para o conjunto de técnicas que buscam aumentar a velocidade de leitura mantendo a compreensão.</li>
+<li><strong>PPM:</strong> sigla de palavras por minuto, a medida da velocidade de leitura. Quanto maior o valor, mais rápido as palavras trocam na tela.</li>
+<li><strong>Fundo:</strong> cor de fundo da caixa de leitura. O fundo preto costuma ser mais agradável em ambientes escuros.</li>
+<li><strong>Fonte:</strong> tamanho das letras exibidas durante a leitura, de pequena a extra grande.</li>
+<li><strong>Ler Rápido:</strong> botão que inicia a exibição das palavras do texto colado.</li>
+<li><strong>Pausar / Continuar:</strong> interrompe a leitura e retoma a partir da mesma palavra.</li>
+<li><strong>Reiniciar:</strong> volta ao começo do texto sem apagá-lo.</li>
+<li><strong>Limpar:</strong> apaga o texto e deixa a ferramenta pronta para um novo uso.</li>
+<li><strong>Compreensão:</strong> quanto do texto você realmente entendeu. Velocidade só vale a pena se o entendimento se mantém.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-util">
-  <a class="card" href="/ferramentas/pomodoro-timer/">
+  <a class="card" href="/ferramentas/capsula-tempo/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
-    <span class="tx"><strong>Pomodoro Timer</strong><small>Temporizador Pomodoro para estudar e trabalhar com foco.</small></span>
+    <span class="tx"><strong>Cápsula do Tempo</strong><small>Escreva uma mensagem hoje para ser aberta no futuro.</small></span>
   </a>
 </li>
 <li class="c-util">
-  <a class="card" href="/ferramentas/teste-de-digitacao/">
+  <a class="card" href="/ferramentas/cronometro-online/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
-    <span class="tx"><strong>Teste de Digitação</strong><small>Meça sua velocidade de digitação em palavras por minuto.</small></span>
+    <span class="tx"><strong>Cronômetro</strong><small>Cronômetro com voltas, direto no navegador.</small></span>
   </a>
 </li>
 <li class="c-util">
-  <a class="card" href="/ferramentas/notepad/">
+  <a class="card" href="/ferramentas/desenhar-online/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
-    <span class="tx"><strong>Notepad Online</strong><small>Bloco de notas no navegador, com salvamento automático.</small></span>
+    <span class="tx"><strong>Desenhar Online</strong><small>Quadro de desenho livre no navegador.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/contagem-regressiva/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Contagem Regressiva</strong><small>Crie uma contagem regressiva para qualquer data.</small></span>
   </a>
 </li>
 <li class="c-util">
-  <a class="card" href="/ferramentas/organizador-de-links/">
+  <a class="card" href="/ferramentas/calculadora-churrasco/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
-    <span class="tx"><strong>Organizador de Links</strong><small>Reúna e organize seus links em uma lista.</small></span>
-  </a>
-</li>
-<li class="c-util">
-  <a class="card" href="/ferramentas/tela-branca/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
-</span>
-    <span class="tx"><strong>Tela Branca</strong><small>Tela branca em tela cheia para testar monitores e iluminar.</small></span>
+    <span class="tx"><strong>Calculadora de Churrasco</strong><small>Calcule carne, bebida e acompanhamentos por convidado.</small></span>
   </a>
 </li>
 

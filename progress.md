@@ -149,8 +149,8 @@ https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-sergipe/
 https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual-tocantins/
 
 2 November 2026
-https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual/ -- belum submit
-https://geradorcpf.github.io/ferramentas/gerador-de-link-whatsapp/ 
+https://geradorcpf.github.io/ferramentas/gerador-de-inscricao-estadual/ 
+https://geradorcpf.github.io/ferramentas/gerador-de-link-whatsapp/  
 https://geradorcpf.github.io/ferramentas/gerador-de-meta-tags/
 https://geradorcpf.github.io/ferramentas/gerador-de-nicks/
 https://geradorcpf.github.io/ferramentas/gerador-de-nomes/
@@ -161,15 +161,27 @@ https://geradorcpf.github.io/ferramentas/gerador-de-pessoas/
 https://geradorcpf.github.io/ferramentas/gerador-de-pis-pasep/
 
 3 November 2026
-http://localhost:1313/ferramentas/gerador-de-placa-de-veiculo/
-http://localhost:1313/ferramentas/gerador-de-qr-code-pix/
-http://localhost:1313/ferramentas/gerador-de-qr-code-wifi/
-http://localhost:1313/ferramentas/gerador-de-qr-code/
-http://localhost:1313/ferramentas/gerador-de-renavam/
-http://localhost:1313/ferramentas/gerador-de-rg/
-http://localhost:1313/ferramentas/gerador-de-senha/
-http://localhost:1313/ferramentas/gerador-de-texto-lorem-ipsum/
-http://localhost:1313/ferramentas/gerador-de-titulo-de-eleitor/
-http://localhost:1313/ferramentas/gerador-de-uuid/
+https://geradorcpf.github.io/ferramentas/gerador-de-placa-de-veiculo/ -- belum submit
+https://geradorcpf.github.io/ferramentas/gerador-de-qr-code-pix/
+https://geradorcpf.github.io/ferramentas/gerador-de-qr-code-wifi/
+https://geradorcpf.github.io/ferramentas/gerador-de-qr-code/
+https://geradorcpf.github.io/ferramentas/gerador-de-renavam/
+https://geradorcpf.github.io/ferramentas/gerador-de-rg/
+https://geradorcpf.github.io/ferramentas/gerador-de-senha/
+https://geradorcpf.github.io/ferramentas/gerador-de-texto-lorem-ipsum/
+https://geradorcpf.github.io/ferramentas/gerador-de-titulo-de-eleitor/
+https://geradorcpf.github.io/ferramentas/gerador-de-uuid/
 
 4 November 2026
+http://localhost:1313/ferramentas/gerador-de-veiculos/
+http://localhost:1313/ferramentas/hora-certa/
+http://localhost:1313/ferramentas/informacoes-de-caractere/
+http://localhost:1313/ferramentas/instagram-anonimo/
+http://localhost:1313/ferramentas/inverter-texto/
+http://localhost:1313/ferramentas/juntar-pdf/
+http://localhost:1313/ferramentas/leitor-codigo-barras-online/
+http://localhost:1313/ferramentas/leitor-qr-code-online/
+http://localhost:1313/ferramentas/leitura-rapida/
+http://localhost:1313/ferramentas/letras-diferentes/
+
+5 November 2026

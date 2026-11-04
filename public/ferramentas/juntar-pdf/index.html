@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Juntar PDF: online e grátis</title>
+<title>Juntar PDF</title>
 <meta name="description" content="Juntar PDF: una vários arquivos PDF em um só. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/juntar-pdf/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/juntar-pdf/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Juntar PDF: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/juntar-pdf/">
+<meta property="og:title" content="Juntar PDF">
+<meta property="og:url" content="http://localhost:1313/ferramentas/juntar-pdf/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Juntar PDF: una vários arquivos PDF em um só. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,36 +38,281 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Juntar PDF</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/juntar-pdf/","name":"Juntar PDF","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Juntar PDF</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/juntar-pdf/","name":"Juntar PDF","position":3}]}</script>
 <article class="prose page">
   <h1>Juntar PDF</h1>
   
-  
+  <p>Basta selecionar (ou arrastar) os arquivos PDF abaixo, organizar a ordem e depois clicar em <strong>Juntar PDF</strong>.</p>
+<div id="juntar-pdf" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📄 Juntar PDF</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha os arquivos, defina a ordem e baixe um único PDF.</p>
+<input id="pdf-arquivos" type="file" accept="application/pdf,.pdf" multiple style="display:none;">
+<div id="pdf-zona" role="button" tabindex="0" aria-label="Selecionar arquivos PDF" style="padding:22px 16px;margin-bottom:16px;text-align:center;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:0.95rem;line-height:1.5;cursor:pointer;box-sizing:border-box;outline:none;">
+<strong style="color:#3730a3;">Clique para selecionar</strong> ou arraste os PDFs até aqui
+</div>
+<div id="pdf-lista" style="display:none;margin-bottom:8px;"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="pdf-juntar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Juntar PDF</button>
+<button type="button" id="pdf-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="pdf-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="pdf-resultado">selecione os arquivos PDF e clique em "Juntar PDF".</span></div>
+</div>
+<script>
+(function () {
+  var LIBS = [
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js',
+    'https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js'
+  ];
+  var entrada = document.getElementById('pdf-arquivos');
+  var zona = document.getElementById('pdf-zona');
+  var lista = document.getElementById('pdf-lista');
+  var botaoJuntar = document.getElementById('pdf-juntar');
+  var botaoLimpar = document.getElementById('pdf-limpar');
+  var caixa = document.getElementById('pdf-resposta');
+  var resultado = document.getElementById('pdf-resultado');
+  var MSG_INICIAL = 'selecione os arquivos PDF e clique em "Juntar PDF".';
+  var STYLE_ICONE = 'width:32px;height:32px;padding:0;font-size:0.95rem;font-weight:700;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:8px;cursor:pointer;flex:none;';
+  var arquivos = [];
+  var urlAtual = null;
+  var promessaLib = null;
+  var ocupado = false;
+  function criar(tag, css, texto) {
+    var e = document.createElement(tag);
+    if (css) { e.style.cssText = css; }
+    if (texto !== undefined) { e.textContent = texto; }
+    return e;
+  }
+  function tamanho(bytes) {
+    if (bytes >= 1048576) { return (bytes / 1048576).toLocaleString('pt-BR', { maximumFractionDigits: 2 }) + ' MB'; }
+    return Math.max(1, Math.round(bytes / 1024)).toLocaleString('pt-BR') + ' KB';
+  }
+  function estado(tipo, mensagem) {
+    var cores = {
+      neutro: ['#c7d2fe', '#ffffff', '#64748b', 'dashed'],
+      ok: ['#86efac', '#f0fdf4', '#166534', 'solid'],
+      erro: ['#fca5a5', '#fef2f2', '#b91c1c', 'solid']
+    };
+    var c = cores[tipo];
+    caixa.style.borderColor = c[0];
+    caixa.style.background = c[1];
+    caixa.style.borderStyle = c[3];
+    resultado.style.color = c[2];
+    resultado.textContent = mensagem;
+  }
+  function carregarLib() {
+    if (window.PDFLib) { return Promise.resolve(window.PDFLib); }
+    if (promessaLib) { return promessaLib; }
+    promessaLib = new Promise(function (resolve, reject) {
+      var i = 0;
+      function tentar() {
+        if (i === LIBS.length) { promessaLib = null; reject(new Error('LIB')); return; }
+        var s = document.createElement('script');
+        s.src = LIBS[i];
+        i += 1;
+        s.onload = function () {
+          if (window.PDFLib) { resolve(window.PDFLib); } else { tentar(); }
+        };
+        s.onerror = function () {
+          if (s.parentNode) { s.parentNode.removeChild(s); }
+          tentar();
+        };
+        document.head.appendChild(s);
+      }
+      tentar();
+    });
+    return promessaLib;
+  }
+  function revogarUrl() {
+    if (urlAtual) { URL.revokeObjectURL(urlAtual); urlAtual = null; }
+  }
+  function desenhar() {
+    while (lista.firstChild) { lista.removeChild(lista.firstChild); }
+    if (arquivos.length === 0) { lista.style.display = 'none'; return; }
+    lista.style.display = 'block';
+    arquivos.forEach(function (f, i) {
+      var linha = criar('div', 'display:flex;align-items:center;gap:8px;padding:10px 12px;margin-bottom:8px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;box-sizing:border-box;');
+      var num = criar('span', 'flex:none;width:24px;height:24px;border-radius:50%;background:#e0e7ff;color:#3730a3;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;', String(i + 1));
+      var nome = criar('span', 'flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:0.9rem;font-weight:600;', f.name);
+      nome.title = f.name;
+      var tam = criar('span', 'flex:none;font-size:0.8rem;color:#64748b;', tamanho(f.size));
+      var subir = criar('button', STYLE_ICONE, '↑');
+      var descer = criar('button', STYLE_ICONE, '↓');
+      var remover = criar('button', STYLE_ICONE, '✕');
+      subir.type = 'button';
+      descer.type = 'button';
+      remover.type = 'button';
+      subir.setAttribute('aria-label', 'Mover para cima');
+      descer.setAttribute('aria-label', 'Mover para baixo');
+      remover.setAttribute('aria-label', 'Remover arquivo');
+      if (i === 0) { subir.disabled = true; subir.style.opacity = '0.4'; subir.style.cursor = 'default'; }
+      if (i === arquivos.length - 1) { descer.disabled = true; descer.style.opacity = '0.4'; descer.style.cursor = 'default'; }
+      subir.addEventListener('click', function () { mover(i, -1); });
+      descer.addEventListener('click', function () { mover(i, 1); });
+      remover.addEventListener('click', function () { arquivos.splice(i, 1); aposMudanca(); });
+      linha.appendChild(num);
+      linha.appendChild(nome);
+      linha.appendChild(tam);
+      linha.appendChild(subir);
+      linha.appendChild(descer);
+      linha.appendChild(remover);
+      lista.appendChild(linha);
+    });
+  }
+  function mover(i, delta) {
+    var j = i + delta;
+    if (0 > j || j > arquivos.length - 1) { return; }
+    var tmp = arquivos[i];
+    arquivos[i] = arquivos[j];
+    arquivos[j] = tmp;
+    aposMudanca();
+  }
+  function aposMudanca() {
+    revogarUrl();
+    desenhar();
+    estado('neutro', arquivos.length === 0 ? MSG_INICIAL : arquivos.length + ' arquivo(s) na lista. Ajuste a ordem e clique em "Juntar PDF".');
+  }
+  function adicionar(selecao) {
+    var itens = Array.prototype.slice.call(selecao);
+    var ignorados = 0;
+    itens.forEach(function (f) {
+      var ehPdf = f.type === 'application/pdf' || /\.pdf$/i.test(f.name);
+      if (ehPdf) { arquivos.push(f); } else { ignorados += 1; }
+    });
+    aposMudanca();
+    if (ignorados > 0) {
+      estado('erro', ignorados + ' arquivo(s) ignorado(s): só são aceitos arquivos PDF.');
+    }
+    carregarLib().catch(function () {});
+  }
+  function juntar() {
+    if (ocupado) { return; }
+    if (2 > arquivos.length) { estado('erro', 'selecione pelo menos 2 arquivos PDF para juntar.'); return; }
+    ocupado = true;
+    botaoJuntar.disabled = true;
+    botaoJuntar.style.opacity = '0.7';
+    estado('neutro', 'juntando os arquivos, aguarde...');
+    var paginas = 0;
+    carregarLib().then(function (lib) {
+      return lib.PDFDocument.create().then(function (saida) {
+        var cadeia = Promise.resolve();
+        arquivos.forEach(function (f) {
+          cadeia = cadeia.then(function () {
+            return f.arrayBuffer().then(function (buf) {
+              return lib.PDFDocument.load(buf).catch(function () {
+                throw new Error('ARQ:' + f.name);
+              });
+            }).then(function (doc) {
+              return saida.copyPages(doc, doc.getPageIndices()).then(function (copias) {
+                copias.forEach(function (p) { saida.addPage(p); });
+              });
+            });
+          });
+        });
+        return cadeia.then(function () {
+          paginas = saida.getPageCount();
+          return saida.save();
+        });
+      });
+    }).then(function (bytes) {
+      revogarUrl();
+      urlAtual = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
+      estado('ok', 'PDF criado com ' + paginas + ' página(s), a partir de ' + arquivos.length + ' arquivos.');
+      var link = criar('a', 'display:inline-block;margin-top:12px;padding:11px 18px;font-size:0.95rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(79,70,229,0.35);', 'Baixar PDF unido');
+      link.href = urlAtual;
+      link.download = 'pdf-unido.pdf';
+      resultado.appendChild(criar('br'));
+      resultado.appendChild(link);
+    }).catch(function (err) {
+      var msg = String(err && err.message ? err.message : '');
+      if (msg.indexOf('ARQ:') === 0) {
+        estado('erro', 'não foi possível ler "' + msg.slice(4) + '". O arquivo pode estar protegido por senha ou corrompido.');
+      } else if (msg === 'LIB') {
+        estado('erro', 'não foi possível carregar o componente de PDF. Verifique sua conexão e tente novamente.');
+      } else {
+        estado('erro', 'ocorreu um erro ao juntar os arquivos. Tente novamente.');
+      }
+    }).then(function () {
+      ocupado = false;
+      botaoJuntar.disabled = false;
+      botaoJuntar.style.opacity = '1';
+    });
+  }
+  function limpar() {
+    arquivos = [];
+    entrada.value = '';
+    revogarUrl();
+    desenhar();
+    estado('neutro', MSG_INICIAL);
+  }
+  zona.addEventListener('click', function () { entrada.click(); });
+  zona.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); entrada.click(); }
+  });
+  zona.addEventListener('focus', function () { zona.style.borderColor = '#6366f1'; });
+  zona.addEventListener('blur', function () { zona.style.borderColor = '#c7d2fe'; });
+  zona.addEventListener('dragover', function (e) {
+    e.preventDefault();
+    zona.style.borderColor = '#6366f1';
+    zona.style.background = '#eef2ff';
+  });
+  zona.addEventListener('dragleave', function () {
+    zona.style.borderColor = '#c7d2fe';
+    zona.style.background = '#ffffff';
+  });
+  zona.addEventListener('drop', function (e) {
+    e.preventDefault();
+    zona.style.borderColor = '#c7d2fe';
+    zona.style.background = '#ffffff';
+    if (e.dataTransfer && e.dataTransfer.files) { adicionar(e.dataTransfer.files); }
+  });
+  entrada.addEventListener('change', function () {
+    adicionar(entrada.files);
+    entrada.value = '';
+  });
+  botaoJuntar.addEventListener('click', juntar);
+  botaoLimpar.addEventListener('click', limpar);
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Clique na área pontilhada para escolher os arquivos PDF no seu dispositivo, ou arraste-os até ela. Você pode selecionar vários de uma vez e adicionar mais arquivos depois.</li>
+<li>Confira a lista: o número à esquerda mostra a posição de cada arquivo no PDF final.</li>
+<li>Use os botões <strong>↑</strong> e <strong>↓</strong> para mudar a ordem e o botão <strong>✕</strong> para tirar um arquivo da lista.</li>
+<li>Clique em <strong>Juntar PDF</strong> (são necessários pelo menos 2 arquivos).</li>
+<li>Quando a mensagem de sucesso aparecer, clique em <strong>Baixar PDF unido</strong> para salvar o arquivo final.</li>
+<li>Use o botão <strong>Limpar</strong> para esvaziar a lista e começar uma nova junção.</li>
+</ol>
+<p>A junção é feita no seu próprio navegador: os arquivos não são enviados para nenhum servidor. PDFs protegidos por senha precisam ser desbloqueados antes de serem unidos.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>PDF:</strong> formato de documento (Portable Document Format) que mantém texto, imagens e layout iguais em qualquer dispositivo.</li>
+<li><strong>Juntar PDF:</strong> unir dois ou mais arquivos PDF em um único documento, também chamado de mesclar ou combinar PDF.</li>
+<li><strong>Ordem dos arquivos:</strong> sequência em que os PDFs aparecem na lista. É a mesma ordem das páginas no arquivo final.</li>
+<li><strong>Página:</strong> cada folha de um documento PDF. O arquivo final contém todas as páginas dos arquivos originais, na ordem escolhida.</li>
+<li><strong>Arrastar e soltar:</strong> forma de adicionar arquivos clicando sobre eles, arrastando até a área da ferramenta e soltando o botão do mouse.</li>
+<li><strong>PDF protegido por senha:</strong> arquivo criptografado que exige senha para abrir. Ele precisa ser desbloqueado antes de ser juntado.</li>
+<li><strong>Tamanho do arquivo:</strong> espaço que o arquivo ocupa, exibido em KB ou MB. O PDF final tem tamanho próximo à soma dos arquivos originais.</li>
+<li><strong>Download:</strong> ato de salvar o arquivo gerado no seu dispositivo, neste caso o <code>pdf-unido.pdf</code>.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-midia">
-  <a class="card" href="/ferramentas/organizar-pdf/">
+  <a class="card" href="/ferramentas/comparar-pdf/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
 </span>
-    <span class="tx"><strong>Organizar PDF</strong><small>Reordene, gire e remova páginas de um PDF.</small></span>
+    <span class="tx"><strong>Comparar PDF</strong><small>Compare dois PDFs e veja o que mudou.</small></span>
   </a>
 </li>
 <li class="c-midia">
-  <a class="card" href="/ferramentas/dividir-pdf/">
+  <a class="card" href="/ferramentas/comprimir-pdf/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
 </span>
-    <span class="tx"><strong>Dividir PDF</strong><small>Separe as páginas de um PDF em arquivos menores.</small></span>
-  </a>
-</li>
-<li class="c-midia">
-  <a class="card" href="/ferramentas/converter-pdf-em-jpg/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
-</span>
-    <span class="tx"><strong>Converter PDF em JPG</strong><small>Transforme as páginas de um PDF em imagens JPG.</small></span>
+    <span class="tx"><strong>Comprimir PDF</strong><small>Reduza o tamanho de um arquivo PDF.</small></span>
   </a>
 </li>
 <li class="c-midia">
@@ -78,10 +323,17 @@
   </a>
 </li>
 <li class="c-midia">
-  <a class="card" href="/ferramentas/comparar-pdf/">
+  <a class="card" href="/ferramentas/converter-pdf-em-jpg/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
 </span>
-    <span class="tx"><strong>Comparar PDF</strong><small>Compare dois PDFs e veja o que mudou.</small></span>
+    <span class="tx"><strong>Converter PDF em JPG</strong><small>Transforme as páginas de um PDF em imagens JPG.</small></span>
+  </a>
+</li>
+<li class="c-midia">
+  <a class="card" href="/ferramentas/dividir-pdf/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-5 4 4 3-3 6 5"/></svg>
+</span>
+    <span class="tx"><strong>Dividir PDF</strong><small>Separe as páginas de um PDF em arquivos menores.</small></span>
   </a>
 </li>
 
