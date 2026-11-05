@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meu Navegador: online e grátis</title>
+<title>Meu Navegador</title>
 <meta name="description" content="Meu Navegador: descubra qual navegador e versão você está usando. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/meu-navegador/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/meu-navegador/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Meu Navegador: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/meu-navegador/">
+<meta property="og:title" content="Meu Navegador">
+<meta property="og:url" content="http://localhost:1313/ferramentas/meu-navegador/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Meu Navegador: descubra qual navegador e versão você está usando. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,143 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Meu Navegador</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/meu-navegador/","name":"Meu Navegador","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Meu Navegador</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/meu-navegador/","name":"Meu Navegador","position":3}]}</script>
 <article class="prose page">
   <h1>Meu Navegador</h1>
   
-  
+  <p>Abra esta página e o resultado aparece automaticamente logo abaixo. Se quiser, use o botão <strong>Copiar Resultado</strong> para compartilhar as informações.</p>
+<div id="nav-ferramenta" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🌐 Meu Navegador</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Veja qual navegador e versão você está usando agora.</p>
+<div style="margin-bottom:12px;padding:14px 16px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;box-sizing:border-box;">
+<div style="font-weight:600;font-size:0.95rem;color:#64748b;margin-bottom:4px;">Navegador</div>
+<div id="nav-nome" style="font-size:1.15rem;font-weight:700;color:#3730a3;">Detectando...</div>
+</div>
+<div style="margin-bottom:12px;padding:14px 16px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;box-sizing:border-box;">
+<div style="font-weight:600;font-size:0.95rem;color:#64748b;margin-bottom:4px;">Versão</div>
+<div id="nav-versao" style="font-size:1.15rem;font-weight:700;color:#3730a3;">Detectando...</div>
+</div>
+<div style="margin-bottom:20px;padding:14px 16px;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;box-sizing:border-box;">
+<div style="font-weight:600;font-size:0.95rem;color:#64748b;margin-bottom:4px;">User Agent</div>
+<div id="nav-ua" style="font-size:0.85rem;color:#475569;word-break:break-all;line-height:1.5;">Detectando...</div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="nav-copiar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Copiar Resultado</button>
+<button type="button" id="nav-atualizar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Atualizar</button>
+</div>
+<div id="nav-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="nav-resultado">detectando o seu navegador...</span></div>
+</div>
+<script>
+(function () {
+  var ua = navigator.userAgent || '';
+  var elNome = document.getElementById('nav-nome');
+  var elVersao = document.getElementById('nav-versao');
+  var elUa = document.getElementById('nav-ua');
+  var caixa = document.getElementById('nav-resposta');
+  var resultado = document.getElementById('nav-resultado');
+  var atual = { nome: 'Desconhecido', versao: 'Não identificada' };
+  function pegar(re) {
+    var m = ua.match(re);
+    return m ? m[1] : '';
+  }
+  function mostrar() {
+    elNome.textContent = atual.nome;
+    elVersao.textContent = atual.versao;
+    elUa.textContent = ua;
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.innerHTML = 'Você está usando o <strong style="font-size:1.2rem;">' + atual.nome + '</strong> na versão <strong style="font-size:1.2rem;">' + atual.versao + '</strong>.';
+  }
+  function detectar() {
+    var nome = 'Desconhecido';
+    var versao = '';
+    if (/Edg(?:e|A|iOS)?\//.test(ua)) {
+      nome = 'Microsoft Edge';
+      versao = pegar(/Edg(?:e|A|iOS)?\/([\d.]+)/);
+    } else if (/OPR\/|OPiOS\/|Opera/.test(ua)) {
+      nome = 'Opera';
+      versao = pegar(/(?:OPR|OPiOS)\/([\d.]+)/) || pegar(/Version\/([\d.]+)/);
+    } else if (/SamsungBrowser\//.test(ua)) {
+      nome = 'Samsung Internet';
+      versao = pegar(/SamsungBrowser\/([\d.]+)/);
+    } else if (/Vivaldi\//.test(ua)) {
+      nome = 'Vivaldi';
+      versao = pegar(/Vivaldi\/([\d.]+)/);
+    } else if (/Firefox\/|FxiOS\//.test(ua)) {
+      nome = 'Mozilla Firefox';
+      versao = pegar(/(?:Firefox|FxiOS)\/([\d.]+)/);
+    } else if (/Chrome\/|CriOS\//.test(ua)) {
+      nome = 'Google Chrome';
+      versao = pegar(/(?:Chrome|CriOS)\/([\d.]+)/);
+    } else if (/Safari\//.test(ua)) {
+      nome = 'Safari';
+      versao = pegar(/Version\/([\d.]+)/);
+    } else if (/MSIE |Trident\//.test(ua)) {
+      nome = 'Internet Explorer';
+      versao = pegar(/MSIE ([\d.]+)/) || pegar(/rv:([\d.]+)/);
+    }
+    atual = { nome: nome, versao: versao || 'Não identificada' };
+    mostrar();
+    try {
+      if (nome === 'Google Chrome') {
+        if (navigator.brave) {
+          if (typeof navigator.brave.isBrave === 'function') {
+            navigator.brave.isBrave().then(function (ehBrave) {
+              if (ehBrave) {
+                atual.nome = 'Brave';
+                mostrar();
+              }
+            }).catch(function () {});
+          }
+        }
+      }
+    } catch (e) {}
+  }
+  function copiar() {
+    var texto = 'Navegador: ' + atual.nome + '\nVersão: ' + atual.versao + '\nUser Agent: ' + ua;
+    var btn = document.getElementById('nav-copiar');
+    function aviso(msg) {
+      btn.textContent = msg;
+      setTimeout(function () { btn.textContent = 'Copiar Resultado'; }, 1800);
+    }
+    try {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(texto).then(function () { aviso('Copiado!'); }).catch(function () { aviso('Não foi possível copiar'); });
+      } else {
+        aviso('Não foi possível copiar');
+      }
+    } catch (e) {
+      aviso('Não foi possível copiar');
+    }
+  }
+  document.getElementById('nav-copiar').addEventListener('click', copiar);
+  document.getElementById('nav-atualizar').addEventListener('click', detectar);
+  detectar();
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Acesse esta página no navegador que você quer identificar.</li>
+<li>Veja nos campos <strong>Navegador</strong> e <strong>Versão</strong> o resultado, que aparece sozinho assim que a página carrega.</li>
+<li>Confira o <strong>User Agent</strong> completo, se precisar de mais detalhes técnicos.</li>
+<li>Clique em <strong>Copiar Resultado</strong> para levar as informações para um e-mail, chamado de suporte ou conversa com um desenvolvedor.</li>
+<li>Use o botão <strong>Atualizar</strong> para repetir a detecção.</li>
+</ol>
+<p>Para saber a informação de outro navegador, abra esta mesma página nele. A ferramenta sempre mostra os dados do navegador que está aberto no momento.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Navegador (browser):</strong> programa usado para acessar sites na internet, como Chrome, Firefox, Edge, Safari e Opera.</li>
+<li><strong>Versão:</strong> número que identifica a edição do navegador instalada, por exemplo 130.0.6723. Versões mais novas trazem recursos e correções de segurança.</li>
+<li><strong>User Agent:</strong> texto que o navegador envia aos sites para se identificar, com nome, versão e sistema operacional. É a base da detecção feita por esta ferramenta.</li>
+<li><strong>Sistema operacional:</strong> programa que controla o dispositivo, como Windows, macOS, Linux, Android e iOS.</li>
+<li><strong>Motor de renderização:</strong> parte do navegador que desenha as páginas na tela, como Blink (Chrome, Edge), Gecko (Firefox) e WebKit (Safari).</li>
+<li><strong>Navegador desatualizado:</strong> versão antiga que pode ter falhas de segurança e não exibir sites modernos corretamente.</li>
+</ul>
+<h2 id="por-que-saber-o-navegador-e-a-versão">Por que saber o navegador e a versão?</h2>
+<p>Essas informações ajudam a diagnosticar problemas de um site que não carrega direito, a abrir chamados de suporte com mais precisão e a conferir se o navegador está atualizado. Desenvolvedores também usam esses dados para testar a compatibilidade de páginas e sistemas.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -57,31 +188,31 @@
   </a>
 </li>
 <li class="c-rede">
-  <a class="card" href="/ferramentas/teste-de-portas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
-</span>
-    <span class="tx"><strong>Teste de Portas</strong><small>Verifique se uma porta está aberta em um endereço.</small></span>
-  </a>
-</li>
-<li class="c-rede">
-  <a class="card" href="/ferramentas/teste-de-velocidade/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
-</span>
-    <span class="tx"><strong>Teste de Velocidade</strong><small>Meça a velocidade de download e upload da sua internet.</small></span>
-  </a>
-</li>
-<li class="c-rede">
   <a class="card" href="/ferramentas/dns-lookup/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
 </span>
     <span class="tx"><strong>DNS Lookup</strong><small>Consulte registros DNS (A, MX, TXT e outros) de um domínio.</small></span>
   </a>
 </li>
-<li class="c-util">
-  <a class="card" href="/ferramentas/tela-branca/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
+<li class="c-rede">
+  <a class="card" href="/ferramentas/localizar-ip/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
 </span>
-    <span class="tx"><strong>Tela Branca</strong><small>Tela branca em tela cheia para testar monitores e iluminar.</small></span>
+    <span class="tx"><strong>Localizar IP</strong><small>Descubra a localização aproximada de um endereço IP.</small></span>
+  </a>
+</li>
+<li class="c-rede">
+  <a class="card" href="/ferramentas/minha-localizacao-atual/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+</span>
+    <span class="tx"><strong>Minha Localização Atual</strong><small>Veja sua localização aproximada no mapa.</small></span>
+  </a>
+</li>
+<li class="c-rede">
+  <a class="card" href="/ferramentas/gerador-de-link-whatsapp/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Link para WhatsApp</strong><small>Crie um link para abrir conversa no WhatsApp com mensagem pronta.</small></span>
   </a>
 </li>
 

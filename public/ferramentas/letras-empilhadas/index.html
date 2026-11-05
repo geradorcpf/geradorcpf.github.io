@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Letras Empilhadas: online e grátis</title>
+<title>Letras Empilhadas</title>
 <meta name="description" content="Letras Empilhadas: empilhe as letras do seu texto em formatos criativos. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/letras-empilhadas/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/letras-empilhadas/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Letras Empilhadas: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/letras-empilhadas/">
+<meta property="og:title" content="Letras Empilhadas">
+<meta property="og:url" content="http://localhost:1313/ferramentas/letras-empilhadas/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Letras Empilhadas: empilhe as letras do seu texto em formatos criativos. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,162 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Letras Empilhadas</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/letras-empilhadas/","name":"Letras Empilhadas","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Letras Empilhadas</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/letras-empilhadas/","name":"Letras Empilhadas","position":3}]}</script>
 <article class="prose page">
   <h1>Letras Empilhadas</h1>
   
-  
+  <p>Digite seu texto abaixo, coloque o cursor onde deseja empilhar e clique nas letras. A letra escolhida aparece pequena, em cima do caractere anterior.</p>
+<div id="calc-empilhadas" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔠 Gerador de Letras Empilhadas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Digite o texto, posicione o cursor e clique nas letras.</p>
+<label for="emp-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Seu texto</label>
+<textarea id="emp-texto" rows="3" placeholder="Ex.: você" autocomplete="off" style="width:100%;min-height:84px;padding:12px 14px;margin-bottom:16px;font-family:inherit;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<label style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Letras para empilhar</label>
+<div id="emp-letras" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="emp-copiar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Copiar Texto</button>
+<button type="button" id="emp-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="emp-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="emp-resultado" style="white-space:pre-wrap;word-break:break-word;">digite um texto e clique nas letras para empilhar.</span><br><small id="emp-status" style="color:#475569;"></small></div>
+</div>
+<script>
+(function () {
+  var ta = document.getElementById('emp-texto');
+  var grade = document.getElementById('emp-letras');
+  var resultado = document.getElementById('emp-resultado');
+  var status = document.getElementById('emp-status');
+  var caixa = document.getElementById('emp-resposta');
+  var padrao = 'digite um texto e clique nas letras para empilhar.';
+  var tocado = false;
+  var mapa = [
+    ['a', 'ͣ'], ['e', 'ͤ'], ['i', 'ͥ'], ['o', 'ͦ'], ['u', 'ͧ'],
+    ['b', 'ᷨ'], ['c', 'ͨ'], ['ç', 'ᷗ'], ['d', 'ͩ'], ['f', 'ᷫ'],
+    ['g', 'ᷚ'], ['G', 'ᷛ'], ['h', 'ͪ'], ['k', 'ᷜ'], ['l', 'ᷝ'],
+    ['L', 'ᷞ'], ['m', 'ͫ'], ['M', 'ᷟ'], ['n', 'ᷠ'], ['N', 'ᷡ'],
+    ['p', 'ᷮ'], ['r', 'ͬ'], ['R', 'ᷢ'], ['s', 'ᷤ'], ['t', 'ͭ'],
+    ['v', 'ͮ'], ['w', 'ᷱ'], ['x', 'ͯ'], ['z', 'ᷦ'], ['.', '̇']
+  ];
+  function neutro() {
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    status.style.color = '#475569';
+  }
+  function atualizar() {
+    neutro();
+    status.textContent = '';
+    if (ta.value === '') {
+      resultado.textContent = padrao;
+    } else {
+      resultado.textContent = ta.value;
+      resultado.style.color = '#1e293b';
+      resultado.style.fontSize = '1.2rem';
+    }
+    if (ta.value === '') { resultado.style.fontSize = '1rem'; }
+  }
+  function aviso(msg, ok) {
+    status.textContent = msg;
+    if (ok) {
+      caixa.style.borderColor = '#86efac';
+      caixa.style.background = '#f0fdf4';
+      status.style.color = '#166534';
+    } else {
+      caixa.style.borderColor = '#fca5a5';
+      caixa.style.background = '#fef2f2';
+      status.style.color = '#b91c1c';
+    }
+  }
+  function inserir(c) {
+    var v = ta.value;
+    var pos = tocado ? ta.selectionEnd : v.length;
+    if (pos === 0) {
+      aviso('digite uma letra antes e coloque o cursor depois dela.', false);
+      ta.focus();
+      return;
+    }
+    ta.value = v.slice(0, pos) + c + v.slice(pos);
+    var novo = pos + c.length;
+    ta.focus();
+    try { ta.setSelectionRange(novo, novo); } catch (e) {}
+    tocado = true;
+    atualizar();
+  }
+  function copiadoOk() { aviso('texto copiado!', true); }
+  function copiadoErro() { aviso('não foi possível copiar. Selecione o texto e copie manualmente.', false); }
+  function copiarAntigo() {
+    ta.focus();
+    ta.select();
+    try {
+      if (document.execCommand('copy')) { copiadoOk(); } else { copiadoErro(); }
+    } catch (e) { copiadoErro(); }
+  }
+  function copiar() {
+    if (ta.value === '') { aviso('digite um texto antes de copiar.', false); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(ta.value).then(copiadoOk, copiarAntigo);
+    } else {
+      copiarAntigo();
+    }
+  }
+  function limpar() {
+    ta.value = '';
+    tocado = false;
+    atualizar();
+    ta.focus();
+  }
+  mapa.forEach(function (par) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = par[0];
+    b.setAttribute('aria-label', 'Empilhar a letra ' + par[0]);
+    b.style.cssText = 'min-width:42px;padding:10px 12px;font-size:1.05rem;font-weight:700;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;';
+    b.addEventListener('mousedown', function (e) { e.preventDefault(); });
+    b.addEventListener('mouseenter', function () { b.style.background = '#eef2ff'; });
+    b.addEventListener('mouseleave', function () { b.style.background = '#ffffff'; });
+    b.addEventListener('click', function () { inserir(par[1]); });
+    grade.appendChild(b);
+  });
+  document.getElementById('emp-copiar').addEventListener('click', copiar);
+  document.getElementById('emp-limpar').addEventListener('click', limpar);
+  ta.addEventListener('input', function () { tocado = true; atualizar(); });
+  ta.addEventListener('click', function () { tocado = true; });
+  ta.addEventListener('keyup', function () { tocado = true; });
+  ta.addEventListener('focus', function () { ta.style.borderColor = '#6366f1'; });
+  ta.addEventListener('blur', function () { ta.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-o-gerador">Como usar o gerador</h2>
+<ol>
+<li>Digite o seu texto no campo <strong>Seu texto</strong>.</li>
+<li>Coloque o cursor logo depois da letra que receberá a letra pequena em cima.</li>
+<li>Clique na letra desejada em <strong>Letras para empilhar</strong>. Ela é inserida na posição do cursor e aparece pequena, acima do caractere anterior.</li>
+<li>Repita os passos 2 e 3 quantas vezes quiser, em qualquer parte do texto.</li>
+<li>Clique em <strong>Copiar Texto</strong> para copiar o resultado e colar em redes sociais, apelidos (nicks), bios e mensagens.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar tudo e começar de novo.</li>
+</ol>
+<p>Só é possível empilhar as letras que aparecem nos botões: a e i o u b c ç d f g G h k l L m M n N p r R s t v w x z e o ponto. Se o cursor estiver no início do campo, não há letra anterior para receber a letra pequena, então digite algo antes. Para desfazer uma letra empilhada, apague-a com a tecla Backspace, como qualquer outro caractere.</p>
+<h2 id="exemplos">Exemplos</h2>
+<ul>
+<li>vͣoͫcͦê</li>
+<li>eͪnͣgͪrͣaͪçͣado</li>
+<li>mͫaͧsͥsͭaͦ</li>
+</ul>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Letras empilhadas:</strong> texto em que pequenas letras aparecem em cima de outras letras, como se fossem um expoente.</li>
+<li><strong>Letra empilhada (sobrescrita):</strong> a letra pequena colocada acima do caractere anterior. Cada botão da ferramenta adiciona uma delas.</li>
+<li><strong>Cursor:</strong> a barra que pisca no campo de texto e mostra onde o próximo caractere será inserido.</li>
+<li><strong>Caractere combinante:</strong> caractere especial que não ocupa espaço próprio e se junta ao caractere que vem antes dele, subindo para cima da letra.</li>
+<li><strong>Unicode:</strong> padrão que define os caracteres usados em computadores e celulares, incluindo as letrinhas combinantes usadas aqui.</li>
+<li><strong>Versalete:</strong> letra com forma de maiúscula, mas em tamanho pequeno. É o caso das letras G, L, M, N e R da lista.</li>
+<li><strong>Nick:</strong> apelido usado em jogos, perfis e redes sociais, onde as letras empilhadas costumam ser aplicadas.</li>
+<li><strong>Copiar Texto:</strong> ação que copia o resultado para a área de transferência, pronto para colar em outro lugar.</li>
+<li><strong>Limpar:</strong> ação que apaga todo o texto do campo para você começar um novo.</li>
+</ul>
+<h2 id="observações">Observações</h2>
+<p>O resultado é texto comum (Unicode), então pode ser colado onde você quiser. Em alguns aplicativos e fontes, as letras pequenas podem aparecer um pouco deslocadas ou não aparecer. Se isso acontecer, teste em outro aplicativo ou mude a fonte.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -71,17 +221,17 @@
   </a>
 </li>
 <li class="c-texto">
-  <a class="card" href="/ferramentas/numero-por-extenso/">
+  <a class="card" href="/ferramentas/colocar-em-ordem-alfabetica/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Número por Extenso</strong><small>Escreva qualquer número por extenso, inclusive valores em reais.</small></span>
+    <span class="tx"><strong>Colocar em Ordem Alfabética</strong><small>Ordene uma lista de palavras em ordem alfabética.</small></span>
   </a>
 </li>
 <li class="c-texto">
-  <a class="card" href="/ferramentas/nuvem-de-palavras/">
+  <a class="card" href="/ferramentas/comparar-textos/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Nuvem de Palavras</strong><small>Transforme um texto em nuvem de palavras.</small></span>
+    <span class="tx"><strong>Comparar Textos</strong><small>Compare dois textos e veja as diferenças.</small></span>
   </a>
 </li>
 

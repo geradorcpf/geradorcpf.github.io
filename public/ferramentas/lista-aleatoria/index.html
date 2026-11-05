@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lista Aleatória: online e grátis</title>
+<title>Lista Aleatória</title>
 <meta name="description" content="Lista Aleatória: embaralhe uma lista em ordem aleatória. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/lista-aleatoria/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/lista-aleatoria/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lista Aleatória: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/lista-aleatoria/">
+<meta property="og:title" content="Lista Aleatória">
+<meta property="og:url" content="http://localhost:1313/ferramentas/lista-aleatoria/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Lista Aleatória: embaralhe uma lista em ordem aleatória. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,39 +38,138 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Lista Aleatória</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/lista-aleatoria/","name":"Lista Aleatória","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Lista Aleatória</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/lista-aleatoria/","name":"Lista Aleatória","position":3}]}</script>
 <article class="prose page">
   <h1>Lista Aleatória</h1>
   
-  
+  <p>Digite ou cole sua lista abaixo (um item por linha) e clique em <strong>Embaralhar Lista</strong>.</p>
+<div id="calc-lista" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔀 Lista Aleatória</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Cole os itens, um por linha, e embaralhe na hora.</p>
+<label for="lis-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Digite ou cole o texto</label>
+<textarea id="lis-texto" rows="8" placeholder="Ex.:&#10;Ana&#10;Bruno&#10;Carla&#10;Diego" style="width:100%;padding:12px 14px;margin-bottom:12px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<label for="lis-enumerar" style="display:flex;align-items:center;gap:8px;margin-bottom:20px;font-weight:600;font-size:0.95rem;cursor:pointer;"><input id="lis-enumerar" type="checkbox" style="width:18px;height:18px;accent-color:#4f46e5;cursor:pointer;"> Enumerar lista aleatória</label>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="lis-embaralhar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Embaralhar Lista</button>
+<button type="button" id="lis-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="lis-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="lis-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resultado:</strong><div id="lis-resultado" style="margin-top:6px;white-space:pre-wrap;word-break:break-word;">preencha a lista e clique em "Embaralhar Lista".</div></div>
+</div>
+<script>
+(function () {
+  var texto = document.getElementById('lis-texto');
+  var enumerar = document.getElementById('lis-enumerar');
+  var resultado = document.getElementById('lis-resultado');
+  var caixa = document.getElementById('lis-resposta');
+  var ultimo = '';
+  var padrao = 'preencha a lista e clique em "Embaralhar Lista".';
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+    ultimo = '';
+  }
+  function sortear(max) {
+    if (window.crypto && window.crypto.getRandomValues) {
+      var buf = new Uint32Array(1);
+      window.crypto.getRandomValues(buf);
+      return buf[0] % max;
+    }
+    return Math.floor(Math.random() * max);
+  }
+  function embaralhar() {
+    var linhas = texto.value.split(/\r?\n/).map(function (l) { return l.trim(); }).filter(function (l) { return l !== ''; });
+    if (linhas.length === 0) { erro('digite pelo menos um item na lista.'); return; }
+    for (var i = linhas.length - 1; i > 0; i--) {
+      var j = sortear(i + 1);
+      var tmp = linhas[i];
+      linhas[i] = linhas[j];
+      linhas[j] = tmp;
+    }
+    if (enumerar.checked) {
+      linhas = linhas.map(function (l, idx) { return (idx + 1) + '. ' + l; });
+    }
+    ultimo = linhas.join('\n');
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.textContent = ultimo;
+  }
+  function copiar() {
+    if (ultimo === '') { return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(ultimo);
+    } else {
+      var area = document.createElement('textarea');
+      area.value = ultimo;
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand('copy');
+      document.body.removeChild(area);
+    }
+    var btn = document.getElementById('lis-copiar');
+    btn.textContent = 'Copiado!';
+    setTimeout(function () { btn.textContent = 'Copiar'; }, 1500);
+  }
+  function limpar() {
+    texto.value = '';
+    enumerar.checked = false;
+    ultimo = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = padrao;
+    texto.focus();
+  }
+  document.getElementById('lis-embaralhar').addEventListener('click', embaralhar);
+  document.getElementById('lis-copiar').addEventListener('click', copiar);
+  document.getElementById('lis-limpar').addEventListener('click', limpar);
+  texto.addEventListener('focus', function () { texto.style.borderColor = '#6366f1'; });
+  texto.addEventListener('blur', function () { texto.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Digite ou cole sua lista no campo de texto, com <strong>um item por linha</strong>.</li>
+<li>Se quiser que os itens saiam numerados, marque a opção <strong>Enumerar lista aleatória</strong>.</li>
+<li>Clique em <strong>Embaralhar Lista</strong> para misturar os itens e ver o resultado.</li>
+<li>Clique em <strong>Embaralhar Lista</strong> novamente para gerar uma nova ordem aleatória.</li>
+<li>Use o botão <strong>Copiar</strong> para copiar o resultado e o botão <strong>Limpar</strong> para começar de novo.</li>
+</ol>
+<p>Linhas em branco são ignoradas, e espaços extras no início e no fim de cada item são removidos. Itens repetidos são mantidos como você digitou.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Lista aleatória:</strong> lista cujos itens foram colocados em uma ordem sorteada, sem seguir um padrão.</li>
+<li><strong>Embaralhar:</strong> misturar os itens de uma lista, como se fossem cartas de baralho, para mudar a posição de cada um.</li>
+<li><strong>Item:</strong> cada linha da lista, como um nome, uma palavra, um número ou uma frase.</li>
+<li><strong>Enumerar:</strong> colocar um número na frente de cada item, mostrando a posição dele na lista (1., 2., 3. etc.).</li>
+<li><strong>Resultado:</strong> a lista já embaralhada, que aparece abaixo dos botões.</li>
+<li><strong>Sorteio:</strong> escolha feita ao acaso. Na lista embaralhada, o item que ficou em primeiro lugar pode ser usado como o sorteado.</li>
+</ul>
+<h2 id="exemplo">Exemplo</h2>
+<p>Suponha que você queira definir a ordem de apresentação de um grupo. Digite os nomes:</p>
+<pre><code>Ana
+Bruno
+Carla
+Diego
+</code></pre>
+<p>Marque <strong>Enumerar lista aleatória</strong> e clique em <strong>Embaralhar Lista</strong>. Um resultado possível seria:</p>
+<pre><code>1. Carla
+2. Ana
+3. Diego
+4. Bruno
+</code></pre>
+<p>Como a ordem é sorteada, cada clique pode gerar um resultado diferente.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
-  <ul class="cards rel"><li class="c-aleatorio">
-  <a class="card" href="/ferramentas/sorteio/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
-</span>
-    <span class="tx"><strong>Sorteio Online</strong><small>Sorteie nomes ou itens de uma lista.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/prefixo-e-sufixo/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Prefixo e Sufixo</strong><small>Adicione prefixo e sufixo a cada linha de uma lista.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/remover-linhas-duplicadas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Remover Linhas Duplicadas</strong><small>Elimine linhas repetidas de uma lista ou texto.</small></span>
-  </a>
-</li>
-<li class="c-texto">
+  <ul class="cards rel"><li class="c-texto">
   <a class="card" href="/ferramentas/colocar-em-ordem-alfabetica/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
@@ -78,10 +177,31 @@
   </a>
 </li>
 <li class="c-aleatorio">
-  <a class="card" href="/ferramentas/roleta-online/">
+  <a class="card" href="/ferramentas/gerador-de-numeros-mega-sena/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
 </span>
-    <span class="tx"><strong>Roleta Online</strong><small>Gire a roleta e sorteie uma opção.</small></span>
+    <span class="tx"><strong>Gerador de Números da Megasena</strong><small>Gere palpites de seis dezenas para a Mega-Sena.</small></span>
+  </a>
+</li>
+<li class="c-aleatorio">
+  <a class="card" href="/ferramentas/gerador-de-numeros-aleatorios/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Números Aleatórios</strong><small>Sorteie números aleatórios dentro do intervalo que quiser.</small></span>
+  </a>
+</li>
+<li class="c-aleatorio">
+  <a class="card" href="/ferramentas/dado-online/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+</span>
+    <span class="tx"><strong>Dado Online</strong><small>Jogue um ou mais dados online.</small></span>
+  </a>
+</li>
+<li class="c-aleatorio">
+  <a class="card" href="/ferramentas/gerador-de-palavras-aleatorias/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+</span>
+    <span class="tx"><strong>Gerador de Palavras Aleatórias</strong><small>Gere palavras aleatórias para jogos e criação de texto.</small></span>
   </a>
 </li>
 

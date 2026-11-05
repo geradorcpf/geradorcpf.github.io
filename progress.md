@@ -161,7 +161,7 @@ https://geradorcpf.github.io/ferramentas/gerador-de-pessoas/
 https://geradorcpf.github.io/ferramentas/gerador-de-pis-pasep/
 
 3 November 2026
-https://geradorcpf.github.io/ferramentas/gerador-de-placa-de-veiculo/ -- belum submit
+https://geradorcpf.github.io/ferramentas/gerador-de-placa-de-veiculo/ 
 https://geradorcpf.github.io/ferramentas/gerador-de-qr-code-pix/
 https://geradorcpf.github.io/ferramentas/gerador-de-qr-code-wifi/
 https://geradorcpf.github.io/ferramentas/gerador-de-qr-code/
@@ -173,15 +173,27 @@ https://geradorcpf.github.io/ferramentas/gerador-de-titulo-de-eleitor/
 https://geradorcpf.github.io/ferramentas/gerador-de-uuid/
 
 4 November 2026
-http://localhost:1313/ferramentas/gerador-de-veiculos/
-http://localhost:1313/ferramentas/hora-certa/
-http://localhost:1313/ferramentas/informacoes-de-caractere/
-http://localhost:1313/ferramentas/instagram-anonimo/
-http://localhost:1313/ferramentas/inverter-texto/
-http://localhost:1313/ferramentas/juntar-pdf/
-http://localhost:1313/ferramentas/leitor-codigo-barras-online/
-http://localhost:1313/ferramentas/leitor-qr-code-online/
-http://localhost:1313/ferramentas/leitura-rapida/
-http://localhost:1313/ferramentas/letras-diferentes/
+https://geradorcpf.github.io/ferramentas/gerador-de-veiculos/ -- belum submit
+https://geradorcpf.github.io/ferramentas/hora-certa/
+https://geradorcpf.github.io/ferramentas/informacoes-de-caractere/
+https://geradorcpf.github.io/ferramentas/instagram-anonimo/
+https://geradorcpf.github.io/ferramentas/inverter-texto/
+https://geradorcpf.github.io/ferramentas/juntar-pdf/
+https://geradorcpf.github.io/ferramentas/leitor-codigo-barras-online/
+https://geradorcpf.github.io/ferramentas/leitor-qr-code-online/
+https://geradorcpf.github.io/ferramentas/leitura-rapida/
+https://geradorcpf.github.io/ferramentas/letras-diferentes/
 
 5 November 2026
+http://localhost:1313/ferramentas/letras-empilhadas/
+http://localhost:1313/ferramentas/letras-personalizadas/
+http://localhost:1313/ferramentas/lista-aleatoria/
+http://localhost:1313/ferramentas/localizar-ip/
+http://localhost:1313/ferramentas/mensagem-autodestrutiva/
+http://localhost:1313/ferramentas/meu-navegador/
+http://localhost:1313/ferramentas/meu-sistema-operacional/
+http://localhost:1313/ferramentas/minha-localizacao-atual/
+http://localhost:1313/ferramentas/nao-seguidores-instagram/
+http://localhost:1313/ferramentas/nota-promissoria-online/
+
+6 November 2026

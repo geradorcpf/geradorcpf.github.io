@@ -6,8 +6,78 @@
     <description>Recent content on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Letras Empilhadas</title>
+      <link>http://localhost:1313/ferramentas/letras-empilhadas/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/letras-empilhadas/</guid>
+      <description>Empilhe as letras do seu texto em formatos criativos.</description>
+    </item>
+    <item>
+      <title>Letras Personalizadas</title>
+      <link>http://localhost:1313/ferramentas/letras-personalizadas/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/letras-personalizadas/</guid>
+      <description>Transforme texto em letras estilizadas para copiar e colar.</description>
+    </item>
+    <item>
+      <title>Lista Aleatória</title>
+      <link>http://localhost:1313/ferramentas/lista-aleatoria/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/lista-aleatoria/</guid>
+      <description>Embaralhe uma lista em ordem aleatória.</description>
+    </item>
+    <item>
+      <title>Localizar IP</title>
+      <link>http://localhost:1313/ferramentas/localizar-ip/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/localizar-ip/</guid>
+      <description>Descubra a localização aproximada de um endereço IP.</description>
+    </item>
+    <item>
+      <title>Mensagem Autodestrutiva</title>
+      <link>http://localhost:1313/ferramentas/mensagem-autodestrutiva/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/mensagem-autodestrutiva/</guid>
+      <description>Envie uma mensagem que se apaga depois de lida.</description>
+    </item>
+    <item>
+      <title>Meu Navegador</title>
+      <link>http://localhost:1313/ferramentas/meu-navegador/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/meu-navegador/</guid>
+      <description>Descubra qual navegador e versão você está usando.</description>
+    </item>
+    <item>
+      <title>Meu Sistema Operacional</title>
+      <link>http://localhost:1313/ferramentas/meu-sistema-operacional/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/meu-sistema-operacional/</guid>
+      <description>Veja qual sistema operacional seu dispositivo está usando.</description>
+    </item>
+    <item>
+      <title>Minha Localização Atual</title>
+      <link>http://localhost:1313/ferramentas/minha-localizacao-atual/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/minha-localizacao-atual/</guid>
+      <description>Veja sua localização aproximada no mapa.</description>
+    </item>
+    <item>
+      <title>Não Seguidores no Instagram</title>
+      <link>http://localhost:1313/ferramentas/nao-seguidores-instagram/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/nao-seguidores-instagram/</guid>
+      <description>Veja quem você segue no Instagram e não segue você de volta.</description>
+    </item>
+    <item>
+      <title>Nota Promissória Online</title>
+      <link>http://localhost:1313/ferramentas/nota-promissoria-online/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/nota-promissoria-online/</guid>
+      <description>Preencha e baixe uma nota promissória.</description>
+    </item>
     <item>
       <title>Gerador de Veículos</title>
       <link>http://localhost:1313/ferramentas/gerador-de-veiculos/</link>
