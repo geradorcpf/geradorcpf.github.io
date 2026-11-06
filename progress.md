@@ -173,8 +173,8 @@ https://geradorcpf.github.io/ferramentas/gerador-de-titulo-de-eleitor/
 https://geradorcpf.github.io/ferramentas/gerador-de-uuid/
 
 4 November 2026
-https://geradorcpf.github.io/ferramentas/gerador-de-veiculos/ -- belum submit
-https://geradorcpf.github.io/ferramentas/hora-certa/
+https://geradorcpf.github.io/ferramentas/gerador-de-veiculos/ 
+https://geradorcpf.github.io/ferramentas/hora-certa/ -- belum submit
 https://geradorcpf.github.io/ferramentas/informacoes-de-caractere/
 https://geradorcpf.github.io/ferramentas/instagram-anonimo/
 https://geradorcpf.github.io/ferramentas/inverter-texto/
@@ -185,15 +185,24 @@ https://geradorcpf.github.io/ferramentas/leitura-rapida/
 https://geradorcpf.github.io/ferramentas/letras-diferentes/
 
 5 November 2026
-http://localhost:1313/ferramentas/letras-empilhadas/
-http://localhost:1313/ferramentas/letras-personalizadas/
-http://localhost:1313/ferramentas/lista-aleatoria/
-http://localhost:1313/ferramentas/localizar-ip/
-http://localhost:1313/ferramentas/mensagem-autodestrutiva/
-http://localhost:1313/ferramentas/meu-navegador/
-http://localhost:1313/ferramentas/meu-sistema-operacional/
-http://localhost:1313/ferramentas/minha-localizacao-atual/
-http://localhost:1313/ferramentas/nao-seguidores-instagram/
-http://localhost:1313/ferramentas/nota-promissoria-online/
+https://geradorcpf.github.io/ferramentas/letras-empilhadas/
+https://geradorcpf.github.io/ferramentas/letras-personalizadas/
+https://geradorcpf.github.io/ferramentas/lista-aleatoria/
+https://geradorcpf.github.io/ferramentas/localizar-ip/
+https://geradorcpf.github.io/ferramentas/mensagem-autodestrutiva/
+https://geradorcpf.github.io/ferramentas/meu-navegador/
+https://geradorcpf.github.io/ferramentas/meu-sistema-operacional/
+https://geradorcpf.github.io/ferramentas/minha-localizacao-atual/
+https://geradorcpf.github.io/ferramentas/nao-seguidores-instagram/
+https://geradorcpf.github.io/ferramentas/nota-promissoria-online/
 
 6 November 2026
+http://localhost:1313/ferramentas/notepad/
+http://localhost:1313/ferramentas/numero-por-extenso/
+http://localhost:1313/ferramentas/nuvem-de-palavras/
+http://localhost:1313/ferramentas/ordenar-conta-instagram/
+http://localhost:1313/ferramentas/organizador-de-links/
+http://localhost:1313/ferramentas/organizar-pdf/
+http://localhost:1313/ferramentas/palavras-que-rimam/
+
+7 November 2026

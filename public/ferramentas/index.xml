@@ -6,8 +6,57 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notepad Online</title>
+      <link>http://localhost:1313/ferramentas/notepad/</link>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/notepad/</guid>
+      <description>Bloco de notas no navegador, com salvamento automático.</description>
+    </item>
+    <item>
+      <title>Número por Extenso</title>
+      <link>http://localhost:1313/ferramentas/numero-por-extenso/</link>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/numero-por-extenso/</guid>
+      <description>Escreva qualquer número por extenso, inclusive valores em reais.</description>
+    </item>
+    <item>
+      <title>Nuvem de Palavras</title>
+      <link>http://localhost:1313/ferramentas/nuvem-de-palavras/</link>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/nuvem-de-palavras/</guid>
+      <description>Transforme um texto em nuvem de palavras.</description>
+    </item>
+    <item>
+      <title>Ordenar Conta do Instagram</title>
+      <link>http://localhost:1313/ferramentas/ordenar-conta-instagram/</link>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/ordenar-conta-instagram/</guid>
+      <description>Organize as contas que você segue no Instagram.</description>
+    </item>
+    <item>
+      <title>Organizador de Links</title>
+      <link>http://localhost:1313/ferramentas/organizador-de-links/</link>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/organizador-de-links/</guid>
+      <description>Reúna e organize seus links em uma lista.</description>
+    </item>
+    <item>
+      <title>Organizar PDF</title>
+      <link>http://localhost:1313/ferramentas/organizar-pdf/</link>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/organizar-pdf/</guid>
+      <description>Reordene, gire e remova páginas de um PDF.</description>
+    </item>
+    <item>
+      <title>Palavras Que Rimam</title>
+      <link>http://localhost:1313/ferramentas/palavras-que-rimam/</link>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/palavras-que-rimam/</guid>
+      <description>Encontre palavras que rimam com a sua.</description>
+    </item>
     <item>
       <title>Letras Empilhadas</title>
       <link>http://localhost:1313/ferramentas/letras-empilhadas/</link>

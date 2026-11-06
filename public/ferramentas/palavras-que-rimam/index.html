@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Palavras Que Rimam: online e grátis</title>
+<title>Palavras Que Rimam</title>
 <meta name="description" content="Palavras Que Rimam: encontre palavras que rimam com a sua. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/palavras-que-rimam/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/palavras-que-rimam/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Palavras Que Rimam: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/palavras-que-rimam/">
+<meta property="og:title" content="Palavras Que Rimam">
+<meta property="og:url" content="http://localhost:1313/ferramentas/palavras-que-rimam/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Palavras Que Rimam: encontre palavras que rimam com a sua. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,268 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Palavras Que Rimam</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/palavras-que-rimam/","name":"Palavras Que Rimam","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Palavras Que Rimam</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/palavras-que-rimam/","name":"Palavras Que Rimam","position":3}]}</script>
 <article class="prose page">
   <h1>Palavras Que Rimam</h1>
   
-  
+  <p>Basta digitar uma palavra abaixo e depois clicar em <strong>Rimar</strong>.</p>
+<div id="calc-rimas" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🎵 Palavras Que Rimam</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Digite uma palavra e veja as rimas na hora.</p>
+<label for="rim-palavra" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Digite uma palavra</label>
+<input id="rim-palavra" type="text" placeholder="Ex.: amor" autocomplete="off" spellcheck="false" maxlength="40" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="rim-rimar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Rimar</button>
+<button type="button" id="rim-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="rim-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="rim-resultado">digite uma palavra e clique em "Rimar".</span><div id="rim-lista" style="margin-top:8px;"></div></div>
+</div>
+<script>
+(function () {
+  var campo = document.getElementById('rim-palavra');
+  var resultado = document.getElementById('rim-resultado');
+  var lista = document.getElementById('rim-lista');
+  var caixa = document.getElementById('rim-resposta');
+  var base = [
+    'amor dor flor calor cor favor valor senhor sabor temor ardor fervor horror pavor rumor suor furor licor clamor labor doutor autor ator motor pintor professor cantor sonhador amador vendedor lutador criador esplendor melhor pior maior menor redor rancor fulgor protetor escritor vencedor sofredor caçador pescador jogador navegador cuidador',
+    'vida ferida saída partida comida bebida corrida subida descida dívida querida perdida vivida sentida nascida medida ida guarida lida mordida escolhida esquecida atrevida sofrida bandida avenida despedida acolhida',
+    'sentido vestido ouvido partido perdido colorido marido ruído fingido bandido banido ferido dormido fundido comprido esquecido lido vivido pedido sumido unido tecido vencido decidido divertido',
+    'coração paixão canção emoção razão ilusão mão chão pão irmão verão perdão então não vão são sensação oração lição estação ação ocasião solidão decisão visão missão nação opinião televisão multidão tradição atenção imaginação condição direção educação população coleção salão feijão limão botão balão vulcão furacão avião rojão',
+    'corações canções paixões ilusões emoções razões botões limões leões lições milhões ações estações orações',
+    'liberdade saudade felicidade verdade cidade idade vontade realidade amizade bondade humanidade eternidade claridade sociedade unidade piedade qualidade igualdade tempestade metade maldade novidade mocidade lealdade dificuldade oportunidade',
+    'momento vento pensamento sentimento lamento tormento sofrimento movimento alimento cimento firmamento juramento casamento esquecimento nascimento acontecimento cumprimento relento',
+    'gente mente presente ausente quente frente contente dente semente diferente inteligente corrente repente doente consciente paciente aparente evidente permanente',
+    'amar sonhar cantar olhar pensar chorar lutar viajar mar lugar lar ar brilhar voar ficar achar andar dançar esperar acordar cuidar jogar falar mudar chegar encontrar recordar pintar beijar abraçar estudar trabalhar passear navegar namorar gostar procurar',
+    'viver querer saber entender ver ter poder dever beber correr escrever vencer perder crescer acontecer merecer esquecer mulher colher prazer sofrer aprender conhecer',
+    'sorrir partir sentir seguir fugir ir cair sair subir vir ouvir dormir resistir existir construir insistir decidir mentir sumir ferir seduzir',
+    'beleza tristeza certeza natureza riqueza pobreza firmeza grandeza fraqueza leveza pureza gentileza delicadeza clareza realeza esperteza destreza braveza frieza',
+    'mesa princesa defesa surpresa francesa portuguesa japonesa sobremesa burguesa inglesa camponesa duquesa',
+    'vez talvez rapidez timidez nitidez altivez avidez estupidez lucidez pequenez escassez mudez',
+    'carinho caminho vizinho ninho sozinho pinho vinho espinho focinho padrinho pezinho amiguinho benzinho',
+    'minha vizinha rainha linha cozinha sardinha madrinha farinha galinha adivinha tinha vinha marinha andorinha',
+    'namorado passado lado cuidado sonhado cansado dado amado guardado calado machado jogado apaixonado abraçado cercado casado criado derrotado encantado pecado soldado',
+    'alegria poesia magia energia melodia fantasia dia tia harmonia sinfonia companhia euforia rebeldia teoria covardia ironia geografia biologia agonia ousadia cortesia',
+    'rio frio fio vazio tio navio desafio arrepio sombrio gentio calafrio estio',
+    'ouro tesouro touro besouro estouro',
+    'bandeira cadeira madeira brincadeira primeira companheira feiticeira fronteira maneira poeira ladeira laranjeira fogueira costureira inteira ligeira faceira cozinheira',
+    'janela estrela bela vela panela cela amarela donzela novela flanela capela aquarela',
+    'rima clima prima cima esgrima lima estima',
+    'ternura loucura aventura procura cura altura criatura doçura bravura formatura leitura cultura costura figura mistura pintura candura frescura amargura secura',
+    'amante distante instante brilhante constante gigante elefante estudante diamante importante',
+    'companheiro dinheiro primeiro janeiro verdadeiro brasileiro guerreiro cavalheiro pioneiro marinheiro cozinheiro padeiro',
+    'também ninguém alguém além armazém bem vem refém trem',
+    'final animal real normal sal mal natural carnaval total jornal capital especial',
+    'sol farol anzol lençol futebol girassol caracol',
+    'brasil mil febril gentil abril funil civil sutil fuzil',
+    'luz cruz capuz produz conduz reluz seduz reduz arcabuz',
+    'céu meu seu eu véu chapéu troféu museu ateu judeu europeu',
+    'jamais mais demais cais pais canais animais',
+    'paz faz capaz rapaz audaz voraz tenaz',
+    'voz feroz veloz atroz algoz',
+    'gesto resto cesto honesto modesto manifesto protesto',
+    'festa floresta testa besta fresta seresta',
+    'resposta aposta proposta costa posta encosta',
+    'nome fome come some tome',
+    'sorte norte morte forte corte porte suporte transporte esporte conforte aborte',
+    'pouco louco rouco',
+    'ame chame clame reclame derrame infame',
+    'faca vaca placa fraca macaca barraca ressaca estaca',
+    'boa coroa pessoa lagoa canoa garoa magoa perdoa atoa voa soa doa',
+    'lua rua tua sua nua flutua continua atua',
+    'menina cortina esquina bailarina rotina vitrina doutrina marina cantina',
+    'menino destino divino sino fino peregrino cristalino matutino assassino ladino pequenino',
+    'pequeno sereno terreno veneno moreno ameno aceno feno pleno',
+    'ano humano plano engano oceano tirano romano mano cigano soberano',
+    'bala sala fala mala escala gala vala resvala',
+    'casa asa brasa rasa',
+    'abraço espaço traço laço aço braço cansaço palhaço pedaço',
+    'ilha filha trilha brilha maravilha armadilha quadrilha',
+    'abelha ovelha orelha vermelha centelha',
+    'montanha campanha castanha façanha aranha tamanha banha',
+    'beijo queijo desejo lampejo ensejo despejo cortejo gracejo',
+    'mudo tudo escudo veludo contudo miúdo sisudo',
+    'viva saliva ativa criativa cativa nativa positiva negativa festiva',
+    'carinhoso maravilhoso gostoso saboroso famoso poderoso orgulhoso amoroso',
+    'rosa prosa formosa preciosa saudosa',
+    'linda ainda infinda finda vinda',
+    'tarde arde covarde alarde guarde aguarde',
+    'terra guerra serra erra encerra aterra desterra ferra',
+    'futuro duro escuro seguro muro puro maduro obscuro',
+    'espuma bruma pluma uma suma',
+    'onda ronda redonda esconda responda',
+    'mundo fundo profundo segundo rotundo moribundo',
+    'moda toda roda soda poda queda seda veda azeda alameda moeda enreda',
+    'sede rede parede pede cede concede excede mede',
+    'hora agora senhora embora fora demora chora ora aurora sonora melhora adora mora devora ignora implora namora colora decora cantora professora',
+    'tempo contratempo passatempo',
+    'lago pago mago trago afago vago'
+  ].join(' ').split(' ');
+  var indice = {};
+  var visto = {};
+  function semAcento(t) {
+    return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+  function normalizar(k) {
+    var t = k.replace(/ss/g, 'ç').replace(/h/g, '').replace(/eij/g, 'ej');
+    t = semAcento(t);
+    return t.replace(/([aeiou])s([aeiou])/g, '$1z$2');
+  }
+  function forte(c) {
+    return 'aeo'.indexOf(c) !== -1;
+  }
+  function chave(palavra) {
+    var w = palavra.toLowerCase().trim().replace(/([qg])u([eiéêí])/g, '$1$2');
+    var acento = -1;
+    var i;
+    for (i = 0; i !== w.length; i++) {
+      if ('áéíóúâêôà'.indexOf(w.charAt(i)) !== -1) { acento = i; }
+    }
+    if (acento === -1) {
+      for (i = 0; i !== w.length; i++) {
+        if ('ãõ'.indexOf(w.charAt(i)) !== -1) { acento = i; }
+      }
+    }
+    if (acento === -1) {
+      var rx = /[aeiou]+/g;
+      var m;
+      var nuc = [];
+      while ((m = rx.exec(w)) !== null) {
+        var g = m[0];
+        var ini = m.index;
+        var resto = w.slice(ini + g.length);
+        var hiato = false;
+        if (g.length === 2) {
+          if (/^s?$/.test(resto)) {
+            if (forte(g.charAt(1))) {
+              if (g.charAt(0) === 'i') { hiato = true; }
+              if (g.charAt(0) === 'u') {
+                if (!/[qg]$/.test(w.slice(0, ini))) { hiato = true; }
+              }
+            }
+          }
+        }
+        if (hiato) {
+          nuc.push(ini);
+          nuc.push(ini + 1);
+        } else {
+          for (i = 0; i !== g.length; i++) {
+            if (i === 0) { nuc.push(ini); }
+            else if (forte(g.charAt(i))) {
+              if (forte(g.charAt(i - 1))) { nuc.push(ini + i); }
+            }
+          }
+        }
+      }
+      if (nuc.length === 0) { return null; }
+      var paroxitona = /(a|e|o|as|es|os|am|em|ens)$/.test(w);
+      var pos = nuc.length - 1;
+      if (nuc.length !== 1) {
+        if (paroxitona) { pos = nuc.length - 2; }
+      }
+      acento = nuc[pos];
+    }
+    return { raw: w.slice(acento), norm: normalizar(w.slice(acento)) };
+  }
+  base.forEach(function (p) {
+    if (p === '' || visto[p]) { return; }
+    visto[p] = true;
+    var c = chave(p);
+    if (c === null) { return; }
+    if (!indice[c.norm]) { indice[c.norm] = []; }
+    indice[c.norm].push(p);
+  });
+  function sufixo(a, b) {
+    var n = 0;
+    while (n !== a.length) {
+      if (n === b.length) { break; }
+      if (a.charAt(a.length - 1 - n) !== b.charAt(b.length - 1 - n)) { break; }
+      n++;
+    }
+    return n;
+  }
+  function estado(tipo) {
+    if (tipo === 'erro') {
+      caixa.style.borderColor = '#fca5a5';
+      caixa.style.background = '#fef2f2';
+      resultado.style.color = '#b91c1c';
+    } else if (tipo === 'ok') {
+      caixa.style.borderColor = '#86efac';
+      caixa.style.background = '#f0fdf4';
+      resultado.style.color = '#166534';
+    } else {
+      caixa.style.borderColor = '#c7d2fe';
+      caixa.style.background = '#ffffff';
+      resultado.style.color = '#64748b';
+    }
+  }
+  function erro(msg) {
+    estado('erro');
+    resultado.textContent = msg;
+  }
+  function chip(texto) {
+    var s = document.createElement('span');
+    s.textContent = texto;
+    s.style.cssText = 'display:inline-block;margin:6px 6px 0 0;padding:6px 12px;background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;color:#3730a3;font-size:0.95rem;font-weight:600;';
+    return s;
+  }
+  function rimar() {
+    var entrada = campo.value.toLowerCase().trim();
+    lista.textContent = '';
+    if (entrada === '') { erro('digite uma palavra.'); return; }
+    if (!/^[a-zà-ú]+$/.test(entrada)) { erro('use apenas letras, sem espaços, números ou símbolos.'); return; }
+    var c = chave(entrada);
+    if (c === null) { erro('a palavra precisa ter pelo menos uma vogal.'); return; }
+    var achadas = (indice[c.norm] || []).filter(function (p) { return p !== entrada; });
+    if (achadas.length === 0) {
+      erro('nenhuma rima encontrada para “' + entrada + '”. Tente outra palavra ou outra forma dela (singular, plural, infinitivo).');
+      return;
+    }
+    achadas.sort(function (x, y) {
+      var d = sufixo(y, entrada) - sufixo(x, entrada);
+      if (d !== 0) { return d; }
+      return x.localeCompare(y, 'pt-BR');
+    });
+    estado('ok');
+    var n = achadas.length;
+    resultado.textContent = 'encontramos ' + n + (n === 1 ? ' palavra que rima' : ' palavras que rimam') + ' com “' + entrada + '” (terminação -' + c.raw + '):';
+    achadas.forEach(function (p) { lista.appendChild(chip(p)); });
+  }
+  function limpar() {
+    campo.value = '';
+    lista.textContent = '';
+    estado('neutro');
+    resultado.textContent = 'digite uma palavra e clique em "Rimar".';
+    campo.focus();
+  }
+  document.getElementById('rim-rimar').addEventListener('click', rimar);
+  document.getElementById('rim-limpar').addEventListener('click', limpar);
+  campo.addEventListener('keydown', function (e) { if (e.key === 'Enter') { rimar(); } });
+  campo.addEventListener('focus', function () { campo.style.borderColor = '#6366f1'; });
+  campo.addEventListener('blur', function () { campo.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Digite uma palavra no campo <strong>Digite uma palavra</strong> (por exemplo, <code>amor</code>).</li>
+<li>Clique em <strong>Rimar</strong> (ou pressione Enter) para ver o resultado.</li>
+<li>Confira a lista de palavras que rimam. As rimas mais próximas, com mais letras finais iguais, aparecem primeiro.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar a palavra e fazer uma nova busca.</li>
+</ol>
+<p>Digite apenas uma palavra por vez, sem espaços, números ou símbolos. Você pode usar acentos e cedilha (por exemplo, <code>coração</code>). Se não houver resultado, tente outra forma da palavra, como o singular, o plural ou o infinitivo do verbo.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Rima:</strong> semelhança de sons no final de duas ou mais palavras, muito usada em poemas, músicas e versos.</li>
+<li><strong>Palavra que rima:</strong> palavra cujo som final, a partir da vogal tônica, é igual ao da palavra pesquisada. Por exemplo, &ldquo;amor&rdquo; rima com &ldquo;flor&rdquo;.</li>
+<li><strong>Rima perfeita (soante):</strong> rima em que todos os sons, a partir da vogal tônica, são iguais. É o tipo que a ferramenta procura.</li>
+<li><strong>Rima toante:</strong> rima em que só as vogais combinam, sem coincidência das consoantes, como em &ldquo;gato&rdquo; e &ldquo;prado&rdquo;.</li>
+<li><strong>Sílaba tônica:</strong> sílaba pronunciada com mais força na palavra. Em &ldquo;coração&rdquo;, é &ldquo;ção&rdquo;.</li>
+<li><strong>Terminação:</strong> parte final da palavra, a partir da vogal tônica. É ela que a ferramenta compara para achar as rimas.</li>
+<li><strong>Verso:</strong> cada linha de um poema ou de uma letra de música.</li>
+<li><strong>Estrofe:</strong> grupo de versos que forma uma unidade dentro do poema, como um parágrafo.</li>
+<li><strong>Dicionário de rimas:</strong> lista de palavras organizadas pelo som final, usada para consultar rimas na hora de escrever.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -54,13 +310,6 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
     <span class="tx"><strong>Número por Extenso</strong><small>Escreva qualquer número por extenso, inclusive valores em reais.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/textos-sinonimos/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Textos Sinônimos</strong><small>Encontre sinônimos para variar as palavras do texto.</small></span>
   </a>
 </li>
 <li class="c-texto">
@@ -78,10 +327,17 @@
   </a>
 </li>
 <li class="c-texto">
-  <a class="card" href="/ferramentas/prefixo-e-sufixo/">
+  <a class="card" href="/ferramentas/nuvem-de-palavras/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
-    <span class="tx"><strong>Prefixo e Sufixo</strong><small>Adicione prefixo e sufixo a cada linha de uma lista.</small></span>
+    <span class="tx"><strong>Nuvem de Palavras</strong><small>Transforme um texto em nuvem de palavras.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/letras-personalizadas/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Letras Personalizadas</strong><small>Transforme texto em letras estilizadas para copiar e colar.</small></span>
   </a>
 </li>
 
