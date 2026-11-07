@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Recortar Imagem: online e grátis</title>
+<title>Recortar Imagem</title>
 <meta name="description" content="Recortar Imagem: recorte uma imagem na área e proporção que quiser. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/recortar-imagem/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/recortar-imagem/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Recortar Imagem: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/recortar-imagem/">
+<meta property="og:title" content="Recortar Imagem">
+<meta property="og:url" content="http://localhost:1313/ferramentas/recortar-imagem/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Recortar Imagem: recorte uma imagem na área e proporção que quiser. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,440 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Recortar Imagem</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/recortar-imagem/","name":"Recortar Imagem","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Recortar Imagem</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/recortar-imagem/","name":"Recortar Imagem","position":3}]}</script>
 <article class="prose page">
   <h1>Recortar Imagem</h1>
   
-  
+  <p>Basta enviar uma imagem, escolher a proporção, ajustar a área de recorte e depois clicar em <strong>Recortar</strong>.</p>
+<div id="rec-img" style="max-width:640px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">✂️ Recortar Imagem</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Envie uma imagem, ajuste a área de recorte e baixe o resultado.</p>
+<input id="rec-arquivo" type="file" accept="image/*" style="display:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
+<button type="button" id="rec-enviar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Enviar Imagem</button>
+<button type="button" id="rec-recortar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Recortar</button>
+<button type="button" id="rec-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<span style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Proporção</span>
+<div id="rec-proporcoes" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+<button type="button" data-r="0" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:2px solid #4f46e5;border-radius:10px;cursor:pointer;">Livre</button>
+<button type="button" data-r="1" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">1:1</button>
+<button type="button" data-r="1.3333333333" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">4:3</button>
+<button type="button" data-r="1.7777777778" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">16:9</button>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+<button type="button" id="rec-zoom-menos" title="Diminuir zoom" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">🔍 −</button>
+<button type="button" id="rec-zoom-mais" title="Aumentar zoom" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">🔍 +</button>
+<button type="button" id="rec-girar-esq" title="Girar 90° para a esquerda" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">↺ Girar</button>
+<button type="button" id="rec-girar-dir" title="Girar 90° para a direita" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">↻ Girar</button>
+<button type="button" id="rec-espelho-h" title="Inverter na horizontal" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">↔ Inverter</button>
+<button type="button" id="rec-espelho-v" title="Inverter na vertical" style="padding:9px 14px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">↕ Inverter</button>
+</div>
+<div id="rec-palco" style="max-height:420px;overflow:auto;padding:8px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;box-sizing:border-box;text-align:center;color:#64748b;font-size:0.95rem;"><span id="rec-vazio" style="display:block;padding:40px 12px;">Nenhuma imagem selecionada. Clique em "Enviar Imagem".</span><canvas id="rec-tela" style="display:none;margin:0 auto;max-width:none;touch-action:none;"></canvas></div>
+<div id="rec-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="rec-resultado">envie uma imagem e clique em "Recortar".</span></div>
+</div>
+<script>
+(function () {
+  var arquivo = document.getElementById('rec-arquivo');
+  var palco = document.getElementById('rec-palco');
+  var tela = document.getElementById('rec-tela');
+  var vazio = document.getElementById('rec-vazio');
+  var caixa = document.getElementById('rec-resposta');
+  var resultado = document.getElementById('rec-resultado');
+  var botoesProp = document.querySelectorAll('#rec-proporcoes button');
+  var ctx = tela.getContext('2d');
+  var TEXTO_INICIAL = 'envie uma imagem e clique em "Recortar".';
+  var src = null;
+  var tipo = 'image/png';
+  var nome = 'imagem';
+  var crop = { x: 0, y: 0, w: 0, h: 0 };
+  var anterior = null;
+  var proporcao = 0;
+  var zoom = 1;
+  var escala = 1;
+  var acao = '';
+  var ancora = null;
+  var inicio = null;
+  var urlAtual = null;
+  function limitar(v, mn, mx) { return Math.max(mn, Math.min(mx, v)); }
+  function criar(tag, texto, estilo) {
+    var n = document.createElement(tag);
+    if (texto) { n.textContent = texto; }
+    if (estilo) { n.style.cssText = estilo; }
+    return n;
+  }
+  function liberarUrl() {
+    if (urlAtual) { URL.revokeObjectURL(urlAtual); urlAtual = null; }
+  }
+  function resetCaixa() {
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+  }
+  function mensagemInicial() {
+    liberarUrl();
+    resetCaixa();
+    resultado.textContent = TEXTO_INICIAL;
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function calcularEscala() {
+    var larguraPalco = Math.max(100, palco.clientWidth - 20);
+    var fit = Math.min(1, larguraPalco / src.width, 400 / src.height);
+    escala = fit * zoom;
+  }
+  function desenhar() {
+    if (!src) { return; }
+    calcularEscala();
+    var cw = Math.max(1, Math.round(src.width * escala));
+    var ch = Math.max(1, Math.round(src.height * escala));
+    tela.width = cw;
+    tela.height = ch;
+    tela.style.width = cw + 'px';
+    tela.style.height = ch + 'px';
+    ctx.drawImage(src, 0, 0, cw, ch);
+    var x = crop.x * escala;
+    var y = crop.y * escala;
+    var w = crop.w * escala;
+    var h = crop.h * escala;
+    ctx.fillStyle = 'rgba(15,23,42,0.55)';
+    ctx.fillRect(0, 0, cw, y);
+    ctx.fillRect(0, y + h, cw, ch - y - h);
+    ctx.fillRect(0, y, x, h);
+    ctx.fillRect(x + w, y, cw - x - w, h);
+    ctx.strokeStyle = 'rgba(255,255,255,0.6)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(x + w / 3, y);
+    ctx.lineTo(x + w / 3, y + h);
+    ctx.moveTo(x + 2 * w / 3, y);
+    ctx.lineTo(x + 2 * w / 3, y + h);
+    ctx.moveTo(x, y + h / 3);
+    ctx.lineTo(x + w, y + h / 3);
+    ctx.moveTo(x, y + 2 * h / 3);
+    ctx.lineTo(x + w, y + 2 * h / 3);
+    ctx.stroke();
+    ctx.strokeStyle = '#6366f1';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(x, y, w, h);
+    var cantos = [[x, y], [x + w, y], [x, y + h], [x + w, y + h]];
+    ctx.fillStyle = '#ffffff';
+    for (var i = 0; i !== cantos.length; i++) {
+      ctx.fillRect(cantos[i][0] - 6, cantos[i][1] - 6, 12, 12);
+      ctx.strokeRect(cantos[i][0] - 6, cantos[i][1] - 6, 12, 12);
+    }
+  }
+  function aplicarProporcao() {
+    if (!src) { return; }
+    if (proporcao === 0) { return; }
+    var cx = crop.x + crop.w / 2;
+    var cy = crop.y + crop.h / 2;
+    var w = crop.w;
+    var h = w / proporcao;
+    if (h > crop.h) { h = crop.h; w = h * proporcao; }
+    if (w > src.width) { w = src.width; h = w / proporcao; }
+    if (h > src.height) { h = src.height; w = h * proporcao; }
+    crop.w = w;
+    crop.h = h;
+    crop.x = limitar(cx - w / 2, 0, src.width - w);
+    crop.y = limitar(cy - h / 2, 0, src.height - h);
+  }
+  function marcarProporcao(botao) {
+    Array.prototype.forEach.call(botoesProp, function (b) {
+      var ativo = (b === botao);
+      b.style.background = ativo ? 'linear-gradient(135deg,#4f46e5,#6366f1)' : '#ffffff';
+      b.style.color = ativo ? '#ffffff' : '#4f46e5';
+      b.style.borderColor = ativo ? '#4f46e5' : '#c7d2fe';
+    });
+  }
+  function posicao(e) {
+    var r = tela.getBoundingClientRect();
+    return { x: (e.clientX - r.left) / escala, y: (e.clientY - r.top) / escala };
+  }
+  function alca(p) {
+    var raio = 14 / escala;
+    var cantos = [
+      ['nw', crop.x, crop.y],
+      ['ne', crop.x + crop.w, crop.y],
+      ['sw', crop.x, crop.y + crop.h],
+      ['se', crop.x + crop.w, crop.y + crop.h]
+    ];
+    for (var i = 0; i !== cantos.length; i++) {
+      var dx = Math.abs(p.x - cantos[i][1]);
+      var dy = Math.abs(p.y - cantos[i][2]);
+      if (raio >= Math.max(dx, dy)) { return cantos[i][0]; }
+    }
+    return '';
+  }
+  function ancoraDe(a) {
+    if (a === 'nw') { return { x: crop.x + crop.w, y: crop.y + crop.h }; }
+    if (a === 'ne') { return { x: crop.x, y: crop.y + crop.h }; }
+    if (a === 'sw') { return { x: crop.x + crop.w, y: crop.y }; }
+    return { x: crop.x, y: crop.y };
+  }
+  function dentro(p) {
+    var dx = p.x - (crop.x + crop.w / 2);
+    var dy = p.y - (crop.y + crop.h / 2);
+    return crop.w / 2 >= Math.abs(dx) ? crop.h / 2 >= Math.abs(dy) : false;
+  }
+  function redimensionar(p) {
+    var ax = ancora.x;
+    var ay = ancora.y;
+    var px = limitar(p.x, 0, src.width);
+    var py = limitar(p.y, 0, src.height);
+    var sx = px >= ax ? 1 : -1;
+    var sy = py >= ay ? 1 : -1;
+    var maxW = sx > 0 ? src.width - ax : ax;
+    var maxH = sy > 0 ? src.height - ay : ay;
+    var w = Math.min(Math.abs(px - ax), maxW);
+    var h = Math.min(Math.abs(py - ay), maxH);
+    if (proporcao > 0) {
+      w = Math.max(w, h * proporcao);
+      w = Math.min(w, maxW, maxH * proporcao);
+      h = w / proporcao;
+    }
+    crop.x = sx > 0 ? ax : ax - w;
+    crop.y = sy > 0 ? ay : ay - h;
+    crop.w = w;
+    crop.h = h;
+  }
+  function cursor(p) {
+    var a = alca(p);
+    if (a === 'nw' || a === 'se') { return 'nwse-resize'; }
+    if (a === 'ne' || a === 'sw') { return 'nesw-resize'; }
+    return dentro(p) ? 'move' : 'crosshair';
+  }
+  tela.addEventListener('pointerdown', function (e) {
+    if (!src) { return; }
+    var p = posicao(e);
+    anterior = { x: crop.x, y: crop.y, w: crop.w, h: crop.h };
+    var a = alca(p);
+    if (a !== '') {
+      acao = 'redim';
+      ancora = ancoraDe(a);
+    } else if (dentro(p)) {
+      acao = 'mover';
+      inicio = { x: p.x - crop.x, y: p.y - crop.y };
+    } else {
+      acao = 'redim';
+      ancora = { x: limitar(p.x, 0, src.width), y: limitar(p.y, 0, src.height) };
+      crop.x = ancora.x;
+      crop.y = ancora.y;
+      crop.w = 0;
+      crop.h = 0;
+    }
+    try { tela.setPointerCapture(e.pointerId); } catch (err) { }
+    e.preventDefault();
+  });
+  tela.addEventListener('pointermove', function (e) {
+    if (!src) { return; }
+    var p = posicao(e);
+    if (acao === '') {
+      tela.style.cursor = cursor(p);
+      return;
+    }
+    if (acao === 'mover') {
+      crop.x = limitar(p.x - inicio.x, 0, src.width - crop.w);
+      crop.y = limitar(p.y - inicio.y, 0, src.height - crop.h);
+    } else {
+      redimensionar(p);
+    }
+    desenhar();
+  });
+  function terminar() {
+    if (acao === '') { return; }
+    acao = '';
+    if (anterior) {
+      if (8 / escala > Math.min(crop.w, crop.h)) {
+        crop = anterior;
+      }
+    }
+    desenhar();
+  }
+  tela.addEventListener('pointerup', terminar);
+  tela.addEventListener('pointercancel', terminar);
+  function girar(sentido) {
+    if (!src) { return; }
+    var w = src.width;
+    var h = src.height;
+    var n = document.createElement('canvas');
+    n.width = h;
+    n.height = w;
+    var c = n.getContext('2d');
+    var nx = 0;
+    var ny = 0;
+    if (sentido > 0) {
+      c.translate(h, 0);
+      c.rotate(Math.PI / 2);
+      nx = h - (crop.y + crop.h);
+      ny = crop.x;
+    } else {
+      c.translate(0, w);
+      c.rotate(-Math.PI / 2);
+      nx = crop.y;
+      ny = w - (crop.x + crop.w);
+    }
+    c.drawImage(src, 0, 0);
+    crop = { x: nx, y: ny, w: crop.h, h: crop.w };
+    src = n;
+    aplicarProporcao();
+    desenhar();
+  }
+  function inverter(horizontal) {
+    if (!src) { return; }
+    var w = src.width;
+    var h = src.height;
+    var n = document.createElement('canvas');
+    n.width = w;
+    n.height = h;
+    var c = n.getContext('2d');
+    if (horizontal) {
+      c.translate(w, 0);
+      c.scale(-1, 1);
+      crop.x = w - (crop.x + crop.w);
+    } else {
+      c.translate(0, h);
+      c.scale(1, -1);
+      crop.y = h - (crop.y + crop.h);
+    }
+    c.drawImage(src, 0, 0);
+    src = n;
+    desenhar();
+  }
+  function recortar() {
+    if (!src) { erro('envie uma imagem antes de recortar.'); return; }
+    var x = limitar(Math.round(crop.x), 0, src.width - 1);
+    var y = limitar(Math.round(crop.y), 0, src.height - 1);
+    var w = limitar(Math.round(crop.w), 1, src.width - x);
+    var h = limitar(Math.round(crop.h), 1, src.height - y);
+    var saida = document.createElement('canvas');
+    saida.width = w;
+    saida.height = h;
+    var c = saida.getContext('2d');
+    if (tipo === 'image/jpeg') {
+      c.fillStyle = '#ffffff';
+      c.fillRect(0, 0, w, h);
+    }
+    c.drawImage(src, x, y, w, h, 0, 0, w, h);
+    saida.toBlob(function (blob) {
+      if (!blob) { erro('não foi possível gerar a imagem recortada.'); return; }
+      liberarUrl();
+      urlAtual = URL.createObjectURL(blob);
+      var ext = tipo === 'image/jpeg' ? '.jpg' : (tipo === 'image/webp' ? '.webp' : '.png');
+      var base = nome.replace(/\.[^.]+$/, '') || 'imagem';
+      caixa.style.borderColor = '#86efac';
+      caixa.style.background = '#f0fdf4';
+      resultado.style.color = '#166534';
+      resultado.textContent = '';
+      var linha = criar('span', 'Imagem recortada: ');
+      linha.appendChild(criar('strong', w + ' × ' + h + ' px', 'font-size:1.2rem;'));
+      var previa = criar('img', '', 'display:block;max-width:100%;max-height:260px;margin:12px 0;border:1px solid #c7d2fe;border-radius:8px;background:#f8fafc;');
+      previa.src = urlAtual;
+      previa.alt = 'Imagem recortada';
+      var link = criar('a', 'Baixar imagem', 'display:inline-block;padding:11px 18px;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(79,70,229,0.35);');
+      link.href = urlAtual;
+      link.download = base + '-recortada' + ext;
+      resultado.appendChild(linha);
+      resultado.appendChild(previa);
+      resultado.appendChild(link);
+    }, tipo, 0.92);
+  }
+  function limpar() {
+    src = null;
+    zoom = 1;
+    acao = '';
+    tela.style.display = 'none';
+    vazio.style.display = 'block';
+    mensagemInicial();
+  }
+  function abrir(arq) {
+    if (!arq) { return; }
+    if (arq.type.indexOf('image/') !== 0) {
+      erro('selecione um arquivo de imagem (JPG, PNG, WebP etc.).');
+      return;
+    }
+    var url = URL.createObjectURL(arq);
+    var img = new Image();
+    img.onload = function () {
+      var c = document.createElement('canvas');
+      c.width = img.naturalWidth;
+      c.height = img.naturalHeight;
+      c.getContext('2d').drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      src = c;
+      nome = arq.name || 'imagem';
+      tipo = arq.type === 'image/jpeg' ? 'image/jpeg' : (arq.type === 'image/webp' ? 'image/webp' : 'image/png');
+      zoom = 1;
+      crop = { x: src.width * 0.1, y: src.height * 0.1, w: src.width * 0.8, h: src.height * 0.8 };
+      aplicarProporcao();
+      vazio.style.display = 'none';
+      tela.style.display = 'block';
+      tela.style.cursor = 'crosshair';
+      mensagemInicial();
+      desenhar();
+    };
+    img.onerror = function () {
+      URL.revokeObjectURL(url);
+      erro('não foi possível abrir esta imagem.');
+    };
+    img.src = url;
+  }
+  arquivo.addEventListener('change', function () {
+    var arq = arquivo.files[0];
+    arquivo.value = '';
+    abrir(arq);
+  });
+  Array.prototype.forEach.call(botoesProp, function (b) {
+    b.addEventListener('click', function () {
+      proporcao = Number(b.getAttribute('data-r'));
+      marcarProporcao(b);
+      aplicarProporcao();
+      desenhar();
+    });
+  });
+  document.getElementById('rec-enviar').addEventListener('click', function () { arquivo.click(); });
+  document.getElementById('rec-recortar').addEventListener('click', recortar);
+  document.getElementById('rec-limpar').addEventListener('click', limpar);
+  document.getElementById('rec-zoom-mais').addEventListener('click', function () { zoom = limitar(zoom * 1.25, 0.25, 5); desenhar(); });
+  document.getElementById('rec-zoom-menos').addEventListener('click', function () { zoom = limitar(zoom / 1.25, 0.25, 5); desenhar(); });
+  document.getElementById('rec-girar-esq').addEventListener('click', function () { girar(-1); });
+  document.getElementById('rec-girar-dir').addEventListener('click', function () { girar(1); });
+  document.getElementById('rec-espelho-h').addEventListener('click', function () { inverter(true); });
+  document.getElementById('rec-espelho-v').addEventListener('click', function () { inverter(false); });
+  window.addEventListener('resize', desenhar);
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Clique em <strong>Enviar Imagem</strong> e escolha uma foto ou imagem do seu dispositivo (JPG, PNG, WebP etc.).</li>
+<li>Escolha a <strong>Proporção</strong> do recorte: Livre, 1:1, 4:3 ou 16:9.</li>
+<li>Ajuste a área de recorte: arraste o interior da moldura para movê-la e arraste os cantos para aumentar ou diminuir. Para desenhar uma nova área, clique e arraste fora da moldura.</li>
+<li>Se precisar, use os botões de <strong>zoom</strong>, <strong>girar</strong> e <strong>inverter</strong> para deixar a imagem na posição desejada.</li>
+<li>Clique em <strong>Recortar</strong> para gerar o resultado e depois em <strong>Baixar imagem</strong> para salvar o arquivo.</li>
+<li>Use o botão <strong>Limpar</strong> para remover a imagem e começar de novo.</li>
+</ol>
+<p>A imagem é processada no seu próprio navegador e não é enviada para nenhum servidor. O arquivo recortado mantém o formato original (JPG, WebP ou PNG) e a resolução da imagem enviada.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Recortar:</strong> cortar e descartar as partes da imagem que ficam fora da área escolhida, mantendo apenas o trecho selecionado.</li>
+<li><strong>Área de recorte:</strong> moldura com cantos destacados que mostra exatamente o trecho da imagem que será mantido.</li>
+<li><strong>Proporção:</strong> relação entre a largura e a altura da área de recorte.</li>
+<li><strong>Proporção Livre:</strong> permite escolher qualquer largura e altura, sem restrição de formato.</li>
+<li><strong>1:1:</strong> proporção quadrada, com largura e altura iguais. É muito usada em fotos de perfil e publicações de redes sociais.</li>
+<li><strong>4:3:</strong> proporção de fotos tradicionais e de telas mais antigas, um pouco mais larga do que alta.</li>
+<li><strong>16:9:</strong> proporção widescreen, comum em vídeos, monitores, TVs e capas de apresentações.</li>
+<li><strong>Zoom:</strong> aumenta ou diminui a imagem na tela para facilitar o ajuste da área de recorte. Não altera o tamanho do arquivo final.</li>
+<li><strong>Girar:</strong> gira a imagem 90° para a esquerda ou para a direita.</li>
+<li><strong>Inverter:</strong> espelha a imagem na horizontal (esquerda e direita) ou na vertical (cima e baixo).</li>
+<li><strong>Pixel (px):</strong> menor ponto de uma imagem digital. O tamanho do recorte é informado em pixels, por exemplo 800 × 600 px.</li>
+<li><strong>Formato da imagem:</strong> tipo do arquivo, como JPG (fotos), PNG (imagens com transparência) e WebP (formato moderno e leve).</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 

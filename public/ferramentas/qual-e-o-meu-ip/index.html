@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Qual é o meu IP: online e grátis</title>
+<title>Qual é o meu IP</title>
 <meta name="description" content="Qual é o meu IP: veja seu endereço de IP público na hora. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/qual-e-o-meu-ip/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/qual-e-o-meu-ip/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Qual é o meu IP: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/qual-e-o-meu-ip/">
+<meta property="og:title" content="Qual é o meu IP">
+<meta property="og:url" content="http://localhost:1313/ferramentas/qual-e-o-meu-ip/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Qual é o meu IP: veja seu endereço de IP público na hora. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,181 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Qual é o meu IP</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/qual-e-o-meu-ip/","name":"Qual é o meu IP","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Qual é o meu IP</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/qual-e-o-meu-ip/","name":"Qual é o meu IP","position":3}]}</script>
 <article class="prose page">
   <h1>Qual é o meu IP</h1>
   
-  
+  <p>Veja abaixo o seu endereço de IP público e o DNS reverso correspondente. A consulta é feita automaticamente ao abrir a página; se quiser atualizar, clique em <strong>Descobrir Meu IP</strong>.</p>
+<div id="ferramenta-meu-ip" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🌐 Qual é o meu IP</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Descubra seu endereço de IP público na hora.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="mip-atualizar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Descobrir Meu IP</button>
+<button type="button" id="mip-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar IP</button>
+</div>
+<div id="mip-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.8;word-break:break-all;">
+<div><strong style="color:#3730a3;">Resposta:</strong> <span id="mip-ip" style="color:#64748b;">consultando...</span></div>
+<div><strong style="color:#3730a3;">Tipo:</strong> <span id="mip-tipo" style="color:#64748b;">-</span></div>
+<div><strong style="color:#3730a3;">DNS Reverso:</strong> <span id="mip-dns" style="color:#64748b;">-</span></div>
+</div>
+</div>
+<script>
+(function () {
+  var elIp = document.getElementById('mip-ip');
+  var elTipo = document.getElementById('mip-tipo');
+  var elDns = document.getElementById('mip-dns');
+  var caixa = document.getElementById('mip-resposta');
+  var btnAtualizar = document.getElementById('mip-atualizar');
+  var btnCopiar = document.getElementById('mip-copiar');
+  var atual = '';
+  var token = 0;
+  function cores(borda, fundo, texto) {
+    caixa.style.borderColor = borda;
+    caixa.style.background = fundo;
+    elIp.style.color = texto;
+    elTipo.style.color = texto;
+    elDns.style.color = texto;
+  }
+  function neutro() { cores('#c7d2fe', '#ffffff', '#64748b'); }
+  function sucesso() { cores('#86efac', '#f0fdf4', '#166534'); }
+  function falha() { cores('#fca5a5', '#fef2f2', '#b91c1c'); }
+  function lerTexto(url) {
+    var ctl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctl) { ctl.abort(); } }, 8000);
+    return fetch(url, ctl ? { signal: ctl.signal } : {}).then(function (r) {
+      clearTimeout(timer);
+      return r.text();
+    }, function (e) {
+      clearTimeout(timer);
+      throw e;
+    });
+  }
+  function lerJson(texto) {
+    try { return JSON.parse(texto); } catch (e) { return null; }
+  }
+  function extrairIp(texto) {
+    var d = lerJson(texto);
+    if (d && d.ip) { return String(d.ip).trim(); }
+    throw new Error('resposta invalida');
+  }
+  function buscarIp() {
+    return lerTexto('https://api64.ipify.org?format=json').then(extrairIp).catch(function () {
+      return lerTexto('https://api.ipify.org?format=json').then(extrairIp);
+    });
+  }
+  function tipoIp(ip) {
+    if (ip.indexOf(':') !== -1) { return 'IPv6'; }
+    if (/^(\d{1,3}\.){3}\d{1,3}$/.test(ip)) { return 'IPv4'; }
+    return '';
+  }
+  function nomePtr(ip) {
+    if (tipoIp(ip) === 'IPv4') {
+      return ip.split('.').reverse().join('.') + '.in-addr.arpa';
+    }
+    var limpo = ip.split('%')[0];
+    var p = limpo.split('::');
+    var inicio = p[0] ? p[0].split(':') : [];
+    var fim = (p.length === 2 && p[1]) ? p[1].split(':') : [];
+    var faltam = Math.max(8 - inicio.length - fim.length, 0);
+    var meio = (p.length === 2) ? new Array(faltam + 1).join('0').split('') : [];
+    var todos = inicio.concat(meio, fim).map(function (h) { return ('0000' + h).slice(-4); });
+    return todos.join('').split('').reverse().join('.') + '.ip6.arpa';
+  }
+  function buscarDns(ip) {
+    var url = 'https://dns.google/resolve?type=PTR&name=' + encodeURIComponent(nomePtr(ip));
+    return lerTexto(url).then(function (texto) {
+      var d = lerJson(texto);
+      if (!d || !d.Answer) { return ''; }
+      return d.Answer.filter(function (a) { return a.type === 12; }).map(function (a) {
+        return String(a.data).replace(/\.$/, '');
+      }).join(', ');
+    }).catch(function () { return null; });
+  }
+  function consultar() {
+    token += 1;
+    var meu = token;
+    atual = '';
+    neutro();
+    elIp.textContent = 'consultando...';
+    elTipo.textContent = '-';
+    elDns.textContent = '-';
+    btnAtualizar.disabled = true;
+    buscarIp().then(function (ip) {
+      if (meu !== token) { return; }
+      atual = ip;
+      elIp.textContent = ip;
+      elTipo.textContent = tipoIp(ip) || 'Desconhecido';
+      elDns.textContent = 'consultando...';
+      sucesso();
+      return buscarDns(ip).then(function (nome) {
+        if (meu !== token) { return; }
+        if (nome === null) { elDns.textContent = 'consulta indisponível no momento'; }
+        else if (nome === '') { elDns.textContent = 'nenhum registro encontrado'; }
+        else { elDns.textContent = nome; }
+      });
+    }).catch(function () {
+      if (meu !== token) { return; }
+      elIp.textContent = 'não foi possível obter o seu IP. Verifique a conexão ou desative bloqueadores e tente de novo.';
+      elTipo.textContent = '-';
+      elDns.textContent = '-';
+      falha();
+    }).then(function () {
+      if (meu === token) { btnAtualizar.disabled = false; }
+    });
+  }
+  function feedbackCopiado() {
+    var original = 'Copiar IP';
+    btnCopiar.textContent = 'Copiado!';
+    setTimeout(function () { btnCopiar.textContent = original; }, 1500);
+  }
+  function copiarFallback(texto) {
+    var campo = document.createElement('textarea');
+    campo.value = texto;
+    campo.style.position = 'fixed';
+    campo.style.opacity = '0';
+    document.body.appendChild(campo);
+    campo.select();
+    try { document.execCommand('copy'); feedbackCopiado(); } catch (e) {}
+    document.body.removeChild(campo);
+  }
+  function copiar() {
+    if (!atual) { return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(atual).then(feedbackCopiado, function () { copiarFallback(atual); });
+    } else {
+      copiarFallback(atual);
+    }
+  }
+  btnAtualizar.addEventListener('click', consultar);
+  btnCopiar.addEventListener('click', copiar);
+  consultar();
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Abra a página: o seu <strong>endereço de IP público</strong> aparece automaticamente no campo de resposta.</li>
+<li>Confira o <strong>Tipo</strong> (IPv4 ou IPv6) e o <strong>DNS Reverso</strong>, que mostra o nome de domínio associado ao IP, quando existir.</li>
+<li>Clique em <strong>Descobrir Meu IP</strong> para fazer uma nova consulta, por exemplo depois de trocar de rede ou ligar uma VPN.</li>
+<li>Clique em <strong>Copiar IP</strong> para copiar o endereço e colar onde precisar.</li>
+</ol>
+<p>Se você usa VPN, proxy ou uma rede compartilhada (como Wi-Fi de empresa ou de escola), o IP exibido será o dessa conexão, e não o do seu provedor de internet. Dependendo do provedor, o DNS Reverso pode não ter nenhum registro, e isso é normal.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>IP (Internet Protocol):</strong> protocolo e endereço único que identifica um dispositivo ou rede na internet, permitindo que eles se comuniquem.</li>
+<li><strong>Endereço de IP:</strong> sequência de números (e, às vezes, letras) que funciona como o &ldquo;endereço&rdquo; do seu dispositivo ou da sua conexão.</li>
+<li><strong>IPv4:</strong> formato mais comum, com quatro números de 0 a 255 separados por pontos, como <code>192.168.0.1</code>.</li>
+<li><strong>IPv6:</strong> formato mais novo e mais longo, com números e letras separados por dois-pontos, como <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>. Foi criado porque os endereços IPv4 estão se esgotando.</li>
+<li><strong>IP público:</strong> endereço visto pelos sites e serviços na internet. É atribuído pelo seu provedor e costuma ser compartilhado por todos os aparelhos da mesma rede.</li>
+<li><strong>IP privado (local):</strong> endereço usado dentro da sua rede doméstica ou da empresa, como <code>192.168.x.x</code>. Ele não aparece na internet e não é o resultado desta ferramenta.</li>
+<li><strong>Provedor de internet (ISP):</strong> empresa que fornece a sua conexão e atribui o IP público.</li>
+<li><strong>Roteador:</strong> aparelho que distribui a internet (Wi-Fi) para os dispositivos da casa ou do escritório.</li>
+<li><strong>VPN:</strong> serviço que encaminha sua conexão por outro servidor e, com isso, muda o IP público que os sites enxergam.</li>
+<li><strong>DNS (Domain Name System):</strong> sistema que converte nomes de sites, como <code>exemplo.com</code>, em endereços de IP.</li>
+<li><strong>DNS Reverso:</strong> o caminho inverso do DNS: a partir de um endereço de IP, descobre o nome de domínio associado a ele.</li>
+<li><strong>Registro PTR:</strong> tipo de registro de DNS que guarda a ligação entre um IP e o seu nome de domínio, usado na consulta de DNS reverso.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -71,17 +240,17 @@
   </a>
 </li>
 <li class="c-rede">
-  <a class="card" href="/ferramentas/teste-de-portas/">
+  <a class="card" href="/ferramentas/dns-lookup/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
 </span>
-    <span class="tx"><strong>Teste de Portas</strong><small>Verifique se uma porta está aberta em um endereço.</small></span>
+    <span class="tx"><strong>DNS Lookup</strong><small>Consulte registros DNS (A, MX, TXT e outros) de um domínio.</small></span>
   </a>
 </li>
 <li class="c-rede">
-  <a class="card" href="/ferramentas/teste-de-velocidade/">
+  <a class="card" href="/ferramentas/minha-localizacao-atual/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
 </span>
-    <span class="tx"><strong>Teste de Velocidade</strong><small>Meça a velocidade de download e upload da sua internet.</small></span>
+    <span class="tx"><strong>Minha Localização Atual</strong><small>Veja sua localização aproximada no mapa.</small></span>
   </a>
 </li>
 

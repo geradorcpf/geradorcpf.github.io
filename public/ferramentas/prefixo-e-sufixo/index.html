@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prefixo e Sufixo: online e grátis</title>
+<title>Prefixo e Sufixo</title>
 <meta name="description" content="Prefixo e Sufixo: adicione prefixo e sufixo a cada linha de uma lista. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/prefixo-e-sufixo/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/prefixo-e-sufixo/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Prefixo e Sufixo: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/prefixo-e-sufixo/">
+<meta property="og:title" content="Prefixo e Sufixo">
+<meta property="og:url" content="http://localhost:1313/ferramentas/prefixo-e-sufixo/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Prefixo e Sufixo: adicione prefixo e sufixo a cada linha de uma lista. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,25 +38,135 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Prefixo e Sufixo</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/prefixo-e-sufixo/","name":"Prefixo e Sufixo","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Prefixo e Sufixo</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/prefixo-e-sufixo/","name":"Prefixo e Sufixo","position":3}]}</script>
 <article class="prose page">
   <h1>Prefixo e Sufixo</h1>
   
-  
+  <p>Basta digitar sua lista abaixo (um item por linha), informar o prefixo e o sufixo e depois clicar em <strong>Adicionar Prefixo/Sufixo</strong>.</p>
+<div id="calc-prefixo-sufixo" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">✍️ Prefixo e Sufixo</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Adicione prefixo e sufixo a cada linha da sua lista.</p>
+<label for="ps-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Seu texto</label>
+<textarea id="ps-texto" rows="6" placeholder="Um item por linha" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<label for="ps-prefixo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Prefixo</label>
+<input id="ps-prefixo" type="text" placeholder="Ex.: (" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="ps-sufixo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Sufixo</label>
+<input id="ps-sufixo" type="text" placeholder="Ex.: )," autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="ps-adicionar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Adicionar Prefixo/Sufixo</button>
+<button type="button" id="ps-enumerar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Enumerar lista</button>
+<button type="button" id="ps-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="ps-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resultado:</strong> <span id="ps-status">preencha o texto e clique em um dos botões.</span>
+<textarea id="ps-resultado" rows="6" readonly style="width:100%;margin-top:12px;padding:12px 14px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#f8fafc;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<button type="button" id="ps-copiar" style="margin-top:12px;padding:10px 16px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar resultado</button>
+</div>
+</div>
+<script>
+(function () {
+  var texto = document.getElementById('ps-texto');
+  var prefixo = document.getElementById('ps-prefixo');
+  var sufixo = document.getElementById('ps-sufixo');
+  var resultado = document.getElementById('ps-resultado');
+  var status = document.getElementById('ps-status');
+  var caixa = document.getElementById('ps-resposta');
+  var quebra = String.fromCharCode(10);
+  function pegarLinhas() {
+    return texto.value.split(/\r?\n/);
+  }
+  function vazia(linha) {
+    return linha.trim() === '';
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    status.style.color = '#b91c1c';
+    status.textContent = msg;
+    resultado.value = '';
+  }
+  function sucesso(linhas) {
+    var total = linhas.filter(function (l) { return !vazia(l); }).length;
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    status.style.color = '#166534';
+    status.textContent = total + (total === 1 ? ' linha processada.' : ' linhas processadas.');
+    resultado.value = linhas.join(quebra);
+  }
+  function adicionar() {
+    if (vazia(texto.value)) { erro('digite ou cole o seu texto primeiro.'); return; }
+    if (prefixo.value === '' && sufixo.value === '') { erro('informe um prefixo, um sufixo ou os dois.'); return; }
+    var saida = pegarLinhas().map(function (linha) {
+      return vazia(linha) ? linha : prefixo.value + linha + sufixo.value;
+    });
+    sucesso(saida);
+  }
+  function enumerar() {
+    if (vazia(texto.value)) { erro('digite ou cole o seu texto primeiro.'); return; }
+    var n = 0;
+    var saida = pegarLinhas().map(function (linha) {
+      if (vazia(linha)) { return linha; }
+      n = n + 1;
+      return n + '. ' + linha;
+    });
+    sucesso(saida);
+  }
+  function limpar() {
+    texto.value = '';
+    prefixo.value = '';
+    sufixo.value = '';
+    resultado.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    status.style.color = '#64748b';
+    status.textContent = 'preencha o texto e clique em um dos botões.';
+    texto.focus();
+  }
+  function copiar() {
+    if (resultado.value === '') { return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(resultado.value);
+    } else {
+      resultado.select();
+      document.execCommand('copy');
+    }
+    status.textContent = 'resultado copiado.';
+  }
+  document.getElementById('ps-adicionar').addEventListener('click', adicionar);
+  document.getElementById('ps-enumerar').addEventListener('click', enumerar);
+  document.getElementById('ps-limpar').addEventListener('click', limpar);
+  document.getElementById('ps-copiar').addEventListener('click', copiar);
+  [texto, prefixo, sufixo].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Digite ou cole a sua lista no campo <strong>Seu texto</strong>, com um item por linha.</li>
+<li>Informe o <strong>Prefixo</strong> (texto que vai antes de cada linha), o <strong>Sufixo</strong> (texto que vai depois) ou os dois.</li>
+<li>Clique em <strong>Adicionar Prefixo/Sufixo</strong> para ver o resultado na caixa <strong>Resultado</strong>.</li>
+<li>Se preferir numerar a lista (1., 2., 3. &hellip;), clique em <strong>Enumerar lista</strong>. Nesse caso, o prefixo e o sufixo não são usados.</li>
+<li>Use <strong>Copiar resultado</strong> para copiar o texto pronto e <strong>Limpar</strong> para apagar tudo e começar de novo.</li>
+</ol>
+<p>As linhas em branco são mantidas como estão, sem prefixo, sufixo ou número. Espaços digitados no prefixo e no sufixo são mantidos, então você pode usar, por exemplo, um espaço depois de um hífen.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Prefixo:</strong> texto adicionado no início de cada linha, antes do conteúdo original. Exemplo: aspas, parêntese, hífen ou o começo de um comando.</li>
+<li><strong>Sufixo:</strong> texto adicionado no final de cada linha, depois do conteúdo original. Exemplo: vírgula, ponto e vírgula, aspas ou parêntese de fechamento.</li>
+<li><strong>Lista:</strong> conjunto de itens escritos um por linha, como nomes, e-mails, números ou palavras.</li>
+<li><strong>Linha:</strong> cada trecho de texto separado por uma quebra de linha (tecla Enter).</li>
+<li><strong>Enumerar lista:</strong> numerar os itens em sequência (1, 2, 3&hellip;), um número para cada linha preenchida.</li>
+<li><strong>Resultado:</strong> texto final, com o prefixo e o sufixo (ou a numeração) já aplicados em cada linha.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-texto">
-  <a class="card" href="/ferramentas/remover-linhas-duplicadas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Remover Linhas Duplicadas</strong><small>Elimine linhas repetidas de uma lista ou texto.</small></span>
-  </a>
-</li>
-<li class="c-texto">
   <a class="card" href="/ferramentas/colocar-em-ordem-alfabetica/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
@@ -64,24 +174,31 @@
   </a>
 </li>
 <li class="c-texto">
-  <a class="card" href="/ferramentas/remover-acentos/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Remover Acentos de um Texto</strong><small>Tire acentos e cedilhas de qualquer texto.</small></span>
-  </a>
-</li>
-<li class="c-texto">
-  <a class="card" href="/ferramentas/remover-quebra-de-linha/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
-</span>
-    <span class="tx"><strong>Remover ou Trocar Quebra de Linha</strong><small>Remova ou troque quebras de linha de um texto.</small></span>
-  </a>
-</li>
-<li class="c-texto">
   <a class="card" href="/ferramentas/converter-maiusculas-minusculas/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
 </span>
     <span class="tx"><strong>Converter Maiúsculas e Minúsculas</strong><small>Troque o texto entre maiúsculas, minúsculas e título.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/cortar-texto-por-caracteres/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Cortar Texto em X Letras</strong><small>Corte um texto no número de letras que você escolher.</small></span>
+  </a>
+</li>
+<li class="c-aleatorio">
+  <a class="card" href="/ferramentas/lista-aleatoria/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".9" fill="currentColor"/><circle cx="15" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg>
+</span>
+    <span class="tx"><strong>Lista Aleatória</strong><small>Embaralhe uma lista em ordem aleatória.</small></span>
+  </a>
+</li>
+<li class="c-texto">
+  <a class="card" href="/ferramentas/palavras-que-rimam/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 7V5h14v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>
+</span>
+    <span class="tx"><strong>Palavras Que Rimam</strong><small>Encontre palavras que rimam com a sua.</small></span>
   </a>
 </li>
 

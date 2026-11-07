@@ -6,8 +6,57 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Fri, 06 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pomodoro Timer</title>
+      <link>http://localhost:1313/ferramentas/pomodoro-timer/</link>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/pomodoro-timer/</guid>
+      <description>Temporizador Pomodoro para estudar e trabalhar com foco.</description>
+    </item>
+    <item>
+      <title>Prefixo e Sufixo</title>
+      <link>http://localhost:1313/ferramentas/prefixo-e-sufixo/</link>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/prefixo-e-sufixo/</guid>
+      <description>Adicione prefixo e sufixo a cada linha de uma lista.</description>
+    </item>
+    <item>
+      <title>Qual é o meu IP</title>
+      <link>http://localhost:1313/ferramentas/qual-e-o-meu-ip/</link>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/qual-e-o-meu-ip/</guid>
+      <description>Veja seu endereço de IP público na hora.</description>
+    </item>
+    <item>
+      <title>Quem Deixou de me Seguir?</title>
+      <link>http://localhost:1313/ferramentas/quem-deixou-de-me-seguir/</link>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/quem-deixou-de-me-seguir/</guid>
+      <description>Descubra quem deixou de seguir você no Instagram.</description>
+    </item>
+    <item>
+      <title>Recibo Online</title>
+      <link>http://localhost:1313/ferramentas/recibo-online/</link>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/recibo-online/</guid>
+      <description>Preencha e baixe um recibo de pagamento.</description>
+    </item>
+    <item>
+      <title>Recortar Imagem</title>
+      <link>http://localhost:1313/ferramentas/recortar-imagem/</link>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/recortar-imagem/</guid>
+      <description>Recorte uma imagem na área e proporção que quiser.</description>
+    </item>
+    <item>
+      <title>Redimensionar Imagem</title>
+      <link>http://localhost:1313/ferramentas/redimensionar-imagem/</link>
+      <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/redimensionar-imagem/</guid>
+      <description>Mude a largura e a altura de uma imagem.</description>
+    </item>
     <item>
       <title>Notepad Online</title>
       <link>http://localhost:1313/ferramentas/notepad/</link>

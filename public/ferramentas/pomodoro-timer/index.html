@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pomodoro Timer: online e grátis</title>
+<title>Pomodoro Timer</title>
 <meta name="description" content="Pomodoro Timer: temporizador Pomodoro para estudar e trabalhar com foco. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/pomodoro-timer/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/pomodoro-timer/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pomodoro Timer: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/pomodoro-timer/">
+<meta property="og:title" content="Pomodoro Timer">
+<meta property="og:url" content="http://localhost:1313/ferramentas/pomodoro-timer/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Pomodoro Timer: temporizador Pomodoro para estudar e trabalhar com foco. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,322 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Pomodoro Timer</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/pomodoro-timer/","name":"Pomodoro Timer","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Pomodoro Timer</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/pomodoro-timer/","name":"Pomodoro Timer","position":3}]}</script>
 <article class="prose page">
   <h1>Pomodoro Timer</h1>
   
-  
+  <p>Escolha o modo, clique em <strong>Iniciar</strong> e foque na sua tarefa até o alarme tocar.</p>
+<div id="pomodoro-timer" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🍅 Pomodoro Timer</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Foque por 25 minutos e descanse em seguida.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+<button type="button" id="pom-modo-pomodoro" style="flex:1;min-width:100px;padding:10px 12px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Pomodoro</button>
+<button type="button" id="pom-modo-curta" style="flex:1;min-width:100px;padding:10px 12px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Pausa Curta</button>
+<button type="button" id="pom-modo-longa" style="flex:1;min-width:100px;padding:10px 12px;font-size:0.95rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Pausa Longa</button>
+</div>
+<div style="padding:20px;margin-bottom:16px;text-align:center;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;">
+<div id="pom-tempo" aria-live="off" style="font-size:3.5rem;font-weight:800;color:#3730a3;line-height:1.1;font-variant-numeric:tabular-nums;">25:00</div>
+<div id="pom-foco" aria-live="polite" style="margin-top:8px;font-size:0.95rem;color:#64748b;">Adicione uma tarefa ou comece a focar.</div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;">
+<button type="button" id="pom-iniciar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Iniciar</button>
+<button type="button" id="pom-desistir" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Desistir</button>
+</div>
+<h3 style="margin:0 0 10px;font-size:1rem;color:#3730a3;">Tarefas</h3>
+<div id="pom-lista" style="margin-bottom:10px;"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;">
+<input id="pom-nova" type="text" placeholder="Ex.: Estudar capítulo 3" autocomplete="off" maxlength="80" style="flex:1;min-width:160px;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<button type="button" id="pom-adicionar" style="padding:12px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Adicionar Tarefa</button>
+</div>
+<h3 style="margin:0 0 10px;font-size:1rem;color:#3730a3;">Estatísticas</h3>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+<button type="button" id="pom-per-semana" style="flex:1;min-width:80px;padding:8px 10px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Semana</button>
+<button type="button" id="pom-per-mes" style="flex:1;min-width:80px;padding:8px 10px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Mês</button>
+<button type="button" id="pom-per-ano" style="flex:1;min-width:80px;padding:8px 10px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Ano</button>
+</div>
+<div style="padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;font-size:1rem;line-height:1.7;">
+<div><strong style="color:#3730a3;">Total:</strong> <span id="pom-total">0 pomodoros (0 min)</span></div>
+<div><strong style="color:#3730a3;">Média por dia:</strong> <span id="pom-media">0 pomodoros</span></div>
+</div>
+</div>
+<script>
+(function () {
+  var MODOS = {
+    pomodoro: { min: 25, texto: 'Hora de focar!' },
+    curta: { min: 5, texto: 'Respire e descanse um pouco.' },
+    longa: { min: 15, texto: 'Hora de uma pausa longa.' }
+  };
+  var modo = 'pomodoro';
+  var restante = MODOS.pomodoro.min * 60;
+  var rodando = false;
+  var fim = 0;
+  var relogio = null;
+  var periodo = 'semana';
+  var ciclo = 0;
+  var tarefas = [];
+  function el(id) { return document.getElementById(id); }
+  var tempo = el('pom-tempo');
+  var foco = el('pom-foco');
+  var btnIniciar = el('pom-iniciar');
+  var lista = el('pom-lista');
+  var campo = el('pom-nova');
+  function ler(chave, padrao) {
+    try {
+      var bruto = window.localStorage.getItem(chave);
+      if (bruto === null) { return padrao; }
+      return JSON.parse(bruto);
+    } catch (e) { return padrao; }
+  }
+  function gravar(chave, valor) {
+    try { window.localStorage.setItem(chave, JSON.stringify(valor)); } catch (e) {}
+  }
+  function dois(n) { return n > 9 ? String(n) : '0' + n; }
+  function chaveHoje() {
+    var d = new Date();
+    return d.getFullYear() + '-' + dois(d.getMonth() + 1) + '-' + dois(d.getDate());
+  }
+  function dec(n) { return n.toLocaleString('pt-BR', { maximumFractionDigits: 1 }); }
+  function tarefaAtiva() {
+    for (var i = 0; tarefas.length !== i; i++) {
+      if (!tarefas[i].feita) { return tarefas[i]; }
+    }
+    return null;
+  }
+  function mostrar() {
+    var m = Math.floor(restante / 60);
+    var s = restante % 60;
+    var texto = dois(m) + ':' + dois(s);
+    tempo.textContent = texto;
+    document.title = (rodando ? texto + ' - ' : '') + 'Pomodoro Timer';
+  }
+  function mensagem() {
+    var ativa = tarefaAtiva();
+    if (modo === 'pomodoro') {
+      foco.textContent = ativa ? 'Focando em: ' + ativa.texto : MODOS.pomodoro.texto;
+    } else {
+      foco.textContent = MODOS[modo].texto;
+    }
+  }
+  function estilizarAbas() {
+    ['pomodoro', 'curta', 'longa'].forEach(function (nome) {
+      var b = el('pom-modo-' + nome);
+      var ativo = nome === modo;
+      b.style.background = ativo ? 'linear-gradient(135deg,#4f46e5,#6366f1)' : '#ffffff';
+      b.style.color = ativo ? '#ffffff' : '#4f46e5';
+      b.style.borderColor = ativo ? '#4f46e5' : '#c7d2fe';
+    });
+    ['semana', 'mes', 'ano'].forEach(function (nome) {
+      var b = el('pom-per-' + nome);
+      var ativo = nome === periodo;
+      b.style.background = ativo ? 'linear-gradient(135deg,#4f46e5,#6366f1)' : '#ffffff';
+      b.style.color = ativo ? '#ffffff' : '#4f46e5';
+      b.style.borderColor = ativo ? '#4f46e5' : '#c7d2fe';
+    });
+  }
+  function parar() {
+    if (relogio !== null) { clearInterval(relogio); relogio = null; }
+    rodando = false;
+    btnIniciar.textContent = 'Iniciar';
+  }
+  function trocarModo(novo) {
+    parar();
+    modo = novo;
+    restante = MODOS[modo].min * 60;
+    estilizarAbas();
+    mensagem();
+    mostrar();
+  }
+  function apitar() {
+    try {
+      var Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) { return; }
+      var ctx = new Ctx();
+      [0, 0.35, 0.7].forEach(function (atraso) {
+        var osc = ctx.createOscillator();
+        var ganho = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = 880;
+        ganho.gain.value = 0.15;
+        osc.connect(ganho);
+        ganho.connect(ctx.destination);
+        osc.start(ctx.currentTime + atraso);
+        osc.stop(ctx.currentTime + atraso + 0.25);
+      });
+    } catch (e) {}
+  }
+  function registrar() {
+    var hist = ler('pom-historico', {});
+    var k = chaveHoje();
+    hist[k] = (hist[k] || 0) + 1;
+    gravar('pom-historico', hist);
+    var ativa = tarefaAtiva();
+    if (ativa) {
+      ativa.pomos = (ativa.pomos || 0) + 1;
+      gravar('pom-tarefas', tarefas);
+      renderTarefas();
+    }
+    estatisticas();
+  }
+  function concluir() {
+    parar();
+    apitar();
+    if (modo === 'pomodoro') {
+      registrar();
+      ciclo = ciclo + 1;
+      trocarModo(ciclo % 4 === 0 ? 'longa' : 'curta');
+    } else {
+      trocarModo('pomodoro');
+    }
+  }
+  function tick() {
+    var r = Math.round((fim - Date.now()) / 1000);
+    if (0 >= r) { restante = 0; mostrar(); concluir(); return; }
+    restante = r;
+    mostrar();
+  }
+  function iniciarOuPausar() {
+    if (rodando) {
+      parar();
+      mostrar();
+      return;
+    }
+    rodando = true;
+    fim = Date.now() + restante * 1000;
+    btnIniciar.textContent = 'Pausar';
+    relogio = setInterval(tick, 250);
+    mensagem();
+    mostrar();
+  }
+  function desistir() {
+    parar();
+    restante = MODOS[modo].min * 60;
+    mensagem();
+    mostrar();
+  }
+  function renderTarefas() {
+    lista.textContent = '';
+    if (tarefas.length === 0) {
+      var vazio = document.createElement('p');
+      vazio.style.cssText = 'margin:0;font-size:0.9rem;color:#64748b;';
+      vazio.textContent = 'Nenhuma tarefa ainda.';
+      lista.appendChild(vazio);
+    }
+    tarefas.forEach(function (t, i) {
+      var linha = document.createElement('div');
+      linha.style.cssText = 'display:flex;align-items:center;gap:10px;padding:10px 12px;margin-bottom:8px;background:#ffffff;border:1px solid #c7d2fe;border-radius:10px;';
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = !!t.feita;
+      cb.setAttribute('aria-label', 'Concluir tarefa');
+      cb.addEventListener('change', function () {
+        t.feita = cb.checked;
+        gravar('pom-tarefas', tarefas);
+        renderTarefas();
+        if (!rodando) { mensagem(); }
+      });
+      var txt = document.createElement('span');
+      txt.style.cssText = 'flex:1;font-size:0.95rem;word-break:break-word;' + (t.feita ? 'text-decoration:line-through;color:#94a3b8;' : '');
+      txt.textContent = t.texto + (t.pomos > 0 ? '  ·  ' + t.pomos + ' 🍅' : '');
+      var rem = document.createElement('button');
+      rem.type = 'button';
+      rem.textContent = '✕';
+      rem.setAttribute('aria-label', 'Remover tarefa');
+      rem.style.cssText = 'padding:4px 10px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:8px;cursor:pointer;';
+      rem.addEventListener('click', function () {
+        tarefas.splice(i, 1);
+        gravar('pom-tarefas', tarefas);
+        renderTarefas();
+        if (!rodando) { mensagem(); }
+      });
+      linha.appendChild(cb);
+      linha.appendChild(txt);
+      linha.appendChild(rem);
+      lista.appendChild(linha);
+    });
+  }
+  function adicionar() {
+    var texto = campo.value.trim();
+    if (texto === '') { campo.focus(); return; }
+    tarefas.push({ texto: texto, feita: false, pomos: 0 });
+    gravar('pom-tarefas', tarefas);
+    campo.value = '';
+    renderTarefas();
+    if (!rodando) { mensagem(); }
+    campo.focus();
+  }
+  function estatisticas() {
+    var hist = ler('pom-historico', {});
+    var agora = new Date();
+    var hoje = new Date(agora.getFullYear(), agora.getMonth(), agora.getDate());
+    var total = 0;
+    for (var k in hist) {
+      var p = k.split('-');
+      var d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+      var diff = Math.round((hoje - d) / 86400000);
+      var ok = false;
+      if (periodo === 'semana') { ok = diff >= 0 ? (7 > diff) : false; }
+      if (periodo === 'mes') { ok = d.getFullYear() === hoje.getFullYear() ? d.getMonth() === hoje.getMonth() : false; }
+      if (periodo === 'ano') { ok = d.getFullYear() === hoje.getFullYear(); }
+      if (ok) { total = total + Number(hist[k]); }
+    }
+    var dias = 7;
+    if (periodo === 'mes') { dias = hoje.getDate(); }
+    if (periodo === 'ano') { dias = Math.round((hoje - new Date(hoje.getFullYear(), 0, 1)) / 86400000) + 1; }
+    el('pom-total').textContent = total + (total === 1 ? ' pomodoro' : ' pomodoros') + ' (' + (total * MODOS.pomodoro.min) + ' min)';
+    el('pom-media').textContent = dec(total / dias) + ' pomodoros';
+  }
+  btnIniciar.addEventListener('click', iniciarOuPausar);
+  el('pom-desistir').addEventListener('click', desistir);
+  el('pom-adicionar').addEventListener('click', adicionar);
+  campo.addEventListener('keydown', function (e) { if (e.key === 'Enter') { adicionar(); } });
+  campo.addEventListener('focus', function () { campo.style.borderColor = '#6366f1'; });
+  campo.addEventListener('blur', function () { campo.style.borderColor = '#c7d2fe'; });
+  ['pomodoro', 'curta', 'longa'].forEach(function (nome) {
+    el('pom-modo-' + nome).addEventListener('click', function () { trocarModo(nome); });
+  });
+  ['semana', 'mes', 'ano'].forEach(function (nome) {
+    el('pom-per-' + nome).addEventListener('click', function () {
+      periodo = nome;
+      estilizarAbas();
+      estatisticas();
+    });
+  });
+  var salvas = ler('pom-tarefas', []);
+  tarefas = Array.isArray(salvas) ? salvas : [];
+  estilizarAbas();
+  renderTarefas();
+  mensagem();
+  mostrar();
+  estatisticas();
+})();
+</script>
+<h2 id="como-usar-o-pomodoro-timer">Como usar o Pomodoro Timer</h2>
+<ol>
+<li>Escolha o modo no topo: <strong>Pomodoro</strong> para focar, <strong>Pausa Curta</strong> ou <strong>Pausa Longa</strong> para descansar.</li>
+<li>(Opcional) Digite o nome de uma tarefa no campo de tarefas e clique em <strong>Adicionar Tarefa</strong>. A primeira tarefa não concluída aparece como o foco atual.</li>
+<li>Clique em <strong>Iniciar</strong> para começar a contagem regressiva. Use o mesmo botão (que vira <strong>Pausar</strong>) para interromper e retomar depois.</li>
+<li>Trabalhe até o alarme tocar. Ao terminar um Pomodoro, o timer troca sozinho para uma pausa: curta a cada ciclo e longa a cada 4 Pomodoros.</li>
+<li>Marque a caixinha da tarefa quando concluí-la. Use o botão ✕ para removê-la da lista.</li>
+<li>Clique em <strong>Desistir</strong> para zerar o tempo do modo atual e recomeçar.</li>
+<li>Acompanhe seu progresso em <strong>Estatísticas</strong>, alternando entre <strong>Semana</strong>, <strong>Mês</strong> e <strong>Ano</strong>.</li>
+</ol>
+<p>Suas tarefas e estatísticas ficam salvas no próprio navegador, sem cadastro. Se você limpar os dados do navegador, elas serão apagadas.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Técnica Pomodoro:</strong> método de gestão de tempo que alterna períodos de foco total com pausas curtas, para manter a concentração e evitar o cansaço.</li>
+<li><strong>Pomodoro:</strong> um período de foco de 25 minutos, sem interrupções, dedicado a uma única tarefa.</li>
+<li><strong>Pausa Curta:</strong> descanso de 5 minutos após cada Pomodoro, para levantar, beber água ou alongar.</li>
+<li><strong>Pausa Longa:</strong> descanso de 15 minutos, feito depois de completar 4 Pomodoros seguidos.</li>
+<li><strong>Ciclo:</strong> sequência de 4 Pomodoros intercalados com pausas curtas, encerrada por uma pausa longa.</li>
+<li><strong>Iniciar / Pausar:</strong> botão que começa a contagem regressiva e também a interrompe temporariamente.</li>
+<li><strong>Desistir:</strong> botão que cancela a contagem atual e volta o relógio ao tempo inicial do modo escolhido.</li>
+<li><strong>Tarefas:</strong> lista das atividades que você pretende fazer. Cada Pomodoro concluído é somado à tarefa em foco.</li>
+<li><strong>Estatísticas:</strong> resumo dos Pomodoros que você completou, filtrado por semana, mês ou ano.</li>
+<li><strong>Total:</strong> quantidade de Pomodoros concluídos no período escolhido, com o tempo de foco equivalente em minutos.</li>
+<li><strong>Média por dia:</strong> total de Pomodoros dividido pelo número de dias do período, mostrando seu ritmo diário de foco.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -54,13 +364,6 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
     <span class="tx"><strong>Leitura Rápida</strong><small>Treine leitura dinâmica e aumente sua velocidade.</small></span>
-  </a>
-</li>
-<li class="c-util">
-  <a class="card" href="/ferramentas/teste-de-digitacao/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
-</span>
-    <span class="tx"><strong>Teste de Digitação</strong><small>Meça sua velocidade de digitação em palavras por minuto.</small></span>
   </a>
 </li>
 <li class="c-util">
@@ -82,6 +385,13 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
 </span>
     <span class="tx"><strong>Organizador de Links</strong><small>Reúna e organize seus links em uma lista.</small></span>
+  </a>
+</li>
+<li class="c-util">
+  <a class="card" href="/ferramentas/notepad/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 3h6"/></svg>
+</span>
+    <span class="tx"><strong>Notepad Online</strong><small>Bloco de notas no navegador, com salvamento automático.</small></span>
   </a>
 </li>
 

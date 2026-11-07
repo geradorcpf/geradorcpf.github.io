@@ -174,7 +174,7 @@ https://geradorcpf.github.io/ferramentas/gerador-de-uuid/
 
 4 November 2026
 https://geradorcpf.github.io/ferramentas/gerador-de-veiculos/ 
-https://geradorcpf.github.io/ferramentas/hora-certa/ -- belum submit
+https://geradorcpf.github.io/ferramentas/hora-certa/ 
 https://geradorcpf.github.io/ferramentas/informacoes-de-caractere/
 https://geradorcpf.github.io/ferramentas/instagram-anonimo/
 https://geradorcpf.github.io/ferramentas/inverter-texto/
@@ -185,7 +185,7 @@ https://geradorcpf.github.io/ferramentas/leitura-rapida/
 https://geradorcpf.github.io/ferramentas/letras-diferentes/
 
 5 November 2026
-https://geradorcpf.github.io/ferramentas/letras-empilhadas/
+https://geradorcpf.github.io/ferramentas/letras-empilhadas/ -- belum submit
 https://geradorcpf.github.io/ferramentas/letras-personalizadas/
 https://geradorcpf.github.io/ferramentas/lista-aleatoria/
 https://geradorcpf.github.io/ferramentas/localizar-ip/
@@ -197,12 +197,21 @@ https://geradorcpf.github.io/ferramentas/nao-seguidores-instagram/
 https://geradorcpf.github.io/ferramentas/nota-promissoria-online/
 
 6 November 2026
-http://localhost:1313/ferramentas/notepad/
-http://localhost:1313/ferramentas/numero-por-extenso/
-http://localhost:1313/ferramentas/nuvem-de-palavras/
-http://localhost:1313/ferramentas/ordenar-conta-instagram/
-http://localhost:1313/ferramentas/organizador-de-links/
-http://localhost:1313/ferramentas/organizar-pdf/
-http://localhost:1313/ferramentas/palavras-que-rimam/
+https://geradorcpf.github.io/ferramentas/notepad/
+https://geradorcpf.github.io/ferramentas/numero-por-extenso/
+https://geradorcpf.github.io/ferramentas/nuvem-de-palavras/
+https://geradorcpf.github.io/ferramentas/ordenar-conta-instagram/
+https://geradorcpf.github.io/ferramentas/organizador-de-links/
+https://geradorcpf.github.io/ferramentas/organizar-pdf/
+https://geradorcpf.github.io/ferramentas/palavras-que-rimam/
 
 7 November 2026
+http://localhost:1313/ferramentas/pomodoro-timer/
+http://localhost:1313/ferramentas/prefixo-e-sufixo/
+http://localhost:1313/ferramentas/qual-e-o-meu-ip/
+http://localhost:1313/ferramentas/quem-deixou-de-me-seguir/
+http://localhost:1313/ferramentas/recibo-online/
+http://localhost:1313/ferramentas/recortar-imagem/
+http://localhost:1313/ferramentas/redimensionar-imagem/
+
+8 November 2026
