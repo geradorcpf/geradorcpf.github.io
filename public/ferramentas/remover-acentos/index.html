@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Remover Acentos de um Texto: online e grátis</title>
+<title>Remover Acentos de um Texto</title>
 <meta name="description" content="Remover Acentos de um Texto: tire acentos e cedilhas de qualquer texto. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/remover-acentos/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/remover-acentos/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Remover Acentos de um Texto: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/remover-acentos/">
+<meta property="og:title" content="Remover Acentos de um Texto">
+<meta property="og:url" content="http://localhost:1313/ferramentas/remover-acentos/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Remover Acentos de um Texto: tire acentos e cedilhas de qualquer texto. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,124 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Remover Acentos de um Texto</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/remover-acentos/","name":"Remover Acentos de um Texto","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Remover Acentos de um Texto</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/remover-acentos/","name":"Remover Acentos de um Texto","position":3}]}</script>
 <article class="prose page">
   <h1>Remover Acentos de um Texto</h1>
   
-  
+  <p>Basta digitar ou colar o texto abaixo e depois clicar em <strong>Remover Acentos</strong>.</p>
+<div id="calc-acentos" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔤 Remover Acentos de um Texto</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Cole o texto e veja o resultado sem acentos na hora.</p>
+<label for="acc-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Texto</label>
+<textarea id="acc-texto" rows="5" placeholder="Ex.: Atenção, João e José foram à escola." autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;font-family:inherit;line-height:1.5;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="acc-remover" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Remover Acentos</button>
+<button type="button" id="acc-copiar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar</button>
+<button type="button" id="acc-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="acc-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="acc-resultado" style="white-space:pre-wrap;word-break:break-word;">digite o texto e clique em "Remover Acentos".</span></div>
+</div>
+<script>
+(function () {
+  var entrada = document.getElementById('acc-texto');
+  var resultado = document.getElementById('acc-resultado');
+  var caixa = document.getElementById('acc-resposta');
+  var padrao = 'digite o texto e clique em "Remover Acentos".';
+  var ultimo = '';
+  function remover(t) {
+    return t.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function sucesso(msg) {
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    resultado.textContent = msg;
+  }
+  function converter() {
+    var texto = entrada.value;
+    if (texto.trim() === '') {
+      ultimo = '';
+      erro('digite ou cole um texto para remover os acentos.');
+      return;
+    }
+    ultimo = remover(texto);
+    sucesso(ultimo);
+  }
+  function copiarAlternativo() {
+    var area = document.createElement('textarea');
+    area.value = ultimo;
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(area);
+    if (ok) { sucesso(ultimo); } else { erro('não foi possível copiar. Selecione o texto e copie manualmente.'); }
+  }
+  function copiar() {
+    if (ultimo === '') {
+      erro('clique primeiro em "Remover Acentos" para gerar o resultado.');
+      return;
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(ultimo).then(function () { sucesso(ultimo); }, copiarAlternativo);
+    } else {
+      copiarAlternativo();
+    }
+  }
+  function limpar() {
+    entrada.value = '';
+    ultimo = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = padrao;
+    entrada.focus();
+  }
+  document.getElementById('acc-remover').addEventListener('click', converter);
+  document.getElementById('acc-copiar').addEventListener('click', copiar);
+  document.getElementById('acc-limpar').addEventListener('click', limpar);
+  entrada.addEventListener('focus', function () { entrada.style.borderColor = '#6366f1'; });
+  entrada.addEventListener('blur', function () { entrada.style.borderColor = '#c7d2fe'; });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Digite ou cole o seu texto no campo <strong>Texto</strong>.</li>
+<li>Clique em <strong>Remover Acentos</strong> para ver o texto sem acentos na caixa <strong>Resposta</strong>.</li>
+<li>Clique em <strong>Copiar</strong> para levar o resultado para a área de transferência.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar o texto e começar de novo.</li>
+</ol>
+<p>A ferramenta funciona com palavras, frases e textos longos, em maiúsculas ou minúsculas. Apenas os acentos e a cedilha são trocados pelas letras simples correspondentes. O restante do texto, como números, pontuação e espaços, permanece igual.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Acento:</strong> sinal gráfico colocado sobre ou sob uma letra para indicar pronúncia, como em &ldquo;é&rdquo;, &ldquo;ê&rdquo; e &ldquo;ç&rdquo;.</li>
+<li><strong>Acento agudo (´):</strong> marca a vogal tônica aberta ou a sílaba mais forte, como em &ldquo;café&rdquo; e &ldquo;avó&rdquo;.</li>
+<li><strong>Acento grave (`):</strong> indica a crase, como em &ldquo;à&rdquo; e &ldquo;às&rdquo;.</li>
+<li><strong>Acento circunflexo (^):</strong> marca a vogal tônica fechada, como em &ldquo;você&rdquo; e &ldquo;avô&rdquo;.</li>
+<li><strong>Til (~):</strong> indica som nasal, como em &ldquo;mão&rdquo; e &ldquo;coração&rdquo;.</li>
+<li><strong>Cedilha (¸):</strong> sinal sob o &ldquo;c&rdquo; que dá a ele som de &ldquo;s&rdquo;, como em &ldquo;criança&rdquo;. Ao remover, &ldquo;ç&rdquo; vira &ldquo;c&rdquo;.</li>
+<li><strong>Trema (¨):</strong> sinal sobre o &ldquo;u&rdquo; usado em palavras de origem estrangeira, como em &ldquo;müller&rdquo;.</li>
+<li><strong>Caractere especial:</strong> qualquer símbolo que não seja letra simples ou número, como acentos, &ldquo;@&rdquo; e &ldquo;#&rdquo;.</li>
+<li><strong>Normalização Unicode:</strong> processo que separa a letra do seu acento, permitindo remover só o sinal e manter a letra base.</li>
+</ul>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Um desenvolvedor precisa gerar um endereço (URL) a partir do título &ldquo;Atenção: João e José foram à escola&rdquo;. Como acentos podem causar problemas em endereços e arquivos, ele quer o texto sem eles.</p>
+<ol>
+<li>Cole o texto no campo: <code>Atenção: João e José foram à escola</code>.</li>
+<li>Clique em <strong>Remover Acentos</strong>.</li>
+<li>A ferramenta troca &ldquo;ç&rdquo; por &ldquo;c&rdquo;, &ldquo;ã&rdquo; por &ldquo;a&rdquo;, &ldquo;é&rdquo; por &ldquo;e&rdquo; e &ldquo;à&rdquo; por &ldquo;a&rdquo;.</li>
+</ol>
+<p><strong>Resposta:</strong> <code>Atencao: Joao e Jose foram a escola</code>.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 

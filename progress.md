@@ -185,7 +185,7 @@ https://geradorcpf.github.io/ferramentas/leitura-rapida/
 https://geradorcpf.github.io/ferramentas/letras-diferentes/
 
 5 November 2026
-https://geradorcpf.github.io/ferramentas/letras-empilhadas/ -- belum submit
+https://geradorcpf.github.io/ferramentas/letras-empilhadas/ 
 https://geradorcpf.github.io/ferramentas/letras-personalizadas/
 https://geradorcpf.github.io/ferramentas/lista-aleatoria/
 https://geradorcpf.github.io/ferramentas/localizar-ip/
@@ -196,8 +196,8 @@ https://geradorcpf.github.io/ferramentas/minha-localizacao-atual/
 https://geradorcpf.github.io/ferramentas/nao-seguidores-instagram/
 https://geradorcpf.github.io/ferramentas/nota-promissoria-online/
 
-6 November 2026
-https://geradorcpf.github.io/ferramentas/notepad/
+6 November 2026 
+https://geradorcpf.github.io/ferramentas/notepad/ -- belum submit
 https://geradorcpf.github.io/ferramentas/numero-por-extenso/
 https://geradorcpf.github.io/ferramentas/nuvem-de-palavras/
 https://geradorcpf.github.io/ferramentas/ordenar-conta-instagram/
@@ -206,12 +206,19 @@ https://geradorcpf.github.io/ferramentas/organizar-pdf/
 https://geradorcpf.github.io/ferramentas/palavras-que-rimam/
 
 7 November 2026
-http://localhost:1313/ferramentas/pomodoro-timer/
-http://localhost:1313/ferramentas/prefixo-e-sufixo/
-http://localhost:1313/ferramentas/qual-e-o-meu-ip/
-http://localhost:1313/ferramentas/quem-deixou-de-me-seguir/
-http://localhost:1313/ferramentas/recibo-online/
-http://localhost:1313/ferramentas/recortar-imagem/
-http://localhost:1313/ferramentas/redimensionar-imagem/
+https://geradorcpf.github.io/ferramentas/pomodoro-timer/
+https://geradorcpf.github.io/ferramentas/prefixo-e-sufixo/
+https://geradorcpf.github.io/ferramentas/qual-e-o-meu-ip/
+https://geradorcpf.github.io/ferramentas/quem-deixou-de-me-seguir/
+https://geradorcpf.github.io/ferramentas/recibo-online/
+https://geradorcpf.github.io/ferramentas/recortar-imagem/
+https://geradorcpf.github.io/ferramentas/redimensionar-imagem/
 
 8 November 2026
+http://localhost:1313/ferramentas/remover-acentos/
+http://localhost:1313/ferramentas/remover-linhas-duplicadas/
+http://localhost:1313/ferramentas/remover-quebra-de-linha/
+http://localhost:1313/ferramentas/roleta-online/
+http://localhost:1313/ferramentas/salario-minimo/
+
+9 November 2026
