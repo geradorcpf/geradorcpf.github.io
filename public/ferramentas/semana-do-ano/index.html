@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Semana do Ano: online e grátis</title>
+<title>Semana do Ano</title>
 <meta name="description" content="Semana do Ano: descubra em que semana do ano estamos. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/semana-do-ano/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/semana-do-ano/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Semana do Ano: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/semana-do-ano/">
+<meta property="og:title" content="Semana do Ano">
+<meta property="og:url" content="http://localhost:1313/ferramentas/semana-do-ano/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Semana do Ano: descubra em que semana do ano estamos. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,33 +38,150 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Semana do Ano</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/semana-do-ano/","name":"Semana do Ano","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Semana do Ano</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/semana-do-ano/","name":"Semana do Ano","position":3}]}</script>
 <article class="prose page">
   <h1>Semana do Ano</h1>
   
-  
+  <p>Ao abrir a página, a ferramenta já mostra a semana de hoje. Para consultar outro dia, escolha a data abaixo e clique em <strong>Calcular Semana</strong>.</p>
+<div id="calc-semana" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📅 Semana do Ano</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Escolha uma data e veja em que semana do ano ela está.</p>
+<label for="sem-data" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Data</label>
+<input id="sem-data" type="date" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="sem-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular Semana</button>
+<button type="button" id="sem-hoje" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Hoje</button>
+</div>
+<div id="sem-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="sem-resultado">escolha uma data e clique em "Calcular Semana".</span>
+<div id="sem-trilha" style="display:none;margin-top:12px;height:10px;background:#e0e7ff;border-radius:999px;overflow:hidden;"><div id="sem-barra" style="height:100%;width:0;background:linear-gradient(135deg,#4f46e5,#6366f1);border-radius:999px;"></div></div>
+</div>
+</div>
+<script>
+(function () {
+  var campo = document.getElementById('sem-data');
+  var resultado = document.getElementById('sem-resultado');
+  var caixa = document.getElementById('sem-resposta');
+  var trilha = document.getElementById('sem-trilha');
+  var barra = document.getElementById('sem-barra');
+  var DIA = 86400000;
+  function dois(n) { return String(n).padStart(2, '0'); }
+  function hoje() {
+    var h = new Date();
+    return h.getFullYear() + '-' + dois(h.getMonth() + 1) + '-' + dois(h.getDate());
+  }
+  function montar(a, m, d) {
+    a = Number(a); m = Number(m); d = Number(d);
+    if (isNaN(a) || isNaN(m) || isNaN(d)) { return null; }
+    var dt = new Date(Date.UTC(a, m - 1, d));
+    if (dt.getUTCFullYear() !== a || dt.getUTCMonth() !== m - 1 || dt.getUTCDate() !== d) { return null; }
+    return dt;
+  }
+  function lerData(v) {
+    var t = String(v).trim();
+    var p;
+    if (t.indexOf('/') !== -1) { p = t.split('/'); return montar(p[2], p[1], p[0]); }
+    p = t.split('-');
+    return montar(p[0], p[1], p[2]);
+  }
+  function semanaIso(dt) {
+    var dn = (dt.getUTCDay() + 6) % 7;
+    var quinta = new Date(dt.getTime() + (3 - dn) * DIA);
+    var ano = quinta.getUTCFullYear();
+    var n = Math.floor((quinta.getTime() - Date.UTC(ano, 0, 1)) / DIA / 7) + 1;
+    return { ano: ano, semana: n, inicio: new Date(dt.getTime() - dn * DIA) };
+  }
+  function totalSemanas(ano) { return semanaIso(new Date(Date.UTC(ano, 11, 28))).semana; }
+  function texto(dt) {
+    return dt.toLocaleDateString('pt-BR', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  }
+  function plural(n) { return n + (n === 1 ? ' semana' : ' semanas'); }
+  function esvaziar() {
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+  }
+  function add(tag, txt, estilo) {
+    var el = document.createElement(tag);
+    if (txt) { el.textContent = txt; }
+    if (estilo) { el.style.cssText = estilo; }
+    resultado.appendChild(el);
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    trilha.style.display = 'none';
+    esvaziar();
+    resultado.textContent = msg;
+  }
+  function calcular() {
+    var dt = lerData(campo.value);
+    if (!dt) { erro('informe uma data válida.'); return; }
+    var s = semanaIso(dt);
+    var total = totalSemanas(s.ano);
+    var fim = new Date(s.inicio.getTime() + 6 * DIA);
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    esvaziar();
+    add('span', 'Semana ');
+    add('strong', String(s.semana), 'font-size:1.2rem;');
+    add('span', ' de ' + s.ano + ' (o ano tem ' + total + ' semanas)');
+    add('br');
+    add('small', 'De ' + texto(s.inicio) + ' a ' + texto(fim), 'color:#475569;');
+    add('br');
+    add('small', 'Já passaram: ' + plural(s.semana - 1) + ' · Esta semana: ' + s.semana + ' · Faltam: ' + plural(total - s.semana), 'color:#475569;');
+    barra.style.width = Math.round(s.semana / total * 100) + '%';
+    trilha.style.display = 'block';
+  }
+  function irParaHoje() {
+    campo.value = hoje();
+    calcular();
+  }
+  document.getElementById('sem-calcular').addEventListener('click', calcular);
+  document.getElementById('sem-hoje').addEventListener('click', irParaHoje);
+  campo.addEventListener('change', calcular);
+  campo.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+  campo.addEventListener('focus', function () { campo.style.borderColor = '#6366f1'; });
+  campo.addEventListener('blur', function () { campo.style.borderColor = '#c7d2fe'; });
+  irParaHoje();
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Ao abrir a página, a ferramenta já mostra a <strong>semana de hoje</strong>, com as datas de início e fim.</li>
+<li>Para consultar outro dia, escolha a data no campo <strong>Data</strong> (ou digite no formato <code>dd/mm/aaaa</code>).</li>
+<li>Clique em <strong>Calcular Semana</strong> (ou pressione Enter) para ver o resultado.</li>
+<li>Veja o número da semana, o período (de segunda a domingo), quantas semanas já passaram e quantas faltam.</li>
+<li>Use o botão <strong>Hoje</strong> para voltar rapidamente à data atual.</li>
+</ol>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Semana do ano:</strong> número que indica a posição de uma semana dentro do ano, contando a partir da semana 1.</li>
+<li><strong>Semana ISO 8601:</strong> padrão internacional usado nesta ferramenta. A semana começa na segunda-feira e termina no domingo, e a semana 1 é a que contém a primeira quinta-feira do ano.</li>
+<li><strong>Período da semana:</strong> intervalo de sete dias, da segunda-feira ao domingo, em que a data escolhida está.</li>
+<li><strong>Já passaram:</strong> quantidade de semanas completas que ficaram para trás desde o início do ano.</li>
+<li><strong>Esta semana:</strong> número da semana em que a data consultada está.</li>
+<li><strong>Faltam:</strong> quantidade de semanas restantes até o fim do ano, sem contar a semana atual.</li>
+<li><strong>Total de semanas:</strong> um ano pode ter 52 ou 53 semanas, conforme o dia da semana em que ele começa.</li>
+</ul>
+<h2 id="como-a-semana-do-ano-é-calculada">Como a semana do ano é calculada</h2>
+<p>Pelo padrão ISO 8601, a semana pertence ao ano em que cai a sua <strong>quinta-feira</strong>. Por isso, os primeiros dias de janeiro podem fazer parte da última semana do ano anterior, e os últimos dias de dezembro podem pertencer à semana 1 do ano seguinte.</p>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Em qual semana do ano está o dia 9 de novembro de 2026?</p>
+<ol>
+<li>Identifique o dia da semana: 9 de novembro de 2026 é uma segunda-feira, o primeiro dia da semana.</li>
+<li>Encontre a quinta-feira dessa semana: 12 de novembro de 2026.</li>
+<li>Conte quantas semanas completas se passaram desde 1º de janeiro até essa quinta-feira e some 1.</li>
+</ol>
+<p><strong>Resposta:</strong> é a <strong>semana 46</strong>, que vai de segunda-feira, 9 de novembro de 2026, a domingo, 15 de novembro de 2026. Como 2026 tem 53 semanas, já passaram 45 e faltam 7.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
 <aside class="related" aria-labelledby="rel-h">
   <h2 id="rel-h">Ferramentas relacionadas</h2>
   <ul class="cards rel"><li class="c-datas">
-  <a class="card" href="/ferramentas/somar-dias-em-datas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Somar Dias em Datas</strong><small>Descubra a data resultante ao somar dias a uma data.</small></span>
-  </a>
-</li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/subtrair-dias-em-datas/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-</span>
-    <span class="tx"><strong>Subtrair Dias em Datas</strong><small>Descubra a data resultante ao subtrair dias de uma data.</small></span>
-  </a>
-</li>
-<li class="c-datas">
-  <a class="card" href="/ferramentas/calendario-2026/">
+  <a class="card" href="/ferramentas/calendario/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
     <span class="tx"><strong>Calendário 2026</strong><small>Calendário de 2026 com feriados e datas importantes.</small></span>
@@ -82,6 +199,20 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
     <span class="tx"><strong>Contador de Dias entre Datas</strong><small>Conte quantos dias existem entre duas datas.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/estacao-ano-hoje/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Estação do Ano Hoje</strong><small>Veja em qual estação do ano estamos e quando muda.</small></span>
+  </a>
+</li>
+<li class="c-datas">
+  <a class="card" href="/ferramentas/feriados-2026/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+</span>
+    <span class="tx"><strong>Feriados 2026</strong><small>Lista de feriados nacionais de 2026.</small></span>
   </a>
 </li>
 

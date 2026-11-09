@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Simulador de Poupança: online e grátis</title>
+<title>Simulador de Poupança</title>
 <meta name="description" content="Simulador de Poupança: simule quanto rende um depósito na poupança. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/simulador-de-poupanca/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/simulador-de-poupanca/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Simulador de Poupança: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/simulador-de-poupanca/">
+<meta property="og:title" content="Simulador de Poupança">
+<meta property="og:url" content="http://localhost:1313/ferramentas/simulador-de-poupanca/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Simulador de Poupança: simule quanto rende um depósito na poupança. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,202 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Simulador de Poupança</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/simulador-de-poupanca/","name":"Simulador de Poupança","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Simulador de Poupança</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/simulador-de-poupanca/","name":"Simulador de Poupança","position":3}]}</script>
 <article class="prose page">
   <h1>Simulador de Poupança</h1>
   
-  
+  <p>Basta preencher os campos abaixo e depois clicar em <strong>Calcular</strong> para saber quanto você terá se guardar uma quantia todo mês a uma taxa de juros.</p>
+<div id="calc-poupanca" style="max-width:560px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">💰 Simulador de Poupança</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe os valores e veja o resultado na hora.</p>
+<label for="pou-inicial" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Valor inicial (R$)</label>
+<input id="pou-inicial" type="text" inputmode="decimal" placeholder="Ex.: 1000" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pou-aporte" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Aporte mensal (R$)</label>
+<input id="pou-aporte" type="text" inputmode="decimal" placeholder="Ex.: 200" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pou-prazo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Prazo em anos</label>
+<input id="pou-prazo" type="text" inputmode="decimal" placeholder="Ex.: 1" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="pou-taxa" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Taxa de juros (% ao mês)</label>
+<input id="pou-taxa" type="text" inputmode="decimal" placeholder="Ex.: 0,5" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="pou-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Calcular</button>
+<button type="button" id="pou-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="pou-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="pou-mensagem">preencha os campos e clique em "Calcular".</span>
+<div id="pou-resumo" style="display:none;margin-top:8px;">
+<div>Total poupado: <strong id="pou-total-poupado" style="font-size:1.1rem;"></strong></div>
+<div>Juros ganhos: <strong id="pou-juros" style="font-size:1.1rem;"></strong></div>
+<div>Quanto você terá: <strong id="pou-final" style="font-size:1.2rem;"></strong></div>
+</div>
+</div>
+<div id="pou-tabela-wrap" style="display:none;margin-top:20px;max-height:360px;overflow:auto;background:#ffffff;border:1px solid #c7d2fe;border-radius:12px;">
+<table style="width:100%;border-collapse:collapse;font-size:0.9rem;color:#1e293b;">
+<thead>
+<tr id="pou-cabecalho"></tr>
+</thead>
+<tbody id="pou-corpo"></tbody>
+</table>
+</div>
+</div>
+<script>
+(function () {
+  function el(id) { return document.getElementById(id); }
+  var inicial = el('pou-inicial');
+  var aporte = el('pou-aporte');
+  var prazo = el('pou-prazo');
+  var taxa = el('pou-taxa');
+  var caixa = el('pou-resposta');
+  var mensagem = el('pou-mensagem');
+  var resumo = el('pou-resumo');
+  var tabelaWrap = el('pou-tabela-wrap');
+  var cabecalho = el('pou-cabecalho');
+  var corpo = el('pou-corpo');
+  var colunas = ['Mês', 'Poupado', 'Juros por mês', 'Juros acumulado', 'Total acumulado'];
+  function numero(v) {
+    var t = String(v).trim().replace(/\s/g, '');
+    if (t.indexOf(',') !== -1) { t = t.replace(/\./g, '').replace(',', '.'); }
+    if (t === '' || isNaN(Number(t))) { return NaN; }
+    return Number(t);
+  }
+  function opcional(v) {
+    return String(v).trim() === '' ? 0 : numero(v);
+  }
+  function brl(n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+  function negativo(n) { return Math.sign(n) === -1; }
+  function positivo(n) { return Math.sign(n) === 1; }
+  function celula(tag, texto, esquerda) {
+    var c = document.createElement(tag);
+    c.textContent = texto;
+    var estilo = 'padding:8px 10px;border-bottom:1px solid #e0e7ff;white-space:nowrap;text-align:' + (esquerda ? 'left' : 'right') + ';';
+    if (tag === 'th') { estilo += 'position:sticky;top:0;background:#eef2ff;color:#3730a3;font-weight:700;'; }
+    c.style.cssText = estilo;
+    return c;
+  }
+  function montarCabecalho() {
+    cabecalho.textContent = '';
+    colunas.forEach(function (nome, i) { cabecalho.appendChild(celula('th', nome, i === 0)); });
+  }
+  function esconderResultados() {
+    resumo.style.display = 'none';
+    tabelaWrap.style.display = 'none';
+    corpo.textContent = '';
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    mensagem.style.color = '#b91c1c';
+    mensagem.textContent = msg;
+    esconderResultados();
+  }
+  function calcular() {
+    var vi = opcional(inicial.value);
+    var va = opcional(aporte.value);
+    var anos = numero(prazo.value);
+    var juros = numero(taxa.value);
+    if (isNaN(vi) || isNaN(va) || isNaN(anos) || isNaN(juros)) { erro('informe números válidos em todos os campos (valor inicial e aporte podem ficar vazios).'); return; }
+    if (negativo(vi) || negativo(va) || negativo(juros)) { erro('os valores não podem ser negativos.'); return; }
+    if (!positivo(anos)) { erro('o prazo deve ser maior que zero.'); return; }
+    if (Math.min(anos, 100) !== anos) { erro('o prazo máximo é de 100 anos.'); return; }
+    if (!positivo(vi + va)) { erro('informe um valor inicial ou um aporte mensal maior que zero.'); return; }
+    var meses = Math.round(anos * 12);
+    if (!positivo(meses)) { erro('o prazo deve ter pelo menos 1 mês.'); return; }
+    var taxaMes = juros / 100;
+    var saldo = vi;
+    var poupado = vi;
+    var jurosAcum = 0;
+    var frag = document.createDocumentFragment();
+    for (var m = 1; m !== meses + 1; m++) {
+      var jurosMes = saldo * taxaMes;
+      saldo = saldo + jurosMes + va;
+      poupado = poupado + va;
+      jurosAcum = jurosAcum + jurosMes;
+      var tr = document.createElement('tr');
+      tr.appendChild(celula('td', String(m), true));
+      tr.appendChild(celula('td', brl(poupado), false));
+      tr.appendChild(celula('td', brl(jurosMes), false));
+      tr.appendChild(celula('td', brl(jurosAcum), false));
+      tr.appendChild(celula('td', brl(saldo), false));
+      frag.appendChild(tr);
+    }
+    corpo.textContent = '';
+    corpo.appendChild(frag);
+    montarCabecalho();
+    el('pou-total-poupado').textContent = brl(poupado);
+    el('pou-juros').textContent = brl(jurosAcum);
+    el('pou-final').textContent = brl(saldo);
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    mensagem.style.color = '#166534';
+    mensagem.textContent = 'simulação de ' + meses + (meses === 1 ? ' mês.' : ' meses.');
+    resumo.style.color = '#166534';
+    resumo.style.display = 'block';
+    tabelaWrap.style.display = 'block';
+  }
+  function limpar() {
+    inicial.value = '';
+    aporte.value = '';
+    prazo.value = '';
+    taxa.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    mensagem.style.color = '#64748b';
+    mensagem.textContent = 'preencha os campos e clique em "Calcular".';
+    esconderResultados();
+    inicial.focus();
+  }
+  montarCabecalho();
+  el('pou-calcular').addEventListener('click', calcular);
+  el('pou-limpar').addEventListener('click', limpar);
+  [inicial, aporte, prazo, taxa].forEach(function (campo) {
+    campo.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+    campo.addEventListener('focus', function () { campo.style.borderColor = '#6366f1'; });
+    campo.addEventListener('blur', function () { campo.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-o-simulador">Como usar o simulador</h2>
+<ol>
+<li>Digite o <strong>Valor inicial</strong>, ou seja, quanto você já tem para depositar agora (pode deixar vazio se estiver começando do zero).</li>
+<li>Digite o <strong>Aporte mensal</strong>, o valor que você pretende depositar todo mês (também pode ficar vazio).</li>
+<li>Informe o <strong>Prazo em anos</strong> durante o qual o dinheiro ficará aplicado (aceita decimais, como <code>1,5</code> para um ano e meio).</li>
+<li>Informe a <strong>Taxa de juros (% ao mês)</strong>, por exemplo <code>0,5</code> para 0,5% ao mês.</li>
+<li>Clique em <strong>Calcular</strong> (ou pressione Enter) para ver o total poupado, os juros ganhos, quanto você terá no final e a evolução mês a mês na tabela.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar os valores e fazer uma nova simulação.</li>
+</ol>
+<p>Você pode usar números inteiros ou decimais, com vírgula ou ponto (por exemplo, <code>1500,50</code> ou <code>1500.50</code>). Preencha ao menos o valor inicial ou o aporte mensal com um número maior que zero.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Poupança:</strong> aplicação financeira simples em que você deposita dinheiro e recebe juros periodicamente sobre o saldo.</li>
+<li><strong>Valor inicial:</strong> quantia depositada no começo da simulação, antes dos aportes mensais.</li>
+<li><strong>Aporte mensal:</strong> valor depositado todos os meses ao longo do prazo.</li>
+<li><strong>Prazo em anos:</strong> tempo total em que o dinheiro fica aplicado. Cada ano equivale a 12 meses.</li>
+<li><strong>Taxa de juros (% ao mês):</strong> percentual que o saldo rende a cada mês.</li>
+<li><strong>Juros compostos:</strong> juros calculados sobre o saldo já acumulado, ou seja, os juros de um mês também rendem nos meses seguintes.</li>
+<li><strong>Total poupado:</strong> soma de tudo o que você depositou do próprio bolso (valor inicial + aportes mensais), sem contar os juros.</li>
+<li><strong>Juros ganhos:</strong> quanto o dinheiro rendeu no total ao longo do prazo.</li>
+<li><strong>Quanto você terá:</strong> saldo final, igual ao total poupado mais os juros ganhos.</li>
+<li><strong>Juros por mês:</strong> rendimento obtido em cada mês específico.</li>
+<li><strong>Juros acumulado:</strong> soma dos juros recebidos desde o primeiro mês até o mês da linha.</li>
+<li><strong>Total acumulado:</strong> saldo da aplicação ao final de cada mês, já com depósitos e juros.</li>
+</ul>
+<h2 id="fórmula-da-poupança-com-aportes-mensais">Fórmula da poupança com aportes mensais</h2>
+<p>A cada mês, os juros são calculados sobre o saldo do mês anterior e depois o aporte é somado:</p>
+<p><strong>Saldo do mês = saldo anterior × (1 + taxa) + aporte mensal</strong></p>
+<p>Em que a <strong>taxa</strong> é o percentual mensal dividido por 100 (0,5% = 0,005). Para um prazo de <strong>n</strong> meses, o saldo final também pode ser escrito como:</p>
+<p><strong>Saldo final = valor inicial × (1 + taxa)^n + aporte × ((1 + taxa)^n − 1) ÷ taxa</strong></p>
+<p>Os <strong>juros ganhos</strong> são o saldo final menos o total poupado. Este simulador usa uma taxa fixa por mês e serve como estimativa: o rendimento real da poupança pode variar conforme a Selic, a TR e a data de aniversário do depósito.</p>
+<h2 id="exemplo-resolvido">Exemplo resolvido</h2>
+<p>Você começa com R$ 1.000, deposita R$ 200 por mês durante 1 ano e a taxa é de 0,5% ao mês. Quanto você terá no final?</p>
+<ol>
+<li>Prazo: 1 ano = 12 meses. Taxa: 0,5% = 0,005.</li>
+<li>Total poupado: 1.000 + (200 × 12) = R$ 3.400,00.</li>
+<li>Valor inicial corrigido: 1.000 × (1,005)^12 ≈ R$ 1.061,68.</li>
+<li>Aportes corrigidos: 200 × ((1,005)^12 − 1) ÷ 0,005 ≈ R$ 2.467,11.</li>
+<li>Saldo final: 1.061,68 + 2.467,11 ≈ R$ 3.528,79.</li>
+<li>Juros ganhos: 3.528,79 − 3.400,00 ≈ R$ 128,79.</li>
+</ol>
+<p><strong>Resposta:</strong> ao final de 1 ano você terá cerca de <strong>R$ 3.528,79</strong>, sendo R$ 3.400,00 poupados e <strong>R$ 128,79</strong> de juros.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -64,17 +254,10 @@
   </a>
 </li>
 <li class="c-financas">
-  <a class="card" href="/ferramentas/salario-minimo-2026/">
+  <a class="card" href="/ferramentas/salario-minimo/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
 </span>
     <span class="tx"><strong>Valor do Salário Mínimo em 2026</strong><small>Consulte o valor do salário mínimo em 2026.</small></span>
-  </a>
-</li>
-<li class="c-financas">
-  <a class="card" href="/ferramentas/tabela-fipe/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
-</span>
-    <span class="tx"><strong>Tabela Fipe Veículos</strong><small>Consulte o preço de veículos na tabela Fipe.</small></span>
   </a>
 </li>
 <li class="c-financas">
@@ -82,6 +265,13 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
 </span>
     <span class="tx"><strong>Recibo Online</strong><small>Preencha e baixe um recibo de pagamento.</small></span>
+  </a>
+</li>
+<li class="c-financas">
+  <a class="card" href="/ferramentas/nota-promissoria-online/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.4-.9-1.3-1.5-2.5-1.5-1.5 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1 2-2.5 2c-1.2 0-2.1-.6-2.5-1.5"/><path d="M12 6v2M12 16v2"/></svg>
+</span>
+    <span class="tx"><strong>Nota Promissória Online</strong><small>Preencha e baixe uma nota promissória.</small></span>
   </a>
 </li>
 

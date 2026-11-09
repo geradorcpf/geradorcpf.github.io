@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Signos e Datas: online e grátis</title>
+<title>Signos e Datas</title>
 <meta name="description" content="Signos e Datas: veja o signo de cada data e as datas de cada signo. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/signos-datas/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/signos-datas/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Signos e Datas: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/signos-datas/">
+<meta property="og:title" content="Signos e Datas">
+<meta property="og:url" content="http://localhost:1313/ferramentas/signos-datas/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Signos e Datas: veja o signo de cada data e as datas de cada signo. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,222 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Signos e Datas</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/signos-datas/","name":"Signos e Datas","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Signos e Datas</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/signos-datas/","name":"Signos e Datas","position":3}]}</script>
 <article class="prose page">
   <h1>Signos e Datas</h1>
   
-  
+  <p>Basta escolher o dia e o mês de nascimento abaixo e depois clicar em <strong>Descobrir Signo</strong>.</p>
+<div id="calc-signos" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">✨ Signos e Datas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Indique a data de nascimento e veja o signo na hora.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+<div style="flex:1;min-width:110px;">
+<label for="sig-dia" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Dia</label>
+<select id="sig-dia" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+</div>
+<div style="flex:2;min-width:160px;">
+<label for="sig-mes" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Mês</label>
+<select id="sig-mes" style="width:100%;padding:12px 14px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;"></select>
+</div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="sig-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Descobrir Signo</button>
+<button type="button" id="sig-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="sig-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="sig-resultado">escolha o dia e o mês e clique em "Descobrir Signo".</span></div>
+</div>
+<script>
+(function () {
+  var selDia = document.getElementById('sig-dia');
+  var selMes = document.getElementById('sig-mes');
+  var resultado = document.getElementById('sig-resultado');
+  var caixa = document.getElementById('sig-resposta');
+  var meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+  var diasNoMes = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  var signos = [
+    { nome: 'Áries', simbolo: '♈', ini: 321, fim: 420, periodo: '21 de março a 20 de abril' },
+    { nome: 'Touro', simbolo: '♉', ini: 421, fim: 520, periodo: '21 de abril a 20 de maio' },
+    { nome: 'Gêmeos', simbolo: '♊', ini: 521, fim: 620, periodo: '21 de maio a 20 de junho' },
+    { nome: 'Câncer', simbolo: '♋', ini: 621, fim: 721, periodo: '21 de junho a 21 de julho' },
+    { nome: 'Leão', simbolo: '♌', ini: 722, fim: 822, periodo: '22 de julho a 22 de agosto' },
+    { nome: 'Virgem', simbolo: '♍', ini: 823, fim: 922, periodo: '23 de agosto a 22 de setembro' },
+    { nome: 'Libra', simbolo: '♎', ini: 923, fim: 1022, periodo: '23 de setembro a 22 de outubro' },
+    { nome: 'Escorpião', simbolo: '♏', ini: 1023, fim: 1121, periodo: '23 de outubro a 21 de novembro' },
+    { nome: 'Sagitário', simbolo: '♐', ini: 1122, fim: 1221, periodo: '22 de novembro a 21 de dezembro' },
+    { nome: 'Capricórnio', simbolo: '♑', ini: 1222, fim: 120, periodo: '22 de dezembro a 20 de janeiro' },
+    { nome: 'Aquário', simbolo: '♒', ini: 121, fim: 219, periodo: '21 de janeiro a 19 de fevereiro' },
+    { nome: 'Peixes', simbolo: '♓', ini: 220, fim: 320, periodo: '20 de fevereiro a 20 de março' }
+  ];
+  var i, op;
+  op = document.createElement('option');
+  op.value = '';
+  op.textContent = 'Dia';
+  selDia.appendChild(op);
+  for (i = 1; i !== 32; i++) {
+    op = document.createElement('option');
+    op.value = String(i);
+    op.textContent = String(i);
+    selDia.appendChild(op);
+  }
+  op = document.createElement('option');
+  op.value = '';
+  op.textContent = 'Mês';
+  selMes.appendChild(op);
+  for (i = 0; i !== 12; i++) {
+    op = document.createElement('option');
+    op.value = String(i + 1);
+    op.textContent = meses[i];
+    selMes.appendChild(op);
+  }
+  function erro(msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    resultado.style.color = '#b91c1c';
+    resultado.textContent = msg;
+  }
+  function achar(valor) {
+    var k, s;
+    for (k = 0; k !== signos.length; k++) {
+      s = signos[k];
+      if (s.ini > s.fim) {
+        if (valor >= s.ini) { return s; }
+        if (s.fim >= valor) { return s; }
+      } else {
+        if (valor >= s.ini) {
+          if (s.fim >= valor) { return s; }
+        }
+      }
+    }
+    return null;
+  }
+  function calcular() {
+    var d = Number(selDia.value);
+    var m = Number(selMes.value);
+    if (!d || !m) { erro('escolha o dia e o mês de nascimento.'); return; }
+    if (d > diasNoMes[m - 1]) { erro('essa data não existe: ' + meses[m - 1] + ' não tem dia ' + d + '.'); return; }
+    var s = achar(m * 100 + d);
+    if (!s) { erro('não foi possível identificar o signo.'); return; }
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    resultado.style.color = '#166534';
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+    resultado.appendChild(document.createTextNode('Quem nasceu em ' + d + ' de ' + meses[m - 1].toLowerCase() + ' é do signo de '));
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.2rem';
+    forte.textContent = s.simbolo + ' ' + s.nome;
+    resultado.appendChild(forte);
+    resultado.appendChild(document.createElement('br'));
+    var pequeno = document.createElement('small');
+    pequeno.style.color = '#475569';
+    pequeno.textContent = 'Período de ' + s.nome + ': ' + s.periodo;
+    resultado.appendChild(pequeno);
+  }
+  function limpar() {
+    selDia.value = '';
+    selMes.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    resultado.textContent = 'escolha o dia e o mês e clique em "Descobrir Signo".';
+    selDia.focus();
+  }
+  document.getElementById('sig-calcular').addEventListener('click', calcular);
+  document.getElementById('sig-limpar').addEventListener('click', limpar);
+  [selDia, selMes].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Escolha o <strong>dia</strong> de nascimento no primeiro campo.</li>
+<li>Escolha o <strong>mês</strong> de nascimento no segundo campo.</li>
+<li>Clique em <strong>Descobrir Signo</strong> (ou pressione Enter) para ver o signo e o período dele.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar a seleção e consultar outra data.</li>
+</ol>
+<p>O ano de nascimento não é necessário, porque as datas dos signos são as mesmas todos os anos. Datas que não existem, como 31 de abril ou 30 de fevereiro, são avisadas na resposta.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Signo:</strong> cada uma das 12 divisões do zodíaco. O signo de uma pessoa é definido pela data de nascimento.</li>
+<li><strong>Zodíaco:</strong> faixa imaginária do céu dividida em 12 partes, cada uma associada a um signo.</li>
+<li><strong>Astrologia:</strong> estudo que relaciona a posição dos astros com a personalidade e os acontecimentos da vida das pessoas.</li>
+<li><strong>Signo solar:</strong> o signo em que o Sol estava no momento do nascimento. É o signo mais conhecido e o que esta ferramenta mostra.</li>
+<li><strong>Período:</strong> intervalo de datas em que cada signo vale, por exemplo, de 21 de março a 20 de abril para Áries.</li>
+<li><strong>Cúspide:</strong> dia de transição entre dois signos. Quem nasce nessa data pode ter características dos dois.</li>
+<li><strong>Elemento:</strong> grupo de três signos que compartilham a mesma natureza: fogo, terra, ar ou água.</li>
+<li><strong>Data de nascimento:</strong> dia e mês em que a pessoa nasceu, usados para descobrir o signo.</li>
+</ul>
+<h2 id="datas-dos-signos">Datas dos signos</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Signo</th>
+          <th>Período</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>♈ Áries</td>
+          <td>21 de março a 20 de abril</td>
+      </tr>
+      <tr>
+          <td>♉ Touro</td>
+          <td>21 de abril a 20 de maio</td>
+      </tr>
+      <tr>
+          <td>♊ Gêmeos</td>
+          <td>21 de maio a 20 de junho</td>
+      </tr>
+      <tr>
+          <td>♋ Câncer</td>
+          <td>21 de junho a 21 de julho</td>
+      </tr>
+      <tr>
+          <td>♌ Leão</td>
+          <td>22 de julho a 22 de agosto</td>
+      </tr>
+      <tr>
+          <td>♍ Virgem</td>
+          <td>23 de agosto a 22 de setembro</td>
+      </tr>
+      <tr>
+          <td>♎ Libra</td>
+          <td>23 de setembro a 22 de outubro</td>
+      </tr>
+      <tr>
+          <td>♏ Escorpião</td>
+          <td>23 de outubro a 21 de novembro</td>
+      </tr>
+      <tr>
+          <td>♐ Sagitário</td>
+          <td>22 de novembro a 21 de dezembro</td>
+      </tr>
+      <tr>
+          <td>♑ Capricórnio</td>
+          <td>22 de dezembro a 20 de janeiro</td>
+      </tr>
+      <tr>
+          <td>♒ Aquário</td>
+          <td>21 de janeiro a 19 de fevereiro</td>
+      </tr>
+      <tr>
+          <td>♓ Peixes</td>
+          <td>20 de fevereiro a 20 de março</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="exemplo">Exemplo</h2>
+<p>Uma pessoa nasceu em 15 de agosto. Qual é o seu signo?</p>
+<ol>
+<li>Escolha o dia <strong>15</strong> e o mês <strong>Agosto</strong>.</li>
+<li>Clique em <strong>Descobrir Signo</strong>.</li>
+<li>Agosto de 15 está entre 22 de julho e 22 de agosto.</li>
+</ol>
+<p><strong>Resposta:</strong> o signo é <strong>Leão</strong> ♌.</p>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -57,17 +267,17 @@
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/somar-dias-em-datas/">
+  <a class="card" href="/ferramentas/calcular-idade/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Somar Dias em Datas</strong><small>Descubra a data resultante ao somar dias a uma data.</small></span>
+    <span class="tx"><strong>Calcular Idade</strong><small>Descubra sua idade exata em anos, meses e dias.</small></span>
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/subtrair-dias-em-datas/">
+  <a class="card" href="/ferramentas/calendario/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Subtrair Dias em Datas</strong><small>Descubra a data resultante ao subtrair dias de uma data.</small></span>
+    <span class="tx"><strong>Calendário 2026</strong><small>Calendário de 2026 com feriados e datas importantes.</small></span>
   </a>
 </li>
 <li class="c-datas">
@@ -78,10 +288,10 @@
   </a>
 </li>
 <li class="c-datas">
-  <a class="card" href="/ferramentas/calcular-idade/">
+  <a class="card" href="/ferramentas/contagem-regressiva/">
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
 </span>
-    <span class="tx"><strong>Calcular Idade</strong><small>Descubra sua idade exata em anos, meses e dias.</small></span>
+    <span class="tx"><strong>Contagem Regressiva</strong><small>Crie uma contagem regressiva para qualquer data.</small></span>
   </a>
 </li>
 

@@ -197,11 +197,11 @@ https://geradorcpf.github.io/ferramentas/nao-seguidores-instagram/
 https://geradorcpf.github.io/ferramentas/nota-promissoria-online/
 
 6 November 2026 
-https://geradorcpf.github.io/ferramentas/notepad/ -- belum submit
-https://geradorcpf.github.io/ferramentas/numero-por-extenso/
+https://geradorcpf.github.io/ferramentas/notepad/ 
+https://geradorcpf.github.io/ferramentas/numero-por-extenso/ 
 https://geradorcpf.github.io/ferramentas/nuvem-de-palavras/
 https://geradorcpf.github.io/ferramentas/ordenar-conta-instagram/
-https://geradorcpf.github.io/ferramentas/organizador-de-links/
+https://geradorcpf.github.io/ferramentas/organizador-de-links/ -- belum submit
 https://geradorcpf.github.io/ferramentas/organizar-pdf/
 https://geradorcpf.github.io/ferramentas/palavras-que-rimam/
 
@@ -215,10 +215,17 @@ https://geradorcpf.github.io/ferramentas/recortar-imagem/
 https://geradorcpf.github.io/ferramentas/redimensionar-imagem/
 
 8 November 2026
-http://localhost:1313/ferramentas/remover-acentos/
-http://localhost:1313/ferramentas/remover-linhas-duplicadas/
-http://localhost:1313/ferramentas/remover-quebra-de-linha/
-http://localhost:1313/ferramentas/roleta-online/
-http://localhost:1313/ferramentas/salario-minimo/
+https://geradorcpf.github.io/ferramentas/remover-acentos/
+https://geradorcpf.github.io/ferramentas/remover-linhas-duplicadas/
+https://geradorcpf.github.io/ferramentas/remover-quebra-de-linha/
+https://geradorcpf.github.io/ferramentas/roleta-online/
+https://geradorcpf.github.io/ferramentas/salario-minimo/
 
 9 November 2026
+http://localhost:1313/ferramentas/semana-do-ano/
+http://localhost:1313/ferramentas/signos-datas/
+http://localhost:1313/ferramentas/simbolos/
+http://localhost:1313/ferramentas/simulador-de-financiamento/
+http://localhost:1313/ferramentas/simulador-de-poupanca/
+
+10 November 2026

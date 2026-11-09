@@ -6,8 +6,43 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Semana do Ano</title>
+      <link>http://localhost:1313/ferramentas/semana-do-ano/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/semana-do-ano/</guid>
+      <description>Descubra em que semana do ano estamos.</description>
+    </item>
+    <item>
+      <title>Signos e Datas</title>
+      <link>http://localhost:1313/ferramentas/signos-datas/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/signos-datas/</guid>
+      <description>Veja o signo de cada data e as datas de cada signo.</description>
+    </item>
+    <item>
+      <title>Símbolos para Copiar</title>
+      <link>http://localhost:1313/ferramentas/simbolos/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/simbolos/</guid>
+      <description>Copie símbolos especiais com um clique.</description>
+    </item>
+    <item>
+      <title>Simulador de Financiamento</title>
+      <link>http://localhost:1313/ferramentas/simulador-de-financiamento/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/simulador-de-financiamento/</guid>
+      <description>Simule parcelas e juros de um financiamento.</description>
+    </item>
+    <item>
+      <title>Simulador de Poupança</title>
+      <link>http://localhost:1313/ferramentas/simulador-de-poupanca/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/simulador-de-poupanca/</guid>
+      <description>Simule quanto rende um depósito na poupança.</description>
+    </item>
     <item>
       <title>Remover Acentos de um Texto</title>
       <link>http://localhost:1313/ferramentas/remover-acentos/</link>
