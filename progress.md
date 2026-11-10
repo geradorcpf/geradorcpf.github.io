@@ -201,12 +201,12 @@ https://geradorcpf.github.io/ferramentas/notepad/
 https://geradorcpf.github.io/ferramentas/numero-por-extenso/ 
 https://geradorcpf.github.io/ferramentas/nuvem-de-palavras/
 https://geradorcpf.github.io/ferramentas/ordenar-conta-instagram/
-https://geradorcpf.github.io/ferramentas/organizador-de-links/ -- belum submit
+https://geradorcpf.github.io/ferramentas/organizador-de-links/ 
 https://geradorcpf.github.io/ferramentas/organizar-pdf/
 https://geradorcpf.github.io/ferramentas/palavras-que-rimam/
 
 7 November 2026
-https://geradorcpf.github.io/ferramentas/pomodoro-timer/
+https://geradorcpf.github.io/ferramentas/pomodoro-timer/ -- belum submit
 https://geradorcpf.github.io/ferramentas/prefixo-e-sufixo/
 https://geradorcpf.github.io/ferramentas/qual-e-o-meu-ip/
 https://geradorcpf.github.io/ferramentas/quem-deixou-de-me-seguir/
@@ -222,10 +222,17 @@ https://geradorcpf.github.io/ferramentas/roleta-online/
 https://geradorcpf.github.io/ferramentas/salario-minimo/
 
 9 November 2026
-http://localhost:1313/ferramentas/semana-do-ano/
-http://localhost:1313/ferramentas/signos-datas/
-http://localhost:1313/ferramentas/simbolos/
-http://localhost:1313/ferramentas/simulador-de-financiamento/
-http://localhost:1313/ferramentas/simulador-de-poupanca/
+https://geradorcpf.github.io/ferramentas/semana-do-ano/
+https://geradorcpf.github.io/ferramentas/signos-datas/
+https://geradorcpf.github.io/ferramentas/simbolos/
+https://geradorcpf.github.io/ferramentas/simulador-de-financiamento/
+https://geradorcpf.github.io/ferramentas/simulador-de-poupanca/
 
 10 November 2026
+http://localhost:1313/ferramentas/somar-dias-em-datas/
+http://localhost:1313/ferramentas/sorteador/
+http://localhost:1313/ferramentas/sorteio/
+http://localhost:1313/ferramentas/subtrair-dias-em-datas/
+http://localhost:1313/ferramentas/tabela-ascii/
+
+11 November 2026

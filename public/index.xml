@@ -6,8 +6,43 @@
     <description>Recent content on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Somar Dias em Datas</title>
+      <link>http://localhost:1313/ferramentas/somar-dias-em-datas/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/somar-dias-em-datas/</guid>
+      <description>Descubra a data resultante ao somar dias a uma data.</description>
+    </item>
+    <item>
+      <title>Sorteador de Números Aleatórios</title>
+      <link>http://localhost:1313/ferramentas/sorteador/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/sorteador/</guid>
+      <description>Sorteie um ou vários números aleatórios.</description>
+    </item>
+    <item>
+      <title>Sorteio Online</title>
+      <link>http://localhost:1313/ferramentas/sorteio/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/sorteio/</guid>
+      <description>Sorteie nomes ou itens de uma lista.</description>
+    </item>
+    <item>
+      <title>Subtrair Dias em Datas</title>
+      <link>http://localhost:1313/ferramentas/subtrair-dias-em-datas/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/subtrair-dias-em-datas/</guid>
+      <description>Descubra a data resultante ao subtrair dias de uma data.</description>
+    </item>
+    <item>
+      <title>Tabela ASCII</title>
+      <link>http://localhost:1313/ferramentas/tabela-ascii/</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/tabela-ascii/</guid>
+      <description>Consulte a tabela ASCII com códigos decimais, hex e binários.</description>
+    </item>
     <item>
       <title>Semana do Ano</title>
       <link>http://localhost:1313/ferramentas/semana-do-ano/</link>

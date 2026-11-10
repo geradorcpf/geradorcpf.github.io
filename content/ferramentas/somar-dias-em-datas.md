@@ -1,11 +1,153 @@
 ---
 title: "Somar Dias em Datas"
-seoTitle: "Somar Dias em Datas: online e grátis"
+seoTitle: "Somar Dias em Datas"
 description: "Somar Dias em Datas: descubra a data resultante ao somar dias a uma data. Grátis e online, sem cadastro."
 summary: "Descubra a data resultante ao somar dias a uma data."
-date: 2026-10-20
-draft: true
+date: 2026-11-10
+draft: false
 category: "datas"
 tags: ["datas", "calendário", "calculadora"]
 keywords: ["somar dias em datas", "somar dias em datas online", "datas", "calendário", "calculadora"]
 ---
+
+Basta escolher a data base, digitar quantos dias deseja somar e depois clicar em **Somar Dias**.
+
+<div id="calc-somar-dias" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">📅 Somar Dias em Datas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe a data e a quantidade de dias e veja o resultado na hora.</p>
+<label for="som-data" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Data base para soma</label>
+<input id="som-data" type="date" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;font-family:inherit;">
+<label for="som-dias" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Quantos dias somar?</label>
+<input id="som-dias" type="text" inputmode="numeric" placeholder="Ex.: 45" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="som-calcular" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Somar Dias</button>
+<button type="button" id="som-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="som-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="som-resultado">preencha os campos e clique em "Somar Dias".</span></div>
+</div>
+<script>
+(function () {
+  var campoData = document.getElementById('som-data');
+  var campoDias = document.getElementById('som-dias');
+  var resultado = document.getElementById('som-resultado');
+  var caixa = document.getElementById('som-resposta');
+  var semana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+  function zeros(n, tam) {
+    return ('0000' + String(n)).slice(-tam);
+  }
+  function formatar(d) {
+    return zeros(d.getUTCDate(), 2) + '/' + zeros(d.getUTCMonth() + 1, 2) + '/' + zeros(d.getUTCFullYear(), 4);
+  }
+  function lerData(v) {
+    var t = String(v).trim();
+    var p;
+    var ano;
+    var mes;
+    var dia;
+    if (/^\d{4}-\d{1,2}-\d{1,2}$/.test(t)) {
+      p = t.split('-');
+      ano = Number(p[0]); mes = Number(p[1]); dia = Number(p[2]);
+    } else if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(t)) {
+      p = t.split('/');
+      dia = Number(p[0]); mes = Number(p[1]); ano = Number(p[2]);
+    } else {
+      return null;
+    }
+    var d = new Date(Date.UTC(2000, 0, 1));
+    d.setUTCFullYear(ano, mes - 1, dia);
+    if (d.getUTCFullYear() !== ano || d.getUTCMonth() !== mes - 1 || d.getUTCDate() !== dia) { return null; }
+    return d;
+  }
+  function lerDias(v) {
+    var t = String(v).trim().replace(/[\s.]/g, '');
+    if (!/^\d+$/.test(t)) { return NaN; }
+    return Number(t);
+  }
+  function mostrar(cor, fundo, texto, nos) {
+    caixa.style.borderColor = cor;
+    caixa.style.background = fundo;
+    resultado.style.color = texto;
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+    nos.forEach(function (no) { resultado.appendChild(no); });
+  }
+  function texto(t) { return document.createTextNode(t); }
+  function erro(msg) {
+    mostrar('#fca5a5', '#fef2f2', '#b91c1c', [texto(msg)]);
+  }
+  function calcular() {
+    var base = lerData(campoData.value);
+    var dias = lerDias(campoDias.value);
+    if (base === null) { erro('informe uma data base válida.'); return; }
+    if (isNaN(dias)) { erro('informe a quantidade de dias com um número inteiro igual ou maior que zero.'); return; }
+    if (Math.min(dias, 3000000) !== dias) { erro('a quantidade de dias é muito grande. Use no máximo 3.000.000.'); return; }
+    var fim = new Date(base.getTime() + dias * 86400000);
+    if (Math.max(fim.getUTCFullYear(), 9999) !== 9999) { erro('a data resultante passa do ano 9999.'); return; }
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.2rem';
+    forte.appendChild(texto(formatar(fim)));
+    var pequeno = document.createElement('small');
+    pequeno.style.color = '#475569';
+    pequeno.appendChild(texto(formatar(base) + ' + ' + dias.toLocaleString('pt-BR') + (dias === 1 ? ' dia = ' : ' dias = ') + formatar(fim)));
+    mostrar('#86efac', '#f0fdf4', '#166534', [
+      texto('A data resultante é '),
+      forte,
+      texto(' (' + semana[fim.getUTCDay()] + ')'),
+      document.createElement('br'),
+      pequeno
+    ]);
+  }
+  function limpar() {
+    campoData.value = '';
+    campoDias.value = '';
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    resultado.style.color = '#64748b';
+    while (resultado.firstChild) { resultado.removeChild(resultado.firstChild); }
+    resultado.appendChild(texto('preencha os campos e clique em "Somar Dias".'));
+    campoData.focus();
+  }
+  document.getElementById('som-calcular').addEventListener('click', calcular);
+  document.getElementById('som-limpar').addEventListener('click', limpar);
+  [campoData, campoDias].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { calcular(); } });
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+
+## Como usar a calculadora
+
+1. Escolha a **Data base para soma** no primeiro campo. Você pode clicar no ícone de calendário ou digitar a data.
+2. Digite no segundo campo **Quantos dias somar?** (número inteiro, por exemplo `45`).
+3. Clique em **Somar Dias** (ou pressione Enter) para ver a data resultante e o dia da semana.
+4. Use o botão **Limpar** para apagar os valores e fazer um novo cálculo.
+
+A calculadora considera automaticamente a quantidade de dias de cada mês e os anos bissextos, então você não precisa contar nada manualmente.
+
+## Entendendo os termos
+
+- **Data base:** data de partida, ou seja, o dia a partir do qual a contagem começa.
+- **Quantidade de dias:** número de dias corridos que serão somados à data base. Sábados, domingos e feriados também entram na conta.
+- **Data resultante:** data obtida depois de somar os dias à data base.
+- **Dia da semana:** nome do dia (segunda-feira, terça-feira etc.) em que cai a data resultante.
+- **Dias corridos:** contagem que inclui todos os dias do calendário, sem pular finais de semana ou feriados.
+- **Ano bissexto:** ano de 366 dias, com 29 dias em fevereiro. Ocorre a cada 4 anos, com exceções para anos de século não divisíveis por 400.
+
+## Como funciona o cálculo
+
+A data resultante é a data base avançada em tantos dias corridos quantos forem informados:
+
+**data resultante = data base + quantidade de dias**
+
+Quando a soma passa do fim do mês, a contagem continua no mês seguinte, e o mesmo vale para a virada do ano.
+
+## Exemplo resolvido
+
+Qual é a data 45 dias depois de 20/10/2026?
+
+1. Data base: 20/10/2026. De 20/10 até 31/10 faltam 11 dias, então restam 45 − 11 = 34 dias.
+2. Novembro tem 30 dias, então 31/10 + 30 dias = 30/11, e restam 34 − 30 = 4 dias.
+3. Somando os 4 dias restantes a 30/11, chega-se a 04/12.
+
+**Resposta:** 45 dias depois de 20/10/2026 é **04/12/2026**, uma sexta-feira.
