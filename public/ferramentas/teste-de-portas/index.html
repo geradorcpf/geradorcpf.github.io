@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Teste de Portas: online e grátis</title>
+<title>Teste de Portas</title>
 <meta name="description" content="Teste de Portas: verifique se uma porta está aberta em um endereço. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/teste-de-portas/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/teste-de-portas/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Teste de Portas: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/teste-de-portas/">
+<meta property="og:title" content="Teste de Portas">
+<meta property="og:url" content="http://localhost:1313/ferramentas/teste-de-portas/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Teste de Portas: verifique se uma porta está aberta em um endereço. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,182 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Teste de Portas</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/teste-de-portas/","name":"Teste de Portas","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Teste de Portas</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/teste-de-portas/","name":"Teste de Portas","position":3}]}</script>
 <article class="prose page">
   <h1>Teste de Portas</h1>
   
-  
+  <!--INI SUDAH DIKERJAKAN-->
+<p>Basta digitar o IP ou domínio e a porta abaixo e depois clicar em <strong>Verificar</strong>.</p>
+<div id="teste-portas" style="max-width:480px;margin:24px 0;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔌 Teste de Portas</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Informe o endereço e a porta TCP e veja se ela está aberta.</p>
+<label for="prt-host" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">IP ou domínio</label>
+<input id="prt-host" type="text" placeholder="Ex.: exemplo.com.br ou 203.0.113.10" autocomplete="off" autocapitalize="off" spellcheck="false" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<label for="prt-porta" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Porta</label>
+<input id="prt-porta" type="text" inputmode="numeric" placeholder="Ex.: 443" autocomplete="off" style="width:100%;padding:12px 14px;margin-bottom:16px;font-size:1rem;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;">
+<div style="margin-bottom:6px;font-weight:600;font-size:0.95rem;">Portas comuns</div>
+<div id="prt-comuns" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="prt-verificar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Verificar</button>
+<button type="button" id="prt-limpar" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="prt-resposta" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta:</strong> <span id="prt-resultado">preencha os campos e clique em "Verificar".</span></div>
+</div>
+<script>
+(function () {
+  var API_URL = '';
+  var host = document.getElementById('prt-host');
+  var porta = document.getElementById('prt-porta');
+  var btn = document.getElementById('prt-verificar');
+  var btnLimpar = document.getElementById('prt-limpar');
+  var caixa = document.getElementById('prt-resposta');
+  var resultado = document.getElementById('prt-resultado');
+  var lista = document.getElementById('prt-comuns');
+  var textoInicial = 'preencha os campos e clique em "Verificar".';
+  var ocupado = false;
+  var comuns = [['21', 'FTP'], ['22', 'SSH'], ['23', 'Telnet'], ['25', 'SMTP'], ['53', 'DNS'], ['80', 'HTTP'], ['110', 'POP3'], ['143', 'IMAP'], ['443', 'HTTPS'], ['587', 'SMTP'], ['3306', 'MySQL'], ['3389', 'RDP']];
+  var estilos = {
+    neutro: ['#c7d2fe', '#ffffff', '#64748b'],
+    ok: ['#86efac', '#f0fdf4', '#166534'],
+    erro: ['#fca5a5', '#fef2f2', '#b91c1c']
+  };
+  function estado(tipo) {
+    var e = estilos[tipo];
+    caixa.style.borderColor = e[0];
+    caixa.style.background = e[1];
+    resultado.style.color = e[2];
+  }
+  function mostrar(tipo, titulo, detalhe) {
+    estado(tipo);
+    resultado.textContent = '';
+    var forte = document.createElement('strong');
+    forte.style.fontSize = '1.2rem';
+    forte.textContent = titulo;
+    resultado.appendChild(forte);
+    if (detalhe) {
+      resultado.appendChild(document.createElement('br'));
+      var pequeno = document.createElement('small');
+      pequeno.style.color = '#475569';
+      pequeno.textContent = detalhe;
+      resultado.appendChild(pequeno);
+    }
+  }
+  function erro(msg) {
+    estado('erro');
+    resultado.textContent = msg;
+  }
+  function limparHost(v) {
+    var t = String(v).trim().replace(/^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//, '');
+    t = t.split('/')[0].split('?')[0].split('#')[0];
+    if (t.indexOf('@') > -1) { t = t.split('@').pop(); }
+    if (t.split(':').length === 2) { t = t.split(':')[0]; }
+    return t.toLowerCase();
+  }
+  function hostValido(h) {
+    if (h === '' || h.length > 253) { return false; }
+    if (h.indexOf(':') > -1) { return /^[0-9a-f:.]+$/.test(h); }
+    return /^[a-z0-9]([a-z0-9.-]*[a-z0-9])?$/.test(h);
+  }
+  function verificar() {
+    if (ocupado) { return; }
+    var h = limparHost(host.value);
+    var p = String(porta.value).trim();
+    if (!hostValido(h)) { erro('informe um IP ou domínio válido.'); return; }
+    if (!/^[0-9]+$/.test(p)) { erro('informe uma porta válida, entre 1 e 65535.'); return; }
+    var n = Number(p);
+    if (!(n >= 1) || n > 65535) { erro('informe uma porta válida, entre 1 e 65535.'); return; }
+    if (API_URL === '') {
+      mostrar('erro', 'Serviço de verificação não configurado.', 'Defina a variável API_URL no script da ferramenta.');
+      return;
+    }
+    ocupado = true;
+    btn.disabled = true;
+    btn.textContent = 'Verificando...';
+    mostrar('neutro', 'Verificando...', h + ':' + n);
+    var controle = new AbortController();
+    var timer = setTimeout(function () { controle.abort(); }, 15000);
+    fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ host: h, port: n }),
+      signal: controle.signal
+    }).then(function (r) {
+      if (!r.ok) { throw new Error('http'); }
+      return r.json();
+    }).then(function (d) {
+      if (d.open === true) {
+        mostrar('ok', 'A porta ' + n + ' está aberta', h + ':' + n + ' aceita conexões TCP.');
+      } else {
+        mostrar('erro', 'A porta ' + n + ' está fechada', h + ':' + n + ' não respondeu à conexão TCP.');
+      }
+    }).catch(function () {
+      erro('não foi possível fazer a verificação agora. Tente novamente em instantes.');
+    }).then(function () {
+      clearTimeout(timer);
+      ocupado = false;
+      btn.disabled = false;
+      btn.textContent = 'Verificar';
+    });
+  }
+  function limpar() {
+    host.value = '';
+    porta.value = '';
+    estado('neutro');
+    resultado.textContent = textoInicial;
+    host.focus();
+  }
+  comuns.forEach(function (item) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = item[0] + ' ' + item[1];
+    b.style.cssText = 'padding:6px 12px;font-size:0.85rem;font-weight:600;color:#4f46e5;background:#ffffff;border:1px solid #c7d2fe;border-radius:999px;cursor:pointer;';
+    b.addEventListener('click', function () {
+      porta.value = item[0];
+      porta.focus();
+    });
+    lista.appendChild(b);
+  });
+  btn.addEventListener('click', verificar);
+  btnLimpar.addEventListener('click', limpar);
+  [host, porta].forEach(function (el) {
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter') { verificar(); } });
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-a-ferramenta">Como usar a ferramenta</h2>
+<ol>
+<li>Digite o <strong>IP ou domínio</strong> que você quer testar no primeiro campo (por exemplo, <code>exemplo.com.br</code> ou <code>203.0.113.10</code>).</li>
+<li>Digite o número da <strong>porta</strong> no segundo campo ou clique em uma das <strong>portas comuns</strong> para preenchê-la automaticamente.</li>
+<li>Clique em <strong>Verificar</strong> (ou pressione Enter) para ver se a porta está aberta ou fechada.</li>
+<li>Use o botão <strong>Limpar</strong> para apagar os valores e fazer um novo teste.</li>
+</ol>
+<p>Se você colar um endereço completo, como <code>https://exemplo.com.br/pagina</code>, a ferramenta usa só o domínio. A porta deve ser um número entre 1 e 65535. O teste verifica portas TCP, as usadas pela maioria dos serviços.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Porta:</strong> número que identifica o serviço que recebe conexões em um computador ou servidor, como a 80 para sites (HTTP) e a 22 para SSH.</li>
+<li><strong>Porta aberta:</strong> porta em que há um programa esperando conexões e nada no caminho bloqueia o acesso.</li>
+<li><strong>Porta fechada:</strong> porta que não aceita conexões, porque nenhum programa a usa ou porque um firewall ou o roteador a bloqueia.</li>
+<li><strong>IP:</strong> endereço numérico que identifica um dispositivo na internet ou em uma rede, como <code>203.0.113.10</code>.</li>
+<li><strong>Domínio:</strong> nome fácil de lembrar que aponta para um IP, como <code>exemplo.com.br</code>.</li>
+<li><strong>TCP:</strong> protocolo de comunicação que estabelece uma conexão confiável entre dois dispositivos. É o usado neste teste.</li>
+<li><strong>UDP:</strong> protocolo mais simples, sem conexão fixa, que não pode ser testado por este método.</li>
+<li><strong>Firewall:</strong> programa ou equipamento que controla quais conexões podem entrar e sair, e pode bloquear portas.</li>
+<li><strong>Roteador:</strong> equipamento que conecta a rede local à internet e pode redirecionar portas para um computador específico.</li>
+<li><strong>Redirecionamento de portas (port forwarding):</strong> configuração do roteador que encaminha uma porta para um computador da rede local.</li>
+<li><strong>CGNAT:</strong> técnica em que a operadora divide um mesmo IP público entre vários clientes, o que impede abrir portas.</li>
+<li><strong>HTTP e HTTPS (80 e 443):</strong> portas usadas por sites, sendo a 443 a versão segura.</li>
+<li><strong>SSH (22):</strong> porta usada para acesso remoto seguro a servidores.</li>
+<li><strong>SMTP, POP3 e IMAP (25/587, 110 e 143):</strong> portas usadas para envio e recebimento de e-mails.</li>
+<li><strong>DNS (53):</strong> porta usada para converter nomes de domínio em endereços IP.</li>
+<li><strong>FTP (21):</strong> porta usada para transferência de arquivos.</li>
+<li><strong>Telnet (23):</strong> porta de acesso remoto sem criptografia, pouco recomendada hoje.</li>
+<li><strong>MySQL (3306):</strong> porta padrão do banco de dados MySQL.</li>
+<li><strong>RDP (3389):</strong> porta do acesso remoto à área de trabalho do Windows.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 

@@ -6,8 +6,43 @@
     <description>Recent content in Ferramentas online grátis on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/ferramentas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tabela Fipe Veículos</title>
+      <link>http://localhost:1313/ferramentas/tabela-fipe/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/tabela-fipe/</guid>
+      <description>Consulte o preço de veículos na tabela Fipe.</description>
+    </item>
+    <item>
+      <title>Tela Branca</title>
+      <link>http://localhost:1313/ferramentas/tela-branca/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/tela-branca/</guid>
+      <description>Tela branca em tela cheia para testar monitores e iluminar.</description>
+    </item>
+    <item>
+      <title>Teste de Digitação</title>
+      <link>http://localhost:1313/ferramentas/teste-de-digitacao/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/teste-de-digitacao/</guid>
+      <description>Meça sua velocidade de digitação em palavras por minuto.</description>
+    </item>
+    <item>
+      <title>Teste de Portas</title>
+      <link>http://localhost:1313/ferramentas/teste-de-portas/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/teste-de-portas/</guid>
+      <description>Verifique se uma porta está aberta em um endereço.</description>
+    </item>
+    <item>
+      <title>Teste de Velocidade</title>
+      <link>http://localhost:1313/ferramentas/teste-de-velocidade/</link>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/teste-de-velocidade/</guid>
+      <description>Meça a velocidade de download e upload da sua internet.</description>
+    </item>
     <item>
       <title>Somar Dias em Datas</title>
       <link>http://localhost:1313/ferramentas/somar-dias-em-datas/</link>
