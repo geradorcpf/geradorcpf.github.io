@@ -209,13 +209,13 @@ https://geradorcpf.github.io/ferramentas/palavras-que-rimam/
 https://geradorcpf.github.io/ferramentas/pomodoro-timer/ 
 https://geradorcpf.github.io/ferramentas/prefixo-e-sufixo/
 https://geradorcpf.github.io/ferramentas/qual-e-o-meu-ip/ 
-https://geradorcpf.github.io/ferramentas/quem-deixou-de-me-seguir/ -- belum submit
+https://geradorcpf.github.io/ferramentas/quem-deixou-de-me-seguir/ 
 https://geradorcpf.github.io/ferramentas/recibo-online/
 https://geradorcpf.github.io/ferramentas/recortar-imagem/
 https://geradorcpf.github.io/ferramentas/redimensionar-imagem/
 
 8 November 2026
-https://geradorcpf.github.io/ferramentas/remover-acentos/
+https://geradorcpf.github.io/ferramentas/remover-acentos/ -- belum submit
 https://geradorcpf.github.io/ferramentas/remover-linhas-duplicadas/
 https://geradorcpf.github.io/ferramentas/remover-quebra-de-linha/
 https://geradorcpf.github.io/ferramentas/roleta-online/
@@ -236,10 +236,17 @@ https://geradorcpf.github.io/ferramentas/subtrair-dias-em-datas/
 https://geradorcpf.github.io/ferramentas/tabela-ascii/
 
 11 November 2026
-http://localhost:1313/ferramentas/tabela-fipe/
-http://localhost:1313/ferramentas/tela-branca/
-http://localhost:1313/ferramentas/teste-de-digitacao/
-http://localhost:1313/ferramentas/teste-de-portas/
-http://localhost:1313/ferramentas/teste-de-velocidade/
+https://geradorcpf.github.io/ferramentas/tabela-fipe/
+https://geradorcpf.github.io/ferramentas/tela-branca/
+https://geradorcpf.github.io/ferramentas/teste-de-digitacao/
+https://geradorcpf.github.io/ferramentas/teste-de-portas/
+https://geradorcpf.github.io/ferramentas/teste-de-velocidade/
 
 12 November 2026
+http://localhost:1313/ferramentas/texto-criptografado/
+http://localhost:1313/ferramentas/texto-de-cabeca-para-baixo/
+http://localhost:1313/ferramentas/textos-sinonimos/
+http://localhost:1313/ferramentas/tradutor-codigo-binario/
+http://localhost:1313/ferramentas/tradutor-de-codigo-morse/
+
+13 November 2026

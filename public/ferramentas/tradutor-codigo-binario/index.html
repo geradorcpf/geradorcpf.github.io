@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta name="google-site-verification" content="Xlw3QfjcYi9b11Yampj1nXYPAEEp1zAKjL4iupKO2ZU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tradutor de Código Binário: online e grátis</title>
+<title>Tradutor de Código Binário</title>
 <meta name="description" content="Tradutor de Código Binário: converta texto em código binário e vice-versa. Grátis e online, sem cadastro.">
-<link rel="canonical" href="https://geradorcpf.github.io/ferramentas/tradutor-codigo-binario/">
+<link rel="canonical" href="http://localhost:1313/ferramentas/tradutor-codigo-binario/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tradutor de Código Binário: online e grátis">
-<meta property="og:url" content="https://geradorcpf.github.io/ferramentas/tradutor-codigo-binario/">
+<meta property="og:title" content="Tradutor de Código Binário">
+<meta property="og:url" content="http://localhost:1313/ferramentas/tradutor-codigo-binario/">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gerador de CPF">
 <meta property="og:description" content="Tradutor de Código Binário: converta texto em código binário e vice-versa. Grátis e online, sem cadastro.">
-<meta property="og:image" content="https://geradorcpf.github.io/img/infografico-cpf-muito-alem-de-11-numeros.webp">
+<meta property="og:image" content="http://localhost:1313/img/infografico-cpf-muito-alem-de-11-numeros.webp">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta name="twitter:card" content="summary_large_image">
@@ -38,12 +38,166 @@
 </header>
 
 <main class="wrap">
-<nav class="crumbs" aria-label="Trilha de navegação"><a href="https://geradorcpf.github.io/">Início</a><span aria-hidden="true"> / </span><a href="https://geradorcpf.github.io/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Tradutor de Código Binário</span></nav>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://geradorcpf.github.io/","name":"Início","position":1},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"https://geradorcpf.github.io/ferramentas/tradutor-codigo-binario/","name":"Tradutor de Código Binário","position":3}]}</script>
+<nav class="crumbs" aria-label="Trilha de navegação"><a href="http://localhost:1313/">Início</a><span aria-hidden="true"> / </span><a href="http://localhost:1313/ferramentas/">Ferramentas online grátis</a><span aria-hidden="true"> / </span><span aria-current="page">Tradutor de Código Binário</span></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"http://localhost:1313/","name":"Início","position":1},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/","name":"Ferramentas online grátis","position":2},{"@type":"ListItem","item":"http://localhost:1313/ferramentas/tradutor-codigo-binario/","name":"Tradutor de Código Binário","position":3}]}</script>
 <article class="prose page">
   <h1>Tradutor de Código Binário</h1>
   
-  
+  <p>Digite um texto e clique em <strong>Codificar em Binário</strong>, ou cole um código binário e clique em <strong>Decodificar Texto</strong>.</p>
+<div id="tradutor-binario" style="max-width:560px;margin:24px 0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1e293b;box-sizing:border-box;">
+<div style="margin-bottom:24px;padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">💻 Texto para Codificar</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Digite o texto e converta para binário na hora.</p>
+<label for="bin-texto" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Texto</label>
+<textarea id="bin-texto" rows="4" placeholder="Ex.: Olá, mundo!" autocomplete="off" spellcheck="false" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="bin-codificar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Codificar em Binário</button>
+<button type="button" id="bin-limpar-1" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="bin-caixa-1" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Texto codificado em binário:</strong> <span id="bin-resultado-1" style="white-space:pre-wrap;word-break:break-word;">preencha o campo e clique em "Codificar em Binário".</span></div>
+<button type="button" id="bin-copiar-1" style="margin-top:12px;padding:10px 16px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar resultado</button>
+</div>
+<div style="padding:24px;background:linear-gradient(135deg,#f8fafc 0%,#eef2ff 100%);border:1px solid #c7d2fe;border-radius:16px;box-shadow:0 8px 24px rgba(79,70,229,0.12);box-sizing:border-box;">
+<h2 style="margin:0 0 4px;font-size:1.25rem;color:#3730a3;">🔢 Binário para Traduzir</h2>
+<p style="margin:0 0 18px;font-size:0.9rem;color:#64748b;">Cole o código binário e veja o texto original.</p>
+<label for="bin-codigo" style="display:block;margin-bottom:6px;font-weight:600;font-size:0.95rem;">Código binário</label>
+<textarea id="bin-codigo" rows="4" placeholder="Ex.: 01001111 01101100 11000011 10100001" autocomplete="off" spellcheck="false" style="width:100%;padding:12px 14px;margin-bottom:20px;font-size:1rem;font-family:inherit;border:2px solid #c7d2fe;border-radius:10px;background:#ffffff;color:#1e293b;box-sizing:border-box;outline:none;resize:vertical;"></textarea>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button type="button" id="bin-decodificar" style="flex:1;min-width:140px;padding:13px 18px;font-size:1rem;font-weight:700;color:#ffffff;background:linear-gradient(135deg,#4f46e5,#6366f1);border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,0.35);">Decodificar Texto</button>
+<button type="button" id="bin-limpar-2" style="padding:13px 18px;font-size:1rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Limpar</button>
+</div>
+<div id="bin-caixa-2" aria-live="polite" style="margin-top:20px;padding:16px;background:#ffffff;border:2px dashed #c7d2fe;border-radius:12px;color:#64748b;font-size:1rem;line-height:1.6;"><strong style="color:#3730a3;">Resposta em texto:</strong> <span id="bin-resultado-2" style="white-space:pre-wrap;word-break:break-word;">preencha o campo e clique em "Decodificar Texto".</span></div>
+<button type="button" id="bin-copiar-2" style="margin-top:12px;padding:10px 16px;font-size:0.9rem;font-weight:600;color:#4f46e5;background:#ffffff;border:2px solid #c7d2fe;border-radius:10px;cursor:pointer;">Copiar resultado</button>
+</div>
+</div>
+<script>
+(function () {
+  var MSG1 = 'preencha o campo e clique em "Codificar em Binário".';
+  var MSG2 = 'preencha o campo e clique em "Decodificar Texto".';
+  var texto = document.getElementById('bin-texto');
+  var codigo = document.getElementById('bin-codigo');
+  var caixa1 = document.getElementById('bin-caixa-1');
+  var caixa2 = document.getElementById('bin-caixa-2');
+  var res1 = document.getElementById('bin-resultado-1');
+  var res2 = document.getElementById('bin-resultado-2');
+  var ultimo1 = '';
+  var ultimo2 = '';
+  function erro(caixa, res, msg) {
+    caixa.style.borderColor = '#fca5a5';
+    caixa.style.background = '#fef2f2';
+    res.style.color = '#b91c1c';
+    res.textContent = msg;
+  }
+  function ok(caixa, res, valor) {
+    caixa.style.borderColor = '#86efac';
+    caixa.style.background = '#f0fdf4';
+    res.style.color = '#166534';
+    res.textContent = valor;
+  }
+  function neutro(caixa, res, msg) {
+    caixa.style.borderColor = '#c7d2fe';
+    caixa.style.background = '#ffffff';
+    res.style.color = '#64748b';
+    res.textContent = msg;
+  }
+  function codificar() {
+    var v = texto.value;
+    ultimo1 = '';
+    if (v.length === 0) { erro(caixa1, res1, 'digite um texto para codificar.'); return; }
+    var bytes = Array.prototype.slice.call(new TextEncoder().encode(v));
+    var binario = bytes.map(function (b) {
+      var s = b.toString(2);
+      while (s.length !== 8) { s = '0' + s; }
+      return s;
+    }).join(' ');
+    ultimo1 = binario;
+    ok(caixa1, res1, binario);
+  }
+  function decodificar() {
+    var v = codigo.value;
+    ultimo2 = '';
+    if (v.trim().length === 0) { erro(caixa2, res2, 'informe o código binário para decodificar.'); return; }
+    if (/[^01\s]/.test(v)) { erro(caixa2, res2, 'use apenas os dígitos 0 e 1 (separados por espaço ou não).'); return; }
+    var limpo = v.replace(/\s/g, '');
+    if (limpo.length % 8 !== 0) { erro(caixa2, res2, 'o código binário deve ter grupos completos de 8 bits (' + limpo.length + ' dígitos informados).'); return; }
+    var grupos = limpo.match(/[01]{8}/g);
+    var bytes = grupos.map(function (g) { return parseInt(g, 2); });
+    var texto2;
+    try {
+      texto2 = new TextDecoder('utf-8', { fatal: true }).decode(new Uint8Array(bytes));
+    } catch (e) {
+      erro(caixa2, res2, 'não foi possível converter: a sequência de bits não é um texto UTF-8 válido.');
+      return;
+    }
+    ultimo2 = texto2;
+    ok(caixa2, res2, texto2);
+  }
+  function copiar(valor, botao) {
+    if (valor === '') { return; }
+    var original = botao.textContent;
+    try {
+      navigator.clipboard.writeText(valor).then(function () {
+        botao.textContent = 'Copiado!';
+        setTimeout(function () { botao.textContent = original; }, 1500);
+      });
+    } catch (e) {
+      botao.textContent = 'Não foi possível copiar';
+      setTimeout(function () { botao.textContent = original; }, 1500);
+    }
+  }
+  document.getElementById('bin-codificar').addEventListener('click', codificar);
+  document.getElementById('bin-decodificar').addEventListener('click', decodificar);
+  document.getElementById('bin-limpar-1').addEventListener('click', function () {
+    texto.value = '';
+    ultimo1 = '';
+    neutro(caixa1, res1, MSG1);
+    texto.focus();
+  });
+  document.getElementById('bin-limpar-2').addEventListener('click', function () {
+    codigo.value = '';
+    ultimo2 = '';
+    neutro(caixa2, res2, MSG2);
+    codigo.focus();
+  });
+  document.getElementById('bin-copiar-1').addEventListener('click', function (e) { copiar(ultimo1, e.currentTarget); });
+  document.getElementById('bin-copiar-2').addEventListener('click', function (e) { copiar(ultimo2, e.currentTarget); });
+  texto.addEventListener('keydown', function (e) { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { codificar(); } });
+  codigo.addEventListener('keydown', function (e) { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { decodificar(); } });
+  [texto, codigo].forEach(function (el) {
+    el.addEventListener('focus', function () { el.style.borderColor = '#6366f1'; });
+    el.addEventListener('blur', function () { el.style.borderColor = '#c7d2fe'; });
+  });
+})();
+</script>
+<h2 id="como-usar-o-tradutor">Como usar o tradutor</h2>
+<p><strong>Para converter texto em binário:</strong></p>
+<ol>
+<li>Digite ou cole o texto no campo <strong>Texto</strong>.</li>
+<li>Clique em <strong>Codificar em Binário</strong> (ou pressione Ctrl + Enter).</li>
+<li>O código binário aparece na caixa de resposta, com cada caractere representado por grupos de 8 bits separados por espaço.</li>
+<li>Use <strong>Copiar resultado</strong> para copiar o código ou <strong>Limpar</strong> para recomeçar.</li>
+</ol>
+<p><strong>Para converter binário em texto:</strong></p>
+<ol>
+<li>Cole o código no campo <strong>Código binário</strong>. Ele deve conter apenas os dígitos <code>0</code> e <code>1</code>, com ou sem espaços entre os grupos.</li>
+<li>Clique em <strong>Decodificar Texto</strong> (ou pressione Ctrl + Enter).</li>
+<li>O texto original aparece na caixa de resposta.</li>
+<li>Se o código tiver dígitos diferentes de 0 e 1, ou se a quantidade de dígitos não for múltipla de 8, o tradutor mostra uma mensagem de erro indicando o problema.</li>
+</ol>
+<p>O tradutor usa a codificação UTF-8, então letras acentuadas, símbolos e emojis também são convertidos corretamente. Nesses casos, um único caractere pode ocupar mais de um grupo de 8 bits.</p>
+<h2 id="entendendo-os-termos">Entendendo os termos</h2>
+<ul>
+<li><strong>Código binário:</strong> sistema de numeração que usa apenas dois dígitos, 0 e 1, para representar qualquer informação em computadores.</li>
+<li><strong>Bit:</strong> a menor unidade de informação digital, que pode valer 0 ou 1.</li>
+<li><strong>Byte:</strong> conjunto de 8 bits. Cada byte pode representar um valor de 0 a 255.</li>
+<li><strong>Codificar:</strong> transformar um texto legível em outra representação, neste caso uma sequência de bits.</li>
+<li><strong>Decodificar:</strong> fazer o caminho inverso, transformando o código binário de volta em texto legível.</li>
+<li><strong>Caractere:</strong> cada letra, número, símbolo ou espaço de um texto.</li>
+<li><strong>ASCII:</strong> tabela clássica que associa 128 caracteres básicos (letras sem acento, números e sinais) a números de 0 a 127.</li>
+<li><strong>UTF-8:</strong> padrão de codificação que inclui todo o ASCII e também acentos, símbolos e emojis, usando de 1 a 4 bytes por caractere.</li>
+<li><strong>Texto binário:</strong> o resultado da codificação, formado por grupos de 8 dígitos como <code>01001111</code>.</li>
+</ul>
+
   <p><a href="/">Ir para o gerador de CPF</a></p>
 </article>
 
@@ -54,13 +208,6 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
 </span>
     <span class="tx"><strong>Conversão de Base Numérica</strong><small>Converta números entre binário, decimal e hexadecimal.</small></span>
-  </a>
-</li>
-<li class="c-dev">
-  <a class="card" href="/ferramentas/url-encode-url-decode/">
-    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
-</span>
-    <span class="tx"><strong>URL Encode/Decode</strong><small>Codifique e decodifique URLs com caracteres especiais.</small></span>
   </a>
 </li>
 <li class="c-dev">
@@ -82,6 +229,13 @@
     <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
 </span>
     <span class="tx"><strong>Tradutor de Código Morse</strong><small>Traduza texto para código Morse e de volta.</small></span>
+  </a>
+</li>
+<li class="c-dev">
+  <a class="card" href="/ferramentas/conversor-de-timestamp/">
+    <span class="tile"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 5-4 14"/></svg>
+</span>
+    <span class="tx"><strong>Conversor de Timestamp</strong><small>Converta timestamp Unix em data e vice-versa.</small></span>
   </a>
 </li>
 

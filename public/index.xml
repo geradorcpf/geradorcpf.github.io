@@ -6,8 +6,43 @@
     <description>Recent content on Gerador de CPF</description>
     <generator>Hugo</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Texto Criptografado</title>
+      <link>http://localhost:1313/ferramentas/texto-criptografado/</link>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/texto-criptografado/</guid>
+      <description>Criptografe e descriptografe mensagens com uma senha.</description>
+    </item>
+    <item>
+      <title>Texto de Cabeça para Baixo</title>
+      <link>http://localhost:1313/ferramentas/texto-de-cabeca-para-baixo/</link>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/texto-de-cabeca-para-baixo/</guid>
+      <description>Vire seu texto de cabeça para baixo.</description>
+    </item>
+    <item>
+      <title>Textos Sinônimos</title>
+      <link>http://localhost:1313/ferramentas/textos-sinonimos/</link>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/textos-sinonimos/</guid>
+      <description>Encontre sinônimos para variar as palavras do texto.</description>
+    </item>
+    <item>
+      <title>Tradutor de Código Binário</title>
+      <link>http://localhost:1313/ferramentas/tradutor-codigo-binario/</link>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/tradutor-codigo-binario/</guid>
+      <description>Converta texto em código binário e vice-versa.</description>
+    </item>
+    <item>
+      <title>Tradutor de Código Morse</title>
+      <link>http://localhost:1313/ferramentas/tradutor-de-codigo-morse/</link>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ferramentas/tradutor-de-codigo-morse/</guid>
+      <description>Traduza texto para código Morse e de volta.</description>
+    </item>
     <item>
       <title>Tabela Fipe Veículos</title>
       <link>http://localhost:1313/ferramentas/tabela-fipe/</link>
